@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasVirtualDataCenterMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasVirtualDataCenter">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="vdc_name" property="vdcName"/>
+        <result column="username" property="username"/>
+        <result column="domain_name" property="domainName"/>
+        <result column="vdc_key" property="vdcKey"/>
+        <result column="user_key" property="userKey"/>
+        <result column="password" property="password"/>
+        <result column="score" property="score"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="vdcVOResultMap" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualDataCenterVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="vdc_name" property="vdcName"/>
+        <result column="username" property="username"/>
+        <result column="domain_name" property="domainName"/>
+        <result column="vdc_key" property="vdcKey"/>
+        <result column="user_key" property="userKey"/>
+        <result column="password" property="password"/>
+        <result column="score" property="score"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <collection property="children" ofType="com.ecdata.cmp.iaas.entity.dto.IaasProjectVO">
+            <id column="project_id" jdbcType="BIGINT" property="id"/>
+            <result column="vdc_id" property="vdcId"/>
+            <result column="project_name" property="projectName"/>
+            <result column="project_Key" property="projectKey"/>
+            <result column="token" property="token"/>
+            <result column="token_time" property="tokenTime"/>
+            <result column="score" property="score"/>
+            <result column="remark" property="remark"/>
+            <collection property="children"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+                <id column="vm_id" property="id"/>
+                <result column="project_id" property="projectId"/>
+                <result column="business_group_id" property="businessGroupId"/>
+                <result column="vm_name" property="vmName"/>
+                <result column="status" property="status"/>
+                <result column="state" property="state"/>
+                <result column="os_name" property="osName"/>
+                <result column="os" property="os"/>
+                <result column="os_type" property="osType"/>
+                <result column="vcpu_total" property="vcpuTotal"/>
+                <result column="vcpu_used" property="vcpuUsed"/>
+                <result column="memory_total" property="memoryTotal"/>
+                <result column="memory_used" property="memoryUsed"/>
+                <result column="username" property="username"/>
+                <result column="password" property="password"/>
+                <result column="owner" property="owner"/>
+                <result column="vm_key" property="vmKey"/>
+                <result column="uuid" property="uuid"/>
+                <result column="right_type" property="rightType"/>
+                <result column="remark" property="remark"/>
+                <result column="last_start_up" property="lastStartUp"/>
+                <result column="business_group_name" property="businessGroupName"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+
+
+    <resultMap id="BareMetalVOResultMap" type="com.ecdata.cmp.iaas.entity.dto.BareMetalVO">
+        <result column="bare_name" property="value"/>
+        <result column="detail_name" property="detailName"/>
+        <result column="project_id" property="projectId"/>
+        <result column="business_group_name" property="businessGroupName"/>
+    </resultMap>
+
+
+
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                cluster_id,
+                provider_id,
+                vdc_name,
+                domain_name,
+                username,
+                password,
+                vdc_key,
+                user_key,
+                score,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+    <select id="queryIaasVirtualDataCenterByKey" resultMap="BaseResultMap">
+        select * from iaas_virtual_data_center where is_deleted=0 and vdc_key=#{vdcKey}
+    </select>
+
+
+    <select id="queryBareMetalList" resultMap="BareMetalVOResultMap"
+            parameterType="java.util.List">
+        select
+          m.`name` bare_name,
+          m.detail_name,
+          m.project_id,
+          g.business_group_name
+        FROM iaas_bare_metal m
+        LEFT JOIN sys_business_group g
+        ON m.business_group_id = g.id
+    </select>
+
+    <select id="queryIaasVirtualDataCentersByClusterIds"
+            resultMap="vdcVOResultMap"
+            parameterType="java.util.List">
+        select
+          t1.*,
+          t2.id project_id,
+          t2.project_name,
+          t2.project_Key,
+          t2.token,
+          t2.token_time,
+          t2.score,
+          t2.remark,
+          t3.id vm_id,
+          t3.project_id,
+          t5.id business_group_id,
+          t3.vm_name,
+          t3.status,
+          t3.state,
+          t3.os_name,
+          t3.os,
+          t3.os_type,
+          t3.vcpu_total,
+          t3.vcpu_used,
+          t3.memory_total,
+          t3.memory_used,
+          t3.username,
+          t3.password,
+          t3.owner,
+          t3.vm_key,
+          t3.uuid,
+          t3.right_type,
+          t3.remark,
+          t3.last_start_up,
+          t5.business_group_name
+        from iaas_virtual_data_center t1
+        left join iaas_project t2 on t1.id= t2.vdc_id and t2.is_deleted = 0
+        left join iaas_virtual_machine t3 on t2.id=t3.project_id AND t3.is_deleted = 0
+        LEFT JOIN iaas_virtual_machine_right t4 ON t3.id = t4.vm_id AND t4.type=5
+        LEFT JOIN sys_business_group t5 ON t4.relate_id = t5.id AND t5.is_deleted=0
+        where t1.is_deleted=0 and t1.provider_id=#{providerId}
+    </select>
+
+    <select id="getVdcNameByProviderId" resultType="Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from iaas_virtual_data_center where is_deleted=0 and provider_id=#{providerId}
+    </select>
+
+
+
+
+
+    <resultMap id="vdcVOResultMap2" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualDataCenterVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="vdc_name" property="vdcName"/>
+        <result column="username" property="username"/>
+        <result column="domain_name" property="domainName"/>
+        <result column="vdc_key" property="vdcKey"/>
+        <result column="user_key" property="userKey"/>
+        <result column="password" property="password"/>
+        <result column="score" property="score"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="projectKey" property="projectKey"/>
+    </resultMap>
+
+
+    <select id="selectVdcById" resultMap="vdcVOResultMap2">
+        SELECT c.*,p.project_key projectKey FROM iaas_virtual_data_center c
+        LEFT JOIN iaas_project p
+        ON p.vdc_id = c.id
+        WHERE p.id =#{id}
+    </select>
+
+
+
+</mapper>

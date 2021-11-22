@@ -1,0 +1,718 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.report.IaasApplyReportMapper">
+    <resultMap id="reportResult" type="com.ecdata.cmp.iaas.entity.dto.report.IaasApplyReport">
+        <result column="businessId" property="businessId"/>
+        <result column="businessGroupName" property="businessGroupName"/>
+        <result column="parentId" property="parentId"/>
+        <collection property="applyInfoList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.report.ApplyInfo">
+            <result column="applyId" property="applyId"/>
+            <collection property="configInfoList"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.report.ConfigInfo">
+                <result column="configId" property="configId"/>
+                <result column="serverName" property="serverName"/>
+                <result column="applyType" property="applyType"/>
+                <result column="model" property="model"/>
+                <result column="areaName" property="areaName"/>
+                <result column="cpuName" property="cpuName"/>
+                <result column="memoryName" property="memoryName"/>
+                <result column="diskName" property="diskName"/>
+                <result column="cpu" property="cpu"/>
+                <result column="memory" property="memory"/>
+                <result column="state" property="state"/>
+                <collection property="storageList"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.report.Storage">
+                    <result column="storageId" property="storageId"/>
+                    <result column="memoryDisk" property="memoryDisk"/>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <resultMap id="configMap" type="com.ecdata.cmp.iaas.entity.dto.report.ConfigInfo">
+        <result column="configId" property="configId"/>
+        <result column="serverName" property="serverName"/>
+        <result column="applyType" property="applyType"/>
+        <result column="model" property="model"/>
+        <result column="cluster_name" property="areaName"/>
+        <result column="cpu" property="cpu"/>
+        <result column="memory" property="memory"/>
+        <result column="state" property="state"/>
+        <result column="is_das" property="isDas" />
+        <result column="is_ssl_vpn" property="isSslVpn" />
+        <result column="is_edr" property="isEdr" />
+        <result column="is_log_audit" property="isLogAudit" />
+        <result column="is_loophole_scan" property="isLoopholeScan" />
+        <result column="is_sinfors" property="isSinfors" />
+        <result column="is_sinfors_check" property="isSinforsCheck" />
+        <result column="is_prevent_change" property="isPreventChange" />
+        <result column="is_next_nfw" property="isNextNfw" />
+        <result column="is_web_nfw" property="isWebNfw" />
+        <result column="is_ips" property="isIps" />
+        <result column="is_ad" property="isAd" />
+        <result column="is_sinfor_ac" property="isSinforAc" />
+        <collection property="storageList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.report.Storage">
+            <result column="storageId" property="storageId"/>
+            <result column="memoryDisk" property="memoryDisk"/>
+        </collection>
+    </resultMap>
+
+    <select id="cloudResourceStatistics" resultMap="reportResult">
+        select
+        t1.id businessId,
+        t1.business_group_name businessGroupName,
+        t1.parent_id parentId,
+        t2.id applyId,
+        t2.state,
+        t3.id configId,
+        t3.server_name serverName,
+        t3.apply_type applyType,
+        t3.model,
+        t3.cpu,
+        t3.memory,
+        t4.id storageId,
+        t4.memory_disk memoryDisk
+        from sys_business_group t1
+        left join iaas_apply_resource t2 on t2.business_group_id=t1.id and t2.is_deleted=0
+        left join iaas_apply_config_info t3 on t2.id=t3.apply_id and t3.is_deleted=0
+        left join iaas_apply_memory_disk t4 on t3.id=t4.config_id and t4.is_deleted=0
+        where t1.is_deleted=0
+        <if test="businessName != null and businessName != ''">
+            and t1.business_group_name LIKE concat('%', #{businessName,jdbcType = VARCHAR} , '%')
+        </if>
+    </select>
+
+    <select id="securityResourceUsageReport" resultMap="configMap">
+        select
+        t3.id configId,
+        t3.server_name serverName,
+        t3.apply_type applyType,
+        t3.model,
+        t3.cpu,
+        t3.memory,
+        t2.state,
+        t4.id storageId,
+        t4.memory_disk memoryDisk,
+        t5.cluster_name,
+        t6.is_das,
+        t6.is_ssl_vpn,
+        t6.is_edr,
+        t6.is_log_audit,
+        t6.is_loophole_scan,
+        t6.is_sinfors,
+        t6.is_sinfors_check,
+        t6.is_prevent_change,
+        t6.is_next_nfw,
+        t6.is_web_nfw,
+        t6.is_ips,
+        t6.is_ad,
+        t6.is_sinfor_ac
+        from iaas_apply_config_info t3
+        left join iaas_apply_resource t2 on t2.id=t3.apply_id and t3.is_deleted=0
+        left join iaas_apply_memory_disk t4 on t3.id=t4.config_id and t4.is_deleted=0
+        left join iaas_cluster t5 on t3.area_id=t5.cluster_key and t5.is_deleted=0
+        left join iaas_apply_service_security_resources t6 on t3.id=t6.config_id and t6.is_deleted=0
+        where t2.is_deleted=0
+    </select>
+
+    <select id="calculationResourceStatistics" resultMap="configMap">
+        select
+        t3.id configId,
+        t3.server_name serverName,
+        t3.apply_type applyType,
+        t3.model,
+        t3.cpu,
+        t3.memory,
+        t2.state,
+        t4.id storageId,
+        t4.memory_disk memoryDisk,
+        t5.cluster_name
+        from iaas_apply_config_info t3
+        left join iaas_apply_resource t2 on t2.id=t3.apply_id and t3.is_deleted=0
+        left join iaas_apply_memory_disk t4 on t3.id=t4.config_id and t4.is_deleted=0
+        left join iaas_cluster t5 on t3.area_id=t5.cluster_key and t5.is_deleted=0
+        where t2.is_deleted=0
+    </select>
+
+    <select id="cloudResourceAssignedStatistics" resultMap="reportResult">
+        select
+        t1.id businessId,
+        t1.business_group_name businessGroupName,
+        t1.parent_id parentId,
+        t2.id applyId,
+        t2.state,
+        t3.id configId,
+        t3.server_name serverName,
+        t3.apply_type applyType,
+        t5.cluster_name areaName,
+        t3.model,
+        t3.cpu,
+        t3.memory,
+        t4.id storageId,
+        t4.memory_disk memoryDisk
+        from sys_business_group t1
+        left join iaas_apply_resource t2 on t2.business_group_id=t1.id and t2.is_deleted=0
+        left join iaas_apply_config_info t3 on t2.id=t3.apply_id and t3.is_deleted=0
+        left join iaas_apply_memory_disk t4 on t3.id=t4.config_id and t4.is_deleted=0
+        left join iaas_cluster t5 on t3.area_id=t5.cluster_key and t5.is_deleted=0
+        where t1.is_deleted=0
+        <if test="map.businessId !=null and map.businessId != ''">
+            and t1.id =#{map.businessId}
+        </if>
+        <if test="map.businessName != null and map.businessName != '' ">
+            and t1.business_group_name LIKE concat('%', #{map.businessName,jdbcType = VARCHAR} , '%')
+        </if>
+        <if test="map.areaId != null and map.areaId !='' ">
+            and t5.cluster_key =#{map.areaId}
+        </if>
+    </select>
+
+    <select id="queryParentName" resultType="java.lang.String">
+        select business_group_name from sys_business_group
+        where is_deleted=0 and id=#{id}
+    </select>
+
+    <select id="queryTowDep" resultType="java.util.Map">
+        select id,business_group_name from sys_business_group
+        where is_deleted=0 and parent_id is null
+    </select>
+
+    <select id="queryArea" resultType="java.util.Map">
+        select cluster_key,cluster_name from iaas_cluster
+        where is_deleted=0
+    </select>
+
+
+
+    <!--资源跟踪报表 cpu 内存-->
+    <select id="resourceTrackingStatement1" resultMap="resourceResult">
+        SELECT
+        sum(ivm.vcpu_total) vcpu_total,
+        sum(ivm.memory_total) memory_total,
+        COUNT(1)
+        FROM
+        iaas_virtual_machine ivm
+        WHERE
+        ivm.id IN (
+        SELECT
+        ivmr.vm_id
+        FROM
+        iaas_virtual_machine_right ivmr
+        WHERE
+        ivmr.relate_id IN (
+        SELECT
+        sbg.id
+        FROM
+        sys_business_group sbg
+        WHERE
+        sbg.parent_id = #{map.parentId}
+        AND sbg.is_deleted = 0
+        )
+        )
+        AND ivm.create_time  &lt;=  #{map.time}
+    </select>
+    <!--资源跟踪报表 存储-->
+    <select id="resourceTrackingStatement2" resultMap="resourceResult">
+        SELECT
+        sum(d.disk_total) system_disk,
+        COUNT(1)
+        FROM
+        iaas_virtual_machine ivm
+        LEFT JOIN iaas_virtual_machine_disk d ON ivm.id = d.vm_id
+        WHERE
+        ivm.id IN (
+        SELECT
+        ivmr.vm_id
+        FROM
+        iaas_virtual_machine_right ivmr
+        WHERE
+        ivmr.relate_id IN (
+        SELECT
+        sbg.id
+        FROM
+        sys_business_group sbg
+        WHERE
+        sbg.parent_id = #{map.parentId}
+        AND sbg.is_deleted = 0
+        )
+        )
+        AND ivm.create_time &lt;=  #{map.time}
+    </select>
+
+    <!--资源跟踪报表 裸金属-->
+    <select id="resourceTrackingStatement3" resultMap="resourceResult">
+        SELECT
+        COUNT(m.id) bmcon,
+        m.detail_id
+        FROM
+        iaas_bare_metal m
+        WHERE
+        m.business_group_id IN (
+        SELECT
+        sbg.id
+        FROM
+        sys_business_group sbg
+        WHERE
+        sbg.parent_id =  #{map.parentId}
+        AND sbg.is_deleted = 0
+        )
+        AND m.create_time &lt;=  #{map.time}
+        GROUP BY  m.detail_id
+    </select>
+
+
+    <resultMap id="resourceResult" type="com.ecdata.cmp.iaas.entity.dto.resource.ResourceResultVO">
+        <result column="vcpu_total" jdbcType="BIGINT" property="cpu"/>
+        <result column="memory_total" jdbcType="BIGINT" property="memory"/>
+        <result column="system_disk" jdbcType="VARCHAR" property="systemDisk"/>
+        <result column="time" jdbcType="VARCHAR" property="time"/>
+        <result column="bmcon" jdbcType="BIGINT" property="bmCon"/>
+        <result column="detail_id" jdbcType="VARCHAR" property="detailId"/>
+    </resultMap>
+
+    <!--资源跟踪报表 安全资源-->
+    <select id="resourceTrackingStatement4" resultMap="resourceResultSafety">
+         select
+        <if test="type == 'nexts'">
+         SUM(sr.next_nfw_num) nexts
+        </if>
+        <if test="type == 'web'">
+         SUM(sr.web_nfw_num) web
+        </if>
+        <if test="type == 'ips'">
+          SUM(sr.ips_num) ips
+        </if>
+        <if test="type == 'ad'">
+          SUM(sr.ad_num) ad
+        </if>
+        <if test="type == 'ac'">
+          SUM(sr.sinfor_ac_num) ac
+        </if>
+        <if test="type == 'das'">
+          COUNT(sr.das) das
+        </if>
+        <if test="type == 'vpn'">
+          COUNT(sr.ssl_vpn)vpn
+        </if>
+        <if test="type == 'edr'">
+          COUNT(sr.edr) edr
+        </if>
+        <if test="type == 'log'">
+          COUNT(sr.log_audit) log
+        </if>
+        <if test="type == 'scan'">
+          COUNT(sr.loophole_scan) scan
+        </if>
+        <if test="type == 'sinfors'">
+          COUNT(sr.sinfors) sinfors
+        </if>
+        <if test="type == 'sinfors_check'">
+          COUNT(sr.sinfors_check) sinfors_check
+        </if>
+        <if test="type == 'changes'">
+         COUNT(sr.is_prevent_change) changes
+        </if>
+        FROM iaas_apply_service_security_resources sr
+        LEFT JOIN iaas_apply_config_info i ON i.id=sr.config_id
+        LEFT JOIN iaas_apply_resource r ON r.id = i.apply_id
+        where  sr.is_deleted=0
+        AND i.is_deleted=0
+        <if test="type == 'nexts'">
+            AND sr.is_next_nfw=0
+        </if>
+        <if test="type == 'web'">
+            AND sr.is_web_nfw =0
+        </if>
+        <if test="type == 'ips'">
+            AND sr.is_ips=0
+        </if>
+        <if test="type == 'ad'">
+            AND sr.is_ad =0
+        </if>
+        <if test="type == 'ac'">
+            AND sr.is_sinfor_ac =0
+        </if>
+        <if test="type == 'das'">
+            AND sr.is_das=0
+        </if>
+        <if test="type == 'vpn'">
+            AND sr.is_ssl_vpn=0
+        </if>
+        <if test="type == 'edr'">
+            AND sr.is_edr =0
+        </if>
+        <if test="type == 'log'">
+            AND sr.is_log_audit = 0
+        </if>
+        <if test="type == 'scan'">
+            AND sr.is_loophole_scan =0
+        </if>
+        <if test="type == 'sinfors'">
+            AND sr.is_sinfors =0
+        </if>
+        <if test="type == 'sinfors_check'">
+            AND sr.is_sinfors_check =0
+        </if>
+        <if test="type == 'changes'">
+          AND sr.is_prevent_change=0
+        </if>
+        AND r.business_group_id in
+         (
+        SELECT
+        sbg.id
+        FROM
+        sys_business_group sbg
+        WHERE
+        sbg.parent_id =  #{parentId}
+        AND sbg.is_deleted = 0
+        )
+        AND sr.create_time &lt;=  #{time}
+    </select>
+
+    <resultMap id="resourceResultSafety" type="com.ecdata.cmp.iaas.entity.dto.resource.ResourceResultSafetyVO">
+        <result column="nexts" jdbcType="BIGINT" property="next"/>
+        <result column="web" jdbcType="BIGINT" property="web"/>
+        <result column="ips" jdbcType="BIGINT" property="ips"/>
+        <result column="ad" jdbcType="BIGINT" property="ad"/>
+        <result column="ac" jdbcType="BIGINT" property="ac"/>
+        <result column="das" jdbcType="BIGINT" property="das"/>
+        <result column="vpn" jdbcType="BIGINT" property="vpn"/>
+        <result column="edr" jdbcType="BIGINT" property="edr"/>
+        <result column="log" jdbcType="BIGINT" property="log"/>
+        <result column="scan" jdbcType="BIGINT" property="scan"/>
+        <result column="sinfors" jdbcType="BIGINT" property="sinfors"/>
+        <result column="sinfors_check" jdbcType="BIGINT" property="sinforsCheck"/>
+        <result column="changes" jdbcType="BIGINT" property="changes"/>
+    </resultMap>
+
+    <!--云平台资源分配-->
+    <!--1.部门 系统数量-->
+    <select id="getDeptCount" resultMap="deptCountMap">
+        select
+        distinct
+        ip.id project_id,
+        sbg.id business_group_id,
+        ip.project_name,
+        sbg.business_group_name
+        FROM
+        iaas_project ip
+        LEFT JOIN iaas_virtual_machine ivm ON ip.id = ivm.project_id
+        LEFT JOIN iaas_virtual_machine_right ivmr on ivmr.vm_id = ivm.id
+        LEFT JOIN sys_business_group sbg ON sbg.id = ivmr.relate_id
+        WHERE
+        -- AND sbg.is_deleted =0
+         ip.id  = #{projectId}
+        ORDER BY
+        ip.project_name
+    </select>
+    <resultMap id="deptCountMap" type="com.ecdata.cmp.iaas.entity.dto.distribution.DeptCountVO">
+        <result column="project_id" jdbcType="BIGINT" property="projectId"/>
+        <result column="business_group_id" jdbcType="BIGINT" property="businessGroupId"/>
+        <result column="project_name" jdbcType="VARCHAR" property="projectName"/>
+        <result column="business_group_name" jdbcType="VARCHAR" property="businessGroupName"/>
+    </resultMap>
+    <!--2.虚拟机cup 内存 数量-->
+    <select id="getVmCpuAndCount" resultMap="cpuAndCountMap">
+        select
+        ip.id project_id,
+        ic.remark,
+        SUM(ivm.vcpu_total) vcpu_total,
+        SUM(ivm.memory_total) memory_total,
+        count(ivm.vm_name) vmcon
+        FROM iaas_project ip
+        LEFT JOIN iaas_virtual_machine ivm ON ip.id = ivm.project_id
+        LEFT JOIN iaas_cluster ic ON ic.cluster_key = ivm.azone_name
+        where  ip.id = #{projectId}
+        AND ic.id = #{azonId}
+        AND ivm.is_deleted =0
+        GROUP BY ic.remark
+    </select>
+    <!--3.虚拟机存储盘 -->
+    <select id="getVmDisk"  resultMap="cpuAndCountMap">
+        select
+        ip.id project_id,
+        ic.remark,
+        SUM(ivmd.disk_total) disk_total
+        FROM iaas_project ip
+        LEFT JOIN iaas_virtual_machine ivm ON ip.id = ivm.project_id
+        LEFT JOIN iaas_cluster ic ON ic.cluster_key = ivm.azone_name
+        LEFT JOIN iaas_virtual_machine_disk ivmd ON ivm.id = ivmd.vm_id
+        where    ip.id= #{projectId}
+        AND ic.id = #{azonId}
+        AND ivm.is_deleted =0
+        GROUP BY ic.remark ,ip.id
+    </select>
+
+    <!--4.裸金属数量-->
+    <select id="getBareMetalCount"  resultMap="cpuAndCountMap">
+        select
+        ip.id project_id,
+        ibm.detail_id,
+        ic.remark,
+        COUNT(ibm.id) ibmcon
+        FROM iaas_project ip
+        LEFT JOIN iaas_bare_metal ibm ON ip.id=ibm.project_id
+        LEFT JOIN iaas_cluster ic ON ic.remark = ibm.azone_info
+        where ip.id  =#{projectId}
+        AND ic.id = #{azonId}
+        GROUP BY ip.id,ibm.detail_id
+    </select>
+
+
+    <resultMap id="cpuAndCountMap" type="com.ecdata.cmp.iaas.entity.dto.distribution.CpuAndCountVO">
+        <result column="project_id" jdbcType="BIGINT" property="projectId"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="vcpu_total" jdbcType="VARCHAR" property="vcpu"/>
+        <result column="memory_total" jdbcType="VARCHAR" property="memory"/>
+        <result column="vmcon" jdbcType="VARCHAR" property="vmcon"/>
+        <result column="disk_total" jdbcType="VARCHAR" property="disk"/>
+        <result column="detail_id" jdbcType="VARCHAR" property="detail"/>
+        <result column="ibmcon" jdbcType="VARCHAR" property="ibmcon"/>
+    </resultMap>
+
+
+    <resultMap id="inTransitCMDMap" type="com.ecdata.cmp.iaas.entity.dto.statistics.InTransitCMDVO">
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="cpu" jdbcType="BIGINT" property="cpu"/>
+        <result column="memory" jdbcType="BIGINT" property="memory"/>
+        <result column="disk" jdbcType="BIGINT" property="disk"/>
+    </resultMap>
+
+    <!--云平台资源统计 在途 cpu 内存 磁盘 -->
+    <select id="getInTransitCMD" resultMap="inTransitCMDMap">
+        SELECT
+        c.id,
+        c.remark,
+        sum(i.cpu) cpu,
+        sum(i.memory) memory,
+        sum(d.memory_disk) disk
+        FROM
+        iaas_apply_resource r
+        LEFT JOIN iaas_apply_config_info i ON r.id = i.apply_id
+        LEFT JOIN iaas_apply_memory_disk d ON i.id = d.config_id
+        LEFT JOIN iaas_project p ON r.project_id = p.id
+        LEFT JOIN iaas_virtual_data_center c ON c.id = p.vdc_id
+        WHERE 1=1
+        AND  r.state=1
+        AND i.operation_type=1
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND  c.remark like  concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+        </if>
+        AND r.business_group_id in(
+            SELECT g.id
+            FROM sys_business_group g
+            LEFT JOIN sys_business_group_member m ON g.id = m.business_group_id
+            WHERE m.user_id = #{map.userId}
+        )
+        GROUP BY
+        c.id
+    </select>
+
+
+    <resultMap id="inTransitBMMap" type="com.ecdata.cmp.iaas.entity.dto.statistics.InTransitBMVO">
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="model" jdbcType="BIGINT" property="model"/>
+        <result column="con" jdbcType="BIGINT" property="con"/>
+    </resultMap>
+
+    <!--云平台资源统计 在途 裸金属 -->
+    <select id="getInTransitBM" resultMap="inTransitBMMap">
+        SELECT
+        c.id,
+        c.remark,
+        i.model,
+        count(i.id) con
+        FROM
+        iaas_apply_resource r
+        LEFT JOIN iaas_apply_config_info i ON r.id = i.apply_id
+        LEFT JOIN iaas_project p ON r.project_id = p.id
+        LEFT JOIN iaas_virtual_data_center c ON c.id = p.vdc_id
+
+         WHERE
+        i.apply_type=2
+        AND  r.state=1
+        AND i.operation_type=1
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND  c.remark like  concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+        </if>
+        AND
+        i.model is not null
+        AND r.business_group_id in(
+            SELECT g.id
+            FROM sys_business_group g
+            LEFT JOIN sys_business_group_member m ON g.id = m.business_group_id
+            WHERE m.user_id = #{map.userId}
+        )
+        GROUP BY
+        c.id ,i.model
+    </select>
+
+
+    <resultMap id="distributionVMMap" type="com.ecdata.cmp.iaas.entity.dto.statistics.DistributionVMVO">
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="vmcon" jdbcType="BIGINT" property="vmcon"/>
+        <result column="cpu" jdbcType="BIGINT" property="cpu"/>
+        <result column="memory" jdbcType="BIGINT" property="memory"/>
+        <result column="disk" jdbcType="BIGINT" property="disk"/>
+    </resultMap>
+
+    <!--已分配虚拟机信息-->
+    <select id="getDistributionVM" resultMap="distributionVMMap">
+        select
+        c.id,
+        c.remark,
+        COUNT(distinct m.id) vmcon,
+        SUM(m.vcpu_total) cpu,
+        SUM(m.memory_total) memory,
+        SUM(d.disk_total) disk
+        FROM iaas_virtual_machine m
+        LEFT JOIN iaas_project p ON m.project_id = p.id
+        LEFT JOIN iaas_virtual_data_center c ON c.id = p.vdc_id
+        LEFT JOIN iaas_virtual_machine_right r ON r.vm_id = m.id
+        LEFT JOIN iaas_virtual_machine_disk d ON d.vm_id = m.id
+        where m.is_deleted=0
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND  c.remark like  concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+        </if>
+        AND r.relate_id in(
+            SELECT g.id
+            FROM sys_business_group g
+            LEFT JOIN sys_business_group_member m ON g.id = m.business_group_id
+            WHERE m.user_id = #{map.userId}
+        )
+        GROUP BY c.id
+    </select>
+
+    <!--已分配裸金属信息-->
+    <select id="getDistributionBM" resultMap="inTransitBMMap">
+        SELECT
+        c.id,
+        c.remark,
+        m.detail_id model,
+        COUNT(c.id) con
+        FROM
+        iaas_bare_metal m
+        LEFT JOIN iaas_project p ON m.project_id = p.id
+        LEFT JOIN iaas_virtual_data_center c ON c.id = p.vdc_id
+        where 1=1
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND  c.remark like  concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+        </if>
+        AND m.business_group_id in(
+            SELECT g.id
+            FROM sys_business_group g
+            LEFT JOIN sys_business_group_member m ON g.id = m.business_group_id
+            WHERE m.user_id = #{map.userId}
+        )
+        GROUP BY c.id,m.detail_id
+    </select>
+
+
+
+
+    <!--云平台资源使用报表 计算资源-->
+    <!--虚拟机资源cpu/内存/存储 已分配-->
+    <select id="getEmployVmDistribution" resultMap="EmployVmMap">
+      SELECT
+        <if test="type == 'vCpu'">
+        SUM(m.vcpu_total) cpu
+        </if>
+        <if test="type == 'memory'">
+        SUM(m.memory_total) memory
+        </if>
+        <if test="type == 'disk'">
+        SUM(d.disk_total) disk
+        </if>
+      FROM
+        iaas_virtual_machine m
+      LEFT JOIN iaas_cluster c ON m.azone_name = c.cluster_key
+      LEFT JOIN iaas_virtual_machine_disk d ON m.id = d.vm_id
+      WHERE m.is_deleted=0
+	  AND c.remark =#{remark}
+    </select>
+
+    <!--虚拟机在途数-->
+    <select id="getEmployInTransitVm" resultMap="EmployVmMap">
+        SELECT
+        <if test="type == 'vCpu'">
+        SUM(i.cpu) cpu
+        </if>
+        <if test="type == 'memory'">
+        SUM(i.memory) memory
+        </if>
+        <if test="type == 'disk'">
+        SUM(i.system_disk) disk
+        </if>
+        FROM iaas_apply_config_info i
+        LEFT JOIN iaas_cluster c ON i.area_id = c.cluster_key
+        LEFT JOIN iaas_apply_resource r ON r.id = i.apply_id
+        WHERE i.is_deleted=0
+        AND i.apply_type=1
+        AND  r.state=1
+        AND i.operation_type=1
+        AND c.remark is NOT NULL
+        AND c.remark =#{remark}
+    </select>
+
+    <!--合计-->
+    <select id="getEmployVmBmSum" resultMap="EmployVmMap">
+        select
+        s.areaSum
+        FROM
+        iaas_area_sum s
+        where s.serverName =#{type}
+        AND areaName=#{remark}
+    </select>
+
+    <resultMap id="EmployVmMap" type="com.ecdata.cmp.iaas.entity.dto.employ.EmployVmVO">
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="cpu" jdbcType="BIGINT" property="cpu"/>
+        <result column="memory" jdbcType="BIGINT" property="memory"/>
+        <result column="disk" jdbcType="BIGINT" property="disk"/>
+        <result column="areaSum" jdbcType="BIGINT" property="areaSum"/>
+    </resultMap>
+
+
+
+    <!--裸金属已分配-->
+    <select id="getEmployBmDistribution" resultMap="EmployBmMap">
+         SELECT
+        count(m.id) bmcon
+        FROM
+        iaas_bare_metal m
+        LEFT JOIN  iaas_cluster c ON c.remark = m.azone_info
+        WHERE m.is_deleted=0
+		AND m.detail_id =#{type}
+        AND m.azone_info =#{remark}
+    </select>
+
+    <!--裸金属在途数-->
+    <select id="getEmployInTransitBM" resultMap="EmployBmMap">
+        SELECT
+        COUNT(i.id) bmcon
+        FROM iaas_apply_config_info i
+        LEFT JOIN iaas_cluster c ON i.area_id = c.cluster_key
+        LEFT JOIN iaas_apply_resource r ON r.id = i.apply_id
+        WHERE i.is_deleted=0
+        AND i.apply_type=2
+        AND  r.state=1
+        AND i.operation_type=1
+        AND c.remark is NOT NULL
+		AND i.model =#{type}
+        AND c.remark =#{remark}
+    </select>
+
+    <resultMap id="EmployBmMap" type="com.ecdata.cmp.iaas.entity.dto.employ.EmployBmVO">
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="model" jdbcType="VARCHAR" property="model"/>
+        <result column="bmcon" jdbcType="BIGINT" property="bmcon"/>
+    </resultMap>
+
+</mapper>

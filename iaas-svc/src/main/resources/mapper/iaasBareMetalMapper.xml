@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasBareMetalMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.dto.BareMetalVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="detail_id" property="detailId"/>
+        <result column="nativie_id" property="nativieId"/>
+        <result column="name" property="value"/>
+        <result column="private_ips" property="privateIps"/>
+        <result column="detail_name" property="detailName"/>
+        <result column="vcpus" property="vcpus"/>
+        <result column="disk" property="disk"/>
+        <result column="ram" property="ram"/>
+        <result column="floating_ip" property="floatingIp"/>
+        <result column="resource_pool_name" property="resourcePoolName"/>
+        <result column="biz_region_name" property="bizRegionName"/>
+        <result column="region_id" property="regionId"/>
+        <result column="azone_info" property="azoneInfo"/>
+    </resultMap>
+
+    <select id="getBareMetalVOPage" parameterType="map" resultMap="BaseResultMap">
+            select
+            bm.id,
+            bm.project_id,
+            bm.detail_id,
+            bm.nativie_id,
+            bm.`name`,
+            bm.`status`,
+            bm.private_ips,
+            bm.detail_name,
+            bm.vcpus,
+            bm.disk,
+            bm.ram,
+            bm.floating_ip,
+            bm.resource_pool_name,
+            bm.biz_region_name,
+            bm.region_id,
+            bm.azone_info
+            FROM
+            iaas_bare_metal bm
+            where bm.project_id=#{map.projectId}
+            AND bm.is_deleted=0
+
+    </select>
+
+
+</mapper>

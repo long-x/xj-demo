@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysChargeableMapper">
+
+    <update id="modifyUpdateRecord">
+        update sys_chargeable
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <resultMap id="chargeInfo" type="com.ecdata.cmp.user.dto.chargeable.SysChargeableVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="area_id" property="areaId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="charging_type" property="chargingType"/>
+        <result column="monetary_unit" property="monetaryUnit"/>
+        <result column="period" property="period"/>
+        <result column="price" property="price"/>
+        <result column="type" property="type"/>
+        <result column="sub_type" property="subType"/>
+        <result column="unit" property="unit"/>
+        <result column="flavor_id" property="flavorId"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="pro_id" property="proId"/>
+        <result column="provider_name" property="providerName"/>
+        <result column="pl_id" property="plId"/>
+        <result column="rp_pro_id" property="rpProId"/>
+        <result column="ar_area_id" property="arAreaId"/>
+        <result column="area_name" property="areaName"/>
+        <result column="cl_clust_id" property="clClustId"/>
+        <result column="cluster_name" property="clusterName"/>
+        <result column="is_deleted" property="isDeleted"/>
+
+    </resultMap>
+
+
+    <select id="qryChargeInfo" resultMap="chargeInfo">
+
+SELECT
+	a.*,
+	p.id AS pro_id,
+	p.provider_name ,
+	rp.id AS pl_id,
+	rp.provider_id as rp_pro_id ,
+	rp.pool_name ,
+	ar.id AS ar_area_id,
+	ar.area_name,
+	cl.id AS cl_clust_id,
+	cl.cluster_name
+FROM
+	sys_chargeable a
+	LEFT JOIN iaas_provider p ON  a.provider_id = p.id
+	LEFT JOIN iaas_resource_pool rp ON  a.pool_id = rp.id
+	LEFT JOIN iaas_area ar ON  ar.id = a.area_id
+	LEFT JOIN iaas_cluster cl ON  cl.id = a.cluster_id and cl.area_id = ar.id
+    where a.is_deleted =0
+
+
+
+    </select>
+
+
+
+</mapper>

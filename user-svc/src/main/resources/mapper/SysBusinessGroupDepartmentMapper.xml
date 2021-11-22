@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysBusinessGroupDepartmentMapper">
+
+
+    <!--由于每次新增，修改，删除不太好判断，所以都是先批量删除，然后批量插入 确保每次都是新增-->
+    <!--业务组 移除/关联 部门 根据业务组id-->
+    <delete id="deleteDepartmentByGroupId">
+        DELETE FROM sys_business_department
+        WHERE business_group_id = #{businessGroupId}
+    </delete>
+
+    <!--移除部门-->
+    <delete id="deleteDepartment" parameterType="long">
+        DELETE FROM sys_business_department
+        WHERE business_group_id = #{businessGroupId}
+        AND department_id =#{departmentId}
+    </delete>
+
+    <select id="getDepartmentList" resultMap="resultMap" parameterType="long">
+        SELECT
+          t1.id,t1.department_name,department_alias
+        FROM
+          sys_business_department t2
+        LEFT JOIN
+          sys_department t1
+        ON
+          t1.id = t2.department_id
+        WHERE
+          t2.business_group_id=#{id}
+        GROUP BY t1.id
+    </select>
+    
+    <select id="getGroupIdByDepartment"  resultMap="departmentMap" parameterType="long">
+        select t.business_group_id FROM
+        sys_business_department t
+        where t.department_id=#{departmentId}
+    </select>
+
+
+    <resultMap id="resultMap" type="com.ecdata.cmp.user.dto.DepartmentVO">
+        <result column="id" property="id"/>
+        <result column="department_name" property="departmentName"/>
+        <result column="department_alias" property="departmentAlias"/>
+    </resultMap>
+
+    <resultMap id="departmentMap" type="com.ecdata.cmp.user.entity.SysBusinessGroupDepartment">
+        <result column="id" property="id"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="department_id" property="departmentId"/>
+    </resultMap>
+</mapper>

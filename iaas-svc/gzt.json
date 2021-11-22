@@ -1,0 +1,319 @@
+{
+  "responseData": {
+    "total": 14,
+    "data": [
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.07",
+        "cloud_vm#diskUsage": "20.40",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "8.23",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0BEFBE29344637F9A2A58530AA21D923",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-CentOs"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.23",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "0BEFBE29344637F9A2A58530AA21D923",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "fc201900-6a4a-4fdf-8616-8388a9a7fabf"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "1.70",
+        "cloud_vm#diskUsage": "2.10",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "5.84",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "32F9CF0F3148374C898DAA6B52A09BE7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_SW_JBHS_OTH_03"
+        },
+        "cloud_vm#floatingIp": "10.232.0.15",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.15",
+        "cloud_vm#flavor": "16U64G|16vCPU|64GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "94123772D10E30D1859E49491A734F14",
+        "cloud_vm#resId": "32F9CF0F3148374C898DAA6B52A09BE7",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f01a8ef5-ada6-4f52-b37c-e88c72707eef"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "1.62",
+        "cloud_vm#diskUsage": "3.14",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "9.42",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C33EB77FB3F736A7824C76BF918A3624",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_SW_JBHS_OTH_02"
+        },
+        "cloud_vm#floatingIp": "10.232.0.14",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.14",
+        "cloud_vm#flavor": "16U64G|16vCPU|64GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81",
+        "cloud_vm#resId": "C33EB77FB3F736A7824C76BF918A3624",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f1978a04-58e3-48ed-97c3-308599f5b9ef"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.08",
+        "cloud_vm#diskUsage": "3.30",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "6.07",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "1D87801ACAAE334E976D7C17B066FE55",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_SW_JBHS_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.232.0.10",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.11",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC",
+        "cloud_vm#resId": "1D87801ACAAE334E976D7C17B066FE55",
+        "cloud_vm#osVersion": "Ubuntu Server 18.04.2 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e186d846-b708-480e-958d-db747263cda9"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.05",
+        "cloud_vm#diskUsage": "21.17",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "8.47",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C264DD1AD38E31B4B79B77D1A39B91F7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-Oraclelinux"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.22",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81",
+        "cloud_vm#resId": "C264DD1AD38E31B4B79B77D1A39B91F7",
+        "cloud_vm#osVersion": "Oracle Linux 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b51ad785-1783-48a9-99fe-8e6087c0badd"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.13",
+        "cloud_vm#diskUsage": "8.98",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "8.17",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4793B61937993CDEB8654768FAA3CCFC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-Ubuntu"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.25",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "4793B61937993CDEB8654768FAA3CCFC",
+        "cloud_vm#osVersion": "Ubuntu Server 18.04.2 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "426c5db6-4144-453c-97ad-2f001c440d9e"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.07",
+        "cloud_vm#diskUsage": "1.48",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "2.86",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "9A5CC834E02136D3B0CEB1AD736D11A2",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_SW_JBHS_DB_01"
+        },
+        "cloud_vm#floatingIp": "10.232.0.11",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.10",
+        "cloud_vm#flavor": "8U64G|8vCPU|64GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC",
+        "cloud_vm#resId": "9A5CC834E02136D3B0CEB1AD736D11A2",
+        "cloud_vm#osVersion": "Ubuntu Server 18.04.2 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "124a4d15-a930-46ca-820a-c7b7da518abf"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.19",
+        "cloud_vm#diskUsage": "22.69",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "9.11",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "48A1E7AA73FD33A2A46BC7EBEB46C44F",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Template-2016"
+        },
+        "cloud_vm#floatingIp": "10.232.0.38",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.20",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "48A1E7AA73FD33A2A46BC7EBEB46C44F",
+        "cloud_vm#osVersion": "Windows Server 2016 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a2cef611-0cee-4e74-aec0-47c59c95bef6"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.16",
+        "cloud_vm#diskUsage": "15.73",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "8.88",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C699D3117A463063A888D9B4E101AB3A",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Template-2008"
+        },
+        "cloud_vm#floatingIp": "10.232.0.37",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.19",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "C699D3117A463063A888D9B4E101AB3A",
+        "cloud_vm#osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b47b507d-7733-4e8a-b567-65406d69d8ab"
+      },
+      {
+        "cloud_vm#projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+        "cloud_vm#status": "active",
+        "cloud_vm#cpuUsage": "0.22",
+        "cloud_vm#diskUsage": "20.37",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#memoryUsage": "8.51",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "9F44E8237296338EB9295C888CBA5A78",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-Redhat"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.16.0.24",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_SW",
+        "cloud_vm#physicalHostId": "94123772D10E30D1859E49491A734F14",
+        "cloud_vm#resId": "9F44E8237296338EB9295C888CBA5A78",
+        "cloud_vm#osVersion": "Red Hat Enterprise Linux 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "fa038b47-9774-4473-b20c-bfc5a09dc436"
+      }
+    ]
+  },
+  "resultCode": "RES.000001",
+  "resultMessage": "getBussiness successfully."
+}

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasVirtualMachineMonitorMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasVirtualMachineMonitor">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="vm_id" jdbcType="BIGINT" property="vmId"/>
+        <result column="host_id" jdbcType="BIGINT" property="hostId"/>
+        <result column="cluster_id" jdbcType="BIGINT" property="clusterId"/>
+        <result column="cluster_key" jdbcType="BIGINT" property="clusterKey"/>
+        <result column="cpu_total" jdbcType="DOUBLE" property="cpuTotal"/>
+        <result column="cpu_used" jdbcType="DOUBLE" property="cpuUsed"/>
+        <result column="cpu_usage_rate" jdbcType="DOUBLE" property="cpuUsageRate"/>
+        <result column="vcpu_total" jdbcType="DOUBLE" property="vcpuTotal"/>
+        <result column="vcpu_used" jdbcType="DOUBLE" property="vcpuUsed"/>
+        <result column="vcpu_usage_rate" jdbcType="DOUBLE" property="vcpuUsageRate"/>
+        <result column="memory_total" jdbcType="DOUBLE" property="memoryTotal"/>
+        <result column="memory_used" jdbcType="DOUBLE" property="memoryUsed"/>
+        <result column="memory_usage_rate" jdbcType="DOUBLE" property="memoryUsageRate"/>
+        <result column="disk_total" jdbcType="DOUBLE" property="diskTotal"/>
+        <result column="disk_used" jdbcType="DOUBLE" property="diskUsed"/>
+        <result column="disk_usage_rate" jdbcType="DOUBLE" property="diskUsageRate"/>
+        <result column="nic_byte_in" jdbcType="DOUBLE" property="nicByteIn"/>
+        <result column="nic_byte_out" jdbcType="DOUBLE" property="nicByteOut"/>
+        <result column="disk_io_out" jdbcType="DOUBLE" property="diskIoOut"/>
+        <result column="disk_io_in" jdbcType="DOUBLE" property="diskIoIn"/>
+        <result column="cpu_ready_time" jdbcType="BIGINT" property="cpuReadyTime"/>
+        <result column="disk_out_ps" jdbcType="INTEGER" property="diskOutPs"/>
+        <result column="disk_in_ps" jdbcType="INTEGER" property="diskInPs"/>
+        <result column="disk_read_delay" jdbcType="INTEGER" property="diskReadDelay"/>
+        <result column="disk_write_delay" jdbcType="INTEGER" property="diskWriteDelay"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapVO" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineMonitorVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="vm_id" jdbcType="BIGINT" property="vmId"/>
+        <result column="cluster_id" jdbcType="BIGINT" property="clusterId"/>
+        <result column="cluster_key" jdbcType="BIGINT" property="clusterKey"/>
+        <result column="cpu_total" jdbcType="DOUBLE" property="cpuTotal"/>
+        <result column="cpu_used" jdbcType="DOUBLE" property="cpuUsed"/>
+        <result column="cpu_usage_rate" jdbcType="DOUBLE" property="cpuUsageRate"/>
+        <result column="vcpu_total" jdbcType="DOUBLE" property="vcpuTotal"/>
+        <result column="vcpu_used" jdbcType="DOUBLE" property="vcpuUsed"/>
+        <result column="vcpu_usage_rate" jdbcType="DOUBLE" property="vcpuUsageRate"/>
+        <result column="memory_total" jdbcType="DOUBLE" property="memoryTotal"/>
+        <result column="memory_used" jdbcType="DOUBLE" property="memoryUsed"/>
+        <result column="memory_usage_rate" jdbcType="DOUBLE" property="memoryUsageRate"/>
+        <result column="disk_total" jdbcType="DOUBLE" property="diskTotal"/>
+        <result column="disk_used" jdbcType="DOUBLE" property="diskUsed"/>
+        <result column="disk_usage_rate" jdbcType="DOUBLE" property="diskUsageRate"/>
+        <result column="nic_byte_in" jdbcType="DOUBLE" property="nicByteIn"/>
+        <result column="nic_byte_out" jdbcType="DOUBLE" property="nicByteOut"/>
+        <result column="disk_io_out" jdbcType="DOUBLE" property="diskIoOut"/>
+        <result column="disk_io_in" jdbcType="DOUBLE" property="diskIoIn"/>
+        <result column="cpu_ready_time" jdbcType="BIGINT" property="cpuReadyTime"/>
+        <result column="disk_out_ps" jdbcType="INTEGER" property="diskOutPs"/>
+        <result column="disk_in_ps" jdbcType="INTEGER" property="diskInPs"/>
+        <result column="disk_read_delay" jdbcType="INTEGER" property="diskReadDelay"/>
+        <result column="disk_write_delay" jdbcType="INTEGER" property="diskWriteDelay"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="hostId" property="hostId"/>
+        <result column="hostName" property="hostName"/>
+        <result column="clusterId" property="clusterId"/>
+        <result column="clusterName" property="clusterName"/>
+        <result column="timeRange" property="timeRange"/>
+        <result column="usageRate" property="usageRate"/>
+        <result column="radioType" property="radioType"/>
+        <result column="count" property="count"/>
+        <result column="providerId" property="providerId"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                vm_id,
+                provider_id,
+                host_id,
+                cpu_total,
+                cluster_id,
+                cluster_key,
+                cpu_used,
+                cpu_usage_rate,
+                vcpu_total,
+                vcpu_used,
+                vcpu_usage_rate,
+                memory_total,
+                memory_used,
+                memory_usage_rate,
+                disk_total,
+                disk_used,
+                disk_usage_rate,
+                nic_byte_in,
+                nic_byte_out,
+                nic_byte_rate,
+                disk_io_out,
+                disk_io_in,
+                disk_io_rate,
+                cpu_ready_time,
+                disk_out_ps,
+                disk_in_ps,
+                disk_read_delay,
+                disk_write_delay,
+                remark,
+                create_user,
+                create_time,
+                is_deleted,
+                type
+    </sql>
+
+    <select id="queryVMMVoInfoByType" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from iaas_virtual_machine_monitor where type=#{type} and is_deleted=0
+    </select>
+
+    <!--集群菜单：趋势统计list-->
+    <select id="getClusterRateByVMMV" resultMap="BaseResultMapVO"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineMonitorVO">
+        select d.time createTimeStr,ifnull(t1.count1,0) count1,ifnull(t2.count2,0) count2,ifnull(t3.count3,0)
+        count3,ifnull(t4.count4,0) count4,ifnull(t5.count5,0) count5 from
+        iaas_day_times d left join
+        (SELECT date(ivmm.create_time) createTimeStr,
+        count(DISTINCT ivmm.cluster_id) count1
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql2"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 2 GROUP BY
+        date(ivmm.create_time) ) t1 on d.time =t1.createTimeStr
+        left join
+        (SELECT 40 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.cluster_id) count2
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql4"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 2 GROUP BY
+        date(ivmm.create_time) ) t2
+        on d.time=t2.createTimeStr left join(
+        SELECT 60 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.cluster_id) count3
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql6"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 2 GROUP BY
+        date(ivmm.create_time)) t3
+        on d.time=t3.createTimeStr left join(
+        SELECT 80 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.cluster_id) count4
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql8"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 2 GROUP BY
+        date(ivmm.create_time)) t4
+        on d.time=t4.createTimeStr left join(
+        SELECT 100 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.cluster_id) count5
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+        <include refid="queryRateSql10"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 2 GROUP BY
+        date(ivmm.create_time)) t5
+        on d.time=t5.createTimeStr
+    </select>
+
+    <!--  集群分页列表-->
+    <select id="getClusterRateByVMMVPage" resultMap="BaseResultMapVO" parameterType="map">
+        select ivmm.id,ic.id clusterId,ic.remark clusterName,ivmm.create_time,
+        ifnull(ivmm.cpu_usage_rate,0) cpu_usage_rate,
+        ifnull(ivmm.memory_usage_rate,0) memory_usage_rate,ip.id providerId
+        from iaas_virtual_machine_monitor ivmm
+        left join iaas_cluster ic on ivmm.cluster_id=ic.id and ic.is_deleted=0
+        left join iaas_provider ip on ivmm.provider_id=ip.id and ip.is_deleted=0
+        where ivmm.is_deleted=0 and ivmm.type=2
+        <include refid="queryTimeAndClusterMapSql"/>
+        ORDER BY ivmm.create_time DESC
+    </select>
+
+    <!--宿主机菜单：趋势统计list-->
+    <select id="getHostRateByVMMV" resultMap="BaseResultMapVO"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineMonitorVO">
+        select d.time createTimeStr,ifnull(t1.count1,0) count1,ifnull(t2.count2,0) count2,ifnull(t3.count3,0)
+        count3,ifnull(t4.count4,0) count4,ifnull(t5.count5,0) count5
+        from iaas_day_times d
+        left join
+        (SELECT date(ivmm.create_time)
+        createTimeStr, count(DISTINCT ivmm.host_id) count1
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql2"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 3 GROUP BY date(ivmm.create_time) ) t1 on d.time=t1.createTimeStr
+        left join
+        (SELECT 40 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.host_id) count2
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql4"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 3 GROUP BY date(ivmm.create_time) ) t2
+        on d.time=t2.createTimeStr left join(
+        SELECT 60 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.host_id) count3
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql6"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 3 GROUP BY date(ivmm.create_time)) t3
+        on d.time=t3.createTimeStr left join(
+        SELECT 80 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.host_id) count4
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql8"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 3 GROUP BY date(ivmm.create_time)) t4
+        on d.time=t4.createTimeStr left join(
+        SELECT 100 type,date(ivmm.create_time) createTimeStr, count(DISTINCT ivmm.host_id) count5
+        FROM iaas_virtual_machine_monitor ivmm where ivmm.is_deleted = 0
+
+        <include refid="queryRateSql10"/>
+        <include refid="queryTimeSql"/>
+        AND ivmm.type = 3 GROUP BY date(ivmm.create_time)) t5
+        on d.time=t5.createTimeStr
+    </select>
+
+    <sql id="queryRateSql2">
+        <choose>
+            <when test="usageRate==1">
+                and ivmm.cpu_usage_rate>=0 and ivmm.cpu_usage_rate &lt; 20
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate>=0 and ivmm.memory_usage_rate &lt; 20
+            </otherwise>
+        </choose>
+    </sql>
+    <sql id="queryRateSql4">
+        <choose>
+            <when test="usageRate==1">
+                and ivmm.cpu_usage_rate>=20 and ivmm.cpu_usage_rate &lt; 40
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate>=20 and ivmm.memory_usage_rate &lt; 40
+            </otherwise>
+        </choose>
+    </sql>
+    <sql id="queryRateSql6">
+        <choose>
+            <when test="usageRate==1">
+                and ivmm.cpu_usage_rate>=40 and ivmm.cpu_usage_rate &lt; 60
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate>=40 and ivmm.memory_usage_rate &lt; 60
+            </otherwise>
+        </choose>
+    </sql>
+    <sql id="queryRateSql8">
+        <choose>
+            <when test="usageRate==1">
+                and ivmm.cpu_usage_rate>=60 and ivmm.cpu_usage_rate &lt; 80
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate>=60 and ivmm.memory_usage_rate &lt; 80
+            </otherwise>
+        </choose>
+    </sql>
+    <sql id="queryRateSql10">
+        <choose>
+            <when test="usageRate==1">
+                and ivmm.cpu_usage_rate>=80 and ivmm.cpu_usage_rate &lt;= 100
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate>=80 and ivmm.memory_usage_rate &lt;= 100
+            </otherwise>
+        </choose>
+    </sql>
+
+    <sql id="queryTimeSql">
+        <if test="clusterId!=null and clusterId!=0">
+            and ivmm.cluster_id =#{clusterId,jdbcType = VARCHAR}
+        </if>
+        <choose>
+            <when test="timeRange==1">
+                and DATE_SUB(CURDATE(), INTERVAL 7 DAY) &lt;= date(ivmm.create_time)
+            </when>
+            <when test="timeRange==2">
+                and DATE_SUB(CURDATE(), INTERVAL 30 DAY) &lt;= date(ivmm.create_time)
+            </when>
+            <when test="timeRange==3">
+                and ivmm.create_time between date_sub(now(),interval 3 month) and now()
+            </when>
+            <when test="timeRange==4">
+                and ivmm.create_time between date_sub(now(),interval 6 month) and now()
+            </when>
+            <when test="timeRange==5">
+                and year(ivmm.create_time)=year(date_sub(now(),interval 1 year))
+            </when>
+            <otherwise>
+                and ivmm.create_time is not null
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!--   宿主机分页列表-->
+    <select id="getHostRateByVMMVPage" resultMap="BaseResultMapVO" parameterType="map">
+        SELECT ih.id hostId, ih.host_name hostName,ifnull(ivmm.cpu_usage_rate, 0)
+        cpu_usage_rate,ifnull(ivmm.memory_usage_rate, 0) memory_usage_rate,ivmm.create_time
+        FROM iaas_virtual_machine_monitor ivmm
+        LEFT JOIN iaas_cluster ic ON ivmm.cluster_id = ic.id AND ic.is_deleted = 0
+        LEFT JOIN iaas_host ih ON ivmm.host_id = ih.id AND ih.is_deleted = 0
+        WHERE ivmm.is_deleted = 0 AND ivmm.type =3
+        <include refid="queryTimeAndClusterMapSql"/>
+        ORDER BY ivmm.create_time DESC
+    </select>
+
+    <sql id="queryTimeAndClusterMapSql">
+        <choose>
+            <when test="map.timeRange==1">
+                and DATE_SUB(CURDATE(), INTERVAL 7 DAY) &lt;= date(ivmm.create_time)
+            </when>
+            <when test="map.timeRange==2">
+                and DATE_SUB(CURDATE(), INTERVAL 30 DAY) &lt;= date(ivmm.create_time)
+            </when>
+            <when test="map.timeRange==3">
+                and ivmm.create_time between date_sub(now(),interval 3 month) and now()
+            </when>
+            <when test="map.timeRange==4">
+                and ivmm.create_time between date_sub(now(),interval 6 month) and now()
+            </when>
+            <when test="map.timeRange==5">
+                and year(ivmm.create_time)=year(date_sub(now(),interval 1 year))
+            </when>
+            <otherwise>
+                and ivmm.create_time is not null
+            </otherwise>
+        </choose>
+
+        <choose>
+            <when test="map.usageRate==1">
+                and ivmm.cpu_usage_rate is not null
+            </when>
+            <otherwise>
+                and ivmm.memory_usage_rate is not null
+            </otherwise>
+        </choose>
+        <if test="map.clusterId!=null and map.clusterId!=''">
+            and ivmm.cluster_id =#{map.clusterId,jdbcType = VARCHAR}
+        </if>
+    </sql>
+</mapper>

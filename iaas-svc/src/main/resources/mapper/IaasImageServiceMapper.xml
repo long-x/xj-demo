@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasImageServiceMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.dto.ImageServiceVO">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="name" property="name"/>
+        <result column="image_key" property="imageKey"/>
+        <result column="visibility" property="visibility"/>
+        <result column="status" property="status"/>
+        <result column="container_format" property="containerFormat"/>
+        <result column="disk_format" property="diskFormat"/>
+        <result column="min_ram" property="minRam"/>
+        <result column="min_disk" property="minDisk"/>
+        <result column="os_bit" property="osBit"/>
+        <result column="platform" property="platform"/>
+        <result column="os_type" property="osType"/>
+        <result column="tag" property="tag"/>
+        <result column="vdc_id" property="vdcId"/>
+        <result column="system_disk_size" property="systemDiskSize"/>
+        <result column="source" property="source"/>
+        <result column="image_describe" property="imageDescribe"/>
+        <result column="start_mode" property="startMode"/>
+        <result column="cloud_init" property="cloudInit"/>
+        <result column="cpu_framework" property="cpuFramework"/>
+        <result column="disk_device_type" property="diskDeviceType"/>
+        <result column="image_size" property="imageSize"/>
+        <result column="share_tenet" property="shareTenet"/>
+        <result column="current_version" property="currentVersion"/>
+        <result column="history_version" property="historyVersion"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="os_version" property="osVersion"/>
+        <result column="created_at" property="createdAt"/>
+    </resultMap>
+
+    <resultMap id="ResultVersionMap" type="com.ecdata.cmp.iaas.entity.dto.ImageServiceVO">
+        <result column="os_type" property="osType"/>
+        <result column="os_version" property="osVersion"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                name,
+                image_key,
+                visibility,
+                status,
+                container_format,
+                disk_format,
+                min_ram,
+                min_disk,
+                os_bit,
+                platform,
+                os_type,
+                tag,
+                vdc_id,
+                system_disk_size,
+                source,
+                image_describe,
+                start_mode,
+                cloud_init,
+                cpu_framework,
+                disk_device_type,
+                image_size,
+                share_tenet,
+                current_version,
+                history_version,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted,
+                created_at,
+                os_version
+    </sql>
+
+
+    <select id="getImageServicePage" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_image_service
+        WHERE is_deleted = 0
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            name LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR id LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR image_key LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR visibility LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR status LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR container_format LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR disk_format LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR min_ram LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR min_disk LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR os_bit LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR platform LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR os_type LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR tag LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR remark LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR system_disk_size LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR source LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR image_describe LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR start_mode LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR cloud_init LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR cpu_framework LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR disk_device_type LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR image_size LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR share_tenet LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR current_version LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR history_version LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+            GROUP BY id
+        </if>
+        order by create_time desc,update_time desc
+    </select>
+
+    <select id="queryImageByKey" resultType="com.ecdata.cmp.iaas.entity.IaasImageService">
+      select * from iaas_image_service where is_deleted=0 and image_key=#{key}
+    </select>
+
+    <select id="getOsVersionList" resultMap="ResultVersionMap">
+          select os_type, os_version from iaas_image_service where is_deleted=0  and os_version is not null group by os_version
+    </select>
+
+    <select id="getOsVersions" resultMap="BaseResultMap">
+        <choose>
+            <when test="imageVersion !=null and imageVersion != ''">
+                select * from iaas_image_service where is_deleted=0 and os_version =#{imageVersion}
+            </when>
+            <otherwise>
+                select * from iaas_image_service where is_deleted=0
+            </otherwise>
+        </choose>
+    </select>
+</mapper>

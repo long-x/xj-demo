@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.activiti.mapper.WorkflowTaskMapper">
+
+    <update id="modifyUpdateRecord">
+        update workflow_task
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="queryBacklog" resultType="java.util.Map">
+        SELECT t.id workflowTaskId, t.process_instance_id processInstanceId, t.task_id taskId, c.id candidateId, c.is_approved isApproved
+        FROM workflow_task t
+        INNER JOIN workflow_task_candidate c ON t.id = c.workflow_task_id AND c.is_deleted = 0
+        WHERE t.is_approved = 0 AND t.is_deleted = 0
+        AND c.related_party IN
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="queryApproved" resultType="java.lang.String" parameterType="Long">
+        SELECT DISTINCT t.task_id
+        FROM workflow_task t
+        INNER JOIN workflow_task_candidate c ON t.id = c.workflow_task_id AND c.is_approved = 1 AND c.is_deleted = 0
+        WHERE t.type = 2 AND t.is_deleted = 0 AND c.relate_id = #{userId,jdbcType = VARCHAR}
+    </select>
+
+</mapper>

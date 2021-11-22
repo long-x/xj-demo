@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasHostDatastoreMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasHostDatastore">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="host_id" property="hostId"/>
+        <result column="datastore_name" property="datastoreName"/>
+        <result column="drive_type" property="driveType"/>
+        <result column="space_total" property="spaceTotal"/>
+        <result column="space_used" property="spaceUsed"/>
+        <result column="datastore_key" property="datastoreKey"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                host_id,
+                datastore_name,
+                drive_type,
+                space_total,
+                space_used,
+                datastore_key,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <select id="queryHostDatastoreVO" resultType="com.ecdata.cmp.iaas.entity.dto.IaasHostDatastoreVO"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasHostDatastoreVO">
+        select * from iaas_host_datastore
+        where is_deleted=0
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+    </select>
+
+    <select id="queryHostDatastoreByKey" resultMap="BaseResultMap">
+          select * from iaas_host_datastore
+        where is_deleted=0 and datastore_key=#{datastoreKey}
+    </select>
+</mapper>

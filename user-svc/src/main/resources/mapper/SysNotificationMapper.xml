@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysNotificationMapper">
+
+    <resultMap id="messageInfoMap" type="com.ecdata.cmp.user.dto.SysNotificationVO">
+        <result column="id" property="id" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="cluster_id" property="clusterId" />
+        <result column="business_type" property="businessType" />
+        <result column="type" property="type" />
+        <result column="level" property="level" />
+        <result column="csn" property="csn" />
+        <result column="message" property="message" />
+        <result column="status" property="status" />
+        <result column="operator" property="operator" />
+        <result column="source_type" property="sourceType" />
+        <result column="operator_name" property="operatorName" />
+        <result column="operation_time" property="operationTime" />
+        <result column="operation_status" property="operationStatus" />
+        <result column="detail" property="detail" />
+        <result column="remark" property="remark" />
+        <result column="create_user" property="createUser" />
+        <result column="create_time" property="createTime" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_name" property="updateName" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+
+    <update id="modifyUpdateRecord">
+        update paas_image_source
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectByReceivId"  resultType="com.ecdata.cmp.user.entity.SysNotification">
+         SELECT sn.*  FROM
+              sys_notification_receiver snr
+              JOIN sys_notification sn ON sn.id = snr.notification_id
+              WHERE   snr.id = #{receiveId}
+    </select>
+
+    <select id="getUserNotification" parameterType="java.util.Map" resultMap="messageInfoMap" >
+      SELECT
+      snr.id id,
+      sn.csn,
+      sn.type,
+      sn.source_type,
+      sn.message,
+      sn.detail,
+      CASE WHEN sn.operator IS NULL
+      THEN snr.update_user
+      ELSE sn.operator END AS 'operator' ,
+      CASE WHEN
+      uo.display_name IS NULL
+      THEN
+      u.display_name ELSE uo.display_name
+      END AS 'operator_name',
+      CASE WHEN
+      sn.operation_time IS NULL
+      THEN
+      snr.update_time ELSE sn.operation_time
+      END AS 'operation_time',
+      CASE
+        WHEN sn.status = 1 AND snr.status = 1
+        THEN 1
+        WHEN sn.status = 3
+        THEN 3
+        ELSE 2
+        END  AS 'operation_status',
+      snr.update_user,
+      u.display_name AS update_name,
+      sn.create_time,
+      snr.remark,
+      snr.update_time
+      FROM
+      sys_notification_receiver snr
+      LEFT JOIN sys_notification sn ON sn.id = snr.notification_id
+      LEFT JOIN sys_user u ON u.id = snr.update_user
+      LEFT JOIN sys_user uo ON uo.id = sn.operator
+        <where>
+            sn.is_deleted = 0
+            AND snr.is_deleted = 0
+            AND snr.user_id = #{map.userId}
+            <if test="map.status != null and map.status == 1">
+                AND snr.status = 1 AND sn.status = 1
+            </if>
+            <if test="map.sourceType != null">
+                AND sn.source_type = #{map.sourceType}
+            </if>
+            <if test="map.keyword != null and map.keyword != '' ">
+                AND (
+                sn.`message` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+                )
+            </if>
+            <if test="map.createTimeStart != null  and map.createTimeStart != ''">
+                AND sn.create_time &gt;= #{map.createTimeStart}
+            </if>
+            <if test="map.createTimeEnd != null  and map.createTimeEnd != ''">
+                AND sn.create_time &lt;= #{map.createTimeEnd}
+            </if>
+          ORDER BY sn.create_time DESC
+        </where>
+    </select>
+
+
+    <!--更改sys_notification type为2:统一处理消息的-->
+    <update id="updateNotifiStatus">
+        UPDATE sys_notification sn, sys_notification_receiver snr
+        SET sn.update_time = NOW(), sn.update_user = #{userId}, sn.operator = #{userId}, sn.status = #{status}, sn.operation_time = NOW()
+        WHERE snr.notification_id = sn.id
+        AND sn.is_deleted = 0
+        AND snr.is_deleted = 0
+        AND snr.user_id = #{userId}
+        AND sn.type = 2 AND sn.status = 1
+        <if test="useCsn != null and useCsn == 'noExist'" >
+            AND sn.csn IS NULL
+        </if>
+        <if test="csnList != null and csnList.size() !=0" >
+            AND sn.csn in
+            <foreach collection="csnList" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+    </update>
+
+    <!-- 标记个人接收消息-->
+    <update id="updateReceiverMessageStatus">
+        update sys_notification_receiver snr, sys_notification sn
+        set  snr.update_time = NOW(), snr.status = 2, snr.update_user = #{userId}
+        <if test="remark != null and remark != ''" >
+            , snr.remark = #{remark}
+        </if>
+        WHERE snr.notification_id = sn.id
+        AND snr.user_id = #{userId}
+        AND snr.status != 2
+        <if test="id != null">
+            AND snr.id = #{id}
+        </if>
+        AND sn.csn IS NULL
+    </update>
+
+    <!--个人消息备注-->
+    <update id="updateReceiverRemark">
+        update sys_notification_receiver snr, sys_notification sn
+        set  snr.update_time = NOW()
+        <if test="remark != null and remark != ''" >
+            , snr.remark = #{remark}
+        </if>
+        WHERE snr.notification_id = sn.id
+        AND snr.status != 2
+        AND sn.csn in
+        <foreach collection="csnList" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
+
+
+    <select id="getUserHuaweiMessageId" resultType="long" >
+         SELECT sn.csn FROM
+              sys_notification_receiver snr
+              JOIN sys_notification sn ON sn.id = snr.notification_id
+                 WHERE    snr.user_id = #{userId}
+                 AND sn.is_deleted = 0
+                 AND snr.is_deleted = 0
+                 AND sn.type = 2 AND sn.status = 1
+                 AND sn.csn IS NOT NULL
+    </select>
+
+
+</mapper>

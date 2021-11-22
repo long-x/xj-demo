@@ -1,0 +1,16 @@
+#开发环境
+#spring:
+#  profiles:
+#    active: dev
+
+#生产环境
+spring:
+  profiles:
+    active: prod
+
+sangfor:
+  url: https://10.10.10.10:7443
+  username: 123
+  password: 123
+  party: 123
+  platformName: 云管平台

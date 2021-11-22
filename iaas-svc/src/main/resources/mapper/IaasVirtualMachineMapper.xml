@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasVirtualMachineMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="host_id" property="hostId"/>
+        <result column="datastore_id" property="datastoreId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="vm_name" property="vmName"/>
+        <result column="status" property="status"/>
+        <result column="state" property="state"/>
+        <result column="os_name" property="osName"/>
+        <result column="os" property="os"/>
+        <result column="os_type" property="osType"/>
+        <result column="disk_usage" property="diskUsage"/>
+        <result column="vcpu_total" property="vcpuTotal"/>
+        <result column="vcpu_used" property="vcpuUsed"/>
+        <result column="memory_total" property="memoryTotal"/>
+        <result column="memory_used" property="memoryUsed"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="owner" property="owner"/>
+        <result column="vm_key" property="vmKey"/>
+        <result column="res_id" property="resId"/>
+        <result column="uuid" property="uuid"/>
+        <result column="right_type" property="rightType"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="disk_total" property="diskTotal"/>
+        <result column="disk_used" property="diskUsed"/>
+        <result column="ip_address" property="ipAddress"/>
+        <result column="res_id" property="resId"/>
+        <result column="image_name" property="imageName"/>
+        <result column="type" property="type"/>
+
+        <result column="avg_cpu" property="avgCpu"/>
+        <result column="max_cpu" property="maxCpu"/>
+        <result column="min_cpu" property="minCpu"/>
+        <result column="avg_memory" property="avgMemory"/>
+        <result column="max_memory" property="maxMemory"/>
+        <result column="min_memory" property="minMemory"/>
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="provider_name" property="providerName"/>
+
+    </resultMap>
+
+    <resultMap id="machinesByProcessApplyVmIdResultMap" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="host_id" property="hostId"/>
+        <result column="datastore_id" property="datastoreId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="vm_name" property="vmName"/>
+        <result column="image_name" property="imageName"/>
+        <result column="status" property="status"/>
+        <result column="state" property="state"/>
+        <result column="os_name" property="osName"/>
+        <result column="os" property="os"/>
+        <result column="os_type" property="osType"/>
+        <result column="disk_usage" property="diskUsage"/>
+        <result column="vcpu_total" property="vcpuTotal"/>
+        <result column="vcpu_used" property="vcpuUsed"/>
+        <result column="memory_total" property="memoryTotal"/>
+        <result column="memory_used" property="memoryUsed"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="owner" property="owner"/>
+        <result column="vm_key" property="vmKey"/>
+        <result column="res_id" property="resId"/>
+        <result column="uuid" property="uuid"/>
+        <result column="right_type" property="rightType"/>
+        <result column="remark" property="remark"/>
+        <result column="last_start_up" property="lastStartUp"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="type" property="type"/>
+        <collection property="machineDiskVOList" ofType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineDiskVO">
+            <result column="disk_id" property="id"/>
+            <result column="disk_tenant_id" property="tenantId"/>
+            <result column="disk_vm_id" property="vmId"/>
+            <result column="disk_name" property="diskName"/>
+            <result column="disk_type" property="diskType"/>
+            <result column="disk_total" property="diskTotal"/>
+            <result column="disk_used" property="diskUsed"/>
+            <result column="disk_remark" property="remark"/>
+        </collection>
+        <collection property="machineNetworkVOList" ofType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineNetworkVO">
+            <result column="network_id" property="id"/>
+            <result column="network_tenant_id" property="tenantId"/>
+            <result column="network_vm_id" property="vmId"/>
+            <result column="network_id" property="networkId"/>
+            <result column="segment_id" property="segmentId"/>
+            <result column="gateway" property="gateway"/>
+            <result column="ip_address" property="ipAddress"/>
+            <result column="dns" property="dns"/>
+            <result column="cidr" property="cidr"/>
+            <result column="network_remark" property="remark"/>
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                cluster_id,
+                host_id,
+                datastore_id,
+                pool_id,
+                business_group_id,
+                process_apply_vm_id,
+                provider_id,
+                project_id,
+                vm_name,
+                status,
+                state,
+                os_name,
+                os,
+                os_type,
+                vcpu_total,
+                vcpu_used,
+                memory_total,
+                memory_used,
+                username,
+                password,
+                owner,
+                vm_key,
+                uuid,
+                right_type,
+                last_start_up,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted,
+                ip_address,
+                res_id,
+                disk_usage,
+                type,
+                image_name
+    </sql>
+
+    <!--虚拟机资源使用情况详细-->
+    <select id="qrtIaasVirtualMachineInfo" parameterType="string" resultMap="BaseResultMap">
+      SELECT m.id,m.tenant_id,m.project_id, m.cluster_id, m.host_id,
+        m.datastore_id, m.pool_id, m.business_group_id, m.vm_name,m.status,m.state,m.disk_usage,
+        m.os_name, m.os, m.os_type, m.vcpu_total,
+        m.vcpu_used, m.memory_total, m.memory_used, m.username,
+        m.password, m.owner, m.vm_key, m.uuid,
+        m.right_type, m.remark, m.create_user, m.create_time,
+        m.update_user, m.update_time, m.is_deleted,m.ip_address,m.res_id,
+        (select sum(d.disk_total)
+        FROM iaas_virtual_machine_disk d
+        where d.vm_id = m.id ) disk_total,
+        (select sum(d.disk_used)
+        FROM iaas_virtual_machine_disk d
+        where d.vm_id = m.id ) disk_used
+        FROM iaas_virtual_machine m, iaas_virtual_machine_disk md
+        WHERE m.is_deleted = 0
+        AND m.id = #{id}
+        GROUP BY m.id
+    </select>
+
+    <!--按条件查询虚拟机使用情况 list-->
+    <select id="selectIaasVirtualMachineAll" parameterType="map" resultMap="BaseResultMap">
+        SELECT
+        m.id,m.tenant_id,m.project_id, m.cluster_id, m.host_id,
+        m.datastore_id, m.pool_id, m.vm_name,m.status,m.state,m.disk_usage,
+        m.os_name, m.os, m.os_type, m.vcpu_total,
+        m.vcpu_used, m.memory_total, m.memory_used, m.username,
+        m.password, m.owner, m.vm_key, m.uuid,m.res_id,
+        m.right_type, m.remark, m.create_user, m.create_time,
+        m.update_user, m.update_time, m.is_deleted,m.ip_address,
+        -- 磁盘占用率需要关联磁盘表 iaas_virtual_machine_disk
+        (select sum(d.disk_total)
+        FROM iaas_virtual_machine_disk d
+        where d.vm_id = m.id ) disk_total,
+        (select sum(d.disk_used)
+        FROM iaas_virtual_machine_disk d
+        where d.vm_id = m.id ) disk_used
+        FROM iaas_virtual_machine m
+        WHERE m.is_deleted = 0
+        AND m.id IN (
+        SELECT r.vm_id
+        FROM iaas_virtual_machine_right r
+        WHERE r.relate_id IN (
+        SELECT gm.business_group_id FROM
+        sys_business_group_member gm
+        WHERE
+        <if test="map.userId!=null and map.userId != ''">
+            gm.user_id = #{map.userId}
+        </if>
+        )
+        -- 根据业务组id查询
+        <if test="map.businessGroupId!=null and map.businessGroupId != ''">
+            AND r.relate_id = #{map.businessGroupId}
+        </if>
+        )
+        -- 根据开关机状态查询
+        <if test="map.state!=null and map.state != ''">
+            AND m.state = #{map.state}
+        </if>
+        -- 关键字 虚拟机名 操作系统名
+        <if test="map.keyword!=null and map.keyword != ''">
+            AND (
+            m.`vm_name` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR m.`os_name` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        GROUP BY m.id
+        order by m.update_time desc
+    </select>
+
+
+    <!--虚拟机优化 配置sql-->
+    <select id="qrMachineOptimize" parameterType="map" resultMap="MonitorMap">
+        SELECT m.vm_id
+        FROM iaas_virtual_machine_monitor m
+        <choose>
+            <when test="map.date ==1">
+                WHERE m.create_time &gt; DATE_SUB(NOW(),INTERVAL 24 HOUR)
+            </when>
+            <otherwise>
+                WHERE m.create_time &gt;= DATE_SUB(CURDATE(),INTERVAL ${map.date} DAY)
+                AND m.create_time &lt; NOW()
+            </otherwise>
+        </choose>
+        GROUP BY vm_id
+        <if test="map.maxCpu !=null and map.maxCpu != ''">
+            HAVING max(m.cpu_usage_rate) &lt; #{map.maxCpu}
+        </if>
+        <if test="map.avgCpu !=null and map.avgCpu != ''">
+            AND avg(m.cpu_usage_rate) &lt; #{map.avgCpu}
+        </if>
+        <if test="map.maxMemory !=null and map.maxMemory != ''">
+            AND max(m.memory_usage_rate) &lt; #{map.maxMemory}
+        </if>
+        <if test="map.avgMemory !=null and map.avgMemory != ''">
+            AND avg(m.memory_usage_rate) &lt; #{map.avgMemory}
+        </if>
+
+        <if test="map.maxCpug !=null and map.maxCpug != ''">
+            HAVING max(m.cpu_usage_rate) &gt; #{map.maxCpug}
+        </if>
+        <if test="map.avgCpug !=null and map.avgCpug != ''">
+            AND avg(m.cpu_usage_rate) &gt; #{map.avgCpug}
+        </if>
+        <if test="map.maxMemoryg !=null and map.maxMemoryg != ''">
+            AND max(m.memory_usage_rate) &gt; #{map.maxMemoryg}
+        </if>
+        <if test="map.avgMemoryg !=null and map.avgMemoryg != ''">
+            AND avg(m.memory_usage_rate) &gt; #{map.avgMemoryg}
+        </if>
+    </select>
+
+
+    <!--根据资源优化查询结果集查询-->
+    <select id="selectByIds" resultMap="BaseResultMap" parameterType="hashmap">
+        SELECT
+        m.id,m.tenant_id, m.project_id,m.cluster_id, m.host_id,
+        m.datastore_id, m.pool_id, mr.relate_id as business_group_id, m.vm_name,m.status,m.state,m.disk_usage,
+        m.os_name, m.os, m.os_type, m.vcpu_total,
+        m.vcpu_used, m.memory_total, m.memory_used, m.username,
+        m.password, m.owner, m.vm_key, m.uuid,
+        m.right_type, m.remark, m.create_user, m.create_time,
+        m.update_user, m.update_time, m.is_deleted, p.provider_name,
+        -- (avg(mm.vcpu_used)/avg(mm.vcpu_total))*100 avg_cpu,
+        -- (max(mm.vcpu_used)/max(mm.vcpu_total))*100 max_cpu,
+        -- (min(mm.vcpu_used)/min(mm.vcpu_total))*100 min_cpu,
+        -- (avg(mm.memory_used)/avg(mm.memory_total))*100 avg_memory,
+        -- (max(mm.memory_used)/max(mm.memory_total))*100 max_memory,
+        -- (min(mm.memory_used)/min(mm.memory_total))*100 min_memory,
+        avg(mm.cpu_usage_rate) avg_cpu,
+        max(mm.cpu_usage_rate) max_cpu,
+        min(mm.cpu_usage_rate) min_cpu,
+        avg(mm.memory_usage_rate) avg_memory,
+        max(mm.memory_usage_rate) max_memory,
+        min(mm.memory_usage_rate) min_memory,
+        bg.business_group_name,
+        -- GROUP_CONCAT(DISTINCT mn.ip_address) ip_address
+        m.ip_address
+        FROM iaas_virtual_machine m LEFT JOIN iaas_virtual_machine_monitor mm ON mm.vm_id = m.id
+        LEFT JOIN iaas_virtual_machine_right mr ON mr.vm_id = m.id
+        LEFT JOIN sys_business_group bg on mr.relate_id = bg.id
+        LEFT JOIN iaas_provider p ON p.id = m.provider_id
+        WHERE m.is_deleted = 0
+        <choose>
+            <when test="null != map.ids and map.ids.size() !=0">
+                AND m.id in
+                <foreach collection="map.ids" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </when>
+            <otherwise>
+                AND m.id in (NULL)
+            </otherwise>
+        </choose>
+        <choose>
+            <when test="map.type ==1">
+                AND m.create_time &gt; DATE_SUB(NOW(),INTERVAL 24 HOUR)
+            </when>
+            <otherwise>
+                AND mm.create_time &gt;= DATE_SUB(CURDATE(),INTERVAL 500 DAY)
+                AND mm.create_time &lt; NOW()
+            </otherwise>
+        </choose>
+
+        GROUP BY m.id
+        order by m.update_time desc
+    </select>
+
+
+    <resultMap id="MonitorMap" type="String">
+        <id column="vm_id" property="vmId"/>
+    </resultMap>
+
+    <select id="queryMachinesByProcessApplyVmId" resultMap="machinesByProcessApplyVmIdResultMap">
+      select
+      t1.*,
+      t2.id disk_id,
+      t2.tenant_id disk_tenant_id,
+      t2.vm_id disk_vm_id,
+      t2.disk_name,
+      t2.disk_type,
+      t2.disk_total,
+      t2.disk_used,
+      t2.remark disk_remark,
+      t3.network_id,
+      t3.tenant_id network_tenant_id,
+      t3.vm_id network_vm_id,
+      t3.network_id,
+      t3.segment_id,
+      t3.gateway,
+      t3.ip_address,
+      t3.dns,
+      t3.cidr,
+      t3.remark network_remark
+      from iaas_virtual_machine t1
+      left join iaas_virtual_machine_disk t2 on (t1.id=t2.vm_id and t2.is_deleted=0)
+      left join iaas_virtual_machine_network t3 on (t1.id=t3.vm_id and t3.is_deleted=0)
+      where t1.is_deleted=0
+      and t1.id=#{processApplyVmId}
+    </select>
+
+    <select id="getVirtualMachineVOPage" parameterType="map" resultMap="BaseResultMap">
+        select
+        ivm.id,
+        ivm.tenant_id,
+        ivm.cluster_id,
+        ivm.host_id,
+        ivm.datastore_id,
+        ivm.pool_id,
+        ivm.business_group_id,
+        ivm.process_apply_vm_id,
+        ivm.provider_id,
+        ivm.project_id,
+        ivm.vm_name,
+        ivm.status,
+        ivm.state,
+        ivm.os_name,
+        ivm.os,
+        ivm.os_type,
+        ivm.vcpu_total,
+        ivm.vcpu_used,
+        ivm.memory_total,
+        ivm.memory_used,
+        ivm.username,
+        ivm.password,
+        ivm.owner,
+        ivm.vm_key,
+        ivm.uuid,
+        ivm.right_type,
+        ivm.last_start_up,
+        ivm.remark,
+        ivm.create_user,
+        ivm.create_time,
+        ivm.update_user,
+        ivm.update_time,
+        ivm.is_deleted,
+        ivm.ip_address,
+        ivm.res_id,
+        ivm.disk_usage,
+        ivm.image_name,
+        sbg.business_group_name,ip.provider_name
+        from iaas_virtual_machine ivm
+        left join sys_business_group sbg on ivm.business_group_id = sbg.id and sbg.is_deleted=0
+        left join iaas_provider ip on ivm.provider_id=ip.id and ip.is_deleted=0
+        where ivm.is_deleted=0 and ivm.pool_id=#{map.poolId}
+        <if test="map.projectId!=null and map.projectId!=''">
+            and ivm.project_id =#{map.projectId}
+        </if>
+    </select>
+
+    <select id="queryIaasVirtualMachineByKey" resultType="com.ecdata.cmp.iaas.entity.IaasVirtualMachine">
+        select * from iaas_virtual_machine where is_deleted=0
+        and vm_key=#{key}
+    </select>
+
+    <select id="qryVMforTemplate" resultMap="BaseResultMap">
+         select
+        ivm.id,ivm.vm_name,ivm.business_group_id,sbg.business_group_name,ivm.status,ivm.os_type,ip.provider_name
+        from iaas_virtual_machine ivm
+        left join sys_business_group sbg on ivm.business_group_id = sbg.id and sbg.is_deleted=0
+        left join iaas_provider ip on ivm.provider_id=ip.id and ip.is_deleted=0
+        where ivm.is_deleted=0 and ivm.vm_name is not null
+
+    </select>
+
+    <select id="queryVDCAndProjectInfo" resultType="java.util.Map">
+       select t4.username,t4.password,t2.project_key projectKey,t4.id providerId from iaas_virtual_machine t1
+       left join iaas_project t2 on t1.project_id=t2.id and t2.is_deleted=0
+       left join iaas_virtual_data_center t3 on t2.vdc_id=t3.id and t3.is_deleted=0
+       left join iaas_provider t4 on t3.provider_id=t4.id and t4.is_deleted=0
+       where pool_id is not null and project_id is not null GROUP BY t2.project_key
+   </select>
+
+    <select id="queryVMByHostId" resultType="com.ecdata.cmp.iaas.entity.IaasVirtualMachine">
+        select * from iaas_virtual_machine where is_deleted=0 and host_id=#{hostId}
+    </select>
+
+
+    <!--根据vmkey查询虚拟机id-->
+    <select id="getIdBykey" resultMap="BaseResultMap" parameterType="string">
+        SELECT
+        m.id
+        FROM iaas_virtual_machine m
+        WHERE m.is_deleted = 0
+        <choose>
+            <when test="null != list.size() and list.size() !=0">
+                AND m.vm_key in
+                <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </when>
+            <otherwise>
+                AND m.vm_key in (NULL)
+            </otherwise>
+        </choose>
+
+    </select>
+
+
+    <update id="removeNetwork">
+        update iaas_virtual_machine_network
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE vm_id = #{id}
+    </update>
+
+    <update id="removeDisk">
+        update iaas_virtual_machine_disk
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE vm_id = #{id}
+    </update>
+
+    <update id="removeVm">
+        update iaas_virtual_machine
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+
+    <!--云上系统统计表 虚拟机-->
+    <select id="VmStatisticalList" resultMap="VmMap">
+        select
+            sbg.id,
+            sbg.business_group_name,
+            ip.project_name,
+            ivmr.relate_id,
+            ic.remark,
+            COUNT(ic.remark) - sum(ivm.is_deleted) vm_count,
+            ivm.vm_name,
+            ivm.create_time,
+            ivm.update_time,
+            sum(ivm.is_deleted) sum_deleted,
+            ivm.is_deleted
+        FROM iaas_virtual_machine ivm
+        LEFT JOIN iaas_cluster ic ON ic.cluster_key = ivm.azone_name
+        LEFT JOIN iaas_virtual_machine_right ivmr ON ivm.id = ivmr.vm_id
+        LEFT JOIN sys_business_group sbg  ON ivmr.relate_id = sbg.id
+        LEFT JOIN iaas_project ip ON ivm.project_id = ip.id
+        WHERE sbg.id is NOT NULL
+        GROUP BY sbg.business_group_name,
+            ip.project_name,
+            ic.remark
+    </select>
+
+    <resultMap id="VmMap" type="com.ecdata.cmp.iaas.entity.dto.vm.VMGroupVO">
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="project_name" property="projectName"/>
+        <result column="id" property="id"/>
+        <collection property="children" ofType="com.ecdata.cmp.iaas.entity.dto.vm.VMCountVO">
+            <result column="relate_id" property="id"/>
+            <result column="remark" property="remark"/>
+            <result column="vm_count" property="vmCount"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="sum_deleted" property="sumDeleted"/>
+        </collection>
+    </resultMap>
+
+    <select id="BmStatisticalList" resultMap="BmMap">
+        SELECT
+            sbg.id,
+            sbg.business_group_name,
+            ip.project_name,
+            m.azone_info,
+            COUNT(m.azone_info) -sum(m.is_deleted) bm_count,
+            m.create_time,
+            sum(m.is_deleted) sum_deleted
+        FROM iaas_bare_metal m
+        LEFT JOIN sys_business_group sbg ON m.business_group_id = sbg.id
+        LEFT JOIN iaas_project ip ON ip.tenant_id = 10000
+        AND m.project_id = ip.id
+        WHERE sbg.id is NOT NULL
+        GROUP BY
+            sbg.business_group_name,
+            ip.project_name,
+            m.azone_info
+    </select>
+
+    <resultMap id="BmMap" type="com.ecdata.cmp.iaas.entity.dto.vm.BMGroupVO">
+        <result column="id" property="id"/>
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="project_name" property="projectName"/>
+        <result column="azone_info" property="azoneInfo"/>
+        <result column="bm_count" property="bmCount"/>
+        <result column="create_time" property="createTime"/>
+        <result column="sum_deleted" property="sumDeleted"/>
+    </resultMap>
+
+
+</mapper>

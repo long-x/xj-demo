@@ -1,0 +1,1006 @@
+{
+  "flavors": [
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "16U128G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/0aa90e11-2ad0-41ab-93ba-c49cf7d05826"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/0aa90e11-2ad0-41ab-93ba-c49cf7d05826"
+        }
+      ],
+      "id": "0aa90e11-2ad0-41ab-93ba-c49cf7d05826",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 131072
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "24",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "24U24G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/0ce65ce6-d3ba-4811-abad-618b80c5e66e"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/0ce65ce6-d3ba-4811-abad-618b80c5e66e"
+        }
+      ],
+      "id": "0ce65ce6-d3ba-4811-abad-618b80c5e66e",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 24576
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "LocalDisk"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "100",
+      "rxtx_factor": "1.0",
+      "name": "08X32",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/2cd4de5f-4125-418b-8f90-51fa5e24134c"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/2cd4de5f-4125-418b-8f90-51fa5e24134c"
+        }
+      ],
+      "id": "2cd4de5f-4125-418b-8f90-51fa5e24134c",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "16U64G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/3cc07144-20fd-4809-9620-ecd499aa145c"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/3cc07144-20fd-4809-9620-ecd499aa145c"
+        }
+      ],
+      "id": "3cc07144-20fd-4809-9620-ecd499aa145c",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 65536
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "8U32G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/5988278b-a933-46a5-99de-e7d6cc622eb9"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/5988278b-a933-46a5-99de-e7d6cc622eb9"
+        }
+      ],
+      "id": "5988278b-a933-46a5-99de-e7d6cc622eb9",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "8U16G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/5bc282bf-5285-4848-ad33-a6a70b15ee38"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/5bc282bf-5285-4848-ad33-a6a70b15ee38"
+        }
+      ],
+      "id": "5bc282bf-5285-4848-ad33-a6a70b15ee38",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "16U32G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/7354adf0-ba36-45f2-a16c-fd7f268efaa4"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/7354adf0-ba36-45f2-a16c-fd7f268efaa4"
+        }
+      ],
+      "id": "7354adf0-ba36-45f2-a16c-fd7f268efaa4",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "4U8G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/86e7aa1c-14fb-48b6-a6eb-ef064425b003"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/86e7aa1c-14fb-48b6-a6eb-ef064425b003"
+        }
+      ],
+      "id": "86e7aa1c-14fb-48b6-a6eb-ef064425b003",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "2",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "2U8G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/9a79cde7-00cc-455b-a083-8f5035e19922"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/9a79cde7-00cc-455b-a083-8f5035e19922"
+        }
+      ],
+      "id": "9a79cde7-00cc-455b-a083-8f5035e19922",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "4U4G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/9b3731b8-f8a1-405a-b3f8-236f321e5b68"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/9b3731b8-f8a1-405a-b3f8-236f321e5b68"
+        }
+      ],
+      "id": "9b3731b8-f8a1-405a-b3f8-236f321e5b68",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 4096
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "4U16G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/a44f1cb7-a18d-4a89-9d69-eea8ae36e576"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/a44f1cb7-a18d-4a89-9d69-eea8ae36e576"
+        }
+      ],
+      "id": "a44f1cb7-a18d-4a89-9d69-eea8ae36e576",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "24",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "24U32G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/afd5c41b-a9e1-4c15-b442-c821b2d524ed"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/afd5c41b-a9e1-4c15-b442-c821b2d524ed"
+        }
+      ],
+      "id": "afd5c41b-a9e1-4c15-b442-c821b2d524ed",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "8U64G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/b8489fac-e6ad-43b1-82a3-9f86dc38a1b9"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/b8489fac-e6ad-43b1-82a3-9f86dc38a1b9"
+        }
+      ],
+      "id": "b8489fac-e6ad-43b1-82a3-9f86dc38a1b9",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 65536
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "8U8G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/c9e54c4c-921e-420a-aeb2-64c7bde2b348"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/c9e54c4c-921e-420a-aeb2-64c7bde2b348"
+        }
+      ],
+      "id": "c9e54c4c-921e-420a-aeb2-64c7bde2b348",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "ecs:virtualization_env_types": "CloudCompute",
+        "resource_type": "<all-in-list> IOoptimized",
+        "capabilities:cpu_info:arch": "x86_64",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "FCD_4U4G40G",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/f8b5bd30-581e-4758-aa2f-c13ad7ab8ca6"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/f8b5bd30-581e-4758-aa2f-c13ad7ab8ca6"
+        }
+      ],
+      "id": "f8b5bd30-581e-4758-aa2f-c13ad7ab8ca6",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 4096
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "<all-in-list> IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "40",
+      "rxtx_factor": "1.0",
+      "name": "paas_pod_16U32G40G_ForPaaS",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_16U32G40G_ForPaaS"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_16U32G40G_ForPaaS"
+        }
+      ],
+      "id": "paas_pod_16U32G40G_ForPaaS",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "<all-in-list> IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "2",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "40",
+      "rxtx_factor": "1.0",
+      "name": "paas_pod_2U4G40G_ForPaaS",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_2U4G40G_ForPaaS"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_2U4G40G_ForPaaS"
+        }
+      ],
+      "id": "paas_pod_2U4G40G_ForPaaS",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 4096
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "<all-in-list> IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "40",
+      "rxtx_factor": "1.0",
+      "name": "paas_pod_4U8G40G_ForPaaS",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_4U8G40G_ForPaaS"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_4U8G40G_ForPaaS"
+        }
+      ],
+      "id": "paas_pod_4U8G40G_ForPaaS",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "<all-in-list> IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "40",
+      "rxtx_factor": "1.0",
+      "name": "paas_pod_8U16G40G_ForPaaS",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_8U16G40G_ForPaaS"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/paas_pod_8U16G40G_ForPaaS"
+        }
+      ],
+      "id": "paas_pod_8U16G40G_ForPaaS",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.2xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.2xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.2xlarge"
+        }
+      ],
+      "id": "rds.c2.2xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.4xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.4xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.4xlarge"
+        }
+      ],
+      "id": "rds.c2.4xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "32",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.8xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.8xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.8xlarge"
+        }
+      ],
+      "id": "rds.c2.8xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 65536
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "2",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.large",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.large"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.large"
+        }
+      ],
+      "id": "rds.c2.large",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 4096
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "1",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.medium",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.medium"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.medium"
+        }
+      ],
+      "id": "rds.c2.medium",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 2048
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.c2.xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.c2.xlarge"
+        }
+      ],
+      "id": "rds.c2.xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.m1.2xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.2xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.2xlarge"
+        }
+      ],
+      "id": "rds.m1.2xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 65536
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.m1.4xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.4xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.4xlarge"
+        }
+      ],
+      "id": "rds.m1.4xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 131072
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "2",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.m1.large",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.large"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.large"
+        }
+      ],
+      "id": "rds.m1.large",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "1",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.m1.medium",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.medium"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.medium"
+        }
+      ],
+      "id": "rds.m1.medium",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.m1.xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.m1.xlarge"
+        }
+      ],
+      "id": "rds.m1.xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "8",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.2xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.2xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.2xlarge"
+        }
+      ],
+      "id": "rds.s1.2xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 32768
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "16",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.4xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.4xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.4xlarge"
+        }
+      ],
+      "id": "rds.s1.4xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 65536
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "32",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.8xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.8xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.8xlarge"
+        }
+      ],
+      "id": "rds.s1.8xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 131072
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "2",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.large",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.large"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.large"
+        }
+      ],
+      "id": "rds.s1.large",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 8192
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "1",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.medium",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.medium"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.medium"
+        }
+      ],
+      "id": "rds.s1.medium",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 4096
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "ecs:performancetype": "normal",
+        "resource_type": "IOoptimized",
+        "huawei:extBootType": "Volume"
+      },
+      "vcpus": "4",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "0",
+      "rxtx_factor": "1.0",
+      "name": "rds.s1.xlarge",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.xlarge"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/49f1b96e3fd34860a70de9cb85607ebe/flavors/rds.s1.xlarge"
+        }
+      ],
+      "id": "rds.s1.xlarge",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 16384
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasResourcePoolMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasResourcePool">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="vdc_id" property="vdcId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="pool_name" property="poolName"/>
+        <result column="tag" property="tag"/>
+        <result column="priority" property="priority"/>
+        <result column="vcpu_total_allocate" property="vcpuTotalAllocate"/>
+        <result column="vcpu_used_allocate" property="vcpuUsedAllocate"/>
+        <result column="memory_total_allocate" property="memoryTotalAllocate"/>
+        <result column="memory_used_allocate" property="memoryUsedAllocate"/>
+        <result column="vm_total_allocate" property="vmTotalAllocate"/>
+        <result column="vm_used_allocate" property="vmUsedAllocate"/>
+        <result column="pod_total_allocate" property="podTotalAllocate"/>
+        <result column="pod_used_allocate" property="podUsedAllocate"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="vcpu_reserved_allocate" property="vcpuReservedAllocate"/>
+        <result column="memory_reserved_allocate" property="memoryReservedAllocate"/>
+        <result column="vm_reserved_allocate" property="vmReservedAllocate"/>
+        <result column="pod_reserved_allocate" property="podReservedAllocate"/>
+    </resultMap>
+
+    <!--其他属性对象map-->
+    <resultMap id="BaseResultMapAndProperties" type="com.ecdata.cmp.iaas.entity.dto.ResourcePoolVO">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="vdc_id" property="vdcId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="pool_name" property="poolName"/>
+        <result column="tag" property="tag"/>
+        <result column="priority" property="priority"/>
+        <result column="vcpu_total_allocate" property="vcpuTotalAllocate"/>
+        <result column="vcpu_used_allocate" property="vcpuUsedAllocate"/>
+        <result column="memory_total_allocate" property="memoryTotalAllocate"/>
+        <result column="memory_used_allocate" property="memoryUsedAllocate"/>
+        <result column="vm_total_allocate" property="vmTotalAllocate"/>
+        <result column="vm_used_allocate" property="vmUsedAllocate"/>
+        <result column="pod_total_allocate" property="podTotalAllocate"/>
+        <result column="pod_used_allocate" property="podUsedAllocate"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="vcpu_reserved_allocate" property="vcpuReservedAllocate"/>
+        <result column="memory_reserved_allocate" property="memoryReservedAllocate"/>
+        <result column="vm_reserved_allocate" property="vmReservedAllocate"/>
+        <result column="pod_reserved_allocate" property="podReservedAllocate"/>
+
+        <result column="display_name" property="displayName"/>
+        <result column="businessIds" property="businessIds"/>
+        <result column="businessNames" property="businessNames"/>
+        <result column="cpu_total" property="cpuTotal"/>
+        <result column="memory_total" property="memoryTotal"/>
+        <result column="providerId" property="providerId"/>
+        <result column="providerType" property="providerType"/>
+        <result column="providerName" property="providerName"/>
+        <result column="displayName" property="displayName"/>
+        <result column="cpuTTHostRatio" property="cpuTTHostRatio"/>
+        <result column="vmTTHostRatio" property="vmTTHostRatio"/>
+        <result column="memoryTURatio" property="memoryTURatio"/>
+        <result column="vmTURratio" property="vmTURratio"/>
+    </resultMap>
+
+    <!--集群对象map-->
+    <resultMap id="BaseResultMapsIaasClusterVo" type="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_name" property="clusterName"/>
+        <result column="area_id" property="areaId"/>
+        <result column="score" property="score"/>
+        <result column="cluster_key" property="clusterKey"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+
+        <!--其他属性-->
+        <result column="providerId" property="providerId"/>
+        <result column="poolId" property="poolId"/>
+        <result column="hostCpuTotal" property="hostCpuTotal"/>
+        <result column="vcpuTotalAllocate" property="vcpuTotalAllocate"/>
+        <result column="cpuTTHostRatio" property="cpuTTHostRatio"/>
+        <result column="hostMemoryTotal" property="hostMemoryTotal"/>
+        <result column="memoryTotalAllocate" property="memoryTotalAllocate"/>
+        <result column="vmTTHostRatio" property="vmTTHostRatio"/>
+        <result column="vmTotalAllocate" property="vmTotalAllocate"/>
+    </resultMap>
+
+    <!--group map-->
+    <resultMap id="qrySysBusinessGroupInfoMap" type="com.ecdata.cmp.user.dto.SysBusinessGroupVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="process_definition_key" property="processDefinitionKey"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="admin_user" property="adminUser"/>
+        <result column="default_lease" property="defaultLease"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+                id,
+                provider_id,
+                vdc_id,
+                project_id,
+                cluster_id,
+                pool_name,
+                tag,
+                priority,
+                vcpu_total_allocate,
+                vcpu_used_allocate,
+                memory_total_allocate,
+                memory_used_allocate,
+                vm_total_allocate,
+                vm_used_allocate,
+                pod_total_allocate,
+                pod_used_allocate,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted,
+                vcpu_reserved_allocate,
+                memory_reserved_allocate,
+                vm_reserved_allocate,
+                pod_reserved_allocate
+    </sql>
+
+    <delete id="delete">
+        DELETE FROM iaas_resource_pool
+        WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.ecdata.cmp.iaas.entity.IaasResourcePool">
+        UPDATE iaas_resource_pool
+        <set>
+            <if test='null != providerId'>provider_id = #{providerId},</if>
+            <if test='null != vdcId'>vdc_id = #{vdcId},</if>
+            <if test='null != projectId'>project_id = #{projectId},</if>
+            <if test='null != clusterId'>cluster_id = #{clusterId},</if>
+            <if test='null != poolName'>pool_name = #{poolName},</if>
+            <if test='null != tag'>tag = #{tag},</if>
+            <if test='null != priority'>priority = #{priority},</if>
+            <if test='null != vcpuTotalAllocate'>vcpu_total_allocate = #{vcpuTotalAllocate},</if>
+            <if test='null != vcpuUsedAllocate'>vcpu_used_allocate = #{vcpuUsedAllocate},</if>
+            <if test='null != memoryTotalAllocate'>memory_total_allocate = #{memoryTotalAllocate},</if>
+            <if test='null != memoryUsedAllocate'>memory_used_allocate = #{memoryUsedAllocate},</if>
+            <if test='null != vmTotalAllocate'>vm_total_allocate = #{vmTotalAllocate},</if>
+            <if test='null != vmUsedAllocate'>vm_used_allocate = #{vmUsedAllocate},</if>
+            <if test='null != podTotalAllocate'>pod_total_allocate = #{podTotalAllocate},</if>
+            <if test='null != podUsedAllocate'>pod_used_allocate = #{podUsedAllocate},</if>
+            <if test='null != remark'>remark = #{remark},</if>
+            <if test='null != createUser'>create_user = #{createUser},</if>
+            <if test='null != createTime'>create_time = #{createTime},</if>
+            <if test='null != updateUser'>update_user = #{updateUser},</if>
+            <if test='null != updateTime'>update_time = #{updateTime},</if>
+            <if test='null != isDeleted'>is_deleted = #{isDeleted}</if>
+            <if test='null != vcpuReservedAllocate'>vcpu_reserved_allocate = #{vcpuReservedAllocate}</if>
+            <if test='null != memoryReservedAllocate'>memory_reserved_allocate = #{memoryReservedAllocate}</if>
+            <if test='null != vmReservedAllocate'>vm_reserved_allocate = #{vmReservedAllocate}</if>
+            <if test='null != podReservedAllocate'>pod_reserved_allocate = #{podReservedAllocate}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="load" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_resource_pool
+        WHERE id = #{id}
+    </select>
+
+    <select id="pageList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_resource_pool
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="pageListCount" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM iaas_resource_pool
+    </select>
+
+
+    <!--删除（逻辑删除,修改标记-->
+    <update id="updateResourcePool">
+        update iaas_resource_pool
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+    <!--分页查询-->
+    <select id="queryResourcePoolPage" parameterType="map"
+            resultMap="BaseResultMapAndProperties">
+        select irp.id,irp.pool_name,ip.id providerId,ip.type providerType,ip.provider_name providerName,
+        g.business_group_id businessIds,g.business_group_name
+        businessNames,irp.priority,su.display_name,irp.create_time,
+        ifnull(TRUNCATE(ifnull(irp.vcpu_total_allocate,0)/ifnull(s.hostCpuTotal,0),2)*100,0) cpuTTHostRatio,
+        ifnull(irp.vcpu_total_allocate,0) vcpu_total_allocate,
+        ifnull(s.hostCpuTotal,0) cpu_total,
+        ifnull(TRUNCATE(ifnull(irp.memory_total_allocate,0)/ifnull(s.hostMemoryTotal,0),2)*100,0) vmTTHostRatio,
+        ifnull(irp.memory_total_allocate,0) memory_total_allocate,
+        ifnull(s.hostMemoryTotal,0) memory_total,
+        ifnull(ROUND(ifnull(irp.memory_used_allocate,0)/ifnull(irp.memory_total_allocate,0),2)*100,0) memoryTURatio,
+        ifnull(irp.memory_used_allocate,0) memory_used_allocate,
+        ifnull(TRUNCATE(ifnull(irp.vm_used_allocate,0)/ifnull(irp.vm_total_allocate,0),2)*100,0) vmTURratio,
+        ifnull(irp.vm_total_allocate,0) vm_total_allocate,
+        ifnull(irp.vm_used_allocate,0) vm_used_allocate,
+        ifnull(irp.vcpu_reserved_allocate,0) vcpuReservedAllocate,
+        ifnull(irp.memory_reserved_allocate,0) memoryReservedAllocate,
+        ifnull(irp.vm_reserved_allocate,0) vmReservedAllocate,
+        ifnull(irp.pod_reserved_allocate,0) podReservedAllocate
+        from iaas_resource_pool irp left join iaas_cluster ic on irp.cluster_id=ic.id and ic.is_deleted=0
+        left join iaas_provider ip on irp.provider_id=ip.id
+        left join sys_user su on irp.create_user=su.id
+        left join (select distinct cluster_id,sum(ifnull(ih.cpu_total,0)) hostCpuTotal, sum(ifnull(ih.memory_total,0))
+        hostMemoryTotal
+        from iaas_host ih where ih.is_deleted=0 group by cluster_id) s
+        on s.cluster_id=ic.id
+        left join (select sbgrp.pool_id,group_concat(sbgrp.business_group_id) business_group_id,
+        group_concat( sbg.business_group_name) business_group_name from sys_business_group_resource_pool sbgrp
+        left join sys_business_group sbg on sbgrp.business_group_id=sbg.id
+        group by sbgrp.pool_id ) g
+        on g.pool_id=irp.id
+        where irp.is_deleted=0
+        <if test="map.businessIds != null and map.businessIds != ''">
+            and g.business_group_id in
+            <foreach item="item" index="index" collection="map.businessIds"
+                     open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="map.providerId !=null and map.providerId!=''">
+            and ip.id=#{map.providerId}
+        </if>
+        <if test="map.providerName !=null and map.providerName!=''">
+            and ip.provider_name=#{map.providerName}
+        </if>
+        <if test="map.clusterId !=null and map.clusterId!=''">
+            and ic.id=#{map.clusterId}
+        </if>
+
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND (
+            irp.pool_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR ip.provider_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR su.display_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR g.business_group_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            )
+            GROUP BY irp.id,g.business_group_id,g.business_group_name,s.hostCpuTotal,s.hostMemoryTotal
+        </if>
+
+        order by irp.create_time desc,irp.update_time desc
+    </select>
+
+    <!--资源池入口-->
+    <select id="getResourceSumInfoById" parameterType="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo"
+            resultMap="BaseResultMapsIaasClusterVo">
+        select s.cluster_name,
+        sum(s.hostCpuTotal) hostCpuTotal,sum(s.vcpu_total_allocate) vcpuTotalAllocate,
+        ifnull(TRUNCATE(sum(s.vcpu_total_allocate)/sum(s.hostCpuTotal),2)*100,0) cpuTTHostRatio,
+        sum(s.hostMemoryTotal) hostMemoryTotal,sum(s.memory_total_allocate) memoryTotalAllocate,
+        ifnull(TRUNCATE(sum(s.memory_total_allocate)/sum(s.hostMemoryTotal),2)*100,0) vmTTHostRatio,
+        sum(s.vm_total_allocate) vmTotalAllocate from (select ic.cluster_name,
+        ifnull(irp.vcpu_total_allocate,0) vcpu_total_allocate,ifnull(ih.cpu_total,0) hostCpuTotal,
+        ifnull(irp.memory_total_allocate,0) memory_total_allocate, ifnull(ih.memory_total,0) hostMemoryTotal ,
+        ifnull(irp.vm_total_allocate,0) vm_total_allocate,
+        ifnull(irp.vcpu_reserved_allocate,0) vcpuReservedAllocate,
+        ifnull(irp.memory_reserved_allocate,0) memoryReservedAllocate,
+        ifnull(irp.vm_reserved_allocate,0) vmReservedAllocate,
+        ifnull(irp.pod_reserved_allocate,0) podReservedAllocate
+        from iaas_cluster ic left join iaas_resource_pool irp on irp.cluster_id = ic.id and ic.is_deleted = 0
+        left join iaas_provider ip on irp.provider_id = ip.id and ip.is_deleted = 0
+        left join iaas_host ih on ih.cluster_id = ic.id and ih.is_deleted = 0
+        where ic.is_deleted = 0
+        <if test="id !=null and id!=''">
+            and ic.id=#{id}
+        </if>
+        <if test="providerId !=null and providerId!=''">
+            and ip.id=#{providerId}
+        </if>
+        <if test="poolId !=null and poolId!=''">
+            and irp.id=#{poolId}
+        </if>
+        )s
+        group by s.cluster_name
+    </select>
+
+
+    <select id="getDatastoreInfoByClusterId" parameterType="com.ecdata.cmp.iaas.entity.dto.ResourcePoolVO"
+            resultMap="BaseResultMapAndProperties">
+        select datastore.id datastoreId,datastore.datastore_name datastoreName,datastore.drive_type driveType,
+        IFNULL(datastore.space_total,0) spaceTotal,IFNULL(datastore.space_used,0) spaceUsed,
+        IFNULL(pd.space_total_allocate,0)
+        spaceTotalAllocate,IFNULL(TRUNCATE(pd.space_used_allocate/IFNULL(datastore.space_total,0),2),0)*100 spaceRandio,
+        IFNULL(pd.space_used_allocate,0) spaceUsedAllocate,pd.priority
+        from iaas_provider p2 left join iaas_area a on p2.id=a.provider_id and a.is_deleted=0
+        left join iaas_cluster c on a.id=c.area_id and c.is_deleted=0
+        left join iaas_host h on h.cluster_id = c.id and h.is_deleted=0
+        left join iaas_cluster_network network on c.id=network.cluster_id and network.is_deleted=0
+        left join iaas_host_datastore datastore on h.id=datastore.host_id and datastore.is_deleted=0
+        left join iaas_resource_pool p on c.id=p.cluster_id and p.is_deleted=0
+        left join iaas_resource_pool_datastore pd on p.id=pd.datastore_id and pd.is_deleted=0
+        where p2.is_deleted=0 and datastore.datastore_name is not null order by datastore.datastore_name
+        <if test="clusterId !=null and clusterId!=''">
+            and c.id=#{clusterId}
+        </if>
+    </select>
+
+    <select id="getBusinessGroupName" resultMap="qrySysBusinessGroupInfoMap" parameterType="String">
+        select id,business_group_name from sys_business_group where is_deleted=0
+        <if test="businessGroupName!=null and businessGroupName!=''">
+            and business_group_name=#{businessGroupName,jdbcType = VARCHAR}
+        </if>
+        order by update_time desc
+    </select>
+
+    <delete id="removeBusinessGroupResourcePool" parameterType="Long">
+        delete from sys_business_group_resource_pool where pool_id=#{poolId,jdbcType = VARCHAR}
+    </delete>
+
+    <insert id="addBusinessGroupResourcePool" parameterType="com.ecdata.cmp.user.dto.SysBusinessGroupResourcePoolVO">
+        INSERT INTO sys_business_group_resource_pool
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test='null != id'>
+                id,
+            </if>
+            <if test='null != type'>
+                type,
+            </if>
+            <if test='null != businessGroupId'>
+                business_group_id,
+            </if>
+            <if test='null != poolId'>
+                pool_id,
+            </if>
+            <if test='null != createUser'>
+                create_user,
+            </if>
+            <if test='null != createTime'>
+                create_time
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test='null != id'>
+                #{id},
+            </if>
+
+            <if test='null != type'>
+                #{type},
+            </if>
+            <if test='null != businessGroupId'>
+                #{businessGroupId},
+            </if>
+            <if test='null != poolId'>
+                #{poolId},
+            </if>
+            <if test='null != createUser'>
+                #{createUser},
+            </if>
+            <if test='null != createTime'>
+                #{createTime}
+            </if>
+        </trim>
+    </insert>
+
+    <select id="getBusinessGroupNameByPoolId" parameterType="long" resultMap="businessGroupResourcePoolMap">
+            select sbgrp.id,sbgrp.business_group_id,sbg.business_group_name
+            from sys_business_group_resource_pool sbgrp
+            left join sys_business_group sbg on sbgrp.business_group_id=sbg.id where sbgrp.pool_id=#{poolId}
+    </select>
+
+    <resultMap id="businessGroupResourcePoolMap" type="com.ecdata.cmp.user.dto.SysBusinessGroupResourcePoolVO">
+        <id column="id" property="id"/>
+        <result column="business_group_id" property="businessIds"/>
+        <result column="business_group_name" property="businessGroupName"/>
+    </resultMap>
+
+    <select id="queryIaasResourcePoolVO" resultType="com.ecdata.cmp.iaas.entity.dto.IaasResourcePoolVO"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasResourcePoolVO">
+        select * from iaas_resource_pool
+        where is_deleted=0
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+    </select>
+
+    <!--根据业务查询资源池信息-->
+    <select id="getPoolByGroupId" resultType="com.ecdata.cmp.iaas.entity.dto.ResourcePoolVO">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_resource_pool WHERE id in
+        (select p.pool_id
+        FROM sys_business_group_resource_pool p
+        WHERE p.business_group_id = #{id}
+        )
+    </select>
+</mapper>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.ProjectMapper">
+
+    <update id="modifyUpdateRecord">
+        update sys_project
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="qryProjectInfo" parameterType="map" resultType="com.ecdata.cmp.user.dto.ProjectVO">
+        SELECT p1.id, p1.tenant_id tenantId, p1.cluster_id clusterId, p1.project_name projectName, p1.display_name displayName, p1.parent_id parentId, p1.cover, p1.remark,
+        p1.create_user createUser, p1.create_time createTime, p1.update_user updateUser, p1.update_time updateTime,
+        p1.is_deleted isDeleted, p2.project_name parentName, p1.department_id departmentId, d.department_name departmentName
+        FROM sys_project p1
+        LEFT JOIN sys_project p2 ON p1.parent_id = p2.id
+        LEFT JOIN sys_department d ON p1.department_id = d.id
+        WHERE p1.is_deleted = 0
+        <if test="map.clusterId != null">
+            AND p1.cluster_id = #{map.clusterId,jdbcType = BIGINT}
+        </if>
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND (
+            p1.project_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR d.department_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        order by p1.create_time desc
+    </select>
+
+    <select id="getProjectByUserId" parameterType="long" resultType="com.ecdata.cmp.user.dto.ProjectVO">
+        SELECT p1.id, p1.tenant_id tenantId, p1.project_name projectName, p1.parent_id parentId, p1.cover, p1.remark,
+        p1.create_user createUser, p1.create_time createTime, p1.update_user updateUser, p1.update_time updateTime,
+        p1.is_deleted isDeleted, p2.project_name parentName, p1.department_id departmentId, d.department_name departmentName
+        FROM sys_project p1
+        INNER JOIN sys_user_project up ON p1.id = up.project_id
+        LEFT JOIN sys_project p2 ON p1.parent_id = p2.id
+        LEFT JOIN sys_department d ON p1.department_id = d.id
+        WHERE p1.is_deleted = 0 AND up.user_id = #{userId,jdbcType = BIGINT}
+        order by p1.create_time
+    </select>
+
+
+    <select id="qryAllSubProject" parameterType="long"
+            resultType="com.ecdata.cmp.user.entity.Project">
+        SELECT * FROM `sys_project` WHERE FIND_IN_SET(#{id,jdbcType=BIGINT}, parent_ids_str)
+    </select>
+
+    <select id="qryParentProjectByUserId" parameterType="long"
+            resultType="com.ecdata.cmp.user.entity.Project">
+        SELECT t.*
+        FROM `sys_project` t
+        INNER JOIN `sys_project` p ON p.parent_id = t.id
+        INNER JOIN sys_user_project up ON up.project_id = p.id
+        INNER JOIN sys_user u ON u.id = up.user_id
+        WHERE u.id = #{userId,jdbcType=BIGINT}
+    </select>
+
+    <select id="qryUserIdByProjectIds"  resultType="java.lang.Long">
+
+        SELECT DISTINCT u.id
+        FROM `sys_project` d
+        INNER JOIN sys_user_project ur ON ur.project_id = d.id
+        INNER JOIN sys_user u ON u.id = ur.user_id AND u.status = 1 AND u.is_deleted = 0
+        WHERE d.id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+
+</mapper>

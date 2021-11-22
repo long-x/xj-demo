@@ -1,0 +1,1094 @@
+{
+  "servers": [
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-14-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:54:e5:79",
+            "addr": "172.16.14.22",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "op_svc_userid": "b681526022c2493b834c86255d4bc96d",
+        "origin_port_ids": "[b5173932-defb-4e79-9488-a7a6356e95d3]",
+        "server_expiry": "0",
+        "volume-720a0df7-76e7-4d7e-b8e8-be0cba692c39": "{\"tg_wwn\":\"2000e00084c92b83;2001e00084c92b83;2003e00084c92b83;2002e00084c92b83;2013e00084c92b83;2011e00084c92b83;2010e00084c92b83;2012e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b83dfe880cc00000098\"}"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/eff09576-e671-42ca-b0d7-9b760fa2cc51"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/eff09576-e671-42ca-b0d7-9b760fa2cc51"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "eff09576-e671-42ca-b0d7-9b760fa2cc51",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "720a0df7-76e7-4d7e-b8e8-be0cba692c39"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/ecc991e9-aacb-4945-a481-b7a16ee4f976"
+          }
+        ],
+        "id": "ecc991e9-aacb-4945-a481-b7a16ee4f976"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-05-19T03:16:02Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2288"
+          }
+        ],
+        "id": "physical.2288"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-0000040c",
+      "user_id": "b681526022c2493b834c86255d4bc96d",
+      "name": "P-CT-SW-CIS-DB-03",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-05-19T03:25:24.000000",
+      "updated": "2020-08-02T11:28:44Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "Heartbeat-192-168-13-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:60:5a:45",
+            "addr": "192.168.13.10",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "subnet-172-16-25-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:4a:8d:11",
+            "addr": "172.16.25.37",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-e26d8804-6d3e-4e4e-9a79-1138c1f986cc": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b83b71e7adb00000097\"}",
+        "op_svc_userid": "b681526022c2493b834c86255d4bc96d",
+        "origin_port_ids": "[b5fd1451-f631-4c91-af01-819ec98d6157, c06fe27c-ed18-4b61-9dbb-74a2714e800a]",
+        "server_expiry": "0"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/af9c7542-b788-484d-96b7-401e229d129f"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/af9c7542-b788-484d-96b7-401e229d129f"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "af9c7542-b788-484d-96b7-401e229d129f",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "e26d8804-6d3e-4e4e-9a79-1138c1f986cc"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-04-17T11:12:37Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2288"
+          }
+        ],
+        "id": "physical.2288"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000003dd",
+      "user_id": "b681526022c2493b834c86255d4bc96d",
+      "name": "P-CT-SW-WKF-DB-01",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-04-17T11:19:53.000000",
+      "updated": "2020-10-09T07:46:42Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "Heartbeat-192-168-13-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c1:37:5b",
+            "addr": "192.168.13.11",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "subnet-172-16-25-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:6b:a2:98",
+            "addr": "172.16.25.39",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-e26d8804-6d3e-4e4e-9a79-1138c1f986cc": "{\"tg_wwn\":\"2000e00084c92b83;2001e00084c92b83;2003e00084c92b83;2002e00084c92b83;2013e00084c92b83;2011e00084c92b83;2010e00084c92b83;2012e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b83b71e7adb00000097\"}",
+        "op_svc_userid": "b681526022c2493b834c86255d4bc96d",
+        "origin_port_ids": "[45f4b82e-49d5-4269-9f8b-d4972bca13e1, afb57b24-3274-447a-8cca-06ea2ac6dde9]",
+        "server_expiry": "0"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/6c255072-62b8-425f-9e0e-6d1ef0bcb70e"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/6c255072-62b8-425f-9e0e-6d1ef0bcb70e"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "6c255072-62b8-425f-9e0e-6d1ef0bcb70e",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "e26d8804-6d3e-4e4e-9a79-1138c1f986cc"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-04-17T08:24:20Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2288"
+          }
+        ],
+        "id": "physical.2288"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000003dc",
+      "user_id": "b681526022c2493b834c86255d4bc96d",
+      "name": "P-CT-SW-WKF-DB-02",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-04-17T08:30:33.000000",
+      "updated": "2020-05-09T07:58:22Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "Heartbeat-192-168-12-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b3:20:c6",
+            "addr": "192.168.12.11",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "subnet-172-16-14-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2f:5f:c9",
+            "addr": "172.16.14.18",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-0fddc5b7-3c90-4f01-b093-e13d5a674835": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b83a113336e0000008b\"}",
+        "volume-2f0535c4-e15c-40f4-912c-15660addc55c": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b83a1152abb0000008f\"}",
+        "volume-f855df70-59ca-420c-ab75-efcd5d3f1edd": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"8\",\"lun_wwn\":\"6e00084100c92b83a1152af400000091\"}",
+        "volume-634aa515-208e-4e20-9176-a3881ba470d2": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b83a1152b5800000095\"}",
+        "volume-876cc5d2-160c-4f0a-b1cc-13cfb3621395": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b83a113338f0000008c\"}",
+        "volume-834f8bc1-0cb6-4014-a357-02bc6e3467c2": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"12\",\"lun_wwn\":\"6e00084100c92b83314aa607000000bb\"}",
+        "server_expiry": "0",
+        "volume-d290040e-40d6-403e-83af-81c2c9089890": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"9\",\"lun_wwn\":\"6e00084100c92b83a1152a9e0000008e\"}",
+        "volume-491861df-9626-445c-8cd4-270fb1ab059b": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b83a11333dd0000008d\"}",
+        "volume-b28a0df7-f323-4b88-aabf-d21c38b86080": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b83a1152b0c00000092\"}",
+        "volume-aff806d3-5bc5-4fb6-a6ae-19adc1f9ba32": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"11\",\"lun_wwn\":\"6e00084100c92b83a1152b2500000093\"}",
+        "volume-26247411-7f1c-493b-9dce-6a3783665172": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b83a1152ad900000090\"}",
+        "volume-4c308ee7-b897-4897-90a7-382dfa02c017": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"13\",\"lun_wwn\":\"6e00084100c92b83314aa62c000000bc\"}",
+        "op_svc_userid": "b681526022c2493b834c86255d4bc96d",
+        "origin_port_ids": "[815e3dfa-c6f9-459b-a848-644a940201ef, 7582936e-5c95-4038-a339-fb1a15459f25]",
+        "volume-53f70c5b-3942-45bf-979e-394ba7579972": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"10\",\"lun_wwn\":\"6e00084100c92b83a1152b4300000094\"}"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/4ba6d423-4317-420d-a8cd-667665833075"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/4ba6d423-4317-420d-a8cd-667665833075"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "4ba6d423-4317-420d-a8cd-667665833075",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "f855df70-59ca-420c-ab75-efcd5d3f1edd"
+        },
+        {
+          "id": "2f0535c4-e15c-40f4-912c-15660addc55c"
+        },
+        {
+          "id": "634aa515-208e-4e20-9176-a3881ba470d2"
+        },
+        {
+          "id": "26247411-7f1c-493b-9dce-6a3783665172"
+        },
+        {
+          "id": "aff806d3-5bc5-4fb6-a6ae-19adc1f9ba32"
+        },
+        {
+          "id": "876cc5d2-160c-4f0a-b1cc-13cfb3621395"
+        },
+        {
+          "id": "0fddc5b7-3c90-4f01-b093-e13d5a674835"
+        },
+        {
+          "id": "491861df-9626-445c-8cd4-270fb1ab059b"
+        },
+        {
+          "id": "b28a0df7-f323-4b88-aabf-d21c38b86080"
+        },
+        {
+          "id": "53f70c5b-3942-45bf-979e-394ba7579972"
+        },
+        {
+          "id": "d290040e-40d6-403e-83af-81c2c9089890"
+        },
+        {
+          "id": "834f8bc1-0cb6-4014-a357-02bc6e3467c2"
+        },
+        {
+          "id": "4c308ee7-b897-4897-90a7-382dfa02c017"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/ecc991e9-aacb-4945-a481-b7a16ee4f976"
+          }
+        ],
+        "id": "ecc991e9-aacb-4945-a481-b7a16ee4f976"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-03-12T04:01:08Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2488"
+          }
+        ],
+        "id": "physical.2488"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-00000376",
+      "user_id": "b681526022c2493b834c86255d4bc96d",
+      "name": "P-CT-SW-CIS-DB-02",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-03-12T04:10:33.000000",
+      "updated": "2020-07-21T08:53:45Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "Heartbeat-192-168-12-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:e9:4c:18",
+            "addr": "192.168.12.10",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "subnet-172-16-14-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:09:ef:fc",
+            "addr": "172.16.14.16",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-0fddc5b7-3c90-4f01-b093-e13d5a674835": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b83a113336e0000008b\"}",
+        "volume-2f0535c4-e15c-40f4-912c-15660addc55c": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"12\",\"lun_wwn\":\"6e00084100c92b83a1152abb0000008f\"}",
+        "volume-876cc5d2-160c-4f0a-b1cc-13cfb3621395": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b83a113338f0000008c\"}",
+        "volume-834f8bc1-0cb6-4014-a357-02bc6e3467c2": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"14\",\"lun_wwn\":\"6e00084100c92b83314aa607000000bb\"}",
+        "volume-d290040e-40d6-403e-83af-81c2c9089890": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"8\",\"lun_wwn\":\"6e00084100c92b83a1152a9e0000008e\"}",
+        "volume-b28a0df7-f323-4b88-aabf-d21c38b86080": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"9\",\"lun_wwn\":\"6e00084100c92b83a1152b0c00000092\"}",
+        "volume-aff806d3-5bc5-4fb6-a6ae-19adc1f9ba32": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b83a1152b2500000093\"}",
+        "volume-26247411-7f1c-493b-9dce-6a3783665172": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"10\",\"lun_wwn\":\"6e00084100c92b83a1152ad900000090\"}",
+        "volume-4c308ee7-b897-4897-90a7-382dfa02c017": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"13\",\"lun_wwn\":\"6e00084100c92b83314aa62c000000bc\"}",
+        "op_svc_userid": "b681526022c2493b834c86255d4bc96d",
+        "volume-53f70c5b-3942-45bf-979e-394ba7579972": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b83a1152b4300000094\"}",
+        "volume-f855df70-59ca-420c-ab75-efcd5d3f1edd": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b83a1152af400000091\"}",
+        "volume-634aa515-208e-4e20-9176-a3881ba470d2": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"11\",\"lun_wwn\":\"6e00084100c92b83a1152b5800000095\"}",
+        "server_expiry": "0",
+        "volume-491861df-9626-445c-8cd4-270fb1ab059b": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b83a11333dd0000008d\"}",
+        "volume-2d23d030-8b63-4769-9598-ea22896bd92d": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b83a0f9722800000064\"}",
+        "origin_port_ids": "[8d517906-5588-4d7a-b6b9-00bc8350661b, 3de0226b-49db-487b-901e-2595e26215fc]"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/77248c02-7fbb-4009-baa0-3f54cedc3771"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/77248c02-7fbb-4009-baa0-3f54cedc3771"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "77248c02-7fbb-4009-baa0-3f54cedc3771",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "2d23d030-8b63-4769-9598-ea22896bd92d"
+        },
+        {
+          "id": "876cc5d2-160c-4f0a-b1cc-13cfb3621395"
+        },
+        {
+          "id": "0fddc5b7-3c90-4f01-b093-e13d5a674835"
+        },
+        {
+          "id": "491861df-9626-445c-8cd4-270fb1ab059b"
+        },
+        {
+          "id": "53f70c5b-3942-45bf-979e-394ba7579972"
+        },
+        {
+          "id": "aff806d3-5bc5-4fb6-a6ae-19adc1f9ba32"
+        },
+        {
+          "id": "f855df70-59ca-420c-ab75-efcd5d3f1edd"
+        },
+        {
+          "id": "d290040e-40d6-403e-83af-81c2c9089890"
+        },
+        {
+          "id": "b28a0df7-f323-4b88-aabf-d21c38b86080"
+        },
+        {
+          "id": "26247411-7f1c-493b-9dce-6a3783665172"
+        },
+        {
+          "id": "634aa515-208e-4e20-9176-a3881ba470d2"
+        },
+        {
+          "id": "2f0535c4-e15c-40f4-912c-15660addc55c"
+        },
+        {
+          "id": "4c308ee7-b897-4897-90a7-382dfa02c017"
+        },
+        {
+          "id": "834f8bc1-0cb6-4014-a357-02bc6e3467c2"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/ecc991e9-aacb-4945-a481-b7a16ee4f976"
+          }
+        ],
+        "id": "ecc991e9-aacb-4945-a481-b7a16ee4f976"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-03-12T03:57:42Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2488"
+          }
+        ],
+        "id": "physical.2488"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-00000375",
+      "user_id": "b681526022c2493b834c86255d4bc96d",
+      "name": "P-CT-SW-CIS-DB-01",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-03-12T04:06:55.000000",
+      "updated": "2020-07-21T08:53:43Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-16-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:bd:66:d2",
+            "addr": "172.16.16.11",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "Heartbeat-192-168-11-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2c:35:cb",
+            "addr": "192.168.11.11",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-bc29f5b0-fc49-4b0c-99e8-5ba1dd24f585": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"8\",\"lun_wwn\":\"6e00084100c92b832fd4205d00000048\"}",
+        "volume-ce2f3163-5f72-48e9-aeaa-99bdcb7224b7": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b832fd3480400000044\"}",
+        "volume-fd2f9609-7ebb-45d0-8b50-f8c8f936c3d8": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b832fd3e29400000047\"}",
+        "volume-ae8182db-19dc-4112-9891-437f54606412": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b832fd4206f00000049\"}",
+        "volume-f408edc1-d887-492e-a648-f3766dece0cc": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"9\",\"lun_wwn\":\"6e00084100c92b832fd420b40000004b\"}",
+        "server_expiry": "0",
+        "volume-9643ff3e-cc22-4a36-934a-35bdc6c9275f": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b832fd420a90000004a\"}",
+        "volume-bcf69474-dc3c-413c-a6c2-b6da7497ad17": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b832fd420c80000004c\"}",
+        "volume-1670a97f-1111-4af9-9bd6-c59786aa3c52": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b832fd3481600000045\"}",
+        "op_svc_userid": "d0e9b904dddd46b5b28df8cddd76880b",
+        "origin_port_ids": "[5669f74d-0b48-4e76-9b45-3a739bbbb296, bc96adf3-a348-4ea2-a5f9-25ed18730812]",
+        "volume-974be825-9c3c-482e-b8c0-b4de121f3b1b": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b832fd347ed00000043\"}"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/6ebc9418-6cf6-4b8c-930f-05651e947628"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/6ebc9418-6cf6-4b8c-930f-05651e947628"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "6ebc9418-6cf6-4b8c-930f-05651e947628",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "bcf69474-dc3c-413c-a6c2-b6da7497ad17"
+        },
+        {
+          "id": "fd2f9609-7ebb-45d0-8b50-f8c8f936c3d8"
+        },
+        {
+          "id": "f408edc1-d887-492e-a648-f3766dece0cc"
+        },
+        {
+          "id": "ae8182db-19dc-4112-9891-437f54606412"
+        },
+        {
+          "id": "974be825-9c3c-482e-b8c0-b4de121f3b1b"
+        },
+        {
+          "id": "ce2f3163-5f72-48e9-aeaa-99bdcb7224b7"
+        },
+        {
+          "id": "1670a97f-1111-4af9-9bd6-c59786aa3c52"
+        },
+        {
+          "id": "9643ff3e-cc22-4a36-934a-35bdc6c9275f"
+        },
+        {
+          "id": "bc29f5b0-fc49-4b0c-99e8-5ba1dd24f585"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-01-08T07:46:58Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2488"
+          }
+        ],
+        "id": "physical.2488"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-00000301",
+      "user_id": "d0e9b904dddd46b5b28df8cddd76880b",
+      "name": "P-CT-SW-SJZL-SJCK-02",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-01-08T07:53:18.000000",
+      "updated": "2020-08-02T11:28:45Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-16-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:74:ec:ba",
+            "addr": "172.16.16.10",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "Heartbeat-192-168-11-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:98:94:b2",
+            "addr": "192.168.11.10",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-bc29f5b0-fc49-4b0c-99e8-5ba1dd24f585": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b832fd4205d00000048\"}",
+        "volume-ce2f3163-5f72-48e9-aeaa-99bdcb7224b7": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b832fd3480400000044\"}",
+        "volume-fd2f9609-7ebb-45d0-8b50-f8c8f936c3d8": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b832fd3e29400000047\"}",
+        "volume-ae8182db-19dc-4112-9891-437f54606412": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b832fd4206f00000049\"}",
+        "volume-f408edc1-d887-492e-a648-f3766dece0cc": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b832fd420b40000004b\"}",
+        "server_expiry": "0",
+        "volume-9643ff3e-cc22-4a36-934a-35bdc6c9275f": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"9\",\"lun_wwn\":\"6e00084100c92b832fd420a90000004a\"}",
+        "volume-bcf69474-dc3c-413c-a6c2-b6da7497ad17": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"8\",\"lun_wwn\":\"6e00084100c92b832fd420c80000004c\"}",
+        "volume-1670a97f-1111-4af9-9bd6-c59786aa3c52": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b832fd3481600000045\"}",
+        "op_svc_userid": "d0e9b904dddd46b5b28df8cddd76880b",
+        "origin_port_ids": "[fe2fc72f-dd23-48f2-b82d-7e431c5ef3ac, cd6bcbc2-388e-4e56-857d-31033a00d863]",
+        "volume-974be825-9c3c-482e-b8c0-b4de121f3b1b": "{\"tg_wwn\":\"2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83;2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b832fd347ed00000043\"}"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/4e546e57-2525-4adf-8b46-0a33cfde00db"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/4e546e57-2525-4adf-8b46-0a33cfde00db"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "4e546e57-2525-4adf-8b46-0a33cfde00db",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "fd2f9609-7ebb-45d0-8b50-f8c8f936c3d8"
+        },
+        {
+          "id": "1670a97f-1111-4af9-9bd6-c59786aa3c52"
+        },
+        {
+          "id": "ae8182db-19dc-4112-9891-437f54606412"
+        },
+        {
+          "id": "9643ff3e-cc22-4a36-934a-35bdc6c9275f"
+        },
+        {
+          "id": "ce2f3163-5f72-48e9-aeaa-99bdcb7224b7"
+        },
+        {
+          "id": "bc29f5b0-fc49-4b0c-99e8-5ba1dd24f585"
+        },
+        {
+          "id": "974be825-9c3c-482e-b8c0-b4de121f3b1b"
+        },
+        {
+          "id": "f408edc1-d887-492e-a648-f3766dece0cc"
+        },
+        {
+          "id": "bcf69474-dc3c-413c-a6c2-b6da7497ad17"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-01-08T07:43:46Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2488"
+          }
+        ],
+        "id": "physical.2488"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-00000300",
+      "user_id": "d0e9b904dddd46b5b28df8cddd76880b",
+      "name": "P-CT-SW-SJZL-SJCK-01",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-01-08T07:50:11.170276",
+      "updated": "2020-01-08T08:32:10Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-16-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ac:47:1d",
+            "addr": "172.16.16.20",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "Heartbeat-192-168-10-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:cc:32:09",
+            "addr": "192.168.10.20",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-5b8766f0-af31-4bca-8a67-fd0d208a883d": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b8334c0368900000051\"}",
+        "volume-160a299d-c78d-4d35-9700-cf25851f584f": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b8334c036af00000053\"}",
+        "volume-613181d3-fc7a-4640-8251-870db3afca86": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b8334c04d1700000054\"}",
+        "server_expiry": "0",
+        "volume-e2c01871-2903-461a-a230-c5532457e409": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b8334c036a500000052\"}",
+        "volume-8186dd2c-d83c-4b42-9d60-66f93381716b": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b8334c04d5700000055\"}",
+        "volume-11be86d1-1585-46bd-b1da-3a1d690a92c1": "{\"tg_wwn\":\"2000e00084c92b83;2001e00084c92b83;2003e00084c92b83;2002e00084c92b83;2013e00084c92b83;2011e00084c92b83;2010e00084c92b83;2012e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b833774e9ca00000058\"}",
+        "volume-a26ec75e-c6b2-4118-a9e7-c04afc366035": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b8334c04d6e00000056\"}",
+        "op_svc_userid": "d0e9b904dddd46b5b28df8cddd76880b",
+        "origin_port_ids": "[fc37580f-da6b-44ae-b0d1-a5b90641afd4, 58336404-86d7-4758-b261-d4896aa15b4a]"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/7f829a41-697d-43e7-8431-fa44dd02eafd"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/7f829a41-697d-43e7-8431-fa44dd02eafd"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "7f829a41-697d-43e7-8431-fa44dd02eafd",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "11be86d1-1585-46bd-b1da-3a1d690a92c1"
+        },
+        {
+          "id": "5b8766f0-af31-4bca-8a67-fd0d208a883d"
+        },
+        {
+          "id": "160a299d-c78d-4d35-9700-cf25851f584f"
+        },
+        {
+          "id": "a26ec75e-c6b2-4118-a9e7-c04afc366035"
+        },
+        {
+          "id": "8186dd2c-d83c-4b42-9d60-66f93381716b"
+        },
+        {
+          "id": "613181d3-fc7a-4640-8251-870db3afca86"
+        },
+        {
+          "id": "e2c01871-2903-461a-a230-c5532457e409"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-01-07T04:15:30Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2288"
+          }
+        ],
+        "id": "physical.2288"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000002d1",
+      "user_id": "d0e9b904dddd46b5b28df8cddd76880b",
+      "name": "P-CT-SW-SJZL-SJJS-01",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-01-07T04:21:40.000000",
+      "updated": "2020-08-02T11:28:46Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-16-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b7:1f:52",
+            "addr": "172.16.16.21",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ],
+        "Heartbeat-192-168-10-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:8e:6c:76",
+            "addr": "192.168.10.21",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "volume-5b8766f0-af31-4bca-8a67-fd0d208a883d": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"7\",\"lun_wwn\":\"6e00084100c92b8334c0368900000051\"}",
+        "volume-160a299d-c78d-4d35-9700-cf25851f584f": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"4\",\"lun_wwn\":\"6e00084100c92b8334c036af00000053\"}",
+        "volume-613181d3-fc7a-4640-8251-870db3afca86": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b8334c04d1700000054\"}",
+        "server_expiry": "0",
+        "volume-e2c01871-2903-461a-a230-c5532457e409": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"5\",\"lun_wwn\":\"6e00084100c92b8334c036a500000052\"}",
+        "volume-8186dd2c-d83c-4b42-9d60-66f93381716b": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"2\",\"lun_wwn\":\"6e00084100c92b8334c04d5700000055\"}",
+        "volume-11be86d1-1585-46bd-b1da-3a1d690a92c1": "{\"tg_wwn\":\"2000e00084c92b83;2001e00084c92b83;2003e00084c92b83;2002e00084c92b83;2013e00084c92b83;2011e00084c92b83;2010e00084c92b83;2012e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"3\",\"lun_wwn\":\"6e00084100c92b833774e9ca00000058\"}",
+        "volume-a26ec75e-c6b2-4118-a9e7-c04afc366035": "{\"tg_wwn\":\"2002e00084c92b83;2001e00084c92b83;2003e00084c92b83;2000e00084c92b83;2012e00084c92b83;2011e00084c92b83;2010e00084c92b83;2013e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"6\",\"lun_wwn\":\"6e00084100c92b8334c04d6e00000056\"}",
+        "op_svc_userid": "d0e9b904dddd46b5b28df8cddd76880b",
+        "origin_port_ids": "[63ed21e8-e24e-4133-b624-4c1d45921227, 81ea18ce-a836-44b4-b751-1d9784bd3983]"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/8ab30c9e-33a5-4bd7-a309-aa4bf9585cea"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/8ab30c9e-33a5-4bd7-a309-aa4bf9585cea"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "8ab30c9e-33a5-4bd7-a309-aa4bf9585cea",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "e2c01871-2903-461a-a230-c5532457e409"
+        },
+        {
+          "id": "11be86d1-1585-46bd-b1da-3a1d690a92c1"
+        },
+        {
+          "id": "613181d3-fc7a-4640-8251-870db3afca86"
+        },
+        {
+          "id": "160a299d-c78d-4d35-9700-cf25851f584f"
+        },
+        {
+          "id": "8186dd2c-d83c-4b42-9d60-66f93381716b"
+        },
+        {
+          "id": "a26ec75e-c6b2-4118-a9e7-c04afc366035"
+        },
+        {
+          "id": "5b8766f0-af31-4bca-8a67-fd0d208a883d"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-01-07T04:13:45Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2288"
+          }
+        ],
+        "id": "physical.2288"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-000002d0",
+      "user_id": "d0e9b904dddd46b5b28df8cddd76880b",
+      "name": "P-CT-SW-SJZL-SJJS-02",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-01-07T04:19:54.233616",
+      "updated": "2020-01-09T07:33:41Z",
+      "status": "ACTIVE"
+    },
+    {
+      "tenant_id": "eb03625637114052a9e1eee880768190",
+      "addresses": {
+        "subnet-172-16-16-0": [
+          {
+            "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:fa:e6:f7",
+            "addr": "172.16.16.32",
+            "OS-EXT-IPS:type": "fixed",
+            "version": 4
+          }
+        ]
+      },
+      "metadata": {
+        "op_svc_userid": "d0e9b904dddd46b5b28df8cddd76880b",
+        "origin_port_ids": "[f98128d6-342c-4f34-986b-090294c82bfe]",
+        "server_expiry": "0",
+        "volume-24ef65fb-068f-48c4-b3ac-8c4463d1eaa6": "{\"tg_wwn\":\"2013e00084c92b83;2011e00084c92b83;2010e00084c92b83;2012e00084c92b83;2000e00084c92b83;2001e00084c92b83;2003e00084c92b83;2002e00084c92b83\",\"path\":\"ultrapath\",\"type\":\"fibre_channel\",\"tg_lun\":\"1\",\"lun_wwn\":\"6e00084100c92b832e5cae3c0000002b\"}"
+      },
+      "OS-EXT-STS:task_state": null,
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "az2.dc1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://ecs.sa-fb-1.chengtou.com/v2.1/eb03625637114052a9e1eee880768190/servers/6ee5b77c-0ab9-422c-b939-b8accb9d92a5"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/servers/6ee5b77c-0ab9-422c-b939-b8accb9d92a5"
+        }
+      ],
+      "OS-EXT-STS:power_state": 1,
+      "id": "6ee5b77c-0ab9-422c-b939-b8accb9d92a5",
+      "os-extended-volumes:volumes_attached": [
+        {
+          "id": "24ef65fb-068f-48c4-b3ac-8c4463d1eaa6"
+        }
+      ],
+      "OS-EXT-SRV-ATTR:host": "az1.dc1.003",
+      "image": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/images/3a0b3903-088a-4de6-bbd7-1709d087337b"
+          }
+        ],
+        "id": "3a0b3903-088a-4de6-bbd7-1709d087337b"
+      },
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "created": "2020-01-02T03:09:50Z",
+      "hostId": "a70f9217ad8fd992bd2888c8e9aa3394c17dfeef3c4a306395b1d4b4",
+      "OS-EXT-SRV-ATTR:hypervisor_hostname": "nova004@101",
+      "key_name": null,
+      "flavor": {
+        "links": [
+          {
+            "rel": "bookmark",
+            "href": "https://ecs.sa-fb-1.chengtou.com/eb03625637114052a9e1eee880768190/flavors/physical.2488"
+          }
+        ],
+        "id": "physical.2488"
+      },
+      "security_groups": [
+        {
+          "name": "default"
+        }
+      ],
+      "config_drive": "",
+      "OS-EXT-STS:vm_state": "active",
+      "OS-EXT-SRV-ATTR:instance_name": "instance-0000028e",
+      "user_id": "d0e9b904dddd46b5b28df8cddd76880b",
+      "name": "P_CT_SW_SJZL_OSB_01",
+      "progress": 0,
+      "OS-SRV-USG:launched_at": "2020-01-02T03:16:21.236276",
+      "updated": "2020-01-02T05:59:12Z",
+      "status": "ACTIVE"
+    }
+  ]
+}

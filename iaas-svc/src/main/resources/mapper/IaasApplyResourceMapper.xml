@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyResourceMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.apply.IaasApplyResource">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="state" property="state"/>
+        <result column="vdc_id" property="vdcId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="is_project" property="isProject"/>
+        <result column="project_name" property="projectName"/>
+        <result column="is_current_network_evn" property="isCurrentNetworkEvn"/>
+        <result column="is_submit_group" property="isSubmitGroup"/>
+        <result column="urgency" property="urgency"/>
+        <result column="remark" property="remark"/>
+        <result column="operation_type" property="operationType"/>
+        <result column="reserved_field_one" property="reservedFieldOne"/>
+        <result column="process_instance_id" property="processInstanceId"/>
+        <result column="group_process_instance_id" property="groupProcessInstanceId"/>
+        <result column="reserved_field_two" property="reservedFieldTwo"/>
+        <result column="reserved_field_three" property="reservedFieldThree"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="lease" property="lease"/>
+        <result column="execute_time" property="executeTime"/>
+        <result column="is_back" property="isBack"/>
+        <result column="backup_request" property="backupRequest"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="model" property="model"/>
+        <result column="is_program_support" property="isProgramSupport"/>
+        <result column="pdf_url" property="pdfUrl"/>
+        <result column="cloud_number" property="cloudNumber"/>
+        <result column="process_state" property="processState"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                state,
+                vdc_id,
+                project_id,
+                is_project,
+                project_name,
+                operation_type,
+                is_current_network_evn,
+                is_submit_group,
+                process_instance_id,
+                group_process_instance_id,
+                urgency,
+                remark,
+                reserved_field_one,
+                reserved_field_two,
+                reserved_field_three,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                business_group_id,
+                lease,
+                model,
+                execute_time,
+                is_back,
+                backup_request,
+                is_program_support,
+                pdf_url,
+                is_deleted
+    </sql>
+
+    <resultMap id="applyQueryResultMap" type="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyResourceVO">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="state" property="state"/>
+        <result column="vdc_id" property="vdcId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="is_project" property="isProject"/>
+        <result column="project_name" property="projectName"/>
+        <result column="is_current_network_evn" property="isCurrentNetworkEvn"/>
+        <result column="operation_type" property="operationType"/>
+        <result column="is_submit_group" property="isSubmitGroup"/>
+        <result column="process_definition_key" property="businessActivitiId"/>
+        <result column="process_definition_name" property="businessActivitiName"/>
+        <result column="urgency" property="urgency"/>
+        <result column="remark" property="remark"/>
+        <result column="reserved_field_one" property="reservedFieldOne"/>
+        <result column="process_instance_id" property="processInstanceId"/>
+        <result column="group_process_instance_id" property="groupProcessInstanceId"/>
+        <result column="reserved_field_two" property="reservedFieldTwo"/>
+        <result column="reserved_field_three" property="reservedFieldThree"/>
+        <result column="create_user" property="createUser"/>
+        <result column="display_name" property="createUserName"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="lease" property="lease"/>
+        <result column="execute_time" property="executeTime"/>
+        <result column="is_back" property="isBack"/>
+        <result column="backup_request" property="backupRequest"/>
+        <result column="project_name" property="projectName"/>
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="vdc_name" property="vdcName"/>
+        <result column="is_program_support" property="isProgramSupport"/>
+        <result column="pdf_url" property="pdfUrl"/>
+        <result column="cloud_number" property="cloudNumber"/>
+        <result column="process_state" property="processState"/>
+        <collection property="fileVos"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.file.FileVo">
+            <result column="file_id" property="fileId"/>
+            <result column="file_name" property="filePath"/>
+            <result column="business_type" property="type"/>
+            <result column="t11_uploadUserName" property="uploadUserName"/>
+        </collection>
+        <collection property="applyFileVos"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.file.FileVo">
+            <result column="apply_file_id" property="fileId"/>
+            <result column="apply_file_name" property="filePath"/>
+            <result column="apply_business_type" property="type"/>
+            <result column="t12_uploadUserName" property="uploadUserName"/>
+        </collection>
+        <collection property="iaasApplyConfigInfoVOList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyConfigInfoVO">
+            <result column="iaci_id" property="id"/>
+            <result column="apply_id" property="applyId"/>
+            <result column="apply_type" property="applyType"/>
+            <result column="conf_operation_type" property="operationType"/>
+            <result column="config_state" property="state"/>
+            <result column="server_name" property="serverName"/>
+            <result column="operation_system" property="operationSystem"/>
+            <result column="area_id" property="areaId"/>
+            <result column="cpu" property="cpu"/>
+            <result column="memory" property="memory"/>
+            <result column="state" property="state"/>
+            <result column="system_disk" property="systemDisk"/>
+            <result column="vm_num" property="vmNum"/>
+            <result column="native_port" property="nativePort"/>
+            <result column="opposite_port" property="oppositePort"/>
+            <result column="port_mapping" property="portMapping"/>
+            <result column="password" property="password"/>
+            <result column="is_disaster_server" property="isDisasterServer"/>
+            <result column="software_require" property="softwareRequire"/>
+            <result column="other_require" property="otherRequire"/>
+            <result column="model" property="model"/>
+            <result column="eip" property="eip"/>
+            <result column="eip_id" property="eipId"/>
+            <result column="ip_address" property="ipAddress"/>
+            <result column="is_two_ccrc" property="isTwoCcrc"/>
+            <result column="is_three_ccrc" property="isThreeCcrc"/>
+            <result column="old_apply_id" property="oldApplyId"/>
+            <result column="old_process_instance_id" property="oldProcessInstanceId"/>
+            <result column="auto_issue" property="autoIssue"/>
+            <collection property="portMappingAskVOS"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyPortMappingAskVO">
+                <result column="mapping_id" property="id"/>
+                <result column="mapping_config_id" property="configId"/>
+                <result column="mapping_native_port" property="nativePort"/>
+                <result column="mapping_opposite_port" property="oppositePort"/>
+            </collection>
+            <collection property="memoryDiskVOList"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyMemoryDiskVO">
+                <result column="disk_id" property="id"/>
+                <result column="disk_config_id" property="configId"/>
+                <result column="memory_disk" property="memoryDisk"/>
+                <result column="content" property="content"/>
+            </collection>
+            <collection property="iaasApplyServiceSecurityResourcesVO"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyServiceSecurityResourcesVO">
+                <result column="security_id" property="id"/>
+                <result column="security_config_id" property="configId"/>
+                <result column="is_das" property="isDas"/>
+                <result column="das" property="das"/>
+                <result column="is_ssl_vpn" property="isSslVpn"/>
+                <result column="ssl_vpn" property="sslVpn"/>
+                <result column="is_edr" property="isEdr"/>
+                <result column="edr" property="edr"/>
+                <result column="is_log_audit" property="isLogAudit"/>
+                <result column="log_audit" property="logAudit"/>
+                <result column="is_loophole_scan" property="isLoopholeScan"/>
+                <result column="loophole_scan" property="loopholeScan"/>
+                <result column="is_sinfors" property="isSinfors"/>
+                <result column="sinfors" property="sinfors"/>
+                <result column="is_sinfors_check" property="isSinforsCheck"/>
+                <result column="sinfors_check" property="sinforsCheck"/>
+                <result column="is_prevent_change" property="isPreventChange"/>
+                <result column="is_next_nfw" property="isNextNfw"/>
+                <result column="next_nfw" property="nextNfw"/>
+                <result column="next_nfw_num" property="nextNfwNum"/>
+                <result column="is_web_nfw" property="isWebNfw"/>
+                <result column="web_nfw" property="webNfw"/>
+                <result column="web_nfw_num" property="webNfwNum"/>
+                <result column="is_ips" property="isIps"/>
+                <result column="ips" property="ips"/>
+                <result column="ips_num" property="ipsNum"/>
+                <result column="is_ad" property="isAd"/>
+                <result column="ad" property="ad"/>
+                <result column="ad_num" property="adNum"/>
+                <result column="is_sinfor_ac" property="isSinforAc"/>
+                <result column="sinfor_ac" property="sinforAc"/>
+                <result column="sinfor_ac_num" property="sinforAcNum"/>
+                <result column="is_antivirus" property="isAntivirus"/>
+                <result column="is_bastion_host" property="isBastionHost"/>
+                <result column="is_spring_board" property="isSpringBoard"/>
+                <result column="is_security_platform" property="isSecurityPlatform"/>
+            </collection>
+            <collection property="iaasApplyNetworkAskVO"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyNetworkAskVO">
+                <result column="network_id" property="id"/>
+                <result column="network_config_id" property="configId"/>
+                <result column="n_native_port" property="nativePort"/>
+                <result column="opposite_server" property="oppositeServer"/>
+                <result column="n_opposite_port" property="oppositePort"/>
+                <result column="access_mode" property="accessMode"/>
+                <result column="requires" property="requires"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryApplyResource" resultMap="applyQueryResultMap">
+        select
+        t1.*,
+        t2.old_apply_id,
+        t2.old_process_instance_id,
+        t9.display_name,
+        t6.project_name,
+        t7.business_group_name,
+        t8.vdc_name,
+        t1.state config_state,
+        t2.id iaci_id,
+        t2.apply_id,
+        t2.apply_type,
+        t2.operation_type conf_operation_type,
+        t2.server_name,
+        t2.operation_system,
+        t2.area_id,
+        t2.cpu,
+        t2.model,
+        t2.memory,
+        t2.system_disk,
+        t2.vm_num,
+        t2.native_port,
+        t2.opposite_port,
+        t2.port_mapping,
+        t2.password,
+        t2.is_disaster_server,
+        t2.software_require,
+        t2.other_require,
+        t2.model,
+        t2.eip,
+        t2.eip_id,
+        t2.ip_address,
+        t2.is_two_ccrc,
+        t2.is_three_ccrc,
+        t2.state,
+        t2.auto_issue,
+        t5.id disk_id,
+        t5.config_id disk_config_id,
+        t5.memory_disk,
+        t5.content,
+        t4.id security_id,
+        t4.config_id security_config_id,
+        t4.is_das,
+        t4.das,
+        t4.is_ssl_vpn,
+        t4.ssl_vpn,
+        t4.is_edr,
+        t4.edr,
+        t4.is_log_audit,
+        t4.log_audit,
+        t4.is_loophole_scan,
+        t4.loophole_scan,
+        t4.is_sinfors,
+        t4.sinfors,
+        t4.is_sinfors_check,
+        t4.sinfors_check,
+        t4.is_prevent_change,
+        t4.is_next_nfw,
+        t4.next_nfw,
+        t4.next_nfw_num,
+        t4.is_web_nfw,
+        t4.web_nfw,
+        t4.web_nfw_num,
+        t4.is_ips,
+        t4.ips,
+        t4.ips_num,
+        t4.is_ad,
+        t4.ad,
+        t4.ad_num,
+        t4.is_sinfor_ac,
+        t4.sinfor_ac,
+        t4.sinfor_ac_num,
+        t4.is_antivirus,
+        t4.is_bastion_host,
+        t4.is_security_platform,
+        t3.id network_id,
+        t3.config_id network_config_id,
+        t3.native_port n_native_port,
+        t3.opposite_server,
+        t3.opposite_port n_opposite_port,
+        t3.requires,
+        t3.access_mode,
+        t10.id mapping_id,
+        t10.config_id mapping_config_id,
+        t10.native_port mapping_native_port,
+        t10.opposite_port mapping_opposite_port,
+        t11.id file_id,
+        t11.business_type,
+        t13.display_name t11_uploadUserName,
+        t11.file_name,
+        t12.id apply_file_id,
+        t12.business_type apply_business_type,
+        t14.display_name t12_uploadUserName,
+        t12.file_name apply_file_name
+        from iaas_apply_resource t1
+        left join sys_user t9 on t1.create_user=t9.id and t9.is_deleted=0
+        left join iaas_apply_config_info t2 on t1.id=t2.apply_id and t2.is_deleted=0
+        left join iaas_apply_port_mapping_ask t10 on t2.id=t10.config_id and t10.is_deleted=0
+        left join iaas_apply_network_ask t3 on t2.id=t3.config_id and t3.is_deleted=0
+        left join iaas_apply_service_security_resources t4 on t2.id=t4.config_id and t4.is_deleted=0
+        left join iaas_apply_memory_disk t5 on t2.id=t5.config_id and t5.is_deleted=0
+        left join iaas_project t6 on t1.project_id=t6.id and t6.is_deleted=0
+        left join sys_business_group t7 on t1.business_group_id=t7.id and t7.is_deleted=0
+        left join iaas_virtual_data_center t8 on t1.vdc_id=t8.id and t8.is_deleted=0
+        left join sys_file t11 on t1.id=t11.business_id and t11.business_type='1'
+        left join sys_user t13 on t11.create_user=t13.id
+        left join sys_file t12 on t1.id=t12.business_id and t12.business_type='2'
+        left join sys_user t14 on t12.create_user=t14.id
+        where t1.is_deleted=0
+        <if test="applyId !=null and applyId !=''">
+            and t1.id=#{applyId}
+        </if>
+    </select>
+
+    <select id="queryApplyResourceLeaseExpire" resultMap="applyQueryResultMap">
+        select
+        t1.*,
+        t1.state config_state,
+        t6.project_name,
+        t7.business_group_name,
+        t7.process_definition_name,
+        t7.process_definition_key,
+        t8.vdc_name,
+        t2.id iaci_id,
+        t2.apply_id,
+        t2.apply_type,
+        t2.operation_type,
+        t2.server_name,
+        t2.operation_system,
+        t2.area_id,
+        t2.cpu,
+        t2.model,
+        t2.memory,
+        t2.system_disk,
+        t2.vm_num,
+        t2.native_port,
+        t2.opposite_port,
+        t2.port_mapping,
+        t2.password,
+        t2.is_disaster_server,
+        t2.software_require,
+        t2.other_require,
+        t2.model,
+        t2.eip,
+        t2.is_two_ccrc,
+        t2.is_three_ccrc,
+        t5.id disk_id,
+        t5.config_id disk_config_id,
+        t5.memory_disk,
+        t5.content,
+        t4.id security_id,
+        t4.config_id security_config_id,
+        t4.is_das,
+        t4.das,
+        t4.is_ssl_vpn,
+        t4.ssl_vpn,
+        t4.is_edr,
+        t4.edr,
+        t4.is_log_audit,
+        t4.log_audit,
+        t4.is_loophole_scan,
+        t4.loophole_scan,
+        t4.is_sinfors,
+        t4.sinfors,
+        t4.is_sinfors_check,
+        t4.sinfors_check,
+        t4.is_prevent_change,
+        t4.is_next_nfw,
+        t4.next_nfw,
+        t4.next_nfw_num,
+        t4.is_web_nfw,
+        t4.web_nfw,
+        t4.web_nfw_num,
+        t4.is_ips,
+        t4.ips,
+        t4.ips_num,
+        t4.is_ad,
+        t4.ad,
+        t4.ad_num,
+        t4.is_sinfor_ac,
+        t4.sinfor_ac,
+        t4.sinfor_ac_num,
+        t3.id network_id,
+        t3.config_id network_config_id,
+        t3.native_port n_native_port,
+        t3.opposite_server,
+        t3.opposite_port n_opposite_port,
+        t3.requires,
+        t3.access_mode
+        from iaas_apply_resource t1
+        left join iaas_apply_config_info t2 on t1.id=t2.apply_id and t2.is_deleted=0
+        left join iaas_apply_network_ask t3 on t2.id=t3.config_id and t3.is_deleted=0
+        left join iaas_apply_service_security_resources t4 on t2.id=t4.config_id and t4.is_deleted=0
+        left join iaas_apply_memory_disk t5 on t2.id=t5.config_id and t5.is_deleted=0
+        left join iaas_project t6 on t1.project_id=t6.id and t6.is_deleted=0
+        left join sys_business_group t7 on t1.business_group_id=t7.id and t7.is_deleted=0
+        left join iaas_virtual_data_center t8 on t1.vdc_id=t8.id and t8.is_deleted=0
+        where t1.is_deleted=0 and (t1.state=1 or t1.state=2)  and t1.operation_type='0' and t1.lease  &lt; #{date}
+    </select>
+
+    <select id="queryApplyResourcePage" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyResourceVO">
+        select
+        t1.*,
+        t6.project_name,
+        t7.business_group_name,
+        t8.vdc_name
+        from iaas_apply_resource t1
+        left join iaas_project t6 on t1.project_id=t6.id and t6.is_deleted=0
+        left join sys_business_group t7 on t1.business_group_id=t7.id and t7.is_deleted=0
+        left join iaas_virtual_data_center t8 on t1.vdc_id=t8.id and t8.is_deleted=0
+        where t1.is_deleted=0
+        <if test="map.state !=null and map.state !=''">
+            and t1.state=#{map.state}
+        </if>
+        <if test="map.keyword !=null and map.keyword !=''">
+            and (
+            t1.id LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            or t6.project_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            or t7.business_group_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            or t8.vdc_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%'))
+        </if>
+        <if test="map.startTime != null and map.startTime !=''">
+            and t1.create_time &gt;= str_to_date(#{map.startTime},'%Y-%m-%d %H:%i:%s')
+        </if>
+        <if test="map.endTime != null and map.endTime !=''">
+            and t1.create_time &lt;= str_to_date(#{map.endTime},'%Y-%m-%d %H:%i:%s')
+        </if>
+        <if test="map.currentUserId != null and map.currentUserId !=''">
+            and t1.create_user = #{map.currentUserId}
+        </if>
+        order by t1.create_time desc
+    </select>
+
+    <resultMap id="CloudVmVOResultMap" type="com.ecdata.cmp.huawei.dto.vo.CloudVmVO">
+    <result column="project_id" property="projectId"/>
+    <result column="server_name" property="name"/>
+    <result column="image_version" property="imageRef"/>
+    <result column="area_id" property="availabilityZone"/>
+    <result column="ip_address" property="ipAddress"/>
+    <result column="eip_id" property="eipId"/>
+    <result column="sys_name" property="volumetype"/>
+    <result column="resource_num" property="size"/>
+    <result column="model" property="flavorRef"/>
+    <result column="security_groups_id" property="id"/>
+    <result column="security_groups_name" property="securityGroups"/>
+    <result column="subnet_id" property="subnetId"/>
+    <result column="adminPass" property="adminPass"/>
+    <result column="count" property="count"/>
+    <result column="vpc_id" property="vpcid"/>
+    </resultMap>
+
+
+
+    <select id="queryCloudVm" resultMap="CloudVmVOResultMap">
+    SELECT
+	t1.project_id,
+	t2.server_name,
+	t2.model,
+	t3.image_version,
+	t2.area_id,
+	t2.ip_address,
+    t2.eip_id,
+	t5.sys_name,
+	t5.resource_num,
+	t6.security_groups_id,
+	t6.security_groups_name,
+	t6.subnet_id,
+	t6.vpc_id,
+	'Ecdata!@#123' AS `adminPass`,
+	1 AS `count`
+FROM
+	iaas_apply_resource t1
+	LEFT JOIN iaas_apply_config_info t2 ON
+	t1.id = t2.apply_id
+	AND t2.is_deleted = 0
+	AND t2.apply_type = 1
+	AND t2.auto_issue = '1'
+	LEFT JOIN iaas_apply_other t3 ON t3.apply_id = t1.id
+	AND t3.is_deleted = 0
+	LEFT JOIN iaas_apply_storage t5 ON t5.apply_id = t1.id
+	AND t5.is_deleted = 0
+	LEFT JOIN iaas_apply_other t6 ON
+	t6.config_id = t2.id
+	AND t6.is_deleted = 0
+	where
+	t1.is_deleted = 0
+	AND t2.operation_type = '1'
+	AND t1.id = #{id}
+	GROUP BY t2.server_name
+    </select>
+
+    <select id="queryApplyResourceByPro" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyResourceVO">
+        SELECT
+	    *
+        FROM
+            iaas_apply_resource
+        WHERE
+	    process_instance_id = #{processInstanceId}
+    </select>
+
+    <select id="queryApplyServiceSecurityResources" resultMap="queryApplyServiceSecurityResourcesMap">
+        SELECT
+        t1.is_three_ccrc,
+        t1.is_two_ccrc,
+        t2.is_das,
+        t2.is_ssl_vpn,
+        t2.is_log_audit,
+        t2.is_loophole_scan,
+        t2.is_next_nfw,
+        t2.is_sinfor_ac,
+        t2.is_antivirus,
+        t2.is_bastion_host,
+        t2.is_security_platform
+        FROM
+            iaas_apply_resource t
+            LEFT JOIN iaas_apply_config_info t1 ON t1.apply_id = t.id
+            AND t1.apply_type = #{applyType}
+            LEFT JOIN iaas_apply_service_security_resources t2 ON t2.config_id = t1.id
+        WHERE
+	     t.business_group_id = #{sysBusinessGroupId}
+	    AND t2.is_deleted=0
+	    ORDER BY
+            t1.is_three_ccrc,
+            t1.is_two_ccrc,
+            t2.is_das,
+            t2.is_ssl_vpn,
+            t2.is_log_audit,
+            t2.is_loophole_scan,
+            t2.is_next_nfw,
+            t2.is_sinfor_ac,
+            t2.is_antivirus,
+            t2.is_bastion_host,
+            t2.is_security_platform
+    </select>
+
+
+    <resultMap id="queryApplyServiceSecurityResourcesMap" type="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyConfigInfoVO">
+        <result column="is_two_ccrc" property="isTwoCcrc"/>
+        <result column="is_three_ccrc" property="isThreeCcrc"/>
+        <collection property="iaasApplyServiceSecurityResourcesVO"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyServiceSecurityResourcesVO">
+            <result column="is_das" property="isDas"/>
+            <result column="is_ssl_vpn" property="isSslVpn"/>
+            <result column="is_log_audit" property="isLogAudit"/>
+            <result column="is_loophole_scan" property="isLoopholeScan"/>
+            <result column="is_next_nfw" property="isNextNfw"/>
+            <result column="is_sinfor_ac" property="isSinforAc"/>
+            <result column="is_antivirus" property="isAntivirus"/>
+            <result column="is_bastion_host" property="isBastionHost"/>
+            <result column="is_spring_board" property="isSpringBoard"/>
+            <result column="is_security_platform" property="isSecurityPlatform"/>
+        </collection>
+    </resultMap>
+</mapper>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysBusinessGroupMapper">
+
+
+    <resultMap id="resultPoolMap" type="com.ecdata.cmp.user.dto.SysBusinessGroupResourcePoolVO">
+        <id column="id" property="id"/>
+        <result column="pool_name" property="poolName"/>
+        <result column="type" property="providerType"/>
+        <result column="provider_name" property="providerName"/>
+        <result column="stype" property="type"/>
+    </resultMap>
+
+    <!--根据用户id查询关联的业务组-->
+    <select id="getBusinessGroupByUser" resultMap="qrySysBusinessGroupInfoMap" parameterType="String">
+        SELECT g.*
+        FROM sys_business_group g
+        LEFT JOIN sys_business_group_member m
+        ON g.id = m.business_group_id
+        where m.user_id = #{userId}
+        GROUP BY g.id
+    </select>
+
+    <select id="getResourcePoolList" parameterType="long" resultMap="resultPoolMap">
+        SELECT
+            irp.id,
+            irp.pool_name,
+            ip.type,
+            ip.provider_name,
+            1 stype
+        FROM
+            iaas_resource_pool irp
+        LEFT JOIN iaas_cluster ic ON ic.id = irp.cluster_id
+        LEFT JOIN iaas_area ia ON ic.area_id = ia.id
+        LEFT JOIN iaas_provider ip ON ia.provider_id = ip.id
+        WHERE
+            irp.id IN (
+            <foreach collection="ids" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+            )
+        UNION ALL
+            SELECT
+                irp.id,
+                irp.pool_name,
+                ic.type,
+                ip.provider_name,
+                2 stype
+            FROM
+                paas_resource_pool irp
+            LEFT JOIN paas_cluster ic ON ic.id = irp.cluster_id
+            LEFT JOIN paas_area ia ON ic.area_id = ia.id
+            LEFT JOIN paas_provider ip ON ia.provider_id = ip.id
+            WHERE
+                irp.id IN (
+                <foreach collection="ids" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+                )
+    </select>
+
+    <select id="getIaasResourcePpool" resultMap="resultPoolMap" parameterType="long">
+        SELECT
+        irp.id,
+        irp.pool_name,
+        ip.type,
+        ip.provider_name,
+        -- group_concat(sgrp.type )stype
+        1 stype
+        FROM
+        iaas_resource_pool irp
+        LEFT JOIN sys_business_group_resource_pool sgrp  ON sgrp.pool_id = irp.id AND irp.is_deleted = 0
+        LEFT JOIN iaas_cluster ic ON ic.id = irp.cluster_id
+        LEFT JOIN iaas_area ia ON ic.area_id = ia.id
+        LEFT JOIN iaas_provider ip ON ia.provider_id = ip.id
+        WHERE irp.is_deleted = 0
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            irp.`pool_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR ip.`type` LIKE concat('%', #{keyword,jdbcType = TINYINT} , '%')
+            OR ip.`provider_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        <if test="id != null and id != '' ">
+            AND sgrp.pool_id IN (
+            SELECT DISTINCT( p.pool_id)
+            FROM sys_business_group_resource_pool p
+            WHERE p.business_group_id=#{id})
+        </if>
+        GROUP BY  irp.id
+        UNION ALL
+        SELECT
+        irp.id,
+        irp.pool_name,
+        ic.type,
+        ip.provider_name,
+        -- group_concat(sgrp.type )stype
+        2 stype
+        FROM
+        paas_resource_pool irp
+        LEFT JOIN sys_business_group_resource_pool sgrp  ON sgrp.pool_id = irp.id AND irp.is_deleted = 0
+        LEFT JOIN paas_cluster ic ON ic.id = irp.cluster_id
+        LEFT JOIN paas_area ia ON ic.area_id = ia.id
+        LEFT JOIN paas_provider ip ON ia.provider_id = ip.id
+        WHERE 1=1
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            irp.`pool_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR ic.`type` LIKE concat('%', #{keyword,jdbcType = TINYINT} , '%')
+            OR ip.`provider_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        <if test="id != null and id != '' ">
+            AND sgrp.pool_id IN (
+            SELECT DISTINCT( p.pool_id)
+            FROM sys_business_group_resource_pool p
+            WHERE p.business_group_id=#{id})
+        </if>
+        GROUP BY irp.id
+    </select>
+
+    <select id="getIaasResourcePpool2" resultMap="resultPoolMap" parameterType="long">
+        SELECT
+        irp.id,
+        irp.pool_name,
+        ip.type,
+        ip.provider_name,
+        -- group_concat(sgrp.type )stype
+        1 stype
+        FROM
+        iaas_resource_pool irp
+        LEFT JOIN sys_business_group_resource_pool sgrp  ON sgrp.pool_id = irp.id AND irp.is_deleted = 0
+        LEFT JOIN iaas_cluster ic ON ic.id = irp.cluster_id
+        LEFT JOIN iaas_area ia ON ic.area_id = ia.id
+        LEFT JOIN iaas_provider ip ON ia.provider_id = ip.id
+        WHERE 1=1
+        <if test="id != null and id != '' ">
+            AND sgrp.pool_id IN (
+            SELECT DISTINCT( p.pool_id)
+            FROM sys_business_group_resource_pool p
+            WHERE p.business_group_id=#{id})
+        </if>
+        GROUP BY  irp.id
+        UNION ALL
+        SELECT
+        irp.id,
+        irp.pool_name,
+        ic.type,
+        ip.provider_name,
+        -- group_concat(sgrp.type )stype
+        2 stype
+        FROM
+        paas_resource_pool irp
+        LEFT JOIN sys_business_group_resource_pool sgrp  ON sgrp.pool_id = irp.id AND irp.is_deleted = 0
+        LEFT JOIN paas_cluster ic ON ic.id = irp.cluster_id
+        LEFT JOIN paas_area ia ON ic.area_id = ia.id
+        LEFT JOIN paas_provider ip ON ia.provider_id = ip.id
+        WHERE 1=1
+        <if test="id != null and id != '' ">
+            AND sgrp.pool_id IN (
+            SELECT DISTINCT( p.pool_id)
+            FROM sys_business_group_resource_pool p
+            WHERE p.business_group_id=#{id})
+        </if>
+        GROUP BY irp.id
+    </select>
+
+    <select id="getGroupList" parameterType="String" resultMap="qrySysBusinessGroupInfoMap">
+        SELECT g1.id,
+        g1.business_group_name,
+        g2.business_group_name as parent_name,
+        g1.parent_id,u.display_name,g1.create_time,
+        g1.tenant_id,g1.process_definition_key,
+        g1.admin_user,g1.default_lease,
+        g1.period,g1.remark,
+        g1.create_user,g1.update_user,
+        g1.update_time
+        FROM sys_business_group g1
+        LEFT JOIN  sys_business_group g2 ON g1.parent_id = g2.id
+        LEFT JOIN  sys_user u ON g1.create_user = u.id
+        AND g1.is_deleted =0
+        <if test="keyword != null and keyword != '' ">
+            WHERE
+            g1.`business_group_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+        </if>
+    </select>
+
+    <update id="modifyUpdateRecord">
+        update sys_business_group
+        set update_user = #{updateUser}, update_time = NOW(),is_deleted = 1
+        WHERE id = #{id}
+    </update>
+
+
+    <select id="getDisBusinessGroupName" parameterType="String" resultMap="qrySysBusinessGroupInfoMap">
+        SELECT g.id, g.business_group_name
+        FROM sys_business_group g
+        WHERE g.is_deleted=0
+        <if test="businessGroupName != null and businessGroupName != '' ">
+          and  g.business_group_name LIKE concat('%', #{businessGroupName,jdbcType = VARCHAR} , '%')
+        </if>
+    </select>
+
+    <select id="getlistByPoolId" parameterType="Long" resultMap="qrySysBusinessGroupInfoMap">
+        SELECT g.*
+        FROM sys_business_group g
+        WHERE 1=1
+        <if test="poolId != null and poolId != '' ">
+            AND g.id in
+            (SELECT r.business_group_id
+            FROM sys_business_group_resource_pool r
+            WHERE r.pool_id=#{poolId})
+        </if>
+    </select>
+
+
+    <select id="qrySysBusinessGroupInfo" parameterType="string" resultMap="qrySysBusinessGroupInfoMap">
+        SELECT
+        t1.*,
+        t2.business_group_name parent_name ,
+        t3.display_name display_name
+        FROM sys_business_group t1
+        LEFT JOIN sys_business_group t2 on t1.parent_id=t2.id
+        LEFT JOIN sys_user t3 on t1.create_user=t3.id
+        WHERE t1.is_deleted = 0
+        <if test="keyword != null and keyword != '' ">
+             AND (
+            t1.`business_group_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR t1.`admin_user` LIKE concat('%', #{keyword,jdbcType = BIGINT} , '%')
+            OR t1.`create_user` LIKE concat('%', #{keyword,jdbcType = BIGINT} , '%')
+            )
+        </if>
+        order by t1.create_time desc
+    </select>
+
+    <!--根据登录用户id获取业务组-->
+    <select id="qrGroupByUserId" parameterType="string" resultMap="qrySysBusinessGroupInfoMap">
+        SELECT u.id,u.tenant_id,u.business_group_name,u.process_definition_name,u.process_definition_key,
+        u.parent_id,u.admin_user,u.default_lease,u.remark,u.create_user,u.create_time,u.update_user,
+        u.update_time,u.is_deleted,u.period,u.is_app,
+        CASE WHEN (u.server_name_prefix is null  or  u.server_name_prefix = '') THEN
+        (SELECT a.server_name_prefix FROM sys_business_group a WHERE a.id = u.parent_id)
+        else u.server_name_prefix end as 'server_name_prefix'
+        FROM sys_business_group u JOIN sys_business_group_member m
+        ON u.id = m.business_group_id
+        AND u.is_app=0
+        AND u.is_deleted = 0
+        AND m.user_id = #{userId}
+    </select>
+
+    <resultMap id="qrySysBusinessGroupNameMap" type="com.ecdata.cmp.user.dto.SysBusinessGroupVO">
+        <id column="id" property="id"/>
+        <result column="business_group_name" property="businessGroupName"/>
+    </resultMap>
+
+    <resultMap id="qrySysBusinessGroupInfoMap" type="com.ecdata.cmp.user.dto.SysBusinessGroupVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="business_group_name" property="businessGroupName"/>
+        <result column="process_definition_name" property="processDefinitionName"/>
+        <result column="process_definition_key" property="processDefinitionKey"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="admin_user" property="adminUser"/>
+        <result column="default_lease" property="defaultLease"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="parent_name" property="parentName"/>
+        <result column="display_name" property="displayName"/>
+        <result column="period" property="period"/>
+        <result column="is_app" property="isApp"/>
+        <result column="server_name_prefix" property="serverNamePrefix"/>
+    </resultMap>
+
+    <select id="getPoolIds" parameterType="map" resultType="long">
+        SELECT p.pool_id
+        FROM sys_business_group_resource_pool p
+        INNER JOIN sys_business_group g ON p.business_group_id = g.id and g.is_deleted = 0
+        INNER JOIN sys_business_group_member m ON g.id = m.business_group_id
+        WHERE m.user_id = #{map.userId, jdbcType = BIGINT}
+        <if test="map.type != null">
+            AND p.type = #{map.type, jdbcType = INTEGER}
+        </if>
+    </select>
+
+    <select id="getUserDistribution" resultType="com.ecdata.cmp.user.dto.DistributionBlockDTO">
+        SELECT COUNT(*) num, IFNULL(g.business_group_name, '其它') blockName
+        FROM sys_business_group_member m
+        INNER JOIN sys_business_group g ON m.business_group_id = g.id and g.is_deleted = 0
+        GROUP BY m.business_group_id
+    </select>
+
+    <!--查询业务组是否被业务组关联-->
+    <select id="getParentGroup" parameterType="String" resultType="long">
+        SELECT COUNT(*) FROM sys_business_group WHERE parent_id=#{id} and is_deleted=0
+    </select>
+
+    <!--删除业务组用户-->
+    <select id="getGroupMemberById" parameterType="String" resultType="long">
+        SELECT COUNT(*) FROM sys_business_group_member
+        WHERE business_group_id = #{id}
+    </select>
+    
+    <select id="getGroupResourcePoolById" parameterType="String" resultType="long">
+        SELECT COUNT(*) FROM sys_business_group_resource_pool
+        WHERE business_group_id = #{id}
+    </select>
+    
+
+    
+
+</mapper>

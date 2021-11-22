@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyCalculateMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.ecdata.cmp.iaas.entity.apply.IaasApplyCalculate" id="iaasApplyCalculateMap">
+        <result property="id" column="id"/>
+        <result property="tenantId" column="tenant_id"/>
+        <result property="applyId" column="apply_id"/>
+        <result property="areaId" column="area_id"/>
+        <result property="configId" column="config_id"/>
+        <result property="operationType" column="operation_type"/>
+        <result property="resourceType" column="resource_type"/>
+        <result property="resourceNum" column="resource_num"/>
+        <result property="model" column="model"/>
+        <result property="cpu" column="cpu"/>
+        <result property="memory" column="memory"/>
+        <result property="createUser" column="create_user"/>
+        <result property="createTime" column="create_time"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+
+    <update id="deleteCalculate">
+        update iaas_apply_calculate
+        set is_deleted = '1'
+        WHERE id = #{id}
+    </update>
+
+    <select id="queryApplyCalculate" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyCalculateVO">
+        select * from iaas_apply_calculate where is_deleted=0
+        and apply_id=#{applyId}
+    </select>
+
+    <select id="queryApplyBatchCalculate" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyCalculateVO">
+        select * from iaas_apply_calculate where is_deleted=0
+        and id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

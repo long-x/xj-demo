@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasAccountingRulesMapper">
+
+    <update id="modifyUpdateRecord">
+        update iaas_accounting_rules
+        set update_user = #{updateUser}, update_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+
+    <resultMap id="BaseResultMapVo" type="com.ecdata.cmp.iaas.entity.dto.IaasAccountingRulesVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+
+        <result column="effective_date" jdbcType="TIMESTAMP" property="effectiveDate"/>
+        <result column="expiration_date" jdbcType="TIMESTAMP" property="expirationDate"/>
+        <result column="cpu_unit_price" jdbcType="INTEGER" property="cpuUnitPrice"/>
+        <result column="memory_unit_price" jdbcType="INTEGER" property="memoryUnitPrice"/>
+        <result column="disk_unit_price" jdbcType="INTEGER" property="diskUnitPrice"/>
+        <result column="bms_type1_unit_price" jdbcType="INTEGER" property="bmsType1UnitPrice"/>
+        <result column="bms_type2_unit_price" jdbcType="INTEGER" property="bmsType2UnitPrice"/>
+
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="display_name" jdbcType="BIGINT" property="userName"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+
+    </resultMap>
+
+
+
+
+    <select id="qrList" resultMap="BaseResultMapVo" parameterType="map">
+        SELECT
+        r.id,r.effective_date,r.expiration_date,r.create_time,
+        r.update_time,r.update_user,u.display_name,r.`status`,r.tenant_id,r.is_deleted,
+        ROUND(r.cpu_unit_price/100 ,2) cpu_unit_price,
+        ROUND(r.memory_unit_price/100 ,2) memory_unit_price,
+        ROUND(r.disk_unit_price/100 ,2) disk_unit_price,
+        ROUND(r.bms_type1_unit_price/100 ,2) bms_type1_unit_price,
+        ROUND(r.bms_type2_unit_price/100 ,2) bms_type2_unit_price
+        FROM
+        iaas_accounting_rules r LEFT JOIN sys_user u on r.update_user = u.id
+        WHERE r.is_deleted = 0
+        <if test="map.status!=null and map.status != ''">
+            AND r.status = #{map.status}
+        </if>
+        <if test="map.effectiveDate!=null and map.effectiveDate != ''">
+            AND r.effective_date >= #{map.effectiveDate}
+        </if>
+        <if test="map.expirationDate!=null and map.expirationDate != ''">
+            AND r.effective_date &lt; #{map.expirationDate}
+        </if>
+
+        GROUP BY r.id
+    </select>
+
+
+
+
+    <select id="isExist" resultType="int">
+        SELECT count(1) FROM
+          iaas_accounting_rules r
+        WHERE
+          #{effectiveDate}
+          BETWEEN r.effective_date and r.expiration_date
+        OR
+          #{expirationDate}
+          BETWEEN r.effective_date and r.expiration_date
+        AND r.is_deleted =0
+    </select>
+
+
+    <select id="isTakeEffect" resultType="int">
+        SELECT count(1) FROM
+        iaas_accounting_rules r
+        WHERE
+        r.status = 0
+        AND r.is_deleted =0
+    </select>
+
+
+    <select id="isTodayExits" resultType="int">
+        SELECT count(1) FROM
+        iaas_accounting_rules r
+        WHERE
+        #{today}
+        BETWEEN r.effective_date and r.expiration_date
+        AND r.is_deleted =0
+        AND r.`status`= 0
+    </select>
+
+
+    <update id="resetTakeEffect">
+        UPDATE iaas_accounting_rules r
+        SET  r.`status`= 1
+    </update>
+
+
+    <update id="updateTakeEffect">
+        UPDATE iaas_accounting_rules r
+        SET  r.`status`= 0
+        WHERE
+              #{today}
+        BETWEEN r.effective_date and r.expiration_date
+        AND r.is_deleted =0
+        AND r.`status`= 1
+    </update>
+
+
+</mapper>

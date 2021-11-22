@@ -1,0 +1,142 @@
+# application.yml
+server:
+  port: 8085
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8.x
+#    driver-class-name: com.mysql.jdbc.Driver # mysql 5.7.x
+
+#    1.0 本地mysql数据库 (简称: 01环境)
+    url: jdbc:mysql://127.0.0.1:3306/ocpmgp_project2?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&&serverTimezone=GMT%2B8
+    username: root
+    password: 110308
+
+
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+#    show-sql: true
+ #springboot 和springcloud版本冲突，暂时解决办法
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+# mybatis
+mybatis-plus:
+  # MyBatis Mapper 所对应的 XML 文件位置，如果您在 Mapper 中有自定义方法（XML 中有自定义实现），需要进行该配置，告诉 Mapper 所对应的 XML 文件位置。
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  #通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以直接使用类名，而不用使用全限定的类名（即 XML 中调用的时候不用包含包名）
+  type-aliases-package: com.ecdata.cmp.user.entity
+  #typeEnumsPackage: com.ecdata.spring.cloud.vcenter.entity.enums
+  global-config:
+    #刷新mapper 该配置不建议在生产环境打开
+    refresh: true
+    db-config:
+      #主键类型com.baomidou.mybatisplus.annotation.IdType;
+      id-type: input
+      #字段策略com.baomidou.mybatisplus.annotation.FieldStrategy
+      field-strategy: not_empty
+      # 逻辑删除全局值（1表示已删除，Mybatis Plus的默认配置）
+      logic-delete-value: 1
+      # 逻辑未删除全局值（0表示未删除，Mybatis Plus的默认配置）
+      logic-not-delete-value: 0
+  configuration:
+    #是否开启自动驼峰命名规则（camel case）映射
+    map-underscore-to-camel-case: true
+    #全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存,默认为 true
+    cache-enabled: false
+
+ocpmgp:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888} # mock for test
+    deploy-env: ${DEPLOY:V2}
+  signing-secret: ${SIGNING_SECRET:TEST_SECRET}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+module-id: 2
+
+private:
+  key: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAINzCPJI/hPrX/yd4pEPONfDupTVDU+3sys5LPm67UaYgZPSxvGxzVljRhfssG9KUH0R06NWRV++A0z+yyYEpDD9xVGErljMR1QZDC++9tiX3t2Jh9N+vnYNWh5F0qWh1Ke4qZIGk7iM46gR7BGo8GXL0dQdyWZAmjRNSKD0PM9vAgMBAAECgYAzIEDwi3dXJAs3Y+lFZlhDg3tEfAEralWjkB9wGkZDWPm9FxQN2Yv3ImeW0pZlEtBvdMmOE/XzoSIDhm5ZISEC5LhB+t8LR4mkFN4bfxTu8HKqoKtMHfXDz2EoPIPRulkLTJ9tgF8KEf9La/47oUntSeNWtWd+BNETim0Y7WbxUQJBANWHQkRxPTpQBMniFKRTgzEFd/tUDxSPe/Cmw2Xw28wuP2A4xlGFZa8VoNcJmn+I0G7uo/xA9Xd3CWq6CB5qYDMCQQCdmFxPjeSwRF1dUswNb99M6/c6Yf9+/n2vn0rownOKx9Wy3KNLrYDVZR+Pyv0FjhVGOUrCCmefjDcfXzhLoSfVAkEAmjh07kXzePhuXPmC+ySuLmvKuqV9ttXjKG7p1ejed1w3veGDq0Fzrb8rSeTPx6kjEdweaITqRXyeOo1ea8lc7QJAMtUZOWPoVt7GSrrRLKhgG3ylMwS3F6xYuBQmYmuOPz5z9Ixsc5WUT8CdbJEqCeepfwwty+b1Q6ZDhW/+RY7GvQJBALfrdzOegdiTNcuSZNPX6PqVUPeTBg67RG7ofEd+zs9OILTZU5ldUA583zBNxwCHBjwx3VlPOqzM1CngQZZ1prw=
+swagger:
+  basePackage: com.ecdata.cmp.user.controller
+  title: Cloud Management Product Restful API
+  description: 管理平台-用户管理
+  termsOfServiceUrl: http://www.ecdatainfo.com/
+  name: 123
+  url: http://www.123.com/
+  email: admin.com
+  version: 1.0
+
+# 租户表维护
+tenant:
+  defaultId: 10000
+  column: tenant_id
+  tableFilter:
+    - sys_tenant
+    - sys_user_role
+    - sys_user_department
+    - sys_user_project
+    - sys_role_permission
+    - sys_permission
+    - sys_license
+    - sys_logo_style
+    - sys_python
+    - sys_business_department
+  mapperFilter:
+    - com.ecdata.cmp.user.mapper.UserMapper.loadUserByUsername
+    - com.ecdata.cmp.user.mapper.UserMapper.getSysAdmin
+    - com.ecdata.cmp.user.mapper.PermissionMapper.getInitPermission
+    - com.ecdata.cmp.user.mapper.SysNotificationMapper.updateNotifiStatus
+    - com.ecdata.cmp.user.mapper.SysNotificationMapper.updateReceiverMessageStatus
+    - com.ecdata.cmp.user.mapper.SysNotificationMapper.updateReceiverRemark
+    - com.ecdata.cmp.user.mapper.UserMapper.bimSchemaService
+
+ribbon:
+  OkToRetryOnAllOperations: false #对所有操作请求都进行重试,默认false
+  ReadTimeout: 5000   #负载均衡超时时间，默认值5000
+  ConnectTimeout: 5000 #ribbon请求连接的超时时间，默认值2000
+  MaxAutoRetries: 0     #对当前实例的重试次数，默认0
+  MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1
+
+role:
+  name:
+    tenant_admin: tenant_admin #租户管理员
+
+ban:
+  url: https://sso.com
+  clientSecret: 123123
+
+email:
+  personal: 云管
+  smtpserver: smtp.exmail.qq.com
+  account: 123.com
+  password: 123
+
+qxt:
+  text:
+    message:
+      # host: qxt.sh.10086.cn
+      host: 10.10.10.11
+      port: 11
+      accountId: 123
+      password: 123
+      serviceId: 123

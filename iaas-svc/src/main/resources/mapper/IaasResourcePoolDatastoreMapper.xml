@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasResourcePoolDatastoreMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasResourcePoolDatastore">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="datastore_id" property="datastoreId"/>
+        <result column="space_total_allocate" property="spaceTotalAllocate"/>
+        <result column="space_used_allocate" property="spaceUsedAllocate"/>
+        <result column="remark" property="remark"/>
+        <result column="priority" property="priority"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapVo" type="com.ecdata.cmp.iaas.entity.dto.ResourcePoolDatastoreVO">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="pool_datastore_id" property="poolDatastoreId"/>
+        <result column="space_total_allocate" property="spaceTotalAllocate"/>
+        <result column="space_used_allocate" property="spaceUsedAllocate"/>
+        <result column="remark" property="remark"/>
+        <result column="priority" property="priority"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+
+        <!--主机存储信息-->
+        <result column="datastoreName" property="datastoreName"/>
+        <result column="driveType" property="driveType"/>
+        <result column="spaceTotal" property="spaceTotal"/>
+        <result column="spaceUsed" property="spaceUsed"/>
+        <result column="spaceRandio" property="spaceRandio"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                pool_id,
+                datastore_id,
+                space_total_allocate,
+                space_used_allocate,
+                remark,
+                priority,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <!--删除（逻辑删除,修改标记-->
+    <update id="updateResourcePoolDatastore">
+        update iaas_resource_pool_datastore
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+    <update id="removeByPoolId">
+        update iaas_resource_pool_datastore
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE pool_id = #{poolId}
+    </update>
+
+    <!--分页查询-->
+    <select id="queryResourcePoolDatastorePage" parameterType="map" resultMap="BaseResultMapVo">
+        select ihd.id,
+        irp.id pool_datastore_id,
+        irp.pool_id pool_id,
+        ihd.datastore_name datastoreName,
+        ihd.drive_type driveType,
+        IFNULL(ihd.space_total, 0) spaceTotal,
+        IFNULL(ihd.space_used, 0) spaceUsed,
+        IFNULL(irp.space_total_allocate, 0) space_total_allocate,
+        IFNULL(ihd.space_used, 0) space_used_allocate,
+        irp.priority
+        FROM
+        iaas_host_datastore ihd
+        LEFT JOIN iaas_resource_pool_datastore irp ON ihd.id = irp.datastore_id AND irp.is_deleted = 0
+        <if test="map.poolId !=null and map.poolId!=''">
+            and irp.pool_id=#{map.poolId}
+        </if>
+        LEFT JOIN iaas_host ih ON ih.id = ihd.host_id
+        AND ih.is_deleted = 0
+        WHERE
+         ihd.is_deleted = 0
+        <if test="map.clusterId !=null and map.clusterId!=''">
+            and ih.cluster_id=#{map.clusterId}
+        </if>
+
+        UNION
+        select ihd.id,
+        irp.id pool_datastore_id,
+        irp.pool_id pool_id,
+        ihd.datastore_name datastoreName,
+        ihd.drive_type driveType,
+        IFNULL(ihd.space_total, 0) spaceTotal,
+        IFNULL(ihd.space_used, 0) spaceUsed,
+        IFNULL(irp.space_total_allocate, 0) space_total_allocate,
+        IFNULL(ihd.space_used,0) space_used_allocate,
+        irp.priority
+        from iaas_host_datastore ihd
+        LEFT JOIN iaas_resource_pool_datastore irp ON ihd.id = irp.datastore_id AND irp.is_deleted = 0
+        LEFT JOIN iaas_host ih ON ih.id = ihd.host_id AND ih.is_deleted = 0
+        WHERE ihd.is_deleted = 0
+        <if test="map.clusterId !=null and map.clusterId!=''">
+            and ih.cluster_id=#{map.clusterId}
+        </if>
+        <if test="map.poolId !=null and map.poolId!=''">
+            and irp.pool_id=#{map.poolId}
+        </if>
+    </select>
+
+    <!--返回list-->
+    <select id="queryResourcePoolDatastoreList" parameterType="map" resultMap="BaseResultMapVo">
+        select ihd.id datastore_id,irp.id,irp.pool_id pool_id,ihd.datastore_name datastoreName,ihd.drive_type driveType,
+        IFNULL(ihd.space_total,0) spaceTotal,IFNULL(ihd.space_used,0) spaceUsed,
+        IFNULL(TRUNCATE(irp.space_total_allocate/IFNULL(ihd.space_total,0),2),0)*100 spaceRandio,
+        IFNULL(irp.space_total_allocate,0) space_total_allocate,ihd.space_used space_used_allocate,irp.priority
+        from iaas_host_datastore ihd
+        left join iaas_resource_pool_datastore irp on ihd.id=irp.datastore_id and irp.is_deleted=0
+        left join (select host_id,sum(space_used) space_used from iaas_host_datastore group by host_id) hd on
+        hd.host_id=ihd.id
+        left join iaas_host ih on ih.id=ihd.host_id and ih.is_deleted=0
+        where ihd.is_deleted=0
+        <if test="map.clusterId !=null and map.clusterId!=''">
+            and ih.cluster_id=#{map.clusterId}
+        </if>
+        UNION
+
+        select ihd.id datastore_id,irp.id,irp.pool_id pool_id,ihd.datastore_name datastoreName,ihd.drive_type driveType,
+        IFNULL(ihd.space_total,0) spaceTotal,IFNULL(ihd.space_used,0) spaceUsed,
+        IFNULL(TRUNCATE(irp.space_total_allocate/IFNULL(ihd.space_total,0),2),0)*100 spaceRandio,
+        IFNULL(irp.space_total_allocate,0) space_total_allocate,ihd.space_used space_used_allocate,irp.priority
+        from iaas_host_datastore ihd
+        left join iaas_resource_pool_datastore irp on ihd.id=irp.datastore_id and irp.is_deleted=0
+        left join (select host_id,sum(space_used) space_used from iaas_host_datastore group by host_id) hd on
+        hd.host_id=ihd.id
+        left join iaas_host ih on ih.id=ihd.host_id and ih.is_deleted=0
+        where ihd.is_deleted=0
+        <if test="map.clusterId !=null and map.clusterId!=''">
+            and ih.cluster_id=#{map.clusterId}
+        </if>
+        <if test="map.poolId !=null and map.poolId!=''">
+            and irp.pool_id=#{map.poolId}
+        </if>
+    </select>
+</mapper>

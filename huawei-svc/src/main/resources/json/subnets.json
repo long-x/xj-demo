@@ -1,0 +1,76 @@
+{
+  "subnets": [
+    {
+      "id": "2e9faf13-4e85-4867-bb27-8ec88bddbd4d",
+      "name": "subnet-172-17-129-0",
+      "cidr": "172.17.129.0/24",
+      "dnsList": [],
+      "status": "ACTIVE",
+      "external": false,
+      "routed": true,
+      "vpc_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "gateway_ip": "172.17.129.1",
+      "dhcp_enable": true,
+      "host_routes": [],
+      "allocation_pools": [
+        {
+          "start": "172.17.129.2",
+          "end": "172.17.129.254"
+        }
+      ],
+      "segmentation_id": 299561,
+      "neutron_subnet_id": "de1fdd15-e63d-4a4d-8952-1f79827e2226",
+      "ip_version": 4,
+      "neutron_network_id": "2e9faf13-4e85-4867-bb27-8ec88bddbd4d"
+    },
+    {
+      "id": "40caedf0-19eb-4b05-8ac6-6875f044cd12",
+      "name": "subnet-172-19-2-0",
+      "cidr": "172.19.2.0/24",
+      "dnsList": [],
+      "status": "ACTIVE",
+      "external": false,
+      "routed": true,
+      "vpc_id": "c0857b28-cb6a-44f0-a608-69a3b33505cb",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "gateway_ip": "172.19.2.1",
+      "dhcp_enable": true,
+      "host_routes": [],
+      "allocation_pools": [
+        {
+          "start": "172.19.2.2",
+          "end": "172.19.2.254"
+        }
+      ],
+      "segmentation_id": 299655,
+      "neutron_subnet_id": "9ad67c52-6db9-4dba-8a29-0f6b0517164c",
+      "ip_version": 4,
+      "neutron_network_id": "40caedf0-19eb-4b05-8ac6-6875f044cd12"
+    },
+    {
+      "id": "1e29f3b6-286f-4b32-ba03-ecec2d0e9e19",
+      "name": "subnet-172-17-128-0",
+      "cidr": "172.17.128.0/24",
+      "dnsList": [],
+      "status": "ACTIVE",
+      "external": false,
+      "routed": true,
+      "vpc_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "gateway_ip": "172.17.128.1",
+      "dhcp_enable": true,
+      "host_routes": [],
+      "allocation_pools": [
+        {
+          "start": "172.17.128.2",
+          "end": "172.17.128.254"
+        }
+      ],
+      "segmentation_id": 299643,
+      "neutron_subnet_id": "75e7dcbb-0629-4ef2-97d8-bd44190d2483",
+      "ip_version": 4,
+      "neutron_network_id": "1e29f3b6-286f-4b32-ba03-ecec2d0e9e19"
+    }
+  ]
+}

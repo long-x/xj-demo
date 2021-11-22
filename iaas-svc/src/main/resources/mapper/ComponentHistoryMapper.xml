@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.component.ComponentHistoryMapper">
+    <!--针对前端的map，3个集合并列-->
+    <resultMap id="compHisMap" type="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentHistoryVO">
+        <id property="id" column="id"/>
+        <result property="componentId" column="component_id"/>
+        <result property="tenantId" column="tenant_id"/>
+        <result property="kind" column="kind"/>
+        <result property="displayName" column="display_name"/>
+        <result property="osType" column="os_type"/>
+        <result property="version" column="version"/>
+        <result property="initType" column="init_type"/>
+        <result property="remark" column="remark"/>
+        <result property="createUser" column="create_user"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateUser" column="update_user"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="isDeleted" column="is_deleted"/>
+        <result property="historyTime" column="history_time"/>
+        <result property="uname" column="uname"/>
+        <collection property="compHisParams" column="param_id"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentParamHistoryVO"
+        >
+            <id property="id" column="param_id"/>
+            <result property="componentParamId" column="component_param_id"/>
+            <result property="componentHistoryId" column="param_history_id"/>
+            <result property="tenantId" column="p_tend"/>
+            <result property="componentId" column="param_comp"/>
+            <result property="paramName" column="param_name"/>
+            <result property="displayName" column="p_disp"/>
+            <result property="defaultValue" column="default_value"/>
+            <result property="paramType" column="param_type"/>
+            <result property="required" column="required"/>
+            <result property="unit" column="unit"/>
+            <result property="valueList" column="value_list"/>
+            <result property="sort" column="param_sort"/>
+            <result property="remark" column="param_remark"/>
+            <result property="createUser" column="param_create_user"/>
+            <result property="createTime" column="param_create_time"/>
+            <result property="updateUser" column="param_update_user"/>
+            <result property="updateTime" column="param_update_time"/>
+            <result property="historyTime" column="param_history_time"/>
+            <result property="isDeleted" column="param_deleted"/>
+        </collection>
+
+        <collection property="compHisScripts" column="script_id"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentScriptHistoryVO"
+        >
+            <id property="id" column="script_id"/>
+            <result property="componentScriptId" column="component_script_id"/>
+            <result property="componentHistoryId" column="sc_history_id"/>
+            <result property="tenantId" column="sc_tend"/>
+            <result property="componentId" column="sc_comp"/>
+            <result property="scriptName" column="script_name"/>
+            <result property="scriptType" column="script_type"/>
+            <result property="content" column="content"/>
+            <result property="remark" column="sc_remark"/>
+            <result property="createUser" column="sc_create_user"/>
+            <result property="createTime" column="sc_create_time"/>
+            <result property="updateUser" column="sc_update_user"/>
+            <result property="updateTime" column="sc_update_time"/>
+            <result property="historyTime" column="sc_history_time"/>
+            <result property="isDeleted" column="sc_deleted"/>
+
+        </collection>
+
+        <collection property="compHisOps" column="operation_id"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentOpHistoryVO"        >
+            <id property="id" column="operation_id"/>
+            <result property="componentOperationId" column="component_operation_id"/>
+            <result property="componentHistoryId" column="op_history_id"/>
+            <result property="tenantId" column="op_tend"/>
+            <result property="componentId" column="op_comp"/>
+            <result property="scriptId" column="op_foreign_script_id"/>
+            <result property="operationName" column="operation_name"/>
+            <result property="operation" column="operation"/>
+            <result property="remark" column="op_remark"/>
+            <result property="createUser" column="op_create_user"/>
+            <result property="createTime" column="op_create_time"/>
+            <result property="updateUser" column="op_update_user"/>
+            <result property="updateTime" column="op_update_time"/>
+            <result property="historyTime" column="op_history_time"/>
+            <result property="isDeleted" column="op_deleted"/>
+        </collection>
+
+    </resultMap>
+
+
+    <sql id="compHisColumns">
+        SELECT
+        u.display_name AS uname,
+        a.*,
+	param.id as param_id,
+	param.component_param_id,
+	param.component_history_id as param_history_id,
+	param.component_id as param_comp,
+	param.param_name,
+	param.display_name as p_disp,
+	param.default_value,
+	param.param_type,
+	param.required,
+	param.unit,
+	param.value_list,
+	param.remark as param_remark,
+	param.create_user as param_create_user,
+	param.create_time as param_create_time,
+	param.update_user as param_update_user,
+	param.update_time as param_update_time,
+	param.history_time as param_history_time,
+	param.is_deleted as param_deleted,
+	sc.id as script_id,
+	sc.component_script_id,
+	sc.component_history_id as sc_history_id,
+	sc.component_id as sc_comp,
+	sc.script_name,
+	sc.script_type,
+	sc.content,
+	sc.remark as sc_remark,
+	sc.create_user as sc_create_user,
+	sc.create_time as sc_create_time,
+	sc.update_user as sc_update_user,
+	sc.update_time as sc_update_time,
+	sc.history_time as sc_history_time,
+	sc.is_deleted as sc_deleted,
+	op.id as operation_id,
+	op.component_operation_id,
+	op.component_history_id as op_history_id,
+	op.component_id as op_comp,
+	op.script_id as op_foreign_script_id,
+	op.operation_name,
+	op.operation,
+	op.remark as op_remark,
+	op.create_user as op_create_user,
+	op.create_time as op_create_time,
+	op.update_user as op_update_user,
+	op.update_time as op_update_time,
+	op.history_time as op_history_time,
+	op.is_deleted as op_deleted
+    </sql>
+
+
+    <select id="qryVersion" parameterType="long"
+            resultType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentHistoryVO">
+        SELECT
+        u.display_name AS uname,
+        a.*
+        from iaas_component_history a
+        LEFT JOIN sys_user u ON a.create_user = u.id
+        where	a.component_id=#{id} and a.is_deleted=0
+
+    </select>
+
+    <select id="qryCompHisInfo"  parameterType="long" resultMap="compHisMap">
+        <include refid="compHisColumns"/>
+        FROM
+        iaas_component_history a
+        LEFT JOIN sys_user u ON a.create_user = u.id
+        LEFT JOIN iaas_component_param_history AS param ON a.id = param.component_history_id
+        AND a.component_id = param.component_id
+        AND param.is_deleted = 0
+        AND a.tenant_id = param.tenant_id
+        LEFT JOIN iaas_component_script_history AS sc ON a.id = sc.component_history_id
+        AND a.component_id = sc.component_id
+        AND sc.is_deleted = 0
+        AND a.tenant_id = sc.tenant_id
+        LEFT JOIN iaas_component_operation_history AS op ON a.id = op.component_history_id
+        AND a.component_id = op.component_id
+        AND op.is_deleted = 0
+        AND op.script_id = sc.component_script_id
+        AND a.tenant_id = op.tenant_id
+        where	a.id=#{id} and a.is_deleted=0
+        order by a.update_time desc
+    </select>
+
+
+    <select id="qryUnionHistory" parameterType="long" resultMap="compHisMap">
+        select * from(
+        <include refid="compHisColumns"/>
+        FROM
+        iaas_component_history a
+        LEFT JOIN sys_user u ON a.create_user = u.id
+        LEFT JOIN iaas_component_param_history AS param ON a.id = param.component_history_id
+        AND a.component_id = param.component_id
+        AND param.is_deleted = 0
+        LEFT JOIN iaas_component_script_history AS sc ON a.id = sc.component_history_id
+        AND a.component_id = sc.component_id
+        AND sc.is_deleted = 0
+        LEFT JOIN iaas_component_operation_history AS op ON a.id = op.component_history_id
+        AND a.component_id = op.component_id
+        AND op.is_deleted = 0
+        AND op.script_id = sc.component_script_id
+        where	sc.component_history_id=#{id}
+        and a.is_deleted = 0
+        and a.id=sc.component_history_id
+        order by a.update_time desc
+        )b
+
+        UNION ALL
+        select * from(
+        <include refid="compHisColumns"/>
+        FROM
+        iaas_component_history a
+        LEFT JOIN sys_user u ON a.create_user = u.id
+        LEFT JOIN iaas_component_param_history AS param ON a.id = param.component_history_id
+        AND a.component_id = param.component_id
+        AND param.is_deleted = 0
+        LEFT JOIN iaas_component_operation_history AS op ON a.id = op.component_history_id
+        AND a.component_id = op.component_id
+        AND op.is_deleted = 0
+        LEFT JOIN iaas_component_script_history AS sc ON a.id = sc.component_history_id
+        AND a.component_id = sc.component_id
+        AND sc.is_deleted = 0
+        AND op.script_id = sc.component_script_id
+        where	op.component_history_id=#{id}
+        and a.is_deleted = 0
+        and a.id=op.component_history_id
+        order by a.update_time desc
+        )c
+
+    </select>
+
+
+
+</mapper>

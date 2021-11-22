@@ -1,0 +1,111 @@
+{
+  "totalCount": 2,
+  "capacityList": [
+    {
+      "capacity": {
+        "isDataEmpty": "false",
+        "oversubscriptionCapacity": {
+          "oversubscriptionRatio": 1.0,
+          "totalCapacity": {
+            "unit": "GB",
+            "capacityValue": "27704.67",
+            "displayCapacity": " 27.05534362793 TB"
+          },
+          "allocatedCapacity": {
+            "unit": "GB",
+            "capacityValue": "1710",
+            "displayCapacity": "1.669921875 TB",
+            "ratio": 6.172244
+          },
+          "freeCapacity": {
+            "unit": "GB",
+            "capacityValue": "25994.671875000001",
+            "displayCapacity": "25.38542175293 TB",
+            "ratio": 93.82776
+          }
+        },
+        "actualCapacity": {
+          "totalCapacity": {
+            "unit": "GB",
+            "capacityValue": "27704.671875000001",
+            "displayCapacity": "27.05534362793 TB"
+          },
+          "usedCapacity": {
+            "unit": "GB",
+            "capacityValue": "72.131843566895",
+            "displayCapacity": "72.131843566895 GB",
+            "ratio": 0.26035985
+          },
+          "freeCapacity": {
+            "unit": "GB",
+            "capacityValue": "27632.541015625001",
+            "displayCapacity": "26.984903335571 TB",
+            "ratio": 99.73964
+          }
+        },
+        "collectTime": "2020-12-21 16:11:31 GMT+08:00",
+        "updateTime": -1
+      },
+      "dimensions": [
+        {
+          "dimensionType": "volumeTypeName",
+          "dimensionValue": "neiwang1_SSD",
+          "volumeTypeOriginal": "neiwang1_SSD"
+        }
+      ]
+    },
+    {
+      "capacity": {
+        "isDataEmpty": "false",
+        "oversubscriptionCapacity": {
+          "oversubscriptionRatio": 3.0000002,
+          "totalCapacity": {
+            "unit": "GB",
+            "capacityValue": "332233.6875",
+            "displayCapacity": " 324.446960449219 TB"
+          },
+          "allocatedCapacity": {
+            "unit": "GB",
+            "capacityValue": "210181.5",
+            "displayCapacity": "205.25537109375 TB",
+            "ratio": 63.263153
+          },
+          "freeCapacity": {
+            "unit": "GB",
+            "capacityValue": "122052.171875000003",
+            "displayCapacity": "119.19157409668 TB",
+            "ratio": 36.736847
+          }
+        },
+        "actualCapacity": {
+          "totalCapacity": {
+            "unit": "GB",
+            "capacityValue": "110744.554687500001",
+            "displayCapacity": "108.148979187012 TB"
+          },
+          "usedCapacity": {
+            "unit": "GB",
+            "capacityValue": "20326.908203125",
+            "displayCapacity": "19.850496292114 TB",
+            "ratio": 18.35477
+          },
+          "freeCapacity": {
+            "unit": "GB",
+            "capacityValue": "90417.648437500006",
+            "displayCapacity": "88.298484802246 TB",
+            "ratio": 81.64523
+          }
+        },
+        "collectTime": "2020-12-21 16:11:31 GMT+08:00",
+        "updateTime": -1
+      },
+      "dimensions": [
+        {
+          "dimensionType": "volumeTypeName",
+          "dimensionValue": "business_type_01",
+          "volumeTypeOriginal": "business_type_01"
+        }
+      ]
+    }
+  ]
+}

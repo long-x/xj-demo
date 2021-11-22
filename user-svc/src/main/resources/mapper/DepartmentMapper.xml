@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.DepartmentMapper">
+
+    <select id="qryDepByUserId" parameterType="long"
+            resultType="com.ecdata.cmp.user.dto.DepartmentVO">
+        SELECT d.*
+        FROM `sys_department` d
+        INNER JOIN sys_user_department ud ON ud.department_id = d.id
+        INNER JOIN sys_user u ON u.id = ud.user_id
+        WHERE d.is_deleted = 0 AND u.id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <update id="modifyUpdateRecord">
+        update sys_department
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="qryAllSubDeployment" parameterType="long"
+            resultType="com.ecdata.cmp.user.entity.Department">
+        SELECT * FROM `sys_department` WHERE FIND_IN_SET(#{id,jdbcType=BIGINT}, parent_ids_str)
+    </select>
+
+    <select id="qryParentDeploymentByUserId" parameterType="long"
+            resultType="com.ecdata.cmp.user.entity.Department">
+        SELECT t.*
+        FROM `sys_department` t
+        INNER JOIN `sys_department` d ON d.parent_id = t.id
+        INNER JOIN sys_user_department ud ON ud.department_id = d.id
+        INNER JOIN sys_user u ON u.id = ud.user_id
+        WHERE u.id = #{userId,jdbcType=BIGINT}
+    </select>
+
+
+    <select id="qryUserIdByDepartIds"  resultType="java.lang.Long">
+
+        SELECT DISTINCT u.id
+        FROM `sys_department` d
+        INNER JOIN sys_user_department ur ON ur.department_id = d.id
+        INNER JOIN sys_user u ON u.id = ur.user_id AND u.status = 1 AND u.is_deleted = 0
+        WHERE d.id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+
+
+
+    <select id="qryTreeList"   resultType="com.ecdata.cmp.user.dto.DepartmentVO">
+        select t1.*
+        from sys_department t1
+        where t1.id not in
+        (
+        select t2.department_id from
+        sys_business_department t2
+        )
+    </select>
+
+    <select id="qryInTreeList"   resultType="com.ecdata.cmp.user.dto.DepartmentVO">
+        select t1.*
+        from sys_department t1
+        where t1.id  in
+        (
+        select t2.department_id from
+        sys_business_department t2
+        )
+    </select>
+
+
+
+</mapper>

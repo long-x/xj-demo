@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasAccountingStatisticsMapper">
+
+    <update id="modifyUpdateRecord">
+        update iaas_accounting_rules
+        set update_user = #{updateUser}, update_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+
+    <resultMap id="BaseStatisticsMapVo" type="com.ecdata.cmp.iaas.entity.dto.IaasAccountingStatisticsVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="effective_date" jdbcType="TIMESTAMP" property="effectiveDate"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="money" jdbcType="INTEGER" property="money"/>
+        <result column="org_id" jdbcType="BIGINT" property="orgId"/>
+        <result column="org_name" jdbcType="INTEGER" property="orgName"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="cpu_count" jdbcType="INTEGER" property="cpuCount"/>
+        <result column="cpu_unit_price" jdbcType="INTEGER" property="cpuUnitPrice"/>
+        <result column="memory_count" jdbcType="INTEGER" property="memoryCount"/>
+        <result column="memory_unit_price" jdbcType="INTEGER" property="memoryUnitPrice"/>
+        <result column="disk_count" jdbcType="INTEGER" property="diskCount"/>
+        <result column="disk_unit_price" jdbcType="INTEGER" property="diskUnitPrice"/>
+        <result column="bms_type1_count" jdbcType="INTEGER" property="bmsType1Count"/>
+        <result column="bms_type1_unit_price" jdbcType="INTEGER" property="bmsType1UnitPrice"/>
+        <result column="bms_type2_count" jdbcType="INTEGER" property="bmsType2Count"/>
+        <result column="bms_type2_unit_price" jdbcType="INTEGER" property="bmsType2UnitPrice"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+
+    </resultMap>
+
+    <resultMap id="BaseStatisticsMapExcelVo" type="com.ecdata.cmp.iaas.entity.dto.IaasAccountingStatisticsExcelVO">
+        <result column="effective_date" jdbcType="TIMESTAMP" property="effectiveDate"/>
+        <result column="money" jdbcType="INTEGER" property="money"/>
+        <result column="org_id" jdbcType="BIGINT" property="orgId"/>
+        <result column="org_name" jdbcType="INTEGER" property="orgName"/>
+        <result column="cpu_count" jdbcType="INTEGER" property="cpuCount"/>
+        <result column="cpu_unit_price" jdbcType="INTEGER" property="cpuUnitPrice"/>
+        <result column="memory_count" jdbcType="INTEGER" property="memoryCount"/>
+        <result column="memory_unit_price" jdbcType="INTEGER" property="memoryUnitPrice"/>
+        <result column="disk_count" jdbcType="INTEGER" property="diskCount"/>
+        <result column="disk_unit_price" jdbcType="INTEGER" property="diskUnitPrice"/>
+        <result column="bms_type1_count" jdbcType="INTEGER" property="bmsType1Count"/>
+        <result column="bms_type1_unit_price" jdbcType="INTEGER" property="bmsType1UnitPrice"/>
+        <result column="bms_type2_count" jdbcType="INTEGER" property="bmsType2Count"/>
+        <result column="bms_type2_unit_price" jdbcType="INTEGER" property="bmsType2UnitPrice"/>
+    </resultMap>
+
+    <select id="qrStatisticsList" resultMap="BaseStatisticsMapVo" parameterType="map">
+        SELECT
+        s.id,s.org_id,s.org_name,
+        s.effective_date,s.status,s.create_time,
+        s.cpu_count,
+        ROUND(s.cpu_unit_price/100 ,2) cpu_unit_price,
+        s.memory_count,
+        ROUND(s.memory_unit_price/100 ,2) memory_unit_price,
+        s.disk_count,
+        ROUND(s.disk_unit_price/100 ,2) disk_unit_price,
+        s.bms_type1_count,
+        ROUND(s.bms_type1_unit_price/100 ,2) bms_type1_unit_price,
+        s.bms_type2_count,
+        ROUND(s.bms_type2_unit_price/100 ,2) bms_type2_unit_price,s.is_deleted,
+        ROUND((SUM(
+        s.cpu_count * s.cpu_unit_price
+        ) + SUM(
+        s.disk_count * s.disk_unit_price
+        ) + SUM(
+        s.memory_count * s.memory_unit_price
+        ) + SUM(
+        s.bms_type1_count * s.bms_type1_unit_price
+        ) + SUM(
+        s.bms_type2_count * s.bms_type2_unit_price
+        ))/100,2) money,
+        <if test="map.statistics == 'date'">
+          DATE(s.effective_date)
+        </if>
+        <if test="map.statistics == 'month'">
+            MONTH(s.effective_date)
+        </if>
+        <if test="map.statistics == 'year'">
+            YEAR(s.effective_date)
+        </if>
+        FROM
+        iaas_accounting_statistics s
+        LEFT JOIN sys_business_group g ON s.org_id = g.id
+        LEFT JOIN sys_business_group_member m ON g.id=m.business_group_id
+        WHERE s.`status`=0 AND  s.is_deleted =0
+        AND m.user_id=#{map.userId}
+        <if test="map.startTime != null and map.startTime !=''">
+          AND s.effective_date >= #{map.startTime}
+        </if>
+        <if test="map.endTime != null and map.endTime !=''">
+          AND  s.effective_date  &lt;  #{map.endTime}
+        </if>
+        GROUP BY
+            s.org_id,
+        <if test="map.statistics == 'date'">
+            DATE(s.effective_date)
+        </if>
+        <if test="map.statistics == 'month'">
+            MONTH(s.effective_date)
+        </if>
+        <if test="map.statistics == 'year'">
+            YEAR(s.effective_date)
+        </if>
+
+
+
+    </select>
+
+    <select id="qrStatisticsExcelList" resultMap="BaseStatisticsMapExcelVo" parameterType="map">
+        SELECT
+        s.org_name,
+        s.effective_date,
+        s.cpu_count,
+        ROUND(s.cpu_unit_price/100 ,2) cpu_unit_price,
+        s.memory_count,
+        ROUND(s.memory_unit_price/100 ,2) memory_unit_price,
+        s.disk_count,
+        ROUND(s.disk_unit_price/100 ,2) disk_unit_price,
+        s.bms_type1_count,
+        ROUND(s.bms_type1_unit_price/100 ,2) bms_type1_unit_price,
+        s.bms_type2_count,
+        ROUND(s.bms_type2_unit_price/100 ,2) bms_type2_unit_price,s.is_deleted,
+        ROUND((SUM(
+        s.cpu_count * s.cpu_unit_price
+        ) + SUM(
+        s.disk_count * s.disk_unit_price
+        ) + SUM(
+        s.memory_count * s.memory_unit_price
+        ) + SUM(
+        s.bms_type1_count * s.bms_type1_unit_price
+        ) + SUM(
+        s.bms_type2_count * s.bms_type2_unit_price
+        ))/100,2) money,
+        <if test="map.statistics == 'date'">
+            DATE(s.effective_date)
+        </if>
+        <if test="map.statistics == 'month'">
+            MONTH(s.effective_date)
+        </if>
+        <if test="map.statistics == 'year'">
+            YEAR(s.effective_date)
+        </if>
+        FROM
+        iaas_accounting_statistics s
+        LEFT JOIN sys_business_group g ON s.org_id = g.id
+        LEFT JOIN sys_business_group_member m ON g.id=m.business_group_id
+        WHERE s.`status`=0 AND  s.is_deleted =0
+        AND m.user_id=#{map.userId}
+        <if test="map.startTime != null and map.startTime !=''">
+            AND s.effective_date >= #{map.startTime}
+        </if>
+        <if test="map.endTime != null and map.endTime !=''">
+            AND  s.effective_date  &lt;  #{map.endTime}
+        </if>
+        GROUP BY
+        s.org_id,
+        <if test="map.statistics == 'date'">
+            DATE(s.effective_date)
+        </if>
+        <if test="map.statistics == 'month'">
+            MONTH(s.effective_date)
+        </if>
+        <if test="map.statistics == 'year'">
+            YEAR(s.effective_date)
+        </if>
+
+
+
+    </select>
+
+
+    <resultMap id="ChargingMapVo" type="com.ecdata.cmp.iaas.entity.dto.ChargingVO">
+        <id column="vm_id" jdbcType="BIGINT" property="vmId"/>
+        <id column="host_id" jdbcType="BIGINT" property="hostId"/>
+        <id column="pool_id" jdbcType="BIGINT" property="poolId"/>
+        <id column="group_id" jdbcType="BIGINT" property="groupId"/>
+        <result column="business_group_name" jdbcType="VARCHAR" property="businessGroupName"/>
+        <result column="vcpu_total" jdbcType="VARCHAR" property="vcpuTotal"/>
+        <result column="memory_total" jdbcType="VARCHAR" property="memoryTotal"/>
+        <result column="disk_total" jdbcType="VARCHAR" property="diskTotal"/>
+    </resultMap>
+
+    
+    <select id="qrCharging" resultMap="ChargingMapVo">
+        select vm.id vm_id,vm.host_id,vm.pool_id,g.id group_id,g.business_group_name,
+        sum(vm.vcpu_total) vcpu_total ,sum(vm.memory_total) memory_total,
+        sum(vmd.disk_total) disk_total
+        from iaas_virtual_machine vm
+        LEFT JOIN  iaas_resource_pool rp
+        ON vm.pool_id = rp.id AND vm.is_deleted =0
+
+        LEFT JOIN sys_business_group_resource_pool grp
+        ON grp.pool_id = rp.id AND rp.is_deleted =0
+
+        LEFT JOIN sys_business_group g
+        ON  g.id = grp.business_group_id AND g.is_deleted=0
+
+        LEFT JOIN iaas_virtual_machine_disk vmd
+        ON vmd.vm_id = vm.id
+
+        WHERE g.business_group_name is not null
+
+        group BY g.id
+
+    </select>
+
+    <resultMap id="BaremetalMapVo" type="com.ecdata.cmp.iaas.entity.dto.BMVO">
+        <result column="business_group_id" jdbcType="BIGINT" property="businessGroupId"/>
+        <result column="detail_name" jdbcType="VARCHAR" property="detailName"/>
+        <result column="count" jdbcType="BIGINT" property="count"/>
+    </resultMap>
+    <!--查询裸金属型号分类-->
+    <select id="qrBaremetal" resultMap="BaremetalMapVo">
+        SELECT m.business_group_id, m.detail_name,COUNT(*) count
+        FROM iaas_bare_metal m
+        LEFT JOIN sys_business_group g
+        ON m.business_group_id=g.id
+        GROUP BY m.detail_name,m.business_group_id
+        order BY m.business_group_id
+    </select>
+
+    <resultMap id="BaseResultMapVo" type="com.ecdata.cmp.iaas.entity.dto.IaasAccountingRulesVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+
+        <result column="effective_date" jdbcType="TIMESTAMP" property="effectiveDate"/>
+        <result column="expiration_date" jdbcType="TIMESTAMP" property="expirationDate"/>
+        <result column="cpu_unit_price" jdbcType="INTEGER" property="cpuUnitPrice"/>
+        <result column="memory_unit_price" jdbcType="INTEGER" property="memoryUnitPrice"/>
+        <result column="disk_unit_price" jdbcType="INTEGER" property="diskUnitPrice"/>
+        <result column="bms_type1_unit_price" jdbcType="INTEGER" property="bmsType1UnitPrice"/>
+        <result column="bms_type2_unit_price" jdbcType="INTEGER" property="bmsType2UnitPrice"/>
+
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+
+    </resultMap>
+
+    <!--查询当前时间有效的计费模型-->
+    <select id="qrInfo" resultMap="BaseResultMapVo">
+        select * FROM
+        iaas_accounting_rules r
+        WHERE r.is_deleted=0
+        AND r.`status`=0
+        AND curdate() BETWEEN r.effective_date AND r.expiration_date
+    </select>
+
+
+
+</mapper>

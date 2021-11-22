@@ -1,0 +1,237 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.WorkbenchMapper">
+
+    <resultMap id="businessGroupResourceMap" type="com.ecdata.cmp.iaas.entity.dto.workbench.BusinessGroupStatisticsVO">
+        <id property="id" column="id"/>
+        <result property="businessGroupName" column="business_group_name"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="isApp" column="is_app"/>
+        <!-- 多表关联映射 -->
+        <collection property="poolStatisticsVOS"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.workbench.ResourcePoolStatisticsVO">
+            <id property="id" column="pool_id"/>
+            <result property="poolName" column="pool_name"/>
+            <result property="cpuTotal" column="vcpu_total_allocate"/>
+            <result property="memoryTotal" column="memory_total_allocate"/>
+            <result property="vmTotal" column="vm_total_allocate"/>
+            <result property="vmUsed" column="vm_used_allocate"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="userBusinessGroupResourceMap" type="com.ecdata.cmp.iaas.entity.dto.workbench.UserResourceVO">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <!-- 多表关联映射 -->
+        <collection property="businessGroupStatisticsVOS"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.workbench.BusinessGroupStatisticsVO">
+            <id property="id" column="businessId"/>
+            <result property="businessGroupName" column="business_group_name"/>
+            <!-- 多表关联映射 -->
+            <collection property="poolStatisticsVOS"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.workbench.ResourcePoolStatisticsVO">
+                <id property="id" column="poolId"/>
+                <result property="poolName" column="pool_name"/>
+                <collection property="iaasVirtualMachineVOList"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+                    <id column="vm_id" property="id"/>
+                    <result column="project_id" property="projectId"/>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <resultMap id="appResultMap" type="com.ecdata.cmp.iaas.entity.dto.workbench.APPResourceVO">
+        <id property="id" column="id"/>
+        <result property="businessGroupName" column="business_group_name"/>
+        <collection property="appvmvoList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.workbench.APPVMVO">
+            <id property="id" column="vm_id"/>
+            <result property="vmName" column="vm_name"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="hostPieDataResultMap" type="com.ecdata.cmp.iaas.entity.dto.workbench.HostDistributionPieDataNewVO">
+        <id property="id" column="id"/>
+        <result property="name" column="business_group_name"/>
+        <result property="parentId" column="parent_id"/>
+        <collection property="appvmvoList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.workbench.APPVMVO">
+            <id property="id" column="vm_id"/>
+            <result property="vmName" column="vm_name"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryHostDistribution" resultType="com.ecdata.cmp.iaas.entity.dto.workbench.HostDistributionPieDataVO">
+        select
+        t1.business_group_name item,
+        count(t2.id) count
+        from sys_business_group t1
+        left join iaas_virtual_machine_right t3 on t1.id=t3.relate_id and t3.type=5
+        left join iaas_virtual_machine t2 on (t3.vm_id=t2.id and t2.is_deleted=0)
+        where t1.is_deleted=0 and t1.is_app=1
+        <if test="null != list and list.size() !=0">
+            AND t1.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+        group by t1.id
+    </select>
+
+    <select id="queryHostDistributionNew" resultMap="hostPieDataResultMap">
+        select
+        t1.id,
+        t1.business_group_name,
+        t1.parent_id,
+        t1.is_app,
+        t3.id vm_id,
+        t3.vm_name
+        from sys_business_group t1
+        left join iaas_virtual_machine_right t2 on t1.id=t2.relate_id and t2.type=5
+        left join iaas_virtual_machine t3 on t2.vm_id=t3.id and t3.is_deleted=0
+        where t1.is_deleted=0
+        <if test="null != list and list.size() !=0">
+            AND t1.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+
+    <select id="queryBusinessGroupUserCount"
+            resultType="com.ecdata.cmp.iaas.entity.dto.workbench.BusinessGroupUserDataVO">
+        select t1.business_group_name country,count(t2.user_id) litres from sys_business_group t1
+        left join sys_business_group_member t2 on (t1.id=t2.business_group_id)
+        where t1.is_deleted=0 and t1.is_app=1
+        <if test="null != list and list.size() !=0">
+            AND t1.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+        group by t1.id
+    </select>
+
+    <select id="queryBusinessApplyCount" resultType="com.ecdata.cmp.iaas.entity.dto.workbench.HostApplyCountDataVO">
+        select
+        date_format(t1.create_time, '%Y-%m-%d') dateStr,
+        t2.business_group_name businessGroupName,
+        count(*) total
+        from iaas_process_apply t1
+        left join sys_business_group t2 on t1.business_group_id=t2.id
+        where t1.is_deleted=0
+        <if test="null != list and list.size() !=0">
+            AND t2.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+        group by t2.id,date_format(t1.create_time, '%Y-%m-%d')
+    </select>
+
+    <select id="queryBusinessGroupResourceStatistics" resultMap="businessGroupResourceMap">
+        select
+        t1.id,
+        t1.business_group_name,
+        t1.parent_id,
+        t1.is_app,
+        t3.id pool_id,
+        t3.pool_name,
+        t3.vcpu_total_allocate,
+        t3.memory_total_allocate,
+        t3.vm_total_allocate,
+        t3.vm_used_allocate
+        from sys_business_group t1
+        left join sys_business_group_resource_pool t2 on t1.id=t2.business_group_id
+        left join iaas_resource_pool t3 on t2.pool_id=t3.id and t3.is_deleted=0
+        where t1.is_deleted=0
+        <if test="null != list and list.size() !=0">
+            AND t1.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+
+    <select id="queryUserBusinessGroupResourceStatisticsNew" resultMap="appResultMap">
+        select
+        t1.id,
+        t1.business_group_name,
+        t1.parent_id,
+        t3.id vm_id,
+        t3.vm_name
+        from sys_business_group t1
+        left join iaas_virtual_machine_right t2 on t1.id=t2.relate_id and t2.type=5
+        left join iaas_virtual_machine t3 on t2.vm_id=t3.id and t3.is_deleted=0
+        where t1.is_app=0 and t1.is_deleted=0
+        <if test="null != list and list.size() !=0">
+            AND t1.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+    <select id="queryUserBusinessGroupResourceStatistics" resultMap="userBusinessGroupResourceMap">
+        select
+        t1.id,
+        t1.name,
+        t3.id businessId,
+        t3.business_group_name,
+        t5.id poolId,
+        t5.pool_name,
+        t6.id vm_id,
+        t6.project_id
+        from sys_user t1,
+        sys_business_group_member t2,
+        sys_business_group t3,
+        sys_business_group_resource_pool t4,
+        iaas_resource_pool t5,
+        iaas_virtual_machine t6
+        where t1.id=t2.user_id and t3.id=t2.business_group_id and t3.id=t4.business_group_id and t4.pool_id=t5.id
+        and t1.is_deleted=0 and t3.is_deleted=0 and t5.is_deleted=0 and t6.pool_id=t5.id and t6.is_deleted=0
+        <if test="null != list and list.size() !=0">
+            AND t3.id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+
+    <select id="queryVirtualMachineCapacity"
+            resultType="com.ecdata.cmp.iaas.entity.dto.workbench.VirtualMachineCapacityVO">
+        select
+        vm.vm_id id,
+        ivm.vm_name name,
+        vm.cpu_usage_rate cpu,
+        vm.memory_usage_rate memory
+        from iaas_virtual_machine_monitor vm
+        LEFT JOIN  iaas_virtual_machine_right r on vm.vm_id= r.vm_id
+        LEFT JOIN iaas_virtual_machine ivm on ivm.id=vm.vm_id
+        WHERE vm.is_deleted=0 and vm.type='1'
+        <!-- and vm.create_time >DATE_ADD(NOW(),INTERVAL-2 HOUR)  -->
+        <if test="null != list and list.size() !=0">
+            AND r.relate_id in
+            <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </if>
+        GROUP BY vm.vm_id
+    </select>
+
+    <!--<select id="queryVirtualMachineCapacity"-->
+            <!--resultType="com.ecdata.cmp.iaas.entity.dto.workbench.VirtualMachineCapacityVO">-->
+        <!--select vm.id,vm.vm_name name,vm.vcpu_used cpu,vm.memory_used memory-->
+        <!--from iaas_virtual_machine vm LEFT JOIN  iaas_virtual_machine_right r on vm.id= r.vm_id-->
+        <!--WHERE vm.is_deleted=0-->
+        <!--<if test="null != list and list.size() !=0">-->
+            <!--AND relate_id in-->
+            <!--<foreach collection="list" item="item" index="index" open="(" close=")" separator=",">-->
+                <!--#{item}-->
+            <!--</foreach>-->
+        <!--</if>-->
+        <!--GROUP BY vm.id-->
+    <!--</select>-->
+</mapper>

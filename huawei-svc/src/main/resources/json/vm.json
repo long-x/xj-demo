@@ -1,0 +1,4301 @@
+{
+  "responseData": {
+    "total": 148,
+    "data": [
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6BCF3009C0963EABA82D999B44C40744",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.74",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.44",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "6BCF3009C0963EABA82D999B44C40744",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "82f21d1d-6dcf-4bf3-865f-82f6628a3509"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "FD1B57CF1B093C379136EC0388AB9D8D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.75",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.45",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "FD1B57CF1B093C379136EC0388AB9D8D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "86bc1d65-d552-486e-802b-66a84f2586ec"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "8F197C3C001132A59C3AC04A4C9A1F17",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_DB_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.49",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "394F3E10610333F88313B79DEF676F2A",
+        "cloud_vm#resId": "8F197C3C001132A59C3AC04A4C9A1F17",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "1c5f4a5b-01b8-42dc-92ee-7fb1807df546"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "459729506D9C371F8D2596D652C6757D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_006"
+        },
+        "cloud_vm#floatingIp": "10.233.0.78",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.48",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC",
+        "cloud_vm#resId": "459729506D9C371F8D2596D652C6757D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "06d6d2d7-4239-40ee-9b09-d752e7d7b25e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CDB72A9FAB4538D7BABC27F1064484D8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_SMARTBI_APP_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.79",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.52",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "CDB72A9FAB4538D7BABC27F1064484D8",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "2a86485f-2c69-4c7c-a78f-a259501ac5e0"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "1A50B8A1A5F236B58543F9596C452E75",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.3",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.12",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "1A50B8A1A5F236B58543F9596C452E75",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "0a9e196d-b70e-40b5-a4af-d8add11c0865"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "ABE713B9E12A383B9C3E3141522AA975",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_DB_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.5",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.14",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "ABE713B9E12A383B9C3E3141522AA975",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "fdd098e3-3714-41f7-89e7-693907093746"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "7CEFCC542A4E31A281826CFB71C02DFA",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_OTH_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.4",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.13",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "7CEFCC542A4E31A281826CFB71C02DFA",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e1c590ce-78a7-4b85-afbe-5d8e6735af5d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "234EFFF3F14E36FC90AEDEB5AD2A012D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_OTH_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.6",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.15",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "234EFFF3F14E36FC90AEDEB5AD2A012D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8ea71051-1221-46aa-939b-e159122c89da"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "FB1CA278CA2B3AC8AE143B17AB8CD14A",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_DB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.7",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.16",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "FB1CA278CA2B3AC8AE143B17AB8CD14A",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8d62e4a8-c861-4b8d-8517-3bd2c86b966f"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "345CCEC30D5831F0B86B565964820028",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.1",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.10",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "345CCEC30D5831F0B86B565964820028",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f47112f5-6fc5-4ae8-ad4c-18e5c269a794"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "F993C2D0993034FF9B40A59C913F26FE",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_DB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.29",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.15",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "F993C2D0993034FF9B40A59C913F26FE",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "19d8d624-d923-4bf9-8c3d-36cf3e208034"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D08EE2752C0B3C21AF262F09E8641191",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_APP_04"
+        },
+        "cloud_vm#floatingIp": "10.233.0.24",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.13",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "D08EE2752C0B3C21AF262F09E8641191",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f8e8b274-be22-4873-966c-6d80b843548d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D54D597642C23C5BA909B71344ADCBB5",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_DB_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.28",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.14",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "D54D597642C23C5BA909B71344ADCBB5",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7b1a28e7-5c7a-4b72-91a3-c9c2b6fd8472"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "多人登陆-前置机|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D2F9D8EAE483364C91DC8E86B4F11114",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_前置机"
+        },
+        "cloud_vm#floatingIp": "10.233.0.94",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.22",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81",
+        "cloud_vm#resId": "D2F9D8EAE483364C91DC8E86B4F11114",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "584dc5fb-9cb4-4f25-85ea-0d4938fa7eeb"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C1175306B02332308EA6C32386E07CC9",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_test03"
+        },
+        "cloud_vm#floatingIp": "10.235.1.93",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.93",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "18C8F355DC1036B78853EDE28F8737CF",
+        "cloud_vm#resId": "C1175306B02332308EA6C32386E07CC9",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "ad5bd738-8eca-42a7-9e6f-afe4f05de30d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A257E77F8D6D3036AA407DF2FA2849A8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_test04"
+        },
+        "cloud_vm#floatingIp": "10.235.1.94",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.94",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C2316B2DCD7539A29E151702978CD432",
+        "cloud_vm#resId": "A257E77F8D6D3036AA407DF2FA2849A8",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8bf22cb3-7087-4ffa-af8d-42e03f1b8b0d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D3674D608B2F31828F3C792122BA2AD2",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_NGINX_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.63",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.30",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "D3674D608B2F31828F3C792122BA2AD2",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "615d6849-66ca-4fe8-80eb-49b8a42411bb"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "73ED88C943193F3CA12686CBD7AE1929",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_NGINX_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.64",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.31",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "73ED88C943193F3CA12686CBD7AE1929",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "233ec617-00b3-421c-b059-2e0f81c7133c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D351444769A83854B60EAE9FD5E3C5D5",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_CACHE_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.62",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.29",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "D351444769A83854B60EAE9FD5E3C5D5",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "68f8e914-9bfd-4fae-89d5-d5fb2b077e2b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DF2B683073DC3FA7AEE352C400B4E92F",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_CACHE_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.61",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.28",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "DF2B683073DC3FA7AEE352C400B4E92F",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "964320a0-497b-40a0-9394-c951c6fd45f1"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BB674CD5BA853B148BDA8437412D7E1B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_APP_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.66",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.33",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "BB674CD5BA853B148BDA8437412D7E1B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "0b37ed34-1253-41d4-ac96-a322abf1ab05"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "Red Hat Enterprise Linux-7.7-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "E733CBC7E03833A290C2B149DDE42407",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-Redhat"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.20",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "E733CBC7E03833A290C2B149DDE42407",
+        "cloud_vm#osVersion": "Red Hat Enterprise Linux 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a528bf35-8284-419e-87c9-7a6c9348acc6"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "ubuntu-18.04.3-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "7F012A2D512B3AEAB3171FB141D27985",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-Ubuntu"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.21",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "7F012A2D512B3AEAB3171FB141D27985",
+        "cloud_vm#osVersion": "Ubuntu Server 18.04.2 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "93571bbc-e891-4fe2-b800-e9f2eea47d9c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "F50F0F05573932878FC0AB9E1230FF34",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-CentOS"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.18",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "F50F0F05573932878FC0AB9E1230FF34",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "2f163266-ef89-4670-9955-ad225384ac71"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "9C0B45AA1456322081468AD9A27DBBCC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_APP_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.78",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "9C0B45AA1456322081468AD9A27DBBCC",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "60912475-9745-4bed-843e-6eaaef463967"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "74719B3E6F1838C18AB60A7DCC4D342C",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_BAK_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.146",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "74719B3E6F1838C18AB60A7DCC4D342C",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "afb5a5b3-f0b4-44b1-9de2-c4102740010c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "56A6FFD6E8DC34FAB6C2A34F16CCA63A",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_ZCGL_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.221",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.5.11",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C2316B2DCD7539A29E151702978CD432",
+        "cloud_vm#resId": "56A6FFD6E8DC34FAB6C2A34F16CCA63A",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "02c59242-5cd4-4c50-ac2b-b3ec6a3303c3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2016-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4FFD4662DB153B3E8587475230D9C8C8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "ecs-Test-Backup-2016"
+        },
+        "cloud_vm#floatingIp": "10.231.220.140",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "192.168.1.126",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "4FFD4662DB153B3E8587475230D9C8C8",
+        "cloud_vm#osVersion": "Windows Server 2016 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d5ae0608-2557-4d4e-9d68-10f6939102b8"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "43F5170156A139A98F11BD226044D6F8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_OTH_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.14",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.16",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "43F5170156A139A98F11BD226044D6F8",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f63dc743-3a72-4884-a59d-8dae762a3871"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "07D7F926227D35DB8A71F2724D8923DF",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_WEB_01"
+        },
+        "cloud_vm#floatingIp": "10.231.0.2",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "172.21.0.10",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "45EE2396D7CA38E1B5B628D53C57DB7F",
+        "cloud_vm#resId": "07D7F926227D35DB8A71F2724D8923DF",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7c987345-4d72-47cf-b235-00d0e73f7e9b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BDE0682C5C433409AAC3D585435C69AE",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_OTH_05"
+        },
+        "cloud_vm#floatingIp": "10.231.0.1",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "172.21.1.10",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "45EE2396D7CA38E1B5B628D53C57DB7F",
+        "cloud_vm#resId": "BDE0682C5C433409AAC3D585435C69AE",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "1e4a1dce-f2f7-4f0b-8a04-6311ae7ab9ff"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "88FB65FF687B3AFDA5A938DB2B676EA2",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YJZH_DB_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.18",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.2.11",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "88FB65FF687B3AFDA5A938DB2B676EA2",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "ccf07eb5-ed12-460e-b0ab-fab65085f769"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "3A50E3728DA2382E80BA6243AFF05A86",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_OTH_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.13",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.15",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "3A50E3728DA2382E80BA6243AFF05A86",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "92a810b3-027f-4172-8357-05e8dd396ed8"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "FEB99EAD057A37788533907FC876D4C0",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_WEB_04"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.21.4.46",
+        "cloud_vm#flavor": "24U24G|24vCPU|24GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "FEB99EAD057A37788533907FC876D4C0",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "5a416479-3a96-42d5-9783-b9fbcec3bf2e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A7A4F5BBB2693432BB925297BA3BE89B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_DB_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.19",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "A7A4F5BBB2693432BB925297BA3BE89B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b9880db2-034b-449d-8e30-00a7b0736c1e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "89B5F85BEB5C3B7A8BEF244B7CF5BBEC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.2",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.11",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "89B5F85BEB5C3B7A8BEF244B7CF5BBEC",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7dfd7ef7-ae2f-4f94-9d39-781c4fd9a057"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "1335C1D6C30D36C1A7A875A9BE5F2130",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_OTH_04"
+        },
+        "cloud_vm#floatingIp": "10.233.0.15",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.17",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "1335C1D6C30D36C1A7A875A9BE5F2130",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8adf3a24-b759-48e1-9124-12f08be20c52"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "AC0BE172B99132B98857820DDA84FB87",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_APP_04"
+        },
+        "cloud_vm#floatingIp": "10.233.0.11",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.13",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "AC0BE172B99132B98857820DDA84FB87",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "56347a7f-b94b-4e57-aa88-f5f0aff7d6f3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C4F4AACE1EDD391F9E14EFA297E624DD",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_OTH_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.12",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.14",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "C4F4AACE1EDD391F9E14EFA297E624DD",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4d87204e-d7e6-4bc9-90f4-9fb1349fae20"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CD755D9B972F357E96C401E967263753",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM04"
+        },
+        "cloud_vm#floatingIp": "10.235.0.8",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.18",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "CD755D9B972F357E96C401E967263753",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "44caf2fd-e69a-418e-bf8e-6dfe81f05fa3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A4DAB57A115E3E72AB81813C9314EA2B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM05"
+        },
+        "cloud_vm#floatingIp": "10.235.0.9",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.19",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "394F3E10610333F88313B79DEF676F2A",
+        "cloud_vm#resId": "A4DAB57A115E3E72AB81813C9314EA2B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4048bf31-a39e-4cb5-8f00-433f39c61388"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "34BE219071893D52B8A91129BDA08D59",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM06"
+        },
+        "cloud_vm#floatingIp": "10.235.0.10",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.20",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "23B8EC7EBCB33CCCA8A5C85BBDD2855A",
+        "cloud_vm#resId": "34BE219071893D52B8A91129BDA08D59",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f8ca421b-ae76-4016-9f67-3bbc12669c03"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6C991B7912D137FC9C9F19A3C5C88765",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM03"
+        },
+        "cloud_vm#floatingIp": "10.235.0.7",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.17",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "6C991B7912D137FC9C9F19A3C5C88765",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "5c8825fa-0ddc-4074-b50f-10e2e68b390a"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A70EFA66B18531F7AAF4B326B9CE0A16",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_DB1"
+        },
+        "cloud_vm#floatingIp": "10.235.0.11",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.21",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "A70EFA66B18531F7AAF4B326B9CE0A16",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "40b53f87-1292-4edc-b458-8409587c348b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4CFD49A3346E3952AD3146A4B035A145",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_DB2"
+        },
+        "cloud_vm#floatingIp": "10.235.0.12",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.22",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "394F3E10610333F88313B79DEF676F2A",
+        "cloud_vm#resId": "4CFD49A3346E3952AD3146A4B035A145",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "1c085b07-0f17-49de-b01e-231a38cb739c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DEC315C081BC3C67BD918190DD268FCB",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_APP_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.21.4.174",
+        "cloud_vm#flavor": "24U24G|24vCPU|24GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "DEC315C081BC3C67BD918190DD268FCB",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d188d04a-3052-428c-ab49-e422b3b618f8"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "861FF1BAF5033DB18D029006B23D24F1",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_DB_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.43",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.9.10",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "861FF1BAF5033DB18D029006B23D24F1",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4045785a-2f58-4b16-934c-2b4b3ee6e5f7"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A843C4E3D5AC32D5AACEAE45C773DB0B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.231.0.4",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "172.21.3.10",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "178B688DAA363364ACBD64E2BE4AEA51",
+        "cloud_vm#resId": "A843C4E3D5AC32D5AACEAE45C773DB0B",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e3bb4e1d-b4bd-4fa7-82fc-ea72ab9be41d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "45B0104008AA32AEB07A242DFEB17CF4",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.32",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.11",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "45B0104008AA32AEB07A242DFEB17CF4",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a621209e-e893-4c1b-8734-43056cd59d99"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BA414280440F306A9C4AE3D591E9D0B7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_06"
+        },
+        "cloud_vm#floatingIp": "10.233.0.36",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.15",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "BA414280440F306A9C4AE3D591E9D0B7",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "fd1afe81-d08a-4497-b8a3-f620a591f1bf"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "8DBA20F8867B3672AA70AE2B72A6381F",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_05"
+        },
+        "cloud_vm#floatingIp": "10.233.0.35",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.14",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "8DBA20F8867B3672AA70AE2B72A6381F",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "ad0d5020-6757-4f3e-98a8-c2274c74164b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0CC336CF361D334A9B80A387B8486DDB",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_DB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.16",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.20",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "0CC336CF361D334A9B80A387B8486DDB",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f76fc3df-6b0f-4912-bdf8-2a1e7b1a9e21"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "多人登陆-前置机|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C39E934085913A8AA49D1AA3EB34AFA5",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "前置机-大数据-多人登陆"
+        },
+        "cloud_vm#floatingIp": "10.233.0.80",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.56",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "C39E934085913A8AA49D1AA3EB34AFA5",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f2ba2afb-0a83-4152-a4f9-280b70279fb6"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D1512FF2BD123850B88F05DDCAB19289",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DB_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.81",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.10",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "D1512FF2BD123850B88F05DDCAB19289",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "5dc4d985-a5a3-44fc-989c-79c3145537b6"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "63C080BCF17F391785719AA46F18F334",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_ELK_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.82",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.11",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "63C080BCF17F391785719AA46F18F334",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "3a37ea27-4857-4ded-b37b-a8323157f35a"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "66CD5C31A6913181B13BFEDEF10E21A6",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XMWD_OTH_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.10.10",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "66CD5C31A6913181B13BFEDEF10E21A6",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "2ad18671-521b-411e-8f8a-d536fe8f6639"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "AD0728E5585135A8A33434441908B594",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.45",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.0.11",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C2316B2DCD7539A29E151702978CD432",
+        "cloud_vm#resId": "AD0728E5585135A8A33434441908B594",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "ccf7464e-fd7a-4140-ad67-4f331bf1d4f3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "69F03F78C7763DEFAF1E9A4ED7C4A061",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.231.0.5",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "172.21.3.11",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1191A37E0B3D3773A969397F6D980A22",
+        "cloud_vm#resId": "69F03F78C7763DEFAF1E9A4ED7C4A061",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "33b8d228-5520-4514-b5f1-01938d8df518"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CF2C6AEC3DFA370681F7FC34609FB88E",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_DB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.44",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.0.10",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "129F13AAA66733E8BB14A9C47907625D",
+        "cloud_vm#resId": "CF2C6AEC3DFA370681F7FC34609FB88E",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "da30afcf-b751-4cca-b367-cf39c64ea31d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "3E8E05A30269393683912002A15033F8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_KJGL_APP_04"
+        },
+        "cloud_vm#floatingIp": "10.233.0.46",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.0.12",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "3E8E05A30269393683912002A15033F8",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e5a4dece-2a86-4b1e-aacd-a0af727a6555"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A505A51BBA0D3A82971BCC311F24714B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.22",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.11",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "A505A51BBA0D3A82971BCC311F24714B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8edbe9c4-a105-4a0c-a024-e8bdfc1d5650"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A9E8303E66923990A08E133A899512FA",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.21",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.10",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "A9E8303E66923990A08E133A899512FA",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "2f030fc2-774d-4002-8dd8-a3031333e1c4"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "99BAA3FE0FF13C54B0127138B2A4BDD3",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SFRZ_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.23",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.3.12",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "99BAA3FE0FF13C54B0127138B2A4BDD3",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a7e14217-1ee5-4752-874b-b9f0277f3c7c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "多人登陆-前置机|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "76527E639FE33C318DC5A19027EE1836",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_ZCGL_前置机"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.19.5.9",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "16B123A34C233C40A06D81A518DA28ED",
+        "cloud_vm#resId": "76527E639FE33C318DC5A19027EE1836",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "14afa4b1-32b0-4e8d-a632-e469e8a8cc13"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "467C44DBDBD33904B802845313FDF49D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_OPERATION_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.91",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.20",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "467C44DBDBD33904B802845313FDF49D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "bd7e21c5-622c-484a-947b-f2b0e30184c1"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6D4705D6C8E539E3B1F876DDD7B33BC3",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_EM_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.21",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "6D4705D6C8E539E3B1F876DDD7B33BC3",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "63e724bf-6250-4de8-94b7-7c8da98a86a4"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D6A2FDC26E5434E6AF9B685468E38CE7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_JUMPSERVER_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.24",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "D6A2FDC26E5434E6AF9B685468E38CE7",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7c2a27b7-cf4d-4d82-8f18-87cb493c6daa"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "3F7B1C856BBF3AC0BAF3D508E078AEF0",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_JUMPSERVER_003"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.26",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "3F7B1C856BBF3AC0BAF3D508E078AEF0",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "0b4ea63d-a6ea-46d2-886b-f151b8fcf728"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "3400F257490D3E109BE7DF01DC19A556",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_JUMPSERVER_002"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.25",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "3400F257490D3E109BE7DF01DC19A556",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f70b0f57-db9d-4983-b1dd-64f49cdf085d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "19B65EBD4FF63AF0A4A42646D6CA5086",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "深信服-前置机-云管"
+        },
+        "cloud_vm#floatingIp": "10.235.41.122",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.30",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "19B65EBD4FF63AF0A4A42646D6CA5086",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "26ab5c01-baf3-4c93-83c1-5a901d217988"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4FCE0A535BBF34C5904AC558B779EAFA",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATAQ_MASTER_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.50",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.13",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "BEB060E91647318C8F6D29C80E4503EE",
+        "cloud_vm#resId": "4FCE0A535BBF34C5904AC558B779EAFA",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "36373e7a-9a22-4586-bf8f-9da1b9bd77c2"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "E0B4B5193F1538A7B83319BA0891480C",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATAQ_MASTER_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.52",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.15",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "E0B4B5193F1538A7B83319BA0891480C",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "70fcdd9f-b564-40e8-a075-9399ab610089"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A3C56D7EDDBE3863811793FB98ECA8BB",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_FXKZ_WEB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.20",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.1.17",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "A3C56D7EDDBE3863811793FB98ECA8BB",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "ad8a3333-108e-42f8-b11a-5b8524c4784f"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "134944A46B4631A8A7D9BCFD6266FB29",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_COMPUTE_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.88",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.17",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C2316B2DCD7539A29E151702978CD432",
+        "cloud_vm#resId": "134944A46B4631A8A7D9BCFD6266FB29",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7bffb86c-a52a-45c5-be57-2c25dba36ff0"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "42B3006A330D3FDFA942A8C16CC0CFD3",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_COMPUTE_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.90",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.19",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "42B3006A330D3FDFA942A8C16CC0CFD3",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "5ce7ed4f-1e26-4786-bf56-7af48ac83f39"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "10727240F7653C0F9FEE4F447D1B34B7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_COMPUTE_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.89",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.18",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "10727240F7653C0F9FEE4F447D1B34B7",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "88c53fa1-743e-4fe4-b9a6-e768d78de601"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "8E3DB7BF4BD2327AA94C9D5043F6962F",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_SMARTBI_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.93",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.23",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "8E3DB7BF4BD2327AA94C9D5043F6962F",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "6f988617-996d-4be6-8c1d-626b4b18a668"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D91D73F757D63C46B0BECAAD40365D98",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_SMARTBI_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.92",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.22",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "D91D73F757D63C46B0BECAAD40365D98",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "658c43c5-771f-4f97-8a04-6c0d8f2fe7cb"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "OceanStorDJ-内部使用|10GB|0MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6A35DE71ACC937A58733A6C4D608BBD7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_WEB_02"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.232",
+        "cloud_vm#flavor": "4U4G|4vCPU|4GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "6A35DE71ACC937A58733A6C4D608BBD7",
+        "cloud_vm#osVersion": "EulerOS 2.5 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f7c6266b-b3c7-48fd-845f-6b00043b4484"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "F3BEF9C3F19F32F68940A5C6568A1B60",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_09"
+        },
+        "cloud_vm#floatingIp": "10.233.0.39",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.18",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "F3BEF9C3F19F32F68940A5C6568A1B60",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b01729e8-bf1b-43e6-8f68-84784903e211"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CDF3512E95753B8A86EA9772329A2490",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_DB_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.37",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "23B8EC7EBCB33CCCA8A5C85BBDD2855A",
+        "cloud_vm#resId": "CDF3512E95753B8A86EA9772329A2490",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d07af9e0-c016-46ed-81f6-3cecd08150f3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "841EA42D2700398EA5E4B8C7058BA100",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_DB_002"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.38",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6E6E23382F533BAF9B92485C2DF0F2B5",
+        "cloud_vm#resId": "841EA42D2700398EA5E4B8C7058BA100",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4b1c2d0f-21b4-4179-840b-d45430822268"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DBEC5469172439AC99C061F429526EA9",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_004"
+        },
+        "cloud_vm#floatingIp": "10.233.0.76",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.46",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "DBEC5469172439AC99C061F429526EA9",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "222840f7-d48a-48a7-a670-ec0be1003d41"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CF27C8046EF4387DA1E9D787BB850C98",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.73",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.43",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81",
+        "cloud_vm#resId": "CF27C8046EF4387DA1E9D787BB850C98",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d17cfa8a-5134-4bf7-a63d-fac09ee6677c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DC8B342074EC3D3C9908484669E90405",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_APP_005"
+        },
+        "cloud_vm#floatingIp": "10.233.0.77",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.47",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "DC8B342074EC3D3C9908484669E90405",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "846674fb-56a5-4ac0-be9d-970eec7c72fe"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "414CEC951B2732E094F718C2C4FADEE0",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "ecs-Test-Backup-CentOS"
+        },
+        "cloud_vm#floatingIp": "10.233.100.86",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "192.168.1.214",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC",
+        "cloud_vm#resId": "414CEC951B2732E094F718C2C4FADEE0",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "df7b958d-5dc1-42e1-b7e7-423e79cfbfb9"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "Windows 10 Professional 64bit|50GB|2048MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "75E24FFF24A73A47B5E097050F42595D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "ecs-4b87"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.21.1.32",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "18C8F355DC1036B78853EDE28F8737CF",
+        "cloud_vm#resId": "75E24FFF24A73A47B5E097050F42595D",
+        "cloud_vm#osVersion": "Windows 10 Professional 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "01879555-5b58-4e9a-aef4-617d845f1df3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C61BBCBAC3B43856B5C7AC0C0482DE8E",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "测试机-OBSBrowser工具"
+        },
+        "cloud_vm#floatingIp": "10.235.47.255",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.21.1.3",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "18C8F355DC1036B78853EDE28F8737CF",
+        "cloud_vm#resId": "C61BBCBAC3B43856B5C7AC0C0482DE8E",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7a0ef382-ee45-4789-b1f6-e1785f3ea8b5"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS7.6-ver0|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "EA28FBF0E41F31559F8571E205C07294",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_OTH_011"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.21.4.243",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "EA28FBF0E41F31559F8571E205C07294",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "c649205e-906c-4eeb-8555-02cdd63c8fe7"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "759A6AC470EF3565A9E84B7D2A5F6025",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBGPT_BAK_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.21.0.150",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "759A6AC470EF3565A9E84B7D2A5F6025",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d76e5fb5-b0dd-4353-a2de-51de66ee9fd5"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "416CE63E367E30FE90E6EE9863A444AD",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-2012"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.16",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "416CE63E367E30FE90E6EE9863A444AD",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b31f1d56-55fb-462b-ab8c-2d996938b399"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2016-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "761E2DF2C74536D5AFB866142DE18B28",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DNS_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.26",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.10",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "761E2DF2C74536D5AFB866142DE18B28",
+        "cloud_vm#osVersion": "Windows Server 2016 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f0add414-9b1b-4f76-927f-fb34ac53f578"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2008R2-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "55F9A484820E39C298C952A32C28E7BC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "Test-2008"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.15",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "55F9A484820E39C298C952A32C28E7BC",
+        "cloud_vm#osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e7c480b5-977d-4f2f-8f0b-21bea6006ffe"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "AB7DA087171331DE894F9EB5F2131EBD",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_test01"
+        },
+        "cloud_vm#floatingIp": "10.235.1.91",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.91",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "129F13AAA66733E8BB14A9C47907625D",
+        "cloud_vm#resId": "AB7DA087171331DE894F9EB5F2131EBD",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e50b0922-55de-4b8d-9757-f608111a8329"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "54BCD2FC07C0356997DAF02F35B08C43",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_test05"
+        },
+        "cloud_vm#floatingIp": "10.235.1.95",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.95",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "54BCD2FC07C0356997DAF02F35B08C43",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "996c6b53-3c03-4476-a4ed-2eb685e60fb9"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0998E06E332F3E03A127E3CB3B7ACEA7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_test02"
+        },
+        "cloud_vm#floatingIp": "10.235.1.92",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "192.168.1.92",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "0998E06E332F3E03A127E3CB3B7ACEA7",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7e9b97be-a85d-4cac-a70f-2bc83995c6ae"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A9E31C00D4A030AA8A31B0297B726F7F",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATAQ_OPERATION_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.53",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.16",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "A9E31C00D4A030AA8A31B0297B726F7F",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f9f2c6db-dd2b-40fc-a407-5443efb2ae6b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "79D418FC71DE39C58BB0228C432D70C4",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATAQ_MASTER_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.51",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.14",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "79D418FC71DE39C58BB0228C432D70C4",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f357fed9-2a85-4a1b-9caf-6d0e95c91079"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "510BDC2719D7373A9E3D6C42DF4A1452",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_NGINX_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.54",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.17",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "510BDC2719D7373A9E3D6C42DF4A1452",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "0bc588fa-70ae-47ec-bc37-a2eff0b423f1"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "EC78660B417D3767AE80B4C13B05DAE7",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_NGINX_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.55",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.18",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "EC78660B417D3767AE80B4C13B05DAE7",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b4ef56e6-3826-4fd6-a800-b4852647dce8"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "43F8432FF0253E28A0EBAB591388355C",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_APP_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.59",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.22",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "43F8432FF0253E28A0EBAB591388355C",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "465c5291-3f01-4515-98bf-9cc1a3aaa80e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "stopped",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "SCInstallWithOS-内部使用|400GB|0MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "9AAA4E659DF83C329AF93DAFBCE11B36",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SPHY_02"
+        },
+        "cloud_vm#floatingIp": "10.231.0.3",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "172.21.2.10",
+        "cloud_vm#flavor": "24U24G|24vCPU|24GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "AC2993C4CC3B37B194FADB550265A8F9",
+        "cloud_vm#resId": "9AAA4E659DF83C329AF93DAFBCE11B36",
+        "cloud_vm#osVersion": "EulerOS 2.3 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8b2a42ed-a1b3-447b-931f-7203c21080ba"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "stopped",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2016-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BC6DCE69167D33959899907817932D91",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_SPHY_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.40",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.6.10",
+        "cloud_vm#flavor": "24U32G|24vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "BC6DCE69167D33959899907817932D91",
+        "cloud_vm#osVersion": "Windows Server 2016 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d7a44a69-4012-4011-9418-6bdf2909c1ee"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "810CAF8E77EE30FB940CD0EE93AD6FED",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_SMARTBI_DB_002"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.54",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "94123772D10E30D1859E49491A734F14",
+        "cloud_vm#resId": "810CAF8E77EE30FB940CD0EE93AD6FED",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "58d56500-e89f-4550-bfd9-ea60efe0f8dc"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D515FCD502DD3C159D35A753DE53DF9D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_SMARTBI_DB_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.53",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6DCA86FD52533899A3677CC304B39541",
+        "cloud_vm#resId": "D515FCD502DD3C159D35A753DE53DF9D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a840fead-d8fd-462a-b73e-db7adf00d19e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver5|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6B1F20DEB15638E59C3019E38E701E1B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "深信服-前置机-大数据"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.4",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "6B1F20DEB15638E59C3019E38E701E1B",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "3265460c-1732-4ca5-93b6-025d8944abde"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "CF13B2880D5B3C2DBD871F6BDE9443FD",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_DB_002"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.50",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "94123772D10E30D1859E49491A734F14",
+        "cloud_vm#resId": "CF13B2880D5B3C2DBD871F6BDE9443FD",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "cd3dee03-6298-4578-a6c8-0e09bcc8d658"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "62277B89F08D35C99A2FD4B94BB401F3",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_04"
+        },
+        "cloud_vm#floatingIp": "10.233.0.34",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.13",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "62277B89F08D35C99A2FD4B94BB401F3",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "be1b2cf3-bd12-4e3d-a4b9-b6e00caf1fba"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6219D915C5983CFBA1DA56789FF957D6",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_08"
+        },
+        "cloud_vm#floatingIp": "10.233.0.38",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.17",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "6219D915C5983CFBA1DA56789FF957D6",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8090a0d9-9b5c-4639-a242-54d1d7f2c1d5"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "72A7FE8CCD7433E5828A032D1B0B7070",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.31",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.10",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "72A7FE8CCD7433E5828A032D1B0B7070",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b4ff9947-cb2c-4647-afa9-9d68ab2257bf"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D0C12943EBBB346DB39535B7096D1B3E",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_07"
+        },
+        "cloud_vm#floatingIp": "10.233.0.37",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.16",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "D0C12943EBBB346DB39535B7096D1B3E",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "d9c58488-598e-46a7-ae66-b0a653ffd389"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0A37E422A54D3152920390457473A492",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YPGCT_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.33",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.5.12",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "0A37E422A54D3152920390457473A492",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "876b1001-f9d1-4769-82d3-a3b16972183e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver4|100GB|4096MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4903C3E4A37B313AB8BF9412FCA31AE2",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XMGL_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.41",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.8.10",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "4903C3E4A37B313AB8BF9412FCA31AE2",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "691da1dd-9e13-4236-89ab-6f1ba15c858b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver4|100GB|4096MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "10D21C01AAF93B7DB0B53F9C79BD182D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XMGL_GIS_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.42",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.8.11",
+        "cloud_vm#flavor": "8U64G|8vCPU|64GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "23B8EC7EBCB33CCCA8A5C85BBDD2855A",
+        "cloud_vm#resId": "10D21C01AAF93B7DB0B53F9C79BD182D",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "fcb928ae-5655-4fcd-bb1c-45da02a4521e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver4|100GB|4096MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0B8F0F01A54131D3955143A8FE213525",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XMGL_DB_01"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.8.12",
+        "cloud_vm#flavor": "8U64G|8vCPU|64GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "394F3E10610333F88313B79DEF676F2A",
+        "cloud_vm#resId": "0B8F0F01A54131D3955143A8FE213525",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "9bbc1208-abb3-49ea-841f-0d8ba96ae8ea"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4254658082753E05BA8ADE07846182A2",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_APP_004"
+        },
+        "cloud_vm#floatingIp": "10.233.0.69",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.36",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "4254658082753E05BA8ADE07846182A2",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "bb239de7-68c0-4111-a99b-7a8a8024f8be"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DD1DC40FCAC137D08231D5926E55F15B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_APP_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.67",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.34",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC",
+        "cloud_vm#resId": "DD1DC40FCAC137D08231D5926E55F15B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "56c44715-834a-432e-b954-72bc1214dd92"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6BEE0E27A509355EADDF0070925CCA13",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_EXCHANGE_APP_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.68",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.35",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6E6E23382F533BAF9B92485C2DF0F2B5",
+        "cloud_vm#resId": "6BEE0E27A509355EADDF0070925CCA13",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "5ff91474-23c9-4981-9498-eac2c29c9e94"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "FBF1845E20EF31868B0DAAA97786FC1D",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_NGINX_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.70",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.40",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "FBF1845E20EF31868B0DAAA97786FC1D",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e405b3e1-9553-42c6-a3f7-181c7f0b4eea"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D6FA2564EDB83148857C18883E2BB711",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_DATASC_NGINX_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.71",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.41",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "D6FA2564EDB83148857C18883E2BB711",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "bd88c15b-45d2-4e18-b0de-fbbedee3d147"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "8E361A77598430039602D78DC8180FC8",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_WEB02"
+        },
+        "cloud_vm#floatingIp": "10.235.0.2",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.12",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A2C8173E9E2337EF95ED172124E215BB",
+        "cloud_vm#resId": "8E361A77598430039602D78DC8180FC8",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "171a4301-4c3a-45d2-9908-13df02978091"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "669BD6BC63963480BC42B93939958617",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_WEB03"
+        },
+        "cloud_vm#floatingIp": "10.235.0.3",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.13",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "394F3E10610333F88313B79DEF676F2A",
+        "cloud_vm#resId": "669BD6BC63963480BC42B93939958617",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "a38efd39-8478-4a30-ba38-81bfb7524b03"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "52E57859BB07335ABF4340764DE96BC9",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM02"
+        },
+        "cloud_vm#floatingIp": "10.235.0.6",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.16",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6E6E23382F533BAF9B92485C2DF0F2B5",
+        "cloud_vm#resId": "52E57859BB07335ABF4340764DE96BC9",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "c460e180-ba45-4217-a611-3b30ebca65a9"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "6301181BAA6F303CAD8463980BA9315B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_BM01"
+        },
+        "cloud_vm#floatingIp": "10.235.0.5",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.15",
+        "cloud_vm#flavor": "4U16G|4vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "6301181BAA6F303CAD8463980BA9315B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "8628542c-b8e3-475b-8dc3-77ed3424dcf7"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver2|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "279AA4CBB5EB3618AF2369741BE86747",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_WEB04"
+        },
+        "cloud_vm#floatingIp": "10.235.0.4",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.14",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "279AA4CBB5EB3618AF2369741BE86747",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "0dbda004-1412-4565-8436-0800d04c43ab"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "5FB6DAC49C873D1E979EFB566660CD27",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_APP_004"
+        },
+        "cloud_vm#floatingIp": "10.233.0.60",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.23",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "85A9FA2EC66F310E9B1112CA642D66CF",
+        "cloud_vm#resId": "5FB6DAC49C873D1E979EFB566660CD27",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "cb7a26dc-83f2-449e-8226-3c011adc47c1"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "41329E30F8413CA5AA9B9EEA99C88D20",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_APP_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.58",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.21",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "6E6E23382F533BAF9B92485C2DF0F2B5",
+        "cloud_vm#resId": "41329E30F8413CA5AA9B9EEA99C88D20",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "29c74ab7-bfba-43a6-9e0f-50fd62178775"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "07EBBEF4D9043C78BD9ADB4EAF79A453",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_APP_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.57",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.20",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "07EBBEF4D9043C78BD9ADB4EAF79A453",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "88f7aa8f-c1d7-4990-9400-a1258bd0988c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "E7CE466C26363BDF8A4886F3BC341D31",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_DB_001"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.24",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "8DABC805245334D2B02BB57B654BA728",
+        "cloud_vm#resId": "E7CE466C26363BDF8A4886F3BC341D31",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4731b499-16e1-4ecd-b359-e2ee275df0ba"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "1F096C2042EF371696A25D973D4C31A4",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_DB_003"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.26",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "1F096C2042EF371696A25D973D4C31A4",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "11cd2e45-811f-4149-829a-caca5553b203"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BB719FFC3451304EB6CAD478AA21EE8E",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJ_PORTAL_DB_002"
+        },
+        "cloud_vm#floatingIp": "",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.11.25",
+        "cloud_vm#flavor": "16U32G|16vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078",
+        "cloud_vm#resId": "BB719FFC3451304EB6CAD478AA21EE8E",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "831889b5-877d-44a0-9122-e8794252672b"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "DC2E2E6A81FB33DD9776F71B14F30F8A",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DNS_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.27",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.4.11",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "DC2E2E6A81FB33DD9776F71B14F30F8A",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "dd7d0a08-0b6a-4118-b70e-0964d1fcc178"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "Red Hat Enterprise Linux-7.7-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "AA04812D137D3907A1793AA82B4E16B5",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "ecs-Test-Linux-02"
+        },
+        "cloud_vm#floatingIp": "10.231.250.251",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "192.168.1.10",
+        "cloud_vm#flavor": "2U8G|2vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "AC2993C4CC3B37B194FADB550265A8F9",
+        "cloud_vm#resId": "AA04812D137D3907A1793AA82B4E16B5",
+        "cloud_vm#osVersion": "Red Hat Enterprise Linux 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4118fd20-0b00-4201-b2c2-aabf7690a476"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "A02707E00D8732F8ACFD89F10C748339",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "ecs-Test-win-02"
+        },
+        "cloud_vm#floatingIp": "10.231.250.250",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az6.dc1",
+        "cloud_vm#privateIps": "192.168.1.104",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1191A37E0B3D3773A969397F6D980A22",
+        "cloud_vm#resId": "A02707E00D8732F8ACFD89F10C748339",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "c6e5f958-8235-4779-bb23-98a83c149de4"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "1CB3671578713075936BBC08E252B4F9",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_APP_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.83",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.12",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "1CB3671578713075936BBC08E252B4F9",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "319a1c33-1431-4c79-92cd-cfcf95374a2e"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0ED872B6EF743EE48FDFB559AA9D11A5",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_APP_004"
+        },
+        "cloud_vm#floatingIp": "10.233.0.86",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.15",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "0ED872B6EF743EE48FDFB559AA9D11A5",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "10a2b02a-864c-40f2-ad58-1f6d127360e2"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "2F051171A5A530DDA2E39E7FD45EBA58",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_APP_002"
+        },
+        "cloud_vm#floatingIp": "10.233.0.84",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.13",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "5FC29B33204331CE9972292A6691344B",
+        "cloud_vm#resId": "2F051171A5A530DDA2E39E7FD45EBA58",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "f1560dd5-662d-4509-b3d9-d0d0717f137c"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "0AA9A5AFE63C31138DF4021F25702EDD",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_APP_003"
+        },
+        "cloud_vm#floatingIp": "10.233.0.85",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.14",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C2316B2DCD7539A29E151702978CD432",
+        "cloud_vm#resId": "0AA9A5AFE63C31138DF4021F25702EDD",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "2ab47039-3ab8-4d7d-a197-519a339825f1"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C21D905CCA7C3B03BF1AF0853FA23697",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_DSJPT_TEST_DATAQ_MASTER_001"
+        },
+        "cloud_vm#floatingIp": "10.233.0.87",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.10.16",
+        "cloud_vm#flavor": "8U16G|8vCPU|16GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "C21D905CCA7C3B03BF1AF0853FA23697",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "96db74ac-4be6-44ac-8204-b399c8f059f2"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "BE381F71A66E30AE9B915BB9FAB9E83E",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.8",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.10",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "C239EDA248333E4281439DEE76336A27",
+        "cloud_vm#resId": "BE381F71A66E30AE9B915BB9FAB9E83E",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "4aa8745e-e20b-4306-8a32-e2da232a475d"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "5D015EA6DAA633C4BA98066055222A8B",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_APP_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.9",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.11",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "5D015EA6DAA633C4BA98066055222A8B",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "708b1404-5d7f-4440-854f-5034520098fe"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "08887DA5D2D43C629D0ED4A25E2CBEBC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_XTBG_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.10",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.0.12",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "1159EB7357C93BA393AE76A3436916A4",
+        "cloud_vm#resId": "08887DA5D2D43C629D0ED4A25E2CBEBC",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e425c7c1-c68e-4b2d-8f45-544009d15f78"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "50158E9C12423BDC9A254B40B08A8DD6",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YJZH_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.17",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.2.10",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "50158E9C12423BDC9A254B40B08A8DD6",
+        "cloud_vm#osVersion": "Windows Server 2012 R2 Standard 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "25091977-df1a-4b21-899b-72b750fbfb7a"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "C0218810B37C38FABF1B92FEA55DCA29",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YJZH_DB_02"
+        },
+        "cloud_vm#floatingIp": "10.233.0.19",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.17.2.12",
+        "cloud_vm#flavor": "16U128G|16vCPU|128GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "A94D2276E41232778E0E9919831E6C4E",
+        "cloud_vm#resId": "C0218810B37C38FABF1B92FEA55DCA29",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "e5b57291-3d83-42eb-b3f2-6da26ffcbfb3"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "D7C41D7AF78B3DE0B1BF712625B57000",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_ZCGL_APP_01"
+        },
+        "cloud_vm#floatingIp": "10.233.0.220",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.5.10",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "330B7DC5412A3D1D8D3894B9CB497DD2",
+        "cloud_vm#resId": "D7C41D7AF78B3DE0B1BF712625B57000",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "3504c367-b00a-4065-b5b9-0e9c2121fea6"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver1|100GB|8192MB",
+        "cloud_vm#azoneId": "811370A5736C39E1A2155BB3296136DC",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "5DA6222E7DF73F1994F527A13D486041",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_YGPT_WEB01"
+        },
+        "cloud_vm#floatingIp": "10.235.0.1",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az1.dc1",
+        "cloud_vm#privateIps": "172.18.0.11",
+        "cloud_vm#flavor": "4U8G|4vCPU|8GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "E2CA829B7373310C852965297116C643",
+        "cloud_vm#resId": "5DA6222E7DF73F1994F527A13D486041",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "b29e56ef-de46-40e6-a423-e48c6a6d2ada"
+      },
+      {
+        "cloud_vm#projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+        "cloud_vm#status": "active",
+        "cloud_vm#bizRegionName": "城投私有云",
+        "cloud_vm#imageName": "CentOS-7.6-ver3|100GB|8192MB",
+        "cloud_vm#azoneId": "139E610D41E738DBBD31ED6F3D382096",
+        "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_vm#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_vm#resId": "4F4FFA8CECE23B1E80A1FDC8EF1629BC",
+            "cloud_vm#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_vm#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_vm",
+          "value": "V_CT_JT_ZCGL_APP_03"
+        },
+        "cloud_vm#floatingIp": "10.233.0.222",
+        "supportHistoryPerf": true,
+        "cloud_vm#azoneName": "az5.dc1",
+        "cloud_vm#privateIps": "172.19.5.12",
+        "cloud_vm#flavor": "8U32G|8vCPU|32GB",
+        "cloud_vm#vdcName": "vdc_JT",
+        "cloud_vm#physicalHostId": "11C149B1D956310AA7275B10E89161CD",
+        "cloud_vm#resId": "4F4FFA8CECE23B1E80A1FDC8EF1629BC",
+        "cloud_vm#osVersion": "CentOS 7.6 64bit",
+        "supportRealPerf": false,
+        "cloud_vm#nativeId": "7526c928-7dc8-472d-84aa-c1a4395e1cde"
+      }
+    ]
+  },
+  "resultCode": "RES.000001",
+  "resultMessage": "getBussiness successfully."
+}

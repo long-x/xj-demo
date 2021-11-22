@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.ResWorkorderMapper">
+
+    <resultMap id="workOrderMap" type="com.ecdata.cmp.user.dto.ResWorkorderVO">
+
+
+
+    </resultMap>
+
+    <select id="qryWorkInfo" resultMap="workOrderMap">
+        SELECT
+	w.*,
+	d.id AS dept_id,
+	d.tenant_id AS d_ten,
+	d.connection_id,
+	d.department_name,
+	d.department_alias,
+	d.parent_id AS d_pid,
+	d.parent_ids_str,
+	d.score,
+	d.remark AS dept_remark,
+	d.is_deleted AS d_del,
+	bg.id AS bg_id,
+	bg.tenant_id AS bg_ten,
+	bg.business_group_name,
+	bg.process_definition_key,
+	bg.parent_id AS bg_pid,
+	bg.admin_user,
+	bg.default_lease,
+	bg.remark AS bg_remark,
+	bg.is_deleted AS bg_del
+FROM
+	res_workorder w
+	LEFT JOIN sys_department d ON d.id = w.department_id
+	AND w.tenant_id = d.tenant_id and d.is_deleted=0
+	JOIN sys_business_group bg ON bg.id = w.business_group_id
+	AND w.tenant_id = bg.tenant_id and bg.is_deleted=0
+	where w.is_deleted=0
+    </select>
+
+
+</mapper>

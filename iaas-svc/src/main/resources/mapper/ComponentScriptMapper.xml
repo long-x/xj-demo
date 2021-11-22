@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.component.ComponentScriptMapper">
+
+    <select id="queryScripsById" parameterType="long"
+            resultType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentScriptVO">
+        SELECT
+        comp.id AS comp_id,
+        sc.*
+        FROM
+        iaas_component comp
+        LEFT JOIN iaas_component_script sc ON comp.id = sc.component_id
+        AND sc.is_deleted = 0
+        <where>
+            comp.is_deleted = 0
+            and sc.component_id=#{id}
+        </where>
+    </select>
+
+
+    <select id="queryScripsByComponentId"
+            resultType="com.ecdata.cmp.iaas.entity.dto.IaasTemplateVirtualMachineComponentScriptVO">
+        select * from iaas_component_script
+        where is_deleted=0 and component_id=#{componentIdScrips}
+    </select>
+</mapper>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasAreaMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasArea">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="area_name" property="areaName"/>
+        <result column="score" property="score"/>
+        <result column="is_default" property="isDefault"/>
+        <result column="area_key" property="areaKey"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                provider_id,
+                area_name,
+                score,
+                is_default,
+                area_key,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <select id="queryIaasAreaByKey" resultMap="BaseResultMap">
+        select * from iaas_area
+        where is_deleted=0
+        and area_key=#{key}
+    </select>
+    <select id="queryIaasAreaIdsByProviderId" resultType="java.lang.Long">
+        select * from iaas_area
+        where is_deleted=0
+        and provider_id=#{providerId}
+    </select>
+</mapper>

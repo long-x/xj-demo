@@ -1,0 +1,114 @@
+# application.yml
+server:
+  port: 18010
+  tomcat:
+    basedir: /tmp/tomcat
+spring:
+  profiles:
+    active: dev
+  application:
+    name: activiti-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8.x
+#    driver-class-name: com.mysql.jdbc.Driver # mysql 5.7.x
+#    1.0 本地mysql数据库 (简称: 01环境)
+    url: jdbc:mysql://127.0.0.1:3306/cmp_workflow2?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&&serverTimezone=GMT%2B8
+    username: root
+    password: 110308
+
+
+
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+# mybatis
+mybatis-plus:
+  # MyBatis Mapper 所对应的 XML 文件位置，如果您在 Mapper 中有自定义方法（XML 中有自定义实现），需要进行该配置，告诉 Mapper 所对应的 XML 文件位置。
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  #通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以直接使用类名，而不用使用全限定的类名（即 XML 中调用的时候不用包含包名）
+  type-aliases-package: com.ecdata.cmp.activiti.entity
+  #typeEnumsPackage: com.ecdata.spring.cloud.vcenter.entity.enums
+  global-config:
+    #刷新mapper 该配置不建议在生产环境打开
+    refresh: true
+    db-config:
+      #主键类型com.baomidou.mybatisplus.annotation.IdType;
+      id-type: input
+      #字段策略com.baomidou.mybatisplus.annotation.FieldStrategy
+      field-strategy: not_empty
+      # 逻辑删除全局值（1表示已删除，Mybatis Plus的默认配置）
+      logic-delete-value: 1
+      # 逻辑未删除全局值（0表示未删除，Mybatis Plus的默认配置）
+      logic-not-delete-value: 0
+  configuration:
+    #是否开启自动驼峰命名规则（camel case）映射
+    map-underscore-to-camel-case: true
+    #全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存,默认为 true
+    cache-enabled: false
+
+ocpmgp:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888} # mock for test
+    deploy-env: ${DEPLOY:V2}
+  signing-secret: ${SIGNING_SECRET:TEST_SECRET}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+module-id: 8
+
+swagger:
+  basePackage: com.ecdata.cmp.activiti.controller
+  title: Cloud Management Product Restful API
+  description: Ocpmgp-流程定义
+  termsOfServiceUrl: http://www.123.com/
+  name: ECDATA
+  url: http://www.123.com/
+  email: admin.com
+  version: 1.0
+
+# 租户表维护
+tenant:
+  defaultId: 10000
+  column: tenant_id
+  tableFilter:
+    - ACT_EVT_LOG
+    - ACT_GE_BYTEARRAY
+    - ACT_GE_PROPERTY
+    - ACT_HI_ACTINST
+    - ACT_HI_ATTACHMENT
+    - ACT_HI_COMMENT
+    - ACT_HI_DETAIL
+    - ACT_HI_IDENTITYLINK
+    - ACT_HI_PROCINST
+    - ACT_HI_TASKINST
+    - ACT_HI_VARINST
+    - ACT_ID_GROUP
+    - ACT_ID_INFO
+    - ACT_ID_MEMBERSHIP
+    - ACT_ID_USER
+    - ACT_PROCDEF_INFO
+    - ACT_RE_DEPLOYMENT
+    - ACT_RE_MODEL
+    - ACT_RE_PROCDEF
+    - ACT_RU_EVENT_SUBSCR
+    - ACT_RU_EXECUTION
+    - ACT_RU_IDENTITYLINK
+    - ACT_RU_JOB
+    - ACT_RU_TASK
+    - ACT_RU_VARIABLE
+    - workflow_step_right
+  mapperFilter:
+    - com.ecdata.cmp.activiti.mapper.ActReDeploymentMapper.qurDeployment

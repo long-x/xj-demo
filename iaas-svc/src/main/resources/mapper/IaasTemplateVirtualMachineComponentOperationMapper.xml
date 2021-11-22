@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasTemplateVirtualMachineComponentOperationMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasTemplateVirtualMachineComponentOperation">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="operation_id" property="operationId"/>
+        <result column="vm_component_id" property="vmComponentId"/>
+        <result column="vm_component_script_id" property="vmComponentScriptId"/>
+        <result column="operation_name" property="operationName"/>
+        <result column="operation" property="operation"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                operation_id,
+                vm_component_id,
+                vm_component_script_id,
+                operation_name,
+                operation,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <resultMap id="componentOperationVORes"
+               type="com.ecdata.cmp.iaas.entity.dto.IaasTemplateVirtualMachineComponentOperationVO">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="operation_id" property="operationId"/>
+        <result column="vm_component_id" property="vmComponentId"/>
+        <result column="vm_component_script_id" property="vmComponentScriptId"/>
+        <result column="operation_name" property="operationName"/>
+        <result column="operation" property="operation"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <select id="queryComponentOperations" resultMap="componentOperationVORes">
+      select * from iaas_template_virtual_machine_component_operation
+      where is_deleted=0 and vm_component_id=#{componentId}
+    </select>
+
+    <delete id="deleteByVmComponentId">
+        delete from iaas_template_virtual_machine_component_operation
+        where vm_component_id=#{vmComponentId}
+    </delete>
+
+    <select id="queryTemplateOperationByScriptId"
+            resultType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineComponentOperationVO">
+      select * from iaas_template_virtual_machine_component_operation
+      where is_deleted=0 and vm_component_script_id=#{scriptId}
+    </select>
+</mapper>

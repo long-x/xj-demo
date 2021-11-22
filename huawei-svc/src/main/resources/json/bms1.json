@@ -1,0 +1,259 @@
+{
+  "responseData": {
+    "total": 10,
+    "data": [
+      {
+        "cloud_bms#floatingIp": "10.232.0.27",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "3E0904C1C389342ABAA61FF17A873758",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "77248c02-7fbb-4009-baa0-3f54cedc3771",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "3E0904C1C389342ABAA61FF17A873758",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-CIS-DB-01"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "192.168.12.10@@&amp;172.16.14.16"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.28",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "44415C6F830E3E27AD86BBCEFA5FA21D",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "4ba6d423-4317-420d-a8cd-667665833075",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "44415C6F830E3E27AD86BBCEFA5FA21D",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-CIS-DB-02"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "192.168.12.11@@&amp;172.16.14.18"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.106",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "6D033231FF303BEE97E18C89C43BA3E4",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "7f829a41-697d-43e7-8431-fa44dd02eafd",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "6D033231FF303BEE97E18C89C43BA3E4",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-SJZL-SJJS-01"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.16.20@@&amp;192.168.10.20"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.102",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "552BCC541B623B4783231723BCEF2DD9",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "4e546e57-2525-4adf-8b46-0a33cfde00db",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "552BCC541B623B4783231723BCEF2DD9",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-SJZL-SJCK-01"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.16.10@@&amp;192.168.11.10"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.43",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "1FD9CF1257983AD5B5898CB2C56C693E",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "6ee5b77c-0ab9-422c-b939-b8accb9d92a5",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "1FD9CF1257983AD5B5898CB2C56C693E",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P_CT_SW_SJZL_OSB_01"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.16.32"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.220",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "043E8D4B514330EF8E047F5B718F04F9",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "af9c7542-b788-484d-96b7-401e229d129f",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "043E8D4B514330EF8E047F5B718F04F9",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-WKF-DB-01"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "192.168.13.10@@&amp;172.16.25.37"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.235",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "9D3243CD02613989A5F3CF5832F943B7",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "eff09576-e671-42ca-b0d7-9b760fa2cc51",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "9D3243CD02613989A5F3CF5832F943B7",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-CIS-DB-03"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.14.22"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.107",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "EBEEE794D7C53963971681E5347995CD",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "8ab30c9e-33a5-4bd7-a309-aa4bf9585cea",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "EBEEE794D7C53963971681E5347995CD",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-SJZL-SJJS-02"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.16.21@@&amp;192.168.10.21"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.103",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "63ED042C8B913EBD81399FF4023461D5",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "6ebc9418-6cf6-4b8c-930f-05651e947628",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "63ED042C8B913EBD81399FF4023461D5",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-SJZL-SJCK-02"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "172.16.16.11@@&amp;192.168.11.11"
+      },
+      {
+        "cloud_bms#floatingIp": "10.232.0.221",
+        "cloud_bms#resourcePoolName": "OpenStack_sa-fb-1",
+        "cloud_bms#resId": "3EC23A8886A33FF69696A66E42C0DC13",
+        "cloud_bms#bizRegionName": "城投私有云",
+        "cloud_bms#status": "active",
+        "cloud_bms#vdcName": "vdc_SW",
+        "cloud_bms#nativeId": "6c255072-62b8-425f-9e0e-6d1ef0bcb70e",
+        "supportHistoryPerf": true,
+        "cloud_bms#name": {
+          "view": "moui",
+          "condition": {
+            "cloud_bms#regionId": "C4CA4238A0B933828DCC509A6F75849B",
+            "cloud_bms#resId": "3EC23A8886A33FF69696A66E42C0DC13",
+            "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531"
+          },
+          "type": "cloud_bms",
+          "value": "P-CT-SW-WKF-DB-02"
+        },
+        "cloud_bms#tags": [],
+        "cloud_bms#azoneInfo": "生产区裸金属",
+        "supportRealPerf": false,
+        "cloud_bms#bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "cloud_bms#privateIps": "192.168.13.11@@&amp;172.16.25.39"
+      }
+    ]
+  },
+  "resultCode": "RES.000001",
+  "resultMessage": "getBussiness successfully."
+}

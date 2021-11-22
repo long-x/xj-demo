@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasTimedTaskMapper">
+
+
+    <!--查询业务组下面的虚拟机-->
+    <select id="getVMByGropu" resultMap="BaseVMMap" parameterType="string">
+        select ivm.vm_key, ivm.vm_name,ivm.project_id FROM
+        iaas_virtual_machine ivm
+        LEFT JOIN iaas_virtual_machine_right ivmr on ivm.id = ivmr.vm_id
+        LEFT JOIN sys_business_group sbg ON ivmr.relate_id = sbg.id
+        where sbg.id=#{id}
+        and ivm.is_deleted = 0
+        GROUP BY ivm.vm_key
+
+    </select>
+
+    <resultMap id="BaseVMMap" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+        <result column="vm_key" property="vmKey"/>
+        <result column="vm_name" property="vmName"/>
+        <result column="project_id" property="projectId"/>
+    </resultMap>
+
+
+    <!--查询业务组下面的裸金属-->
+    <select id="getBareByGropu" resultMap="BaseBareMap" parameterType="string">
+        SELECT
+            ibm.`name`,
+            ibm.nativie_id,
+            ibm.project_id
+        FROM
+            iaas_bare_metal ibm
+        LEFT JOIN sys_business_group ivmr ON ibm.business_group_id = ivmr.id
+        WHERE
+            ivmr.id =#{id}
+        AND ibm.is_deleted = 0
+
+    </select>
+
+    <resultMap id="BaseBareMap" type="com.ecdata.cmp.iaas.entity.dto.IaasVirtualMachineVO">
+        <result column="name" property="vmName"/>
+        <result column="nativie_id" property="vmKey"/>
+        <result column="project_id" property="projectId"/>
+    </resultMap>
+
+
+    <select id="getTaskInfo" resultType="Long" resultMap="TimeTaskMap">
+        SELECT
+        	itt.id,
+            itt.business_group_id,
+            itt.business_group_name,
+            itt.serve_id,
+            itt.serve_name,
+            itt.serve_type,
+            itt.project_id,
+            itt.on_time,
+            itt.off_time
+        FROM
+        iaas_timed_task itt
+        WHERE
+        itt.id=#{id}
+        AND
+        itt.is_deleted=0
+    </select>
+
+
+    <resultMap id="TimeTaskMap" type="com.ecdata.cmp.iaas.entity.dto.IaasTimedTaskVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="business_group_id" jdbcType="VARCHAR" property="businessGroupId"/>
+        <result column="business_group_name" jdbcType="VARCHAR" property="businessGroupName"/>
+        <result column="serve_id" jdbcType="VARCHAR" property="serveId"/>
+        <result column="serve_name" jdbcType="VARCHAR" property="serveName"/>
+        <result column="serve_type" jdbcType="VARCHAR" property="serveType"/>
+        <result column="project_id" property="projectId"/>
+        <result column="on_time" jdbcType="TIMESTAMP" property="onTime"/>
+        <result column="off_time" jdbcType="TIMESTAMP" property="offTime"/>
+    </resultMap>
+
+
+
+    <select id="getIaasTimedTaskVOPage" parameterType="map" resultMap="TimeTaskMap">
+        SELECT
+        	itt.id,
+            itt.business_group_id,
+            itt.business_group_name,
+            itt.serve_id,
+            itt.serve_name,
+            itt.serve_type,
+            itt.project_id,
+            itt.on_time,
+            itt.off_time
+        FROM
+        iaas_timed_task itt
+        WHERE
+        itt.is_deleted=0
+    </select>
+
+
+
+    <!--扫描开机/关机时间的服务-->
+    <select id="onOrOffTaskList" parameterType="map" resultMap="TimeTaskMap">
+        SELECT
+        itt.id,
+        itt.business_group_id,
+        itt.business_group_name,
+        itt.serve_id,
+        itt.serve_name,
+        itt.serve_type,
+        itt.project_id,
+        itt.on_time,
+        itt.off_time
+        FROM
+        iaas_timed_task itt
+        WHERE
+        itt.is_deleted=0
+        <if test="map.on_time != null and map.on_time !=''">
+        AND itt.on_time >= #{map.on_time}
+        </if>
+        <if test="map.off_time != null and map.off_time !=''">
+        AND itt.off_time >= #{map.off_time}
+        </if>
+    </select>
+
+
+
+
+
+</mapper>

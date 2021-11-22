@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.catalog.IaasCatalogMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.catalog.IaasCatalog">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="template_id" property="templateId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="catalog_name" property="catalogName"/>
+        <result column="content" property="content"/>
+        <result column="cover" property="cover"/>
+        <result column="main_tag" property="mainTag"/>
+        <result column="sub_tag" property="subTag"/>
+        <result column="state" property="state"/>
+        <result column="init_type" property="initType"/>
+        <result column="right_type" property="rightType"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                template_id,
+                provider_id,
+                catalog_name,
+                content,
+                cover,
+                main_tag,
+                sub_tag,
+                state,
+                init_type,
+                right_type,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <select id="queryIaasCatalog" resultType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVO" parameterType="map" >
+        select * from iaas_catalog
+        where is_deleted=0
+        <if test="map.catalogName != null and map.catalogName != ''">
+            AND (catalog_name LIKE concat('%', #{map.catalogName,jdbcType = VARCHAR} , '%'))
+        </if>
+        <if test="map.state!=null">
+            and state=#{map.state}
+        </if>
+        <if test="map.order ==1">
+            order by catalog_name asc
+        </if>
+        <if test="map.order ==2">
+            order by create_time desc
+        </if>
+    </select>
+
+    <select id="queryIaasCatalogById" resultType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVO">
+        select t1.*,t2.provider_name providerName from iaas_catalog t1
+        left join iaas_provider t2 on t1.provider_id=t2.id
+        where t1.is_deleted=0 and t2.is_deleted=0
+        <if test="catalogId !=null">
+            and t1.id=#{catalogId}
+        </if>
+    </select>
+
+    <select id="checkCatalogIFUse" resultType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVO">
+        select
+        t2.*
+        from iaas_catalog t1
+        right join iaas_process_apply t2 on (t1.id=t2.catalog_id and t2.is_deleted=0)
+        where t1.is_deleted=0 and t2.catalog_id=#{id}
+    </select>
+
+    <update id="updateIaasCatalog" parameterType="com.ecdata.cmp.iaas.entity.catalog.IaasCatalog">
+        UPDATE iaas_catalog
+        <set>
+            <if test='null != catalogName'>
+                catalog_name = #{catalogName},
+            </if>
+            <if test='null != providerId'>
+                provider_id = #{providerId},
+            </if>
+            <if test='null != content'>
+                content = #{content},
+            </if>
+            <if test='null != cover'>
+                cover = #{cover},
+            </if>
+            <if test='null != state'>
+                state = #{state},
+            </if>
+            <if test='null != initType'>
+                init_type = #{initType},
+            </if>
+            <if test='null != remark'>
+                remark = #{remark},
+            </if>
+            <if test='null != updateUser'>
+                update_user = #{updateUser},
+            </if>
+            <if test='null != updateTime'>
+                update_time = #{updateTime},
+            </if>
+            <if test='null != isDeleted'>
+                is_deleted = #{isDeleted}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <resultMap id="machineTreeResultMap"
+               type="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineTreeVO">
+        <result column="one_id" property="key"/>
+        <result column="one_name" property="title"/>
+        <result column="catalog_id" property="catalogId"/>
+        <result column="vcpu" property="vcpu"/>
+        <result column="memory" property="memory"/>
+        <result column="os" property="os"/>
+        <result column="os_type" property="osType"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="sort" property="sort"/>
+        <collection property="machineDiskVOList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineDiskVO">
+            <result column="disk_id" property="id"/>
+            <result column="disk_name" property="diskName"/>
+            <result column="disk_type" property="diskType"/>
+            <result column="disk_size" property="diskSize"/>
+            <result column="disk_remark" property="remark"/>
+            <result column="disk_create_user" property="createUser"/>
+            <result column="disk_create_time" property="createTime"/>
+        </collection>
+        <collection property="children"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineComponentVO">
+            <result column="two_id" property="key"/>
+            <result column="two_name" property="title"/>
+            <result column="two_vm_id" property="vmId"/>
+            <result column="two_component_id" property="componentId"/>
+            <result column="two_kind" property="kind"/>
+            <result column="two_parent_id" property="parentId"/>
+            <result column="two_os_type" property="osType"/>
+            <result column="two_sort" property="sort"/>
+            <collection property="compParams"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineComponentParamVO">
+                <result column="two_par_id" property="id"/>
+                <result column="two_component_param_id" property="componentParamId"/>
+                <result column="two_vm_component_id" property="vmComponentId"/>
+                <result column="two_param_name" property="paramName"/>
+                <result column="two_display_name" property="displayName"/>
+                <result column="two_default_value" property="defaultValue"/>
+                <result column="two_param_type" property="paramType"/>
+                <result column="two_required" property="required"/>
+                <result column="two_unit" property="unit"/>
+                <result column="two_sort" property="sort"/>
+                <result column="two_modifiable" property="modifiable"/>
+                <result column="two_is_show" property="isShow"/>
+                <result column="two_value_list" property="valueList"/>
+                <result column="two_par_remark" property="remark"/>
+            </collection>
+            <collection property="children"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineComponentVO">
+                <result column="three_id" property="key"/>
+                <result column="three_name" property="title"/>
+                <result column="three_vm_id" property="vmId"/>
+                <result column="three_component_id" property="componentId"/>
+                <result column="three_kind" property="kind"/>
+                <result column="three_parent_id" property="parentId"/>
+                <result column="three_os_type" property="osType"/>
+                <result column="three_sort" property="sort"/>
+                <collection property="compParams"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.catalog.IaasCatalogVirtualMachineComponentParamVO">
+                    <result column="three_par_id" property="id"/>
+                    <result column="three_component_param_id" property="componentParamId"/>
+                    <result column="three_vm_component_id" property="vmComponentId"/>
+                    <result column="three_param_name" property="paramName"/>
+                    <result column="three_display_name" property="displayName"/>
+                    <result column="three_default_value" property="defaultValue"/>
+                    <result column="three_param_type" property="paramType"/>
+                    <result column="three_required" property="required"/>
+                    <result column="three_unit" property="unit"/>
+                    <result column="three_sort" property="sort"/>
+                    <result column="three_modifiable" property="modifiable"/>
+                    <result column="three_is_show" property="isShow"/>
+                    <result column="three_value_list" property="valueList"/>
+                    <result column="three_par_remark" property="remark"/>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryMachineTree" resultMap="machineTreeResultMap">
+        select
+        t0.id one_id,
+        t0.vm_name one_name,
+        t0.catalog_id,
+        t0.vcpu,
+        t0.memory,
+        t0.os,
+        t0.os_type,
+        t0.username,
+        t0.password,
+        t0.sort,
+        disk.id disk_id,
+        disk.disk_name,
+        disk.disk_type,
+        disk.disk_size,
+        disk.remark disk_remark,
+        disk.create_user disk_create_user,
+        disk.create_time disk_create_time,
+        t1.id two_id,
+        t1.display_name two_name,
+        t1.vm_id two_vm_id,
+        t1.component_id two_component_id,
+        t1.kind two_kind,
+        t1.parent_id two_parent_id,
+        t1.os_type two_os_type,
+        t1.sort two_sort,
+        t3.id two_par_id,
+        t3.component_param_id two_component_param_id,
+        t3.vm_component_id two_vm_component_id,
+        t3.param_name two_param_name,
+        t3.display_name two_display_name,
+        t3.default_value two_default_value,
+        t3.param_type two_param_type,
+        t3.unit two_unit,
+        t3.sort two_sort,
+        t3.modifiable two_modifiable,
+        t3.is_show two_is_show,
+        t3.value_list two_value_list,
+        t3.remark two_par_remark,
+        t2.id three_id,
+        t2.display_name three_name,
+        t2.component_id three_component_id,
+        t2.kind three_kind,
+        t2.parent_id three_parent_id,
+        t2.os_type three_os_type,
+        t2.sort three_sort,
+        t2.vm_id three_vm_id,
+        t4.id three_par_id,
+        t4.component_param_id three_component_param_id,
+        t4.vm_component_id three_vm_component_id,
+        t4.param_name three_param_name,
+        t4.display_name three_display_name,
+        t4.default_value three_default_value,
+        t4.param_type three_param_type,
+        t4.unit three_unit,
+        t4.sort three_sort,
+        t4.modifiable three_modifiable,
+        t4.is_show three_is_show,
+        t4.value_list three_value_list,
+        t4.remark three_par_remark
+        from iaas_catalog_virtual_machine t0
+        left join iaas_catalog_virtual_machine_disk disk on (t0.id=disk.vm_id and disk.is_deleted=0)
+        left join iaas_catalog_virtual_machine_component t1 on (t0.id=t1.parent_id and t1.is_deleted=0)
+        left join iaas_catalog_virtual_machine_component_param t3 on (t1.id=t3.vm_component_id and t3.is_deleted=0)
+        left join iaas_catalog_virtual_machine_component t2 on (t1.id=t2.parent_id and t2.is_deleted=0)
+        left join iaas_catalog_virtual_machine_component_param t4 on (t2.id=t4.vm_component_id and t4.is_deleted=0)
+        where t0.is_deleted=0
+        <if test="catalogId !=null">
+            and t0.catalog_id=#{catalogId}
+        </if>
+
+    </select>
+</mapper>

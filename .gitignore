@@ -1,0 +1,50 @@
+target/
+/.mvn/*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Mac ###
+.DS_Store
+
+### Spring Dev Credentials ###
+config/*.yml
+
+### Docker Test Credentials ###
+.env
+
+### K8s Credentials
+k8s/test/config.yaml
+k8s/prod/config.yaml
+k8s/uat/config.yaml
+
+### doc
+### doc/
+
+/logs/*
+logs/*
+/log/*
+log/*
+/huawei-svc/logs/*
+/class/*
+class/*

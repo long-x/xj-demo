@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.PermissionMapper">
+    <update id="modifyUpdateRecord">
+        update sys_permission
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="queryByUser" parameterType="long"  resultType="com.ecdata.cmp.user.entity.Permission">
+		SELECT p.*
+		FROM sys_permission p
+		WHERE EXISTS (
+				SELECT rp.id
+				FROM sys_role_permission rp
+				INNER JOIN sys_role r ON rp.role_id = r.id
+				INNER JOIN sys_user_role ur ON ur.role_id = r.id
+				INNER JOIN sys_user u ON u.id = ur.user_id
+				WHERE p.id = rp.permission_id AND u.id = #{userId,jdbcType=BIGINT}
+			)
+			AND p.is_deleted = 0
+		ORDER BY p.sort_no ASC
+	</select>
+
+    <select id="queryButtonByUser" parameterType="long"  resultType="com.ecdata.cmp.user.dto.PermissionVO">
+		SELECT p.*
+		FROM sys_permission p
+		WHERE EXISTS (
+				SELECT rp.id
+				FROM sys_role_permission rp
+				INNER JOIN sys_role r ON rp.role_id = r.id
+				INNER JOIN sys_user_role ur ON ur.role_id = r.id
+				INNER JOIN sys_user u ON u.id = ur.user_id
+				WHERE p.id = rp.permission_id AND u.id = #{userId,jdbcType=BIGINT}
+			)
+			AND p.is_deleted = 0 and p.menu_type = 2
+		ORDER BY p.sort_no ASC
+	</select>
+
+	<select id="getRoleNameByPermissionId" parameterType="long"  resultType="string">
+		SELECT r.role_name
+		FROM sys_role r
+		INNER JOIN sys_role_permission rp ON rp.role_id = r.id
+		WHERE rp.permission_id = #{permissionId, jdbcType=BIGINT}
+	</select>
+</mapper>

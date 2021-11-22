@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.huawei.mapper.SysManageOneMapper">
+
+    <select id="selectById"  resultType="com.ecdata.cmp.huawei.dto.alarm.SysManageOne">
+         SELECT * FROM sys_manageone
+         WHERE id = #{id}
+    </select>
+
+    <select id="selectCountSysManageOne"  resultType="int">
+         select count(*) from sys_manageone;
+    </select>
+
+    <update id="updateOccurTime" parameterType="com.ecdata.cmp.huawei.dto.alarm.SysManageOne">
+        update sys_manageone
+        set last_query_time = #{lastQueryTime}
+        WHERE id = #{id}
+    </update>
+
+    <insert id="saveSysManageOne" parameterType="com.ecdata.cmp.huawei.dto.alarm.SysManageOne">
+        INSERT INTO sys_manageone
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test='null != id'>
+                id,
+            </if>
+            <if test ='null != lastQueryTime'>
+                last_query_time,
+            </if>
+            <if test ='null != executeTime'>
+                execute_time
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test ='null != id'>
+                #{id},
+            </if>
+            <if test ='null != lastQueryTime'>
+                #{lastQueryTime},
+            </if>
+            <if test ='null != executeTime'>
+                #{executeTime}
+            </if>
+        </trim>
+    </insert>
+</mapper>

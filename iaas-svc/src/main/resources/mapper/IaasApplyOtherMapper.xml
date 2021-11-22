@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyOtherMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.ecdata.cmp.iaas.entity.apply.IaasApplyOther" id="applyOtherMap">
+        <result property="id" column="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="apply_id" property="applyId"/>
+        <result column="area_id" property="areaId"/>
+        <result column="config_id" property="configId"/>
+        <result column="image_id" property="imageId"/>
+        <result column="image_name" property="imageName"/>
+        <result column="image_version" property="imageVersion"/>
+        <result column="vpc_id" property="vpcId"/>
+        <result column="vpc_name" property="vpcName"/>
+        <result column="network_id" property="networkId"/>
+        <result column="network_name" property="networkName"/>
+        <result column="subnet_id" property="subnetId"/>
+        <result column="subnet_name" property="subnetName"/>
+        <result column="security_groups_id" property="securityGroupsId"/>
+        <result column="security_groups_name" property="securityGroupsName"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <update id="deleteApplyOther">
+        update iaas_apply_other
+        set is_deleted = '1'
+        WHERE id = #{id}
+    </update>
+
+    <select id="queryApplyOther" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyOtherVO">
+        select * from iaas_apply_other where is_deleted=0
+        and apply_id=#{applyId}
+    </select>
+
+    <select id="queryBatchApplyOther" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyOtherVO">
+        select * from iaas_apply_other where is_deleted=0
+        and id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

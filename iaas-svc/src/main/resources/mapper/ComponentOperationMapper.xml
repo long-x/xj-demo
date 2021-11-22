@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.component.ComponentOperationMapper">
+
+    <select id="queryOpById" parameterType="long"
+            resultType="com.ecdata.cmp.iaas.entity.dto.component.IaasComponentOperationVO">
+           SELECT
+        comp.id AS comp_id,
+        op.*
+    FROM
+        iaas_component comp
+        LEFT JOIN iaas_component_operation op ON comp.id = op.component_id
+        AND op.is_deleted = 0
+        <where>
+            comp.is_deleted = 0
+            and op.component_id=#{id}
+        </where>
+    </select>
+
+    <select id="queryOperationByScriptId" resultType="com.ecdata.cmp.iaas.entity.dto.IaasTemplateVirtualMachineComponentOperationVO">
+        select * from iaas_component_operation
+        where is_deleted = 0 and script_id=#{scripId}
+    </select>
+</mapper>

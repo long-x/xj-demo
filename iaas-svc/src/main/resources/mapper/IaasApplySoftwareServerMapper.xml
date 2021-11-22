@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplySoftwareServerMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.ecdata.cmp.iaas.entity.apply.IaasApplySoftwareServer" id="iaasApplySoftwareServerMap">
+        <result property="id" column="id"/>
+        <result property="tenantId" column="tenant_id"/>
+        <result property="applyId" column="apply_id"/>
+        <result property="configId" column="config_id"/>
+        <result property="areaId" column="area_id"/>
+        <result property="configId" column="config_id"/>
+        <result property="operationType" column="operation_type"/>
+        <result property="serverName" column="server_name"/>
+        <result property="eip" column="eip"/>
+        <result property="originalSoftwareClaim" column="original_software_claim"/>
+        <result property="currentSoftwareClaim" column="current_software_claim"/>
+        <result property="otherClaim" column="other_claim"/>
+        <result property="createUser" column="create_user"/>
+        <result property="createTime" column="create_time"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+    <select id="queryApplySoftwareServer" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplySoftwareServerVO">
+        select * from iaas_apply_software_server where is_deleted=0
+        and apply_id=#{applyId}
+    </select>
+
+    <select id="queryBatchApplySoftwareServer"
+            resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplySoftwareServerVO">
+        select * from iaas_apply_software_server where is_deleted=0
+        and id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+
+</mapper>

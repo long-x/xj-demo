@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.RoleMapper">
+
+    <select id="qryRoleByUserId" parameterType="long"
+            resultType="com.ecdata.cmp.user.dto.RoleVO">
+        SELECT r.*
+        FROM `sys_role` r
+        INNER JOIN sys_user_role ur ON ur.role_id = r.id
+        INNER JOIN sys_user u ON u.id = ur.user_id
+        WHERE r.is_deleted = 0 AND u.id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <update id="modifyUpdateRecord">
+        update sys_role
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="qryUserIdByRole"  resultType="java.lang.Long">
+
+        SELECT DISTINCT u.id
+        FROM `sys_role` r
+        INNER JOIN sys_user_role ur ON ur.role_id = r.id
+        INNER JOIN sys_user u ON u.id = ur.user_id
+        WHERE r.role_name in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+
+    <select id="qryUserIdByRoleIds"  resultType="java.lang.Long">
+
+        SELECT DISTINCT u.id
+        FROM `sys_role` r
+        INNER JOIN sys_user_role ur ON ur.role_id = r.id
+        INNER JOIN sys_user u ON u.id = ur.user_id AND u.status = 1 AND u.is_deleted = 0
+        WHERE r.id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+</mapper>

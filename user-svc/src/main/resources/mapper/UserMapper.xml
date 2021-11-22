@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.UserMapper">
+
+    <select id="loadUserByUsername" resultType="com.ecdata.cmp.user.entity.User">
+        SELECT *
+        FROM `sys_user`
+        WHERE `is_deleted` = 0
+          AND `tenant_id` = #{tenantId, jdbcType=BIGINT}
+          AND `name` = #{username, jdbcType=VARCHAR}
+    </select>
+
+    <update id="modifyUpdateRecord">
+        update sys_user
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <insert id="insertBatchUserDep" parameterType="java.util.List">
+        insert into sys_user_department (id, user_id, department_id, create_time)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id,jdbcType=BIGINT}, #{item.userId,jdbcType=BIGINT}, #{item.departmentId,jdbcType=BIGINT},now())
+        </foreach>
+    </insert>
+    <delete id="deleteBatchUserDep">
+        delete from sys_user_department
+        where id IN
+        <foreach collection="array" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insertBatchUserRole" parameterType="java.util.List">
+        insert into sys_user_role (id, user_id, role_id, create_time)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id,jdbcType=BIGINT}, #{item.userId,jdbcType=BIGINT}, #{item.roleId,jdbcType=BIGINT},now())
+        </foreach>
+    </insert>
+    <delete id="deleteBatchUserRole">
+        delete from sys_user_role
+        where id IN
+        <foreach collection="array" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <resultMap id="userInfoMap" type="com.ecdata.cmp.user.dto.UserVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="display_name" property="displayName"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="account" property="account"/>
+        <result column="birthday" property="birthday"/>
+        <result column="age" property="age"/>
+        <result column="sex" property="sex"/>
+        <result column="status" property="status"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="source_id" property="sourceId"/>
+        <result column="source_pwd" property="sourcePwd"/>
+        <collection property="departmentList" javaType="ArrayList" column="id"
+                    ofType="com.ecdata.cmp.user.dto.DepartmentVO"
+                    select="com.ecdata.cmp.user.mapper.DepartmentMapper.qryDepByUserId"
+        >
+        </collection>
+        <collection property="roleList" javaType="ArrayList" column="id"
+                    ofType="com.ecdata.cmp.user.dto.RoleVO"
+                    select="com.ecdata.cmp.user.mapper.RoleMapper.qryRoleByUserId"
+        >
+        </collection>
+        <collection property="projectList" javaType="ArrayList" column="id"
+                    ofType="com.ecdata.cmp.user.dto.ProjectVO"
+                    select="com.ecdata.cmp.user.mapper.ProjectMapper.getProjectByUserId"
+        >
+        </collection>
+    </resultMap>
+    <select id="qryUserInfo" parameterType="string" resultMap="userInfoMap">
+        SELECT u.*
+        FROM sys_user u
+        <if test="keyword != null and keyword != '' ">
+            LEFT JOIN sys_user_department ud ON ud.user_id = u.id
+            LEFT JOIN sys_department d ON d.id = ud.department_id AND d.is_deleted = 0
+            LEFT JOIN sys_user_role ur ON ur.user_id = u.id
+            LEFT JOIN sys_role r ON r.id = ur.role_id AND r.is_deleted = 0
+            LEFT JOIN sys_user_project up ON up.user_id = u.id
+            LEFT JOIN sys_project p ON p.id = up.project_id AND p.is_deleted = 0
+        </if>
+        WHERE u.is_deleted = 0
+        <if test="keyword != null and keyword != '' ">
+            AND (
+                u.`name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+                OR u.`display_name` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+                OR d.department_name LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+                OR r.role_alias LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+                OR p.project_name LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+            GROUP BY u.id
+        </if>
+        order by u.last_login_time desc
+    </select>
+
+    <select id="getUsersEmail" resultType="string" >
+        SELECT group_concat(DISTINCT(email) separator ',') FROM sys_user WHERE id in
+        <foreach collection="userIds" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        AND email IS NOT NULL;
+    </select>
+
+    <select id="getUsersPhone" resultType="string" >
+        SELECT group_concat(DISTINCT(phone) separator ',') FROM sys_user WHERE id in
+        <foreach collection="userIds" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        AND email IS NOT NULL;
+    </select>
+
+    <select id="getUsersPhoneList" resultType="string" >
+        SELECT DISTINCT(phone) FROM sys_user WHERE id in
+        <foreach collection="userIds" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+             <!--AND email IS NOT NULL;-->
+</mapper>

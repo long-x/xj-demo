@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.process.IaasProcessApplyVirtualMachineComponentParamMapper">
+    <resultMap id="BaseResultMap"
+               type="com.ecdata.cmp.iaas.entity.process.IaasProcessApplyVirtualMachineComponentParam">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="component_param_id" property="componentParamId"/>
+        <result column="vm_component_id" property="vmComponentId"/>
+        <result column="param_name" property="paramName"/>
+        <result column="display_name" property="displayName"/>
+        <result column="default_value" property="defaultValue"/>
+        <result column="param_type" property="paramType"/>
+        <result column="required" property="required"/>
+        <result column="unit" property="unit"/>
+        <result column="value_list" property="valueList"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                component_param_id,
+                vm_component_id,
+                param_name,
+                display_name,
+                default_value,
+                param_type,
+                required,
+                unit,
+                value_list,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <delete id="deleteByVmComponentId">
+        delete from iaas_process_apply_virtual_machine_component_param
+        where vm_component_id=#{vmComponentId}
+    </delete>
+</mapper>

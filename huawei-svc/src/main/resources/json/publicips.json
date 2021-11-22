@@ -1,0 +1,169 @@
+{
+  "publicips": [
+    {
+      "id": "038a228d-a1c6-4eed-826f-46501dc7e957",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "477d6c8a-e444-4cb2-94df-00f290f5c2d5",
+      "public_ip_address": "10.233.192.1",
+      "private_ip_address": "172.17.128.10",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-07-20 07:45:26",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200720074525658991922"
+      },
+      "router_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-07-23T10:01:24",
+      "created_at": "2020-07-20T07:45:27"
+    },
+    {
+      "id": "32ac9566-805f-4225-bbd5-9d06904d4dc1",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "88cf7ca7-b2e3-4285-b964-355c3d532d0a",
+      "public_ip_address": "10.233.192.2",
+      "private_ip_address": "172.17.128.12",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-07-24 03:26:01",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200724032600137309949"
+      },
+      "router_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-07-24T03:40:24",
+      "created_at": "2020-07-24T03:26:02"
+    },
+    {
+      "id": "5900b880-b55a-40ff-88ef-c45f13c895ee",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "40bb8521-5131-4b3c-8b3f-6aaea538566b",
+      "public_ip_address": "10.235.234.234",
+      "private_ip_address": "172.19.2.11",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-08-10 05:27:49",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200810052747882530320"
+      },
+      "router_id": "c0857b28-cb6a-44f0-a608-69a3b33505cb",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-08-10T05:29:06",
+      "created_at": "2020-08-10T05:27:49"
+    },
+    {
+      "id": "79357c22-1dad-4221-ab20-ccf230a62a8b",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "public_ip_address": "10.231.212.128",
+      "status": "DOWN",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-10-22 07:09:27",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20201022070925842954658"
+      },
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-10-26T09:07:19",
+      "created_at": "2020-10-22T07:09:27"
+    },
+    {
+      "id": "98309394-4fab-4c71-9b29-646d83f7f734",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "8f3ca3f2-97ff-41bd-aa84-5e7ea6577ce7",
+      "public_ip_address": "10.235.234.233",
+      "private_ip_address": "172.17.128.11",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-08-10 05:27:21",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200810052720320883186"
+      },
+      "router_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-08-10T05:29:14",
+      "created_at": "2020-08-10T05:27:22"
+    },
+    {
+      "id": "c0f351ec-89e1-4a03-8cf1-a1bd06ba6a27",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "01c55c8f-c350-4bc6-94e6-af5d058a09e1",
+      "public_ip_address": "10.233.19.3",
+      "private_ip_address": "172.19.2.10",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-07-31 04:03:11",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200731040309666955671"
+      },
+      "router_id": "c0857b28-cb6a-44f0-a608-69a3b33505cb",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-07-31T04:04:00",
+      "created_at": "2020-07-31T04:03:11"
+    },
+    {
+      "id": "e6aaaf2e-62e2-43e5-85ed-41ba64e53f22",
+      "type": "生产区网络EIP",
+      "external_net_id": "6dbb0bb5-88a7-4ec1-9d3f-83b376ed9770",
+      "port_id": "9b5fdc3b-d57c-468e-bec6-70f8e0032c4e",
+      "public_ip_address": "10.235.234.232",
+      "private_ip_address": "172.17.129.11",
+      "status": "ACTIVE",
+      "tenant_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "create_time": "2020-08-07 06:30:53",
+      "bandwidth_size": 0,
+      "profile": {
+        "user_id": null,
+        "product_id": "272e89ca545444cfb893765702fe6727",
+        "region_id": "sa-fb-1",
+        "order_id": "20200807063052146768288"
+      },
+      "router_id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "expiry": "0",
+      "op_status": 0,
+      "updated_at": "2020-08-07T06:31:13",
+      "created_at": "2020-08-07T06:30:54"
+    }
+  ]
+}

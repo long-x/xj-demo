@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasClusterMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasCluster">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_name" property="clusterName"/>
+        <result column="area_id" property="areaId"/>
+        <result column="vm_num" property="vmNum"/>
+        <result column="cpu_total" property="cpuTotal"/>
+        <result column="cpu_used" property="cpuUsed"/>
+        <result column="memory_total" property="memoryTotal"/>
+        <result column="memory_used" property="memoryUsed"/>
+        <result column="disk_total" property="diskTotal"/>
+        <result column="disk_used" property="diskUsed"/>
+        <result column="score" property="score"/>
+        <result column="cluster_key" property="clusterKey"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapVo" type="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_name" property="clusterName"/>
+        <result column="area_id" property="areaId"/>
+        <result column="vm_num" property="vmNum"/>
+        <result column="cpu_total" property="cpuTotal"/>
+        <result column="cpu_used" property="cpuUsed"/>
+        <result column="memory_total" property="memoryTotal"/>
+        <result column="memory_used" property="memoryUsed"/>
+        <result column="disk_total" property="diskTotal"/>
+        <result column="disk_used" property="diskUsed"/>
+        <result column="score" property="score"/>
+        <result column="cluster_key" property="clusterKey"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                cluster_name,
+                area_id,
+                cpu_total,
+                cpu_used,
+                vm_num,
+                memory_total,
+                memory_used,
+                disk_total,
+                disk_used,
+                score,
+                cluster_key,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <!--删除（逻辑删除,修改标记-->
+    <update id="updateCluster">
+        update iaas_cluster
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+
+    <!--去重过滤 集群名称-->
+    <select id="getClusterNameByProviderId" resultMap="BaseResultMap"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo">
+        select c.id,c.remark cluster_name from iaas_provider p left join iaas_area a on p.id=a.provider_id
+        left join iaas_cluster c on a.id=c.area_id where c.cluster_name is not null and c.is_deleted=0
+        <if test="providerId !=null and providerId!=''">
+            and a.provider_id= #{providerId,jdbcType = VARCHAR}
+        </if>
+        <if test="clusterName !=null and clusterName!=''">
+            and c.remark LIKE concat('%', #{clusterName,jdbcType = VARCHAR} , '%')
+        </if>
+    </select>
+
+    <select id="getInfoByClusterVO" resultType="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasClusterVo">
+        select * from iaas_cluster
+        where is_deleted=0
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+    </select>
+
+    <select id="queryAreaIdByClusterId" resultType="java.lang.Long">
+        select area_id from iaas_cluster
+        where id=#{clusterId} and is_deleted=0
+    </select>
+
+    <select id="queryIaasClusterByKey" resultMap="BaseResultMap">
+        select * from iaas_cluster
+        where cluster_key=#{clusterKey} and is_deleted=0
+    </select>
+
+    <select id="queryClusterByAreaIds" resultType="java.lang.Long">
+        select id from iaas_cluster
+        where is_deleted=0 and area_id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

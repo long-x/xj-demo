@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasTemplateVirtualMachineMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasTemplateVirtualMachine">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="template_id" property="templateId"/>
+        <result column="vm_name" property="vmName"/>
+        <result column="vcpu" property="vcpu"/>
+        <result column="memory" property="memory"/>
+        <result column="os" property="os"/>
+        <result column="os_type" property="osType"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="sort" property="sort"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+                tenant_id,
+                template_id,
+                vm_name,
+                vcpu,
+                memory,
+                os,
+                os_type,
+                username,
+                password,
+                sort,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+</mapper>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysLogoStyleMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.user.entity.SysLogoStyle">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="title_tab" jdbcType="VARCHAR" property="titleTab"/>
+        <result column="sys_name" jdbcType="VARCHAR" property="sysName"/>
+        <result column="obj_color" jdbcType="VARCHAR" property="objColor"/>
+        <result column="auxiliary_color" jdbcType="VARCHAR" property="auxiliaryColor"/>
+        <result column="login_name" jdbcType="VARCHAR" property="loginName"/>
+        <result column="login_info" jdbcType="VARCHAR" property="loginInfo"/>
+        <result column="login_link" jdbcType="VARCHAR" property="loginLink"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="sys_logo" jdbcType="LONGVARCHAR" property="sysLogo"/>
+        <result column="favicon_logo" jdbcType="LONGVARCHAR" property="faviconLogo"/>
+        <result column="login_logo" jdbcType="LONGVARCHAR" property="loginLogo"/>
+        <result column="sys_logo_pic_name" jdbcType="LONGVARCHAR" property="sysLogoPicName"/>
+        <result column="favicon_logo_pic_name" jdbcType="LONGVARCHAR" property="faviconLogoPicName"/>
+        <result column="login_logo_pic_name" jdbcType="LONGVARCHAR" property="loginLogoPicName"/>
+        <result column="copy_right" jdbcType="VARCHAR" property="copyRight"/>
+        <result column="license_pic" jdbcType="LONGVARCHAR" property="licensePic"/>
+        <result column="license_pic_name" jdbcType="VARCHAR" property="licensePicName"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                sys_logo,
+                title_tab,
+                favicon_logo,
+                sys_name,
+                obj_color,
+                auxiliary_color,
+                login_logo,
+                login_name,
+                login_info,
+                login_link,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                sys_logo_pic_name,
+                favicon_logo_pic_name,
+                login_logo_pic_name,
+                copy_right,
+                license_pic,
+                license_pic_name
+    </sql>
+
+
+    <select id="getLastTimeSysLogoStyle" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_logo_style order by update_time desc limit 0,1
+    </select>
+</mapper>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.sangfor.SangforMapper">
+
+    <insert id="insertBatchRisk" parameterType="java.util.List">
+        insert into iaas_sangfor_security_risk
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test ='null != id'>
+                id,
+            </if>
+            <if test ='null != ip'>
+                ip,
+            </if>
+            <if test ='null != branchName'>
+                branch_name,
+            </if>
+            <if test ='null != branchId'>
+                branch_id,
+            </if>
+            <if test ='null != groupName'>
+                group_name,
+            </if>
+            <if test ='null != groupId'>
+                group_id,
+            </if>
+            <if test ='null != lastTime'>
+                last_time,
+            </if>
+            <if test ='null != eventKey'>
+                event_key,
+            </if>
+            <if test ='null != recordDate'>
+                record_date,
+            </if>
+            <if test ='null != severityLevel'>
+                severity_level,
+            </if>
+            <if test ='null != type'>
+                type,
+            </if>
+            <if test ='null != ruleId'>
+                rule_id,
+            </if>
+            <if test ='null != priority'>
+                priority,
+            </if>
+            <if test ='null != reliability'>
+                reliability,
+            </if>
+            <if test ='null != metaData'>
+                meta_data,
+            </if>
+            <if test ='null != riskType'>
+                risk_type
+            </if>
+            <if test ='null != dealStatus'>
+                deal_status,
+            </if>
+            <if test ='null != dealTime'>
+                deal_time
+            </if>
+        </trim>
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test ='null != ip'>
+                    #{ip},
+                </if>
+                <if test ='null != branchName'>
+                    #{branchName},
+                </if>
+                <if test ='null != branchId'>
+                    #{branchId},
+                </if>
+                <if test ='null != groupName'>
+                    #{groupName},
+                </if>
+                <if test ='null != groupId'>
+                    #{groupId},
+                </if>
+                <if test ='null != lastTime'>
+                    #{lastTime},
+                </if>
+                <if test ='null != eventKey'>
+                    #{eventKey},
+                </if>
+                <if test ='null != recordDate'>
+                    #{recordDate},
+                </if>
+                <if test ='null != severityLevel'>
+                    #{severityLevel},
+                </if>
+                <if test ='null != type'>
+                    #{type},
+                </if>
+                <if test ='null != ruleId'>
+                    #{ruleId},
+                </if>
+                <if test ='null != priority'>
+                    #{priority},
+                </if>
+                <if test ='null != reliability'>
+                    #{reliability},
+                </if>
+                <if test ='null != metaData'>
+                    #{metaData},
+                </if>
+                <if test ='null != riskType'>
+                    #{riskType},
+                </if>
+                <if test ='null != dealStatus'>
+                    #{dealStatus},
+                </if>
+                <if test ='null != dealTime'>
+                    #{dealTime}
+                </if>
+            </trim>
+        </foreach>
+    </insert>
+
+    <select id="fetchReceiveIdByRisk" parameterType="long"
+            resultType="com.ecdata.cmp.user.dto.SysNotificationReceiverVO">
+        select * from (
+        SELECT
+        snr.*,
+        isr.id  as isrId ,
+        isr.deal_status
+        FROM
+        sys_notification_receiver snr
+        right JOIN sys_notification sn ON sn.id = snr.notification_id
+        right JOIN iaas_sangfor_security_risk isr ON isr.id = sn.sang_id
+        ) p
+
+        <where>
+            p.deal_status= 0 and p.`status`=1
+            <if test="riskId !=null and riskId != ''">
+                and isrId = #{riskId}
+            </if>
+        </where>
+  </select>
+
+
+
+</mapper>

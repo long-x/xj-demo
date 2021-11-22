@@ -1,0 +1,52 @@
+{
+  "vpcs": [
+    {
+      "id": "c0857b28-cb6a-44f0-a608-69a3b33505cb",
+      "name": "vpc_CT_CWXT_测试区_AZ5",
+      "cidr": null,
+      "status": "OK",
+      "routes": [],
+      "external_gateway_info": {
+        "network_id": "6ba2c7f6-68fd-4553-b1dd-6155e2540a7d",
+        "enable_snat": false
+      },
+      "service_availability_zones": [
+        "az1.dc1",
+        "az2.dc1",
+        "az3.dc1",
+        "az4.dc1",
+        "az5.dc1",
+        "az6.dc1"
+      ],
+      "ntp": null,
+      "expiry": "0",
+      "op_status": 0,
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "ntp_v6": null
+    },
+    {
+      "id": "edc66e6c-fd82-4a8f-ab0a-a155acca21ac",
+      "name": "vpc_CT_CWXT_内网区_AZ1",
+      "cidr": null,
+      "status": "OK",
+      "routes": [],
+      "external_gateway_info": {
+        "network_id": "6ba2c7f6-68fd-4553-b1dd-6155e2540a7d",
+        "enable_snat": false
+      },
+      "service_availability_zones": [
+        "az1.dc1",
+        "az2.dc1",
+        "az3.dc1",
+        "az4.dc1",
+        "az5.dc1",
+        "az6.dc1"
+      ],
+      "ntp": null,
+      "expiry": "0",
+      "op_status": 0,
+      "project_id": "caa3abc5e21f44a98b6ab9b07865b3a2",
+      "ntp_v6": null
+    }
+  ]
+}

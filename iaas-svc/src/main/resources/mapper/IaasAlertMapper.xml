@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasAlertMapper">
+    <update id="modifyUpdateRecord">
+        update iaas_alert
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+
+    <resultMap id="alertForce" type="com.ecdata.cmp.iaas.entity.dto.IaasAlertVO">
+        <id property="id" column="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="resource_name" property="resourceName"/>
+        <result column="alert_level"     property="alertLevel"/>
+        <result column="alert_definition_name" property= "alertDefinitionName"/>
+        <result column="status"  property="status"/>
+        <result column="type"        property= "type"/>
+        <result column="sub_type"        property= "subType"/>
+        <result column="start_time"      property= "startTime"/>
+        <result column="remark"      property= "remark"/>
+        <result column="create_user"   property=  "createUser"/>
+        <result column="create_time"    property=   "createTime"/>
+        <result column="update_user"     property=  "updateUser"/>
+        <result column="update_time"     property=  "updateTime"/>
+        <result column="is_deleted"    property=  "isDeleted"/>
+        <result column="csn"    property= "csn"/>
+        <result column="visible"      property="visible"/>
+        <result column="severity"   property= "severity"/>
+        <result column="alarm_name" property="alarmName"/>
+        <result column="me_name"       property= "meName"/>
+        <result column="moi"        property= "moi"/>
+        <result column="latest_time"    property= "latestTime"/>
+        <result column="latest_occur_time"   property= "latestOccurTime"/>
+        <result column="logical_region_name"  property= "logicalRegionName"/>
+        <result column="additional_information"   property="additionalInformation"/>
+        <result column="alarm_id" property="alarmId"/>
+        <result column="rule_name"   property="ruleName"/>
+        <result column="address"    property="address"/>
+        <result column="first_time"   property="firstTime"/>
+        <result column="first_occur_time"   property="firstOccurTime"/>
+        <result column="logical_region_id"  property="logicalRegionId"/>
+        <result column="vdc_id"      property="vdcId"/>
+        <result column="vdc_name"   property= "vdcName"/>
+        <result column="origin_system"   property="originSystem"/>
+        <result column="origin_system_name"   property="originSystemName"/>
+        <collection property="children"   column= "{alarmName=alarm_name,csn=csn}"
+                    javaType="java.util.ArrayList"
+                    select="alertChildren"/>
+    </resultMap>
+
+
+
+    <select id="alertPage" resultMap="alertForce">
+   select distinct alarm_name,
+    max(id) as id,
+	max(csn) as csn,
+	max(severity) as severity,
+	max(alert_definition_name) as alert_definition_name,
+	max(alarm_id) as alarm_id,
+	max(me_name) as me_name,
+	max(resource_name) as resource_name,
+	max(logical_region_name) as logical_region_name,
+	max(latest_occur_time) as latest_occur_time,
+	max(visible) as visible,
+	max(update_time) as update_time from iaas_alert where visible=1 group by alarm_name
+
+
+
+    </select>
+
+    <select id="alertChildren" resultType="com.ecdata.cmp.iaas.entity.dto.IaasAlertVO"
+            parameterType="java.util.Map">
+      select * from iaas_alert where visible = 1 and  alarm_name = #{alarmName} and csn &lt;&gt;#{csn}
+    </select>
+
+    <insert id="saveAlert" parameterType="com.ecdata.cmp.iaas.entity.IaasAlert">
+        INSERT ignore  INTO iaas_alert
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+        <if test='null != id'>
+            id,
+        </if>
+        <if test='null != clusterId'>
+            cluster_id,
+        </if>
+        <if test='null != resourceName'>
+            resource_name,
+        </if>
+        <if test='null != alertLevel'>
+            alert_level,
+        </if>
+        <if test='null != alertDefinitionName'>
+            alert_definition_name,
+        </if>
+        <if test='null != status'>
+            status,
+        </if>
+        <if test='null != type'>
+            type,
+        </if>
+        <if test='null != subType'>
+            sub_type,
+        </if>
+        <if test='null != startTime'>
+            start_time,
+        </if>
+        <if test='null != remark'>
+            remark,
+        </if>
+        <if test='null != createUser'>
+            create_user,
+        </if>
+        <if test='null != createTime'>
+            create_time,
+        </if>
+        <if test='null != updateUser'>
+            update_user,
+        </if>
+        <if test='null != updateTime'>
+            update_time,
+        </if>
+        <if test='null != csn'>
+            csn,
+        </if>
+        <if test='null != visible'>
+            visible
+        </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test='null != id'>
+                #{id},
+            </if>
+
+            <if test='null != clusterId'>
+                #{clusterId},
+            </if>
+            <if test='null != resourceName'>
+                #{resourceName},
+            </if>
+            <if test='null != alertLevel'>
+                #{alertLevel},
+            </if>
+            <if test='null != alertDefinitionName'>
+                #{alertDefinitionName},
+            </if>
+            <if test='null != status'>
+                #{status},
+            </if>
+            <if test='null != type'>
+                #{type},
+            </if>
+            <if test='null != subType'>
+                #{subType},
+            </if>
+            <if test='null != startTime'>
+                #{startTime},
+            </if>
+            <if test='null != remark'>
+                #{remark},
+            </if>
+            <if test='null != createUser'>
+                #{createUser},
+            </if>
+            <if test='null != createTime'>
+                #{createTime},
+            </if>
+            <if test='null != updateUser'>
+                #{updateUser},
+            </if>
+            <if test='null != updateTime'>
+                #{updateTime},
+            </if>
+            <if test='null != csn'>
+                #{csn},
+            </if>
+            <if test='null != visible'>
+                #{visible}
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="saveAlertBatch" parameterType="java.util.List">
+        INSERT ignore  INTO iaas_alert (id,cluster_id,resource_name,alert_level,alert_definition_name,status,type,
+        sub_type,start_time,remark,create_user,create_time,update_user,update_time,is_deleted,visible,csn,severity,
+        alarm_name,me_name,moi,latest_occur_time,logical_region_name,additional_information,alarm_id,rule_name,address,
+        first_occur_time,logical_region_id,vdc_id,vdc_name,origin_system,origin_system_name)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.clusterId},#{item.resourceName},#{item.alertLevel},#{item.alertDefinitionName},
+            #{item.status},#{item.type},#{item.subType},#{item.startTime},#{item.remark},#{item.createUser},
+            #{item.createTime}, #{item.updateUser},#{item.updateTime}, #{item.isDeleted},#{item.visible},
+            #{item.csn},#{item.severity},
+            #{item.alarmName},#{item.meName},#{item.moi},#{item.latestOccurTime},#{item.logicalRegionName},
+            #{item.additionalInformation},
+            #{item.alarmId},#{item.ruleName},#{item.address},
+            #{item.firstOccurTime},#{item.logicalRegionId},#{item.vdcId},#{item.vdcName},#{item.originSystem},
+            #{item.originSystemName})
+        </foreach>
+    </insert>
+
+    <select id="fetchReceiveIdByAlert" parameterType="long"
+            resultType="com.ecdata.cmp.user.dto.SysNotificationReceiverVO">
+        SELECT
+        snr.*,isr.csn
+        FROM
+        sys_notification_receiver snr
+        right JOIN sys_notification sn ON sn.id = snr.notification_id
+        right JOIN iaas_alert isr ON isr.csn = sn.csn
+
+        <where>
+            isr.visible = 1 and sn.`status`=1
+            <if test="csn !=null and csn != ''">
+                and isr.csn = #{csn}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

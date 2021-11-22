@@ -1,0 +1,267 @@
+{
+  "code": 0,
+  "message": "成功",
+  "data": [
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_WEB_01"
+      },
+      "status": "active",
+      "privateIps": "172.21.0.10",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.235.8.10",
+      "supportHistoryPerf": false,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "7c987345-4d72-46cf-b235-00d0e73f7e9b",
+      "condition": {
+        "resId": "07D7F926227D35DB8A71F2724D8923DF",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_YGPT_Work1"
+      },
+      "status": "active",
+      "privateIps": "172.18.0.20",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "",
+      "supportHistoryPerf": false,
+      "flavor": "4U8G|4vCPU|8GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "8a38ecce-7654-4059-946d-07d55952b53d",
+      "condition": {
+        "resId": "6158C1B2E95436E6A4ADD415436004CA",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_WEB_02"
+      },
+      "status": "active",
+      "privateIps": "172.21.0.11",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.235.8.11",
+      "supportHistoryPerf": false,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "7e67fbb5-4395-4ea9-806e-988395c4588b",
+      "condition": {
+        "resId": "F3DFABCE016B3ADCA273BD15FA040888",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.17.1.14",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.33",
+      "supportHistoryPerf": false,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "fdd098e3-3714-41f7-89e7-693907093746",
+      "condition": {
+        "resId": "ABE713B9E12A383B9C3E3141522AA975",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_YGPT_WEB01"
+      },
+      "status": "active",
+      "privateIps": "172.18.0.11",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.1.11",
+      "supportHistoryPerf": false,
+      "flavor": "4U8G|4vCPU|8GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "b29e56ef-de46-40e6-a423-e48c6a6d2ada",
+      "condition": {
+        "resId": "5DA6222E7DF73F1994F527A13D486041",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_OTH_01"
+      },
+      "status": "active",
+      "privateIps": "172.17.1.13",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.32",
+      "supportHistoryPerf": false,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "e1c590ce-78a7-4b85-afbe-5d8e6735af5d",
+      "condition": {
+        "resId": "7CEFCC542A4E31A281826CFB71C02DFA",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.17.1.15",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.34",
+      "supportHistoryPerf": false,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "8ea71051-1221-46aa-939b-e159122c89da",
+      "condition": {
+        "resId": "234EFFF3F14E36FC90AEDEB5AD2A012D",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_FXKZ_DB_02"
+      },
+      "status": "active",
+      "privateIps": "172.17.1.16",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.35",
+      "supportHistoryPerf": false,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "8d62e4a8-c861-4b8d-8517-3bd2c86b966f",
+      "condition": {
+        "resId": "FB1CA278CA2B3AC8AE143B17AB8CD14A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_XTBG_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.17.0.15",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.21",
+      "supportHistoryPerf": false,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "92a810b3-027f-4172-8357-05e8dd396ed8",
+      "condition": {
+        "resId": "3A50E3728DA2382E80BA6243AFF05A86",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_JT_XTBG_OTH_03"
+      },
+      "status": "active",
+      "privateIps": "172.17.0.16",
+      "projectId": "49f1b96e3fd34860a70de9cb85607ebe",
+      "cpuUsage": null,
+      "diskUsage": null,
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": null,
+      "floatingIp": "10.232.0.22",
+      "supportHistoryPerf": false,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_JT",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "f63dc743-3a72-4884-a59d-8dae762a3871",
+      "condition": {
+        "resId": "43F5170156A139A98F11BD226044D6F8",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      }
+    }
+  ],
+  "success": true
+}

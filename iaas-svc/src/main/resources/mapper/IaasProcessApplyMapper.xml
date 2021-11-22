@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.process.IaasProcessApplyMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.process.IaasProcessApply">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <!--<result column="tenant_id" property="tenantId"/>-->
+        <result column="catalog_id" property="catalogId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="area_id" property="areaId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="host_id" property="hostId"/>
+        <result column="datastore_id" property="datastoreId"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="process_instance_id" property="processInstanceId"/>
+        <result column="state" property="state"/>
+        <result column="lease" property="lease"/>
+        <result column="period" property="period"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="processApplyResultMap"
+               type="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVO">
+        <result column="id" property="id"/>
+        <!--<result column="tenant_id" property="tenantId"/>-->
+        <result column="catalog_id" property="catalogId"/>
+        <result column="provider_id" property="providerId"/>
+        <result column="area_id" property="areaId"/>
+        <result column="cluster_id" property="clusterId"/>
+        <result column="host_id" property="hostId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="process_apply_name" property="processApplyName"/>
+        <result column="datastore_id" property="datastoreId"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="process_instance_id" property="processInstanceId"/>
+        <result column="state" property="state"/>
+        <result column="lease" property="lease"/>
+        <result column="period" property="period"/>
+        <result column="remark" property="remark"/>
+        <collection property="catalogVirtualMachinVOList"
+                    ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineVO">
+            <result column="one_id" property="key"/>
+            <result column="one_name" property="title"/>
+            <result column="process_apply_id" property="processApplyId"/>
+            <result column="host_id" property="hostId"/>
+            <result column="datastore_id" property="datastoreId"/>
+            <result column="vcpu" property="vcpu"/>
+            <result column="memory" property="memory"/>
+            <result column="os" property="os"/>
+            <result column="os_type" property="osType"/>
+            <result column="username" property="username"/>
+            <result column="password" property="password"/>
+            <result column="sort" property="sort"/>
+            <result column="remark" property="remark"/>
+            <collection property="machineDiskVOList"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineDiskVO">
+                <result column="disk_id" property="id"/>
+                <result column="disk_name" property="diskName"/>
+                <result column="disk_type" property="diskType"/>
+                <result column="disk_size" property="diskSize"/>
+                <result column="disk_remark" property="remark"/>
+                <result column="disk_create_user" property="createUser"/>
+                <result column="disk_create_time" property="createTime"/>
+            </collection>
+            <collection property="children"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineComponentVO">
+                <result column="two_id" property="key"/>
+                <result column="two_name" property="title"/>
+                <result column="two_vm_id" property="vmId"/>
+                <result column="two_component_id" property="componentId"/>
+                <result column="two_kind" property="kind"/>
+                <result column="two_parent_id" property="parentId"/>
+                <result column="two_os_type" property="osType"/>
+                <result column="two_sort" property="sort"/>
+                <result column="two_remark" property="remark"/>
+                <result column="two_version" property="version"/>
+                <collection property="compParams"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineComponentParamVO">
+                    <result column="two_par_id" property="id"/>
+                    <result column="two_component_param_id" property="componentParamId"/>
+                    <result column="two_vm_component_id" property="vmComponentId"/>
+                    <result column="two_param_name" property="paramName"/>
+                    <result column="two_display_name" property="displayName"/>
+                    <result column="two_default_value" property="defaultValue"/>
+                    <result column="two_param_type" property="paramType"/>
+                    <result column="two_required" property="required"/>
+                    <result column="two_unit" property="unit"/>
+                    <result column="two_sort" property="sort"/>
+                    <result column="two_modifiable" property="modifiable"/>
+                    <result column="two_is_show" property="isShow"/>
+                    <result column="two_value_list" property="valueList"/>
+                    <result column="two_par_remark" property="remark"/>
+                </collection>
+                <collection property="children"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineComponentVO">
+                    <result column="three_id" property="key"/>
+                    <result column="three_name" property="title"/>
+                    <result column="three_vm_id" property="vmId"/>
+                    <result column="three_component_id" property="componentId"/>
+                    <result column="three_kind" property="kind"/>
+                    <result column="three_parent_id" property="parentId"/>
+                    <result column="three_os_type" property="osType"/>
+                    <result column="three_sort" property="sort"/>
+                    <result column="three_remark" property="remark"/>
+                    <result column="three_version" property="version"/>
+                    <collection property="compParams"
+                                ofType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVirtualMachineComponentParamVO">
+                        <result column="three_par_id" property="id"/>
+                        <result column="three_component_param_id" property="componentParamId"/>
+                        <result column="three_vm_component_id" property="vmComponentId"/>
+                        <result column="three_param_name" property="paramName"/>
+                        <result column="three_display_name" property="displayName"/>
+                        <result column="three_default_value" property="defaultValue"/>
+                        <result column="three_param_type" property="paramType"/>
+                        <result column="three_required" property="required"/>
+                        <result column="three_unit" property="unit"/>
+                        <result column="three_sort" property="sort"/>
+                        <result column="three_modifiable" property="modifiable"/>
+                        <result column="three_is_show" property="isShow"/>
+                        <result column="three_value_list" property="valueList"/>
+                        <result column="three_par_remark" property="remark"/>
+                    </collection>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                catalog_id,
+                provider_id,
+                pool_id,
+                area_id,
+                cluster_id,
+                host_id,
+                datastore_id,
+                business_group_id,
+                process_instance_id,
+                state,
+                lease,
+                period,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+    <select id="queryProcessApply" resultType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVO"
+            parameterType="java.util.HashMap">
+        select t1.*,t2.catalog_name catalogName,t2.content,t2.main_tag mainTag from iaas_process_apply t1
+        left join iaas_catalog t2 on t1.catalog_id=t2.id
+        where t1.is_deleted=0
+        <if test="map.state!=null">
+            and t1.state=#{map.state}
+        </if>
+        <if test="map.catalogName!=null and map.catalogName!=''">
+            and t2.catalog_name LIKE concat('%', #{map.catalogName,jdbcType = VARCHAR} , '%')
+        </if>
+        <if test="map.currentUserId!=null">
+            and t1.create_user=#{map.currentUserId}
+        </if>
+
+    </select>
+
+    <select id="queryCurrentUserProcessApply" resultType="com.ecdata.cmp.iaas.entity.dto.process.IaasProcessApplyVO">
+        select t1.*,t2.catalog_name catalogName,t2.content,t2.main_tag mainTag from iaas_process_apply t1
+        left join iaas_catalog t2 on t1.catalog_id=t2.id
+        where t1.is_deleted=0
+        <if test="map.state!=null">
+            and t1.state=#{map.state}
+        </if>
+        <if test="map.currentUserId!=null">
+            and t1.create_user=#{map.currentUserId}
+        </if>
+
+    </select>
+
+    <select id="queryProcessApplyDetails" resultMap="processApplyResultMap">
+        select
+        apply.id,
+        apply.tenant_id,
+        apply.catalog_id,
+        apply.provider_id,
+        apply.process_apply_name,
+        apply.pool_id,
+        apply.area_id,
+        apply.cluster_id,
+        apply.host_id,
+        apply.datastore_id,
+        apply.business_group_id,
+        apply.process_instance_id,
+        apply.state,
+        apply.lease,
+        apply.period,
+        apply.remark,
+        t0.id one_id,
+        t0.vm_name one_name,
+        t0.process_apply_id,
+        t0.host_id,
+        t0.datastore_id,
+        t0.remark,
+        t0.vcpu,
+        t0.memory,
+        t0.os,
+        t0.os_type,
+        t0.username,
+        t0.password,
+        t0.sort,
+        disk.id disk_id,
+        disk.disk_name,
+        disk.disk_type,
+        disk.disk_size,
+        disk.remark disk_remark,
+        disk.create_user disk_create_user,
+        disk.create_time disk_create_time,
+        t1.id two_id,
+        t1.display_name two_name,
+        t1.process_apply_vm_id two_vm_id,
+        t1.component_id two_component_id,
+        t1.kind two_kind,
+        t1.parent_id two_parent_id,
+        t1.os_type two_os_type,
+        t1.sort two_sort,
+        t1.remark two_remark,
+        t1.version two_version,
+        t3.id two_par_id,
+        t3.component_param_id two_component_param_id,
+        t3.vm_component_id two_vm_component_id,
+        t3.param_name two_param_name,
+        t3.display_name two_display_name,
+        t3.default_value two_default_value,
+        t3.param_type two_param_type,
+        t3.unit two_unit,
+        t3.sort two_sort,
+        t3.is_show two_is_show,
+        t3.value_list two_value_list,
+        t3.remark two_par_remark,
+        t3.modifiable two_modifiable,
+        t2.id three_id,
+        t2.display_name three_name,
+        t2.component_id three_component_id,
+        t2.kind three_kind,
+        t2.parent_id three_parent_id,
+        t2.os_type three_os_type,
+        t2.sort three_sort,
+        t2.process_apply_vm_id three_vm_id,
+        t2.remark three_remark,
+        t2.version three_version,
+        t4.id three_par_id,
+        t4.component_param_id three_component_param_id,
+        t4.vm_component_id three_vm_component_id,
+        t4.param_name three_param_name,
+        t4.display_name three_display_name,
+        t4.default_value three_default_value,
+        t4.param_type three_param_type,
+        t4.unit three_unit,
+        t4.sort three_sort,
+        t4.modifiable three_modifiable,
+        t4.is_show three_is_show,
+        t4.value_list three_value_list,
+        t4.remark three_par_remark
+        from iaas_process_apply apply
+        left join iaas_process_apply_virtual_machine t0 on (apply.id=t0.process_apply_id and t0.is_deleted=0)
+        left join iaas_process_apply_virtual_machine_disk disk on (t0.id=disk.vm_id and disk.is_deleted=0)
+        left join iaas_process_apply_virtual_machine_component t1 on (t0.id=t1.parent_id and t1.is_deleted=0)
+        left join iaas_process_apply_virtual_machine_component_param t3 on (t1.id=t3.vm_component_id and t3.is_deleted=0)
+        left join iaas_process_apply_virtual_machine_component t2 on (t1.id=t2.parent_id and t2.is_deleted=0)
+        left join iaas_process_apply_virtual_machine_component_param t4 on (t2.id=t4.vm_component_id and t4.is_deleted=0)
+        where apply.is_deleted=0 and apply.id=#{processApplyId}
+    </select>
+
+    <select id="queryAreaIdByBusinessGroupId" resultType="java.util.HashMap">
+        select t1.pool_id,t2.cluster_id from sys_business_group_resource_pool t1
+        left join iaas_resource_pool t2 on (t1.pool_id=t2.id and t2.is_deleted=0)
+        where t1.business_group_id=#{businessGroupId} and t2.provider_id=#{provideId}
+          limit 1
+    </select>
+</mapper>

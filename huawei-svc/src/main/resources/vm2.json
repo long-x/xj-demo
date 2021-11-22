@@ -1,0 +1,2047 @@
+{
+  "code": 0,
+  "message": "成功",
+  "data": [
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "test_kvm1"
+      },
+      "status": "active",
+      "privateIps": "172.16.1.155",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "34.70",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 6.08,
+      "floatingIp": "",
+      "imageName": "Windows 10 Professional 64bit|50GB|2048MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows 10 Professional 64bit",
+      "nativeId": "dc9f38eb-9d95-45b5-b25c-0904c3c2d2a1",
+      "condition": {
+        "resId": "FF0535E603793565AF3189D35235DAC9",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "139E610D41E738DBBD31ED6F3D382096",
+      "azoneName": "az5.dc1",
+      "physicalHostId": "18C8F355DC1036B78853EDE28F8737CF"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_OTH_01"
+      },
+      "status": "building",
+      "privateIps": "172.16.0.13",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 0,
+      "diskUsage": "0",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 0,
+      "floatingIp": "10.232.0.12",
+      "imageName": "CentOS-7.6-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "a00f3a82-0ce1-4741-a5bb-6aaabfa3a899",
+      "condition": {
+        "resId": "B7097AC179C53055AA57EB9659C20A21",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "test_kvm03"
+      },
+      "status": "active",
+      "privateIps": "192.168.1.113@@&amp;192.168.0.182",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "20.91",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 8.89,
+      "floatingIp": "",
+      "imageName": "CentOS-7.6-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U8G|4vCPU|8GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "902e76d1-9619-4535-98cc-1ecbd7ffd28b",
+      "condition": {
+        "resId": "B4D09554C49136E1AE29A8B77D60EFCF",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "139E610D41E738DBBD31ED6F3D382096",
+      "azoneName": "az5.dc1",
+      "physicalHostId": "11C149B1D956310AA7275B10E89161CD"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_OTH_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.0.15",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 0.46,
+      "diskUsage": "3.86",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 12.77,
+      "floatingIp": "10.232.0.15",
+      "imageName": "",
+      "supportHistoryPerf": true,
+      "flavor": "16U64G|16vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "f01a8ef5-ada6-4f52-b37c-e88c72707eef",
+      "condition": {
+        "resId": "32F9CF0F3148374C898DAA6B52A09BE7",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "C239EDA248333E4281439DEE76336A27"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.0.10",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 0.12,
+      "diskUsage": "1.48",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.69,
+      "floatingIp": "10.232.0.11",
+      "imageName": "",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Ubuntu Server 18.04.2 64bit",
+      "nativeId": "124a4d15-a930-46ca-820a-c7b7da518abf",
+      "condition": {
+        "resId": "9A5CC834E02136D3B0CEB1AD736D11A2",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "E2CA829B7373310C852965297116C643"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.0.11",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 0.15,
+      "diskUsage": "3.74",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 5.97,
+      "floatingIp": "10.232.0.10",
+      "imageName": "",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Ubuntu Server 18.04.2 64bit",
+      "nativeId": "e186d846-b708-480e-958d-db747263cda9",
+      "condition": {
+        "resId": "1D87801ACAAE334E976D7C17B066FE55",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "E2CA829B7373310C852965297116C643"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_RLZY_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.12.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.78,
+      "diskUsage": "6.84",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 17.86,
+      "floatingIp": "10.232.0.17",
+      "imageName": "WindowsServer2008x32|100GB|4096MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U4G|4vCPU|4GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2008 Standard SP2 32bit",
+      "nativeId": "f714a982-00fc-47e5-86d0-fb637b7b2a67",
+      "condition": {
+        "resId": "AAE6121FDC823CA59E965FE927D54F61",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V-CT-SW-SJZL-SJGX-02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.16@@&amp;172.16.18.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "0.63",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.54,
+      "floatingIp": "10.232.0.105",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "682c022d-9fdf-486a-90e8-a90cf8d04d34",
+      "condition": {
+        "resId": "6564331E29DB35EABAB249405EFB75A5",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V-CT-SW-SJZL-SJBF-02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.26",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 1.98,
+      "diskUsage": "0.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.83,
+      "floatingIp": "10.232.0.109",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "53ab7457-eb8b-4ca8-977f-d6286c22e9c4",
+      "condition": {
+        "resId": "32219F59E19539E28E97A143FC201291",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BAE8A3FFFDCC3E9FBE65567FBA1B810F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_08"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.48",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.22,
+      "diskUsage": "4.27",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.71,
+      "floatingIp": "10.232.0.59",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "8f2fbf57-bd88-444c-bea6-9eebf2973b9c",
+      "condition": {
+        "resId": "1E18AD01912639D8A145EE12EA4D10E8",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "8DABC805245334D2B02BB57B654BA728"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_06"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.46",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.2,
+      "diskUsage": "4.27",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.71,
+      "floatingIp": "10.232.0.57",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "565da302-e261-46e4-b35d-a8f16f280a19",
+      "condition": {
+        "resId": "AB07D74C07A130DD9E80D4483ADCD218",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A2C8173E9E2337EF95ED172124E215BB"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_04"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.44",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.21,
+      "diskUsage": "1.19",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.71,
+      "floatingIp": "10.232.0.55",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "936cc423-0e13-4188-8050-fdbfba72aa8b",
+      "condition": {
+        "resId": "D182F7727C3239F8BAEA5668906DA22D",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.43",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.22,
+      "diskUsage": "1.19",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.7,
+      "floatingIp": "10.232.0.54",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "916e2ddd-9b03-490b-a367-85f724131435",
+      "condition": {
+        "resId": "85E909574E97334091A691D2E6A1A5F7",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "8DABC805245334D2B02BB57B654BA728"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_07"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.47",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "4.27",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.71,
+      "floatingIp": "10.232.0.58",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "47a7a521-10ad-4a5e-8ea2-cda28e907e7a",
+      "condition": {
+        "resId": "277CD1C96A8537608545A2AA2F650481",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.42",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.21,
+      "diskUsage": "4.27",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.7,
+      "floatingIp": "10.232.0.53",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "b5ae9414-83a7-44c3-8e4f-59e5da6f164a",
+      "condition": {
+        "resId": "794156FCFC243164973E4C7C8D7B58CF",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "94123772D10E30D1859E49491A734F14"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_05"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.45",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.22,
+      "diskUsage": "4.27",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.71,
+      "floatingIp": "10.232.0.56",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "bd98366e-de24-435e-b1a7-76038512b30a",
+      "condition": {
+        "resId": "AA8E2CD9F833332D8D946FC9C1635C1A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "3A78B6264A553014A84A425F4196807C"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_YSJ_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.38",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "20.94",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.57,
+      "floatingIp": "10.232.0.49",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "b995a933-5f9a-49e0-85f9-7f34cbd0cab8",
+      "condition": {
+        "resId": "E6DBB75442BC368BAA1A5466DCE92282",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "94123772D10E30D1859E49491A734F14"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_ZSJ_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.35",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 1.96,
+      "diskUsage": "20.94",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.8,
+      "floatingIp": "10.232.0.46",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "82342d40-9132-45dd-b334-9fe8fd8c3114",
+      "condition": {
+        "resId": "1D8567BCCC0A35A49C79F919FB09928F",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_YSJ_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.37",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.13,
+      "diskUsage": "20.94",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.58,
+      "floatingIp": "10.232.0.48",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "dc34cb4f-8781-4451-8cce-b6b0e459ddbc",
+      "condition": {
+        "resId": "D6545A04A0F03F1EB8150D61D9CC7C2C",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_ZSJ_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.36",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "20.94",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.57,
+      "floatingIp": "10.232.0.47",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "ef8e5fa0-5019-44d7-b5ae-70fff4950560",
+      "condition": {
+        "resId": "C61A59D5A9AC3D509292C8178B07BE2E",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BAE8A3FFFDCC3E9FBE65567FBA1B810F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_OSB_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.34",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.13,
+      "diskUsage": "1.86",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.57,
+      "floatingIp": "10.232.0.45",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "30d34684-0f29-41b2-9521-281b9b593276",
+      "condition": {
+        "resId": "FD809E13791C3656B6BFD5CD43BEF64A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BAE8A3FFFDCC3E9FBE65567FBA1B810F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_APP_02"
+      },
+      "status": "active",
+      "privateIps": "172.20.1.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.3,
+      "diskUsage": "10.85",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.71,
+      "floatingIp": "10.231.32.4",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "4c0ca8f1-0f23-4eb1-97e7-3e35b9cbb0e3",
+      "condition": {
+        "resId": "9FD64EF59216311E8FFB4B0D56E5B8EC",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "B0C9C6867A0C32BA8EE430B2E98C0AA7"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.20.1.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.3,
+      "diskUsage": "10.95",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.78,
+      "floatingIp": "10.231.32.3",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "76c7fdac-c276-44b8-ad26-57156bbaf66a",
+      "condition": {
+        "resId": "248205977CDA3895AC3B45685BF3F93A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "45EE2396D7CA38E1B5B628D53C57DB7F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_WZGL_APP_02"
+      },
+      "status": "active",
+      "privateIps": "172.20.0.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.81,
+      "diskUsage": "4.22",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 9.34,
+      "floatingIp": "10.231.32.1",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "00dac0b1-68b3-4dd3-9d4e-160bb395ef0d",
+      "condition": {
+        "resId": "C5B54A73EBE03BE78F780173DA743D78",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "45EE2396D7CA38E1B5B628D53C57DB7F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V-CT-SW-SJZL-SJGX-01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.15@@&amp;172.16.18.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "0.81",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.55,
+      "floatingIp": "10.232.0.104",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "988bba5b-d016-485a-b143-145fb2f6c141",
+      "condition": {
+        "resId": "AA091A2884D53A5AB2D178D7EFF52F98",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BAE8A3FFFDCC3E9FBE65567FBA1B810F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V-CT-SW-SJZL-SJBF-01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.25",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "0.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.57,
+      "floatingIp": "10.232.0.108",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "eab36b0e-8b81-40e0-b1ca-4e8049fc2277",
+      "condition": {
+        "resId": "339DB4F002773AA5A0C54F367E81D0E7",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A2C8173E9E2337EF95ED172124E215BB"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_LIMS_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.8.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.26,
+      "diskUsage": "5.05",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 8.86,
+      "floatingIp": "10.232.0.6",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "10a4b2c0-6be6-478f-a572-6cf772b5512d",
+      "condition": {
+        "resId": "4B01AE5C74CE3FE78B0098A34147C5EB",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "E2CA829B7373310C852965297116C643"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.50",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.03,
+      "diskUsage": "20.39",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.02,
+      "floatingIp": "10.232.0.61",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "db2a0844-f919-4243-a82e-18c807517c28",
+      "condition": {
+        "resId": "B99613B371383BF69D0AC9BABECB068A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_WEB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.0.12",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 0.14,
+      "diskUsage": "3.12",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.42,
+      "floatingIp": "10.232.0.13",
+      "imageName": "WindowsServer2012R2-ver2|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U64G|16vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "bb3bd1af-dc33-4d6c-9e89-86cb696e4990",
+      "condition": {
+        "resId": "9CB15E0A0E053671A93CFC7E00792274",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "E2CA829B7373310C852965297116C643"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_DI_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.30",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "3.49",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.17,
+      "floatingIp": "10.232.0.41",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "1d7de368-4ad5-4245-8b70-f1e33f5d4b9c",
+      "condition": {
+        "resId": "C9148E466ACE376699B5A0C6FEFBD129",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "94123772D10E30D1859E49491A734F14"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_DI_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.31",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.22,
+      "diskUsage": "3.49",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.17,
+      "floatingIp": "10.232.0.42",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "6f43e1d2-00b0-41d5-a86a-23c804520739",
+      "condition": {
+        "resId": "6233D795F3DA3094989F91CD4075A7BE",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A2C8173E9E2337EF95ED172124E215BB"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "test_kvm2"
+      },
+      "status": "active",
+      "privateIps": "172.16.1.87",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 7.4,
+      "diskUsage": "20.91",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 6.68,
+      "floatingIp": "",
+      "imageName": "CentOS-7.6-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "a0fd65c6-4e76-4eab-9479-be9b411521db",
+      "condition": {
+        "resId": "6A16B402EB5236458DC74FF3F75DBE13",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "139E610D41E738DBBD31ED6F3D382096",
+      "azoneName": "az5.dc1",
+      "physicalHostId": "C2316B2DCD7539A29E151702978CD432"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_WZGL_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.20.0.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.64,
+      "diskUsage": "6.07",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 9.27,
+      "floatingIp": "10.231.32.2",
+      "imageName": "WindowsServer2008R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+      "nativeId": "d447f0ca-6ad9-407e-aca4-ab74d0740c68",
+      "condition": {
+        "resId": "E1D828FD652833D39F6C5B7D753B1F95",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "B0C9C6867A0C32BA8EE430B2E98C0AA7"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GCGL_MUL_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.9.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 7.78,
+      "diskUsage": "37.19",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 24.72,
+      "floatingIp": "10.232.0.4",
+      "imageName": "ims-WindowsServer2016-private|100GB|0MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "47083a61-f423-4e34-b432-840fc0c570b9",
+      "condition": {
+        "resId": "28E436380A35327A944E0EEE4C3187F5",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "1159EB7357C93BA393AE76A3436916A4"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_DWGK_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.3.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.39,
+      "diskUsage": "10.34",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 65.56,
+      "floatingIp": "10.232.0.1",
+      "imageName": "WindowsServer2008R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "2U8G|2vCPU|8GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+      "nativeId": "34abdc8d-5f7e-436a-8991-15b7c5067e30",
+      "condition": {
+        "resId": "665E51732A3235BE966E92EE3EEB1AF3",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_DWGK_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.3.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.88,
+      "diskUsage": "8.35",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 13.16,
+      "floatingIp": "",
+      "imageName": "WindowsServer2008R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "2U8G|2vCPU|8GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+      "nativeId": "4ea82136-50c5-424a-9bf2-3ab47101dde6",
+      "condition": {
+        "resId": "BA08E5D43ECF3773A938D9D747B6E901",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CWGL_MUL_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.2.12",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.9,
+      "diskUsage": "3.15",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 7.43,
+      "floatingIp": "",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "dc2838fd-371b-4e9b-b5ef-a370c8be3557",
+      "condition": {
+        "resId": "0BD45E65C28938AEB0B2921A8FAF9496",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "1159EB7357C93BA393AE76A3436916A4"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CWGL_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.2.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.49,
+      "diskUsage": "2.45",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 4.45,
+      "floatingIp": "",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "701cc0b4-cf90-45d9-9237-cedf67fccf62",
+      "condition": {
+        "resId": "3F067A3FD8A1394F88942BA55A3532C2",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GCGL_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.6.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 2.18,
+      "diskUsage": "35.11",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 7.4,
+      "floatingIp": "",
+      "imageName": "ims-WindowsServer2016-private|100GB|0MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "09655788-a57d-41f1-8d92-9925da1ca509",
+      "condition": {
+        "resId": "B4A6FE057A8C3AD8B54DA4E40B40D569",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JZSL_OTH_01"
+      },
+      "status": "active",
+      "privateIps": "172.20.3.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.74,
+      "diskUsage": "6.21",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 7.95,
+      "floatingIp": "10.231.32.6",
+      "imageName": "WindowsServer2012R2-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "786ca91b-7702-4f83-8df4-d1dedd880704",
+      "condition": {
+        "resId": "6F9AA7D918B130B09ABBED1C4052251A",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "A84BA69EFC9A35B2ADCA3A25D70FDE8D"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JZSL_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.20.3.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.72,
+      "diskUsage": "6.24",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 8.44,
+      "floatingIp": "10.231.32.7",
+      "imageName": "WindowsServer2012R2-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "2637422f-1825-44f4-a924-ca5ae4ba3143",
+      "condition": {
+        "resId": "5145CCE0849C3BB5B2B75551FC7F48D4",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "DB923D022DA03DE8B7C0C6B5EB4D04D4",
+      "azoneName": "az6.dc1",
+      "physicalHostId": "178B688DAA363364ACBD64E2BE4AEA51"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JZSL_OTH_04"
+      },
+      "status": "active",
+      "privateIps": "172.16.10.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.04,
+      "diskUsage": "3.00",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.78,
+      "floatingIp": "10.232.0.9",
+      "imageName": "ubuntu-18.04.3-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Ubuntu Server 18.04.2 64bit",
+      "nativeId": "3599c76c-b37a-41eb-9ea1-9b88ff1bb0e4",
+      "condition": {
+        "resId": "2C474FAE0DE33CCD8F6EAEB92E96AF8C",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "8DABC805245334D2B02BB57B654BA728"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JZSL_OTH_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.10.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.04,
+      "diskUsage": "3.00",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.79,
+      "floatingIp": "10.232.0.8",
+      "imageName": "ubuntu-18.04.3-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Ubuntu Server 18.04.2 64bit",
+      "nativeId": "b39854ae-179f-4bee-8bb3-85086e4ca13f",
+      "condition": {
+        "resId": "8DF405D227233A76B8B174827A1D1BCB",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.24,
+      "diskUsage": "8.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.24,
+      "floatingIp": "10.232.0.22",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "85eba6f5-9f0a-45f7-a953-0bf6359efbc7",
+      "condition": {
+        "resId": "99FF228330EC3B30AF518204ABAB5E96",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BAE8A3FFFDCC3E9FBE65567FBA1B810F"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_04"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.13",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "8.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.22,
+      "floatingIp": "10.232.0.24",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "50a573e7-27fb-436d-b81b-a08abf5d6b99",
+      "condition": {
+        "resId": "F78A1F9381EB3CF390864AC110449574",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 9.05,
+      "diskUsage": "8.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 4.15,
+      "floatingIp": "10.232.0.21",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "86123cec-cbe0-4afc-9999-567c21e37f15",
+      "condition": {
+        "resId": "84D01080733D33018DE71EF637E4313F",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_LIMS_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.7.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 3.19,
+      "diskUsage": "8.60",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 11.06,
+      "floatingIp": "10.232.0.5",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "c8651b5f-6ffb-4d61-99ab-0923f9476540",
+      "condition": {
+        "resId": "2857E230DBE23235A42DD7E0D0C6DEDB",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A94D2276E41232778E0E9919831E6C4E"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_DB_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.5.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.18,
+      "diskUsage": "1.68",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.58,
+      "floatingIp": "",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "869933b8-f023-461e-90d7-40912d81b23b",
+      "condition": {
+        "resId": "1767D6244D4933E091226C63BEA10857",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A94D2276E41232778E0E9919831E6C4E"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.5.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.5,
+      "diskUsage": "1.76",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.15,
+      "floatingIp": "",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "2d08d913-cb1c-45b5-af55-8dad8c14b011",
+      "condition": {
+        "resId": "38FFDDB8D6BF373A8313E7FE52C60ABF",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A94D2276E41232778E0E9919831E6C4E"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_WZGL_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.1.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.5,
+      "diskUsage": "1.64",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 5.31,
+      "floatingIp": "",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "57679894-ae86-445e-aad7-bcc753adc069",
+      "condition": {
+        "resId": "0017088EF16131459E69196E9D99479C",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "C239EDA248333E4281439DEE76336A27"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CWGL_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.2.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.82,
+      "diskUsage": "3.15",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 7.51,
+      "floatingIp": "10.232.0.7",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "851982b2-09a8-45a0-9638-1cc4684f2196",
+      "condition": {
+        "resId": "FB095CE980823CD7B22972B073CEC94D",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GCGL_APP_02"
+      },
+      "status": "active",
+      "privateIps": "172.20.2.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.89,
+      "diskUsage": "6.36",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 9.29,
+      "floatingIp": "10.231.32.5",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "f2c6fdb1-0383-4553-8d05-7a791fb7a5f0",
+      "condition": {
+        "resId": "22D2BCA905D73CD8B785CD10EC83055D",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "BEB060E91647318C8F6D29C80E4503EE"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_OSB_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.33",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "1.86",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.55,
+      "floatingIp": "10.232.0.44",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "a13798cc-0a48-4441-ac6a-95f4c50c579c",
+      "condition": {
+        "resId": "34D8B4B6618E3836A5338E6CAD038E8C",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_BI_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.39",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "1.86",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.58,
+      "floatingIp": "10.232.0.50",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "4d5b2f53-885f-484e-9d31-f30571fcaf00",
+      "condition": {
+        "resId": "D0410446FA4B3A8782EC5165FF8285DC",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_BI_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.40",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.12,
+      "diskUsage": "1.86",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 1.56,
+      "floatingIp": "10.232.0.51",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "8d0a9ce3-2987-4046-8d5d-92ed0bb32d79",
+      "condition": {
+        "resId": "C0E863C3FE16392689C2A090C4A5ABD1",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A2C8173E9E2337EF95ED172124E215BB"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_OTH_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.49",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.24,
+      "diskUsage": "20.94",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.14,
+      "floatingIp": "10.232.0.60",
+      "imageName": "CentOS-7.6-noinit-02|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "CentOS 7.6 64bit",
+      "nativeId": "f01a96fa-46ba-469e-b464-bc994bc0f987",
+      "condition": {
+        "resId": "1AA444429A68369DB71F6B369CC5458B",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_SJZL_GYDSJ_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.16.41",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.54,
+      "diskUsage": "4.31",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.47,
+      "floatingIp": "10.232.0.52",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "16U128G|16vCPU|128GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "02cbf0f7-1d07-4b8b-b30b-4243668d5936",
+      "condition": {
+        "resId": "3C013DCD05193BD8B37F42DBA32B78C0",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "94123772D10E30D1859E49491A734F14"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.12",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "8.39",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.23,
+      "floatingIp": "10.232.0.23",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "9c9c7164-3117-4b42-811c-c2aafa648f65",
+      "condition": {
+        "resId": "DBF70D6974ED3F829B2C887ECA8D6EDF",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "F741A56EDFDA3D279B9493C41FC8D078"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_05"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.14",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.22,
+      "diskUsage": "8.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.26,
+      "floatingIp": "10.232.0.25",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "4fd89d43-436d-47f3-a86b-12979d0c0f1f",
+      "condition": {
+        "resId": "3017B0A72FE036A0B95DDEBA0E7487D6",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "94123772D10E30D1859E49491A734F14"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_RLZY_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.13.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.11,
+      "diskUsage": "",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 0,
+      "floatingIp": "10.232.0.18",
+      "imageName": "WindowsServer2008R2-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2008 R2 Enterprise SP1 64bit",
+      "nativeId": "c3a9da3a-1e47-4df7-bfa2-30ed7526072f",
+      "condition": {
+        "resId": "2DF35470AF073BA9908F0658FFEC5775",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "8DABC805245334D2B02BB57B654BA728"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_113_DB_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.11.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.88,
+      "diskUsage": "2.62",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 6.83,
+      "floatingIp": "10.232.0.16",
+      "imageName": "WindowsServer2016-noinit|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "ba6cf6eb-ed41-4caa-a0b1-ff5daebb119b",
+      "condition": {
+        "resId": "6954FBDFB80D3709971864D1AAE4A025",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "CCFE739F1B9331C8877FDB8F5FC56CFC"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_CIS_APP_06"
+      },
+      "status": "active",
+      "privateIps": "172.16.14.15",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "8.40",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 3.3,
+      "floatingIp": "10.232.0.26",
+      "imageName": "OracleLinux7.6-ver1|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Oracle Linux 7.6 64bit",
+      "nativeId": "25012c21-8b08-4b48-b1fb-46c6f83f8125",
+      "condition": {
+        "resId": "F828B62DA4AC385382CDD58DF2D0E91E",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "787AC7EE0C02391E8F7EBC88A5BA5F81"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_JBHS_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.0.14",
+      "projectId": "03ba7e242f4a4f9b9be0e80d06577892",
+      "cpuUsage": 1.67,
+      "diskUsage": "3.14",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 9.49,
+      "floatingIp": "10.232.0.14",
+      "imageName": "",
+      "supportHistoryPerf": true,
+      "flavor": "16U64G|16vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "f1978a04-58e3-48ed-97c3-308599f5b9ef",
+      "condition": {
+        "resId": "C33EB77FB3F736A7824C76BF918A3624",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "1159EB7357C93BA393AE76A3436916A4"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GCGL_APP_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.9.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 1.18,
+      "diskUsage": "14.35",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 9.53,
+      "floatingIp": "10.232.0.3",
+      "imageName": "ims-WindowsServer2016-private|100GB|0MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U32G|8vCPU|32GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2016 Standard 64bit",
+      "nativeId": "19b9778b-5ad0-4995-a203-5ade92eec0a8",
+      "condition": {
+        "resId": "3AA52D26D0E73980AEF2392FEC143577",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "A94D2276E41232778E0E9919831E6C4E"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_WZGL_APP_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.1.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.85,
+      "diskUsage": "3.15",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 8.65,
+      "floatingIp": "10.232.0.101",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "71395745-5089-49d8-88af-a80af8f97568",
+      "condition": {
+        "resId": "76C172DB71863DE98B5D079ACD3273A4",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "C239EDA248333E4281439DEE76336A27"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_OTH_02"
+      },
+      "status": "active",
+      "privateIps": "172.16.4.12",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.23,
+      "diskUsage": "4.05",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 4.73,
+      "floatingIp": "10.232.0.20",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "a6648272-1662-4e19-934a-47da9a245db4",
+      "condition": {
+        "resId": "C7EF259F99023A6281292899F4A9CF87",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "C239EDA248333E4281439DEE76336A27"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_APP_03"
+      },
+      "status": "active",
+      "privateIps": "172.16.4.10",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.2,
+      "diskUsage": "5.47",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 2.76,
+      "floatingIp": "10.232.0.2",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "8U64G|8vCPU|64GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "43aae1f1-7d81-49ad-a736-c53661aba5be",
+      "condition": {
+        "resId": "3FDA5A620E1D3DAFBA4891A8618B7B3E",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "E2CA829B7373310C852965297116C643"
+    },
+    {
+      "name": {
+        "view": "moui",
+        "type": "cloud_vm",
+        "value": "V_CT_SW_GFWZ_OTH_01"
+      },
+      "status": "active",
+      "privateIps": "172.16.4.11",
+      "projectId": "eb03625637114052a9e1eee880768190",
+      "cpuUsage": 0.25,
+      "diskUsage": "4.06",
+      "bizRegionName": "城投私有云",
+      "bizRegionId": "853FFE094A6D339E97E84AD6BF06A531",
+      "memoryUsage": 5.44,
+      "floatingIp": "10.232.0.19",
+      "imageName": "WindowsServer2012R2-ver3|100GB|8192MB",
+      "supportHistoryPerf": true,
+      "flavor": "4U16G|4vCPU|16GB",
+      "vdcName": "vdc_SW",
+      "osVersion": "Windows Server 2012 R2 Standard 64bit",
+      "nativeId": "c8343eae-db2a-4f0a-a06b-3e0743c21a63",
+      "condition": {
+        "resId": "ADA109E27A7B3D94BCD2621CFAE56A94",
+        "regionId": "853FFE094A6D339E97E84AD6BF06A531",
+        "bizRegionId": "C4CA4238A0B933828DCC509A6F75849B"
+      },
+      "azoneId": "811370A5736C39E1A2155BB3296136DC",
+      "azoneName": "az1.dc1",
+      "physicalHostId": "C239EDA248333E4281439DEE76336A27"
+    }
+  ],
+  "success": true
+}

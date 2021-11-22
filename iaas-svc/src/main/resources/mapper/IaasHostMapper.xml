@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasHostMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasHost">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="host_name" jdbcType="VARCHAR" property="hostName"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="state" jdbcType="VARCHAR" property="state"/>
+        <result column="res_id" jdbcType="VARCHAR" property="resId"/>
+        <result column="ip_address" jdbcType="VARCHAR" property="ipAddress"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="cluster_id" jdbcType="BIGINT" property="clusterId"/>
+        <result column="cpu_total" jdbcType="INTEGER" property="cpuTotal"/>
+        <result column="cpu_used" jdbcType="INTEGER" property="cpuUsed"/>
+        <result column="disk_total" jdbcType="INTEGER" property="diskTotal"/>
+        <result column="disk_used" jdbcType="INTEGER" property="diskUsed"/>
+        <result column="memory_total" jdbcType="INTEGER" property="memoryTotal"/>
+        <result column="memory_used" jdbcType="INTEGER" property="memoryUsed"/>
+        <result column="vcpu" jdbcType="INTEGER" property="vcpu"/>
+        <result column="data_center" jdbcType="VARCHAR" property="dataCenter"/>
+        <result column="exsi_build_number" jdbcType="VARCHAR" property="exsiBuildNumber"/>
+        <result column="exsi_full_version" jdbcType="VARCHAR" property="exsiFullVersion"/>
+        <result column="exsi_version" jdbcType="VARCHAR" property="exsiVersion"/>
+        <result column="host_agent_api_version" jdbcType="VARCHAR" property="hostAgentApiVersion"/>
+        <result column="logic_processor" jdbcType="INTEGER" property="logicProcessor"/>
+        <result column="moref_id" jdbcType="VARCHAR" property="morefId"/>
+        <result column="nics" jdbcType="INTEGER" property="nics"/>
+        <result column="processor_socket" jdbcType="INTEGER" property="processorSocket"/>
+        <result column="enabled" jdbcType="BIT" property="enabled"/>
+        <result column="from_port" jdbcType="INTEGER" property="fromPort"/>
+        <result column="to_port" jdbcType="INTEGER" property="toPort"/>
+        <result column="proxy_address" jdbcType="VARCHAR" property="proxyAddress"/>
+        <result column="host_key" jdbcType="VARCHAR" property="hostKey"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapVo" type="com.ecdata.cmp.iaas.entity.dto.IaasHostVO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="tenant_id" jdbcType="BIGINT" property="tenantId"/>
+        <result column="host_name" jdbcType="VARCHAR" property="hostName"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="state" jdbcType="VARCHAR" property="state"/>
+        <result column="ip_address" jdbcType="VARCHAR" property="ipAddress"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="cluster_id" jdbcType="BIGINT" property="clusterId"/>
+        <result column="cpu_total" jdbcType="INTEGER" property="cpuTotal"/>
+        <result column="cpu_used" jdbcType="INTEGER" property="cpuUsed"/>
+        <result column="res_id" jdbcType="VARCHAR" property="resId"/>
+        <result column="disk_total" jdbcType="INTEGER" property="diskTotal"/>
+        <result column="disk_used" jdbcType="INTEGER" property="diskUsed"/>
+        <result column="memory_total" jdbcType="INTEGER" property="memoryTotal"/>
+        <result column="memory_used" jdbcType="INTEGER" property="memoryUsed"/>
+        <result column="vcpu" jdbcType="INTEGER" property="vcpu"/>
+        <result column="data_center" jdbcType="VARCHAR" property="dataCenter"/>
+        <result column="exsi_build_number" jdbcType="VARCHAR" property="exsiBuildNumber"/>
+        <result column="exsi_full_version" jdbcType="VARCHAR" property="exsiFullVersion"/>
+        <result column="exsi_version" jdbcType="VARCHAR" property="exsiVersion"/>
+        <result column="host_agent_api_version" jdbcType="VARCHAR" property="hostAgentApiVersion"/>
+        <result column="logic_processor" jdbcType="INTEGER" property="logicProcessor"/>
+        <result column="moref_id" jdbcType="VARCHAR" property="morefId"/>
+        <result column="nics" jdbcType="INTEGER" property="nics"/>
+        <result column="processor_socket" jdbcType="INTEGER" property="processorSocket"/>
+        <result column="enabled" jdbcType="BIT" property="enabled"/>
+        <result column="from_port" jdbcType="INTEGER" property="fromPort"/>
+        <result column="to_port" jdbcType="INTEGER" property="toPort"/>
+        <result column="proxy_address" jdbcType="VARCHAR" property="proxyAddress"/>
+        <result column="host_key" jdbcType="VARCHAR" property="hostKey"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+
+        <!--增加两个硬盘使用率信息-->
+        <result column="space_total" property="spaceTotal"/>
+        <result column="space_used" property="spaceUsed"/>
+        <result column="cluster_name" property="clusterName"/>
+        <result column="instance_number" property="instanceNumber"/>
+        <result column="ip_address" property="ipAddress"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                host_name,
+                status,
+                res_id,
+                ip_address,
+                type,
+                state,
+                cluster_id,
+                cpu_total,
+                cpu_used,
+                memory_total,
+                memory_used,
+                disk_total,
+                disk_used,
+                vcpu,
+                data_center,
+                exsi_build_number,
+                exsi_full_version,
+                exsi_version,
+                host_agent_api_version,
+                logic_processor,
+                moref_id,
+                nics,
+                processor_socket,
+                enabled,
+                from_port,
+                to_port,
+                proxy_address,
+                host_key,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <select id="getTotalRatio" resultMap="BaseResultMap" parameterType="Long">
+        select IFNULL(sum(cpu_total),0) cpu_total,IFNULL(sum(memory_total),0) memory_total
+        from iaas_host where cluster_id=#{clusterId} and  is_deleted=0
+    </select>
+
+    <select id="queryIaasHostByKey" resultMap="BaseResultMap">
+        select * from iaas_host where is_deleted=0 and host_key=#{hostKey}
+    </select>
+    <!--集群查询sum-->
+    <select id="getSumByClusterId" parameterType="Long" resultType="String">
+          select ifnull(sum(cpu_total),0) cpu_total from iaas_host where cluster_id=#{clusterId} and is_deleted=0
+    </select>
+
+    <!--查询所有主机信息 (资源利用率) 根据关键字检索-->
+    <select id="qrIssHostList" resultMap="BaseResultMapVo" parameterType="map">
+        SELECT
+        h.id, h.host_name,h.STATUS,h.state, h.cluster_id,h.ip_address,
+        h.res_id,h.cpu_total, h.cpu_used, h.memory_total,
+        h.memory_used,h.vcpu, h.data_center,h.exsi_build_number,
+        h.exsi_full_version,h.exsi_version, h.host_agent_api_version,h.logic_processor,
+        h.moref_id,h.nics,h.processor_socket, h.enabled, h.from_port,h.to_port, h.proxy_address,
+        h.host_key,h.remark, h.create_user,h.create_time,
+        h.update_user,h.update_time,h.is_deleted, c.cluster_name
+        FROM
+        iaas_host h LEFT join iaas_cluster c ON h.cluster_id= c.id
+        WHERE h.is_deleted = 0
+        <if test="map.state!=null and map.state != ''">
+            AND h.state = #{map.state}
+        </if>
+        <if test="map.keyword!=null and map.keyword != ''">
+            AND (
+            h.`host_name` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR h.`data_center` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR h.`ip_address` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR c.`cluster_name` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        GROUP BY h.id
+    </select>
+
+    <!--单个主机详细信息-->
+    <select id="qrIssHostInfo" resultMap="BaseResultMapVo" parameterType="string">
+        SELECT id, host_name,status,state,cluster_id,ip_address,res_id,
+        cpu_total,cpu_used,memory_total,memory_used,
+        vcpu,data_center,exsi_build_number,exsi_full_version,
+        exsi_version,host_agent_api_version,logic_processor,moref_id,
+        nics,processor_socket,enabled,from_port,
+        to_port,proxy_address,host_key,remark,
+        create_user,create_time,update_user,update_time,is_deleted
+--         (select sum(d.space_total)
+--         FROM iaas_host_datastore d
+--         where d.host_id = h.id ) space_total,
+--         (select sum(d.space_used)
+--         FROM iaas_host_datastore d
+--         where d.host_id = h.id ) space_used,
+--         (select GROUP_CONCAT(n.host_ip_address)
+-- 		FROM iaas_host_network n
+-- 		WHERE n.host_id = h.id ) host_ip_address
+        FROM iaas_host h
+        WHERE h.is_deleted = 0
+        AND h.id = #{id}
+        GROUP BY h.id
+    </select>
+
+
+    <select id="getInfoByHostVO" resultType="com.ecdata.cmp.iaas.entity.dto.IaasHostVO"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasHostVO">
+        select * from iaas_host
+        where is_deleted=0
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+    </select>
+
+    <select id="queryHostInfoPage" resultMap="BaseResultMapVo" parameterType="map">
+        select ih.id,ih.host_name,ifnull(ih.cpu_total,0) cpu_total,ifnull(ih.cpu_used,0) cpu_used,ifnull(ih.memory_total,0) memory_total,
+       ifnull(ih.memory_used,0) memory_used,ifnull(ih.vcpu,0) vcpu,
+       ifnull(concat(round(ih.vcpu / ih.cpu_used, 2), '%'),0)  cpuRadio,
+       ifnull(concat(round(ih.memory_total / ih.memory_used, 2), '%'),0) memoryRadio
+        from iaas_host ih where ih.is_deleted=0
+        AND ih.cluster_id = #{map.clusterId}
+    </select>
+</mapper>

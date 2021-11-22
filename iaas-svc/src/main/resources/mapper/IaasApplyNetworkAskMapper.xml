@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyNetworkAskMapper">
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.apply.IaasApplyNetworkAsk">
+        <result column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="config_id" property="configId"/>
+        <result column="native_port" property="nativePort"/>
+        <result column="opposite_server" property="oppositeServer"/>
+        <result column="opposite_port" property="oppositePort"/>
+        <result column="access_mode" property="accessMode"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="requires" property="requires"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                config_id,
+                native_port,
+                opposite_server,
+                opposite_port,
+                access_mode,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                requires,
+                is_deleted
+    </sql>
+
+    <select id="queryNetworkByConfigId" resultType="java.lang.Long">
+        select id from iaas_apply_network_ask
+        where is_deleted=0 and config_id=#{configId};
+    </select>
+</mapper>

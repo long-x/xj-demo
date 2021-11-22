@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysNotifyManageMapper">
+
+    <resultMap id="messageInfoMap" type="com.ecdata.cmp.user.dto.SysNotifyManageVO">
+        <result column="id" property="id" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="cluster_id" property="clusterId" />
+        <result column="notify_type" property="notifyType" />
+        <result column="alert_platform" property="alertPlatform" />
+        <result column="title" property="title" />
+        <result column="detail" property="detail" />
+        <result column="local_platform" property="localPlatform" />
+        <result column="mail" property="mail" />
+        <result column="sms" property="sms" />
+        <result column="high" property="high" />
+        <result column="medium" property="medium" />
+        <result column="low" property="low" />
+        <result column="urgent" property="urgent" />
+        <result column="important" property="important" />
+        <result column="minor" property="minor" />
+        <result column="prompt" property="prompt" />
+        <result column="remark" property="remark" />
+        <result column="notify_user" property="notifyUser" />
+        <result column="notify_time" property="notifyTime" />
+        <result column="create_user" property="createUser" />
+        <result column="create_time" property="createTime" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="notifySendType" property="notifySendType" />
+        <result column="alertLevel" property="alertLevel" />
+        <result column="notifyUserName" property="notifyUserName" />
+    </resultMap>
+
+
+
+    <select id="getNotifyManage" parameterType="java.util.Map" resultMap="messageInfoMap" >
+      SELECT snm.*,  CONCAT(
+        CASE WHEN snm.high = 1
+        THEN ' 危险 '  ELSE '' END,
+        CASE WHEN snm.medium = 1
+        THEN ' 高风险 '  ELSE '' END,
+        CASE WHEN snm.low = 1
+        THEN ' 低风险 '  ELSE '' END,
+        CASE WHEN snm.urgent = 1
+        THEN ' 紧急 '  ELSE '' END,
+        CASE WHEN snm.important = 1
+        THEN ' 重要 '  ELSE '' END,
+        CASE WHEN snm.minor = 1
+        THEN ' 次要 '  ELSE '' END,
+        CASE WHEN snm.prompt = 1
+        THEN ' 提示 '  ELSE '' END ) as alertLevel ,
+        CONCAT(
+        CASE WHEN snm.local_platform = 1
+        THEN ' 本平台 '  ELSE '' END,
+        CASE WHEN snm.mail = 1
+        THEN ' 邮件 '  ELSE '' END,
+        CASE WHEN snm.sms = 1
+        THEN ' 短信 '  ELSE '' END ) as notifySendType ,
+        u.display_name notifyUserName
+        FROM sys_notify_manage snm
+      LEFT JOIN sys_user u ON u.id = snm.notify_user
+        <where>
+            snm.is_deleted = 0
+            <if test="map.keyword != null and map.keyword != '' ">
+                AND (
+                snm.`title` LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+                )
+            </if>
+            <if test="map.createTimeStart != null  and map.createTimeStart != ''">
+                AND snm.create_time &gt;= #{map.createTimeStart}
+            </if>
+            <if test="map.createTimeEnd != null  and map.createTimeEnd != ''">
+                AND snm.create_time &lt;= #{map.createTimeEnd}
+            </if>
+          ORDER BY snm.create_time DESC
+        </where>
+    </select>
+
+
+</mapper>

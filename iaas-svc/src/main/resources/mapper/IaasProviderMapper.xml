@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasProviderMapper">
+
+    <resultMap id="BaseResultMap" type="com.ecdata.cmp.iaas.entity.IaasProvider">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_name" property="providerName"/>
+        <result column="type" property="type"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="address" property="address"/>
+        <result column="port" property="port"/>
+        <result column="auth_address" property="authAddress"/>
+        <result column="auth_username" property="authUsername"/>
+        <result column="auth_password" property="authPassword"/>
+        <result column="oc_address" property="ocAddress"/>
+        <result column="oc_username" property="ocUsername"/>
+        <result column="oc_password" property="ocPassword"/>
+        <result column="ecs_address" property="ecsAddress"/>
+        <result column="ecs_username" property="ecsUsername"/>
+        <result column="ecs_password" property="ecsPassword"/>
+        <result column="evs_address" property="evsAddress"/>
+        <result column="evs_username" property="evsUsername"/>
+        <result column="evs_password" property="evsPassword"/>
+        <result column="vpc_address" property="vpcAddress"/>
+        <result column="vpc_username" property="vpcUsername"/>
+        <result column="vpc_password" property="vpcPassword"/>
+        <result column="version" property="version"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapPlatform" type="com.ecdata.cmp.iaas.entity.dto.IaasProviderVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="provider_name" property="providerName"/>
+        <result column="type" property="type"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="address" property="address"/>
+        <result column="port" property="port"/>
+        <result column="auth_address" property="authAddress"/>
+        <result column="oc_address" property="ocAddress"/>
+        <result column="ecs_address" property="ecsAddress"/>
+        <result column="evs_address" property="evsAddress"/>
+        <result column="vpc_address" property="vpcAddress"/>
+        <result column="version" property="version"/>
+        <result column="remark" property="remark"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="oc_interface_address" property="ocInterfaceAddress"/>
+        <result column="oc_interface_username" property="ocInterfaceUsername"/>
+        <result column="oc_interface_password" property="ocInterfacePassword"/>
+        <result column="ims_address" property="imsAddress"/>
+        <result column="bms_address" property="bmsAddress"/>
+        <result column="domain_name" property="domainName"/>
+
+        <!--vdc-->
+        <collection property="virtualDataCenterVOS" ofType="com.ecdata.cmp.iaas.entity.dto.IaasVirtualDataCenterVO">
+            <id column="ivdc_id" jdbcType="BIGINT" property="id"/>
+            <result column="ivdc_tenant_id" property="tenantId"/>
+            <result column="ivdc_cluster_id" property="clusterId"/>
+            <result column="ivdc_provider_id" property="providerId"/>
+            <result column="ivdc_vdc_name" property="vdcName"/>
+            <result column="ivdc_username" property="username"/>
+            <result column="ivdc_domain_name" property="domainName"/>
+            <result column="ivdc_vdc_key" property="vdcKey"/>
+            <result column="ivdc_user_key" property="userKey"/>
+            <result column="ivdc_password" property="password"/>
+            <result column="ivdc_score" property="score"/>
+            <result column="ivdc_remark" property="remark"/>
+            <result column="ivdc_create_user" property="createUser"/>
+            <result column="ivdc_create_time" property="createTime"/>
+            <result column="ivdc_update_user" property="updateUser"/>
+            <result column="ivdc_update_time" property="updateTime"/>
+            <result column="ivdc_is_deleted" property="isDeleted"/>
+        </collection>
+
+        <!--项目-->
+        <collection property="projectVOS" ofType="com.ecdata.cmp.iaas.entity.dto.IaasProjectVO">
+            <id column="iipr_id" jdbcType="BIGINT" property="id"/>
+            <result column="ipr_tenant_id" property="tenantId"/>
+            <result column="ipr_vdc_id" property="vdcId"/>
+            <result column="ipr_project_name" property="projectName"/>
+            <result column="ipr_project_Key" property="projectKey"/>
+            <result column="ipr_token" property="token"/>
+            <result column="ipr_token_time" property="tokenTime"/>
+            <result column="ipr_score" property="score"/>
+            <result column="ipr_remark" property="remark"/>
+            <result column="ipr_create_user" property="createUser"/>
+            <result column="ipr_create_time" property="createTime"/>
+            <result column="ipr_update_user" property="updateUser"/>
+            <result column="ipr_update_time" property="updateTime"/>
+            <result column="ipr_is_deleted" property="isDeleted"/>
+        </collection>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                provider_name,
+                type,
+                username,
+                password,
+                address,
+                port,
+                auth_address,
+                oc_username,
+                oc_password,
+                auth_username,
+                auth_password,
+                ecs_username,
+                ecs_password,
+                evs_username,
+                evs_password,
+                vpc_username,
+                vpc_password,
+                oc_address,
+                ecs_address,
+                evs_address,
+                vpc_address,
+                version,
+                remark,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <update id="update" parameterType="com.ecdata.cmp.iaas.entity.IaasProvider">
+        UPDATE provider
+        <set>
+            <if test='null != providerName'>provider_name = #{providerName},</if>
+            <if test='null != type'>type = #{type},</if>
+            <if test='null != username'>username = #{username},</if>
+            <if test='null != password'>password = #{password},</if>
+            <if test='null != address'>address = #{address},</if>
+            <if test='null != port'>port = #{port},</if>
+            <if test='null != version'>version = #{version},</if>
+            <if test='null != remark'>remark = #{remark},</if>
+            <if test='null != createUser'>create_user = #{createUser},</if>
+            <if test='null != createTime'>create_time = #{createTime},</if>
+            <if test='null != updateUser'>update_user = #{updateUser},</if>
+            <if test='null != updateTime'>update_time = #{updateTime},</if>
+            <if test='null != isDeleted'>is_deleted = #{isDeleted}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+
+    <select id="load" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_provider
+        WHERE id = #{id}
+    </select>
+
+    <select id="pageList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_provider
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="pageListCount" resultType="java.lang.Integer">
+        SELECT count(1)
+      FROM iaas_provider
+    </select>
+
+    <!--根据type+address查询-->
+    <select id="getInfoByProvider" parameterType="com.ecdata.cmp.iaas.entity.IaasProvider" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        FROM iaas_provider
+        where 1=1
+        <if test="type != null and type != '' ">
+            and type=#{type}
+        </if>
+        <if test="address != null and address != '' ">
+            and address=#{address}
+        </if>
+    </select>
+
+    <!--删除（逻辑删除,修改标记-->
+    <update id="updateIaasProvider">
+        update iaas_provider
+        set create_user = #{createUser}, create_time = NOW(),is_deleted=1
+        WHERE id = #{id}
+    </update>
+
+    <!--分页查询provider-->
+    <select id="queryIaasProviderPage" parameterType="string" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_provider p
+
+        WHERE p.is_deleted = 0
+        <if test="type != null and type != '' ">
+            and p.type =#{type}
+        </if>
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            p.provider_name LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.type LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.username LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.password LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.address LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.port LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.version LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            OR p.remark LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+            GROUP BY p.id
+        </if>
+        order by p.create_time desc,p.update_time desc
+    </select>
+
+
+    <!--供应商区域集群主机信息查询-->
+    <resultMap id="dataCenterResultMap" type="com.ecdata.cmp.iaas.entity.dto.response.provider.ProviderResponse">
+        <result column="provider_name" property="providerName"/>
+        <result column="version" property="version"/>
+        <collection property="areaList" ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.AreaResponse">
+            <result column="area_name" property="areaName"/>
+            <result column="area_key" property="areaKey"/>
+            <collection property="clusterList"
+                        ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.ClusterResponse">
+                <result column="cluster_name" property="clusterName"/>
+                <result column="cluster_key" property="clusterKey"/>
+                <result column="vm_num" property="vmNum"/>
+                <result column="cpu_total" property="cpuTotal"/>
+                <result column="cpu_used" property="cpuUsed"/>
+                <result column="memory_total" property="memoryTotal"/>
+                <result column="memory_used" property="memoryUsed"/>
+                <result column="disk_total" property="diskTotal"/>
+                <result column="disk_used" property="diskUsed"/>
+                <collection property="clusterNetworkList"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.ClusterNetworkResponse">
+                    <result column="network_name" property="name"/>
+                    <result column="type" property="type"/>
+                    <result column="network_key" property="networkKey"/>
+                </collection>
+                <collection property="resourcePool"
+                            ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.ResourcePoolResponse">
+                    <result column="pool_name" property="poolName"/>
+                    <result column="tag" property="tag"/>
+                    <result column="vcpu_total_allocate" property="vcpuTotalAllocate"/>
+                    <result column="vcpu_used_allocate" property="vcpuUsedAllocate"/>
+                    <result column="memory_total_allocate" property="memoryTotalAllocate"/>
+                    <result column="memory_used_allocate" property="memoryUsedAllocate"/>
+                    <result column="vm_total_allocate" property="vmTotalAllocate"/>
+                    <result column="vm_used_allocate" property="vmUsedAllocate"/>
+                    <result column="pod_total_allocate" property="podTotalAllocate"/>
+                    <result column="pod_used_allocate" property="podUsedAllocate"/>
+                </collection>
+                <collection property="hostList" ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.HostResponse">
+                    <result column="host_name" property="hostName"/>
+                    <result column="host_cpu_total" property="cpuTotal"/>
+                    <result column="host_cpu_used" property="cpuUsed"/>
+                    <result column="host_memory_total" property="memoryTotal"/>
+                    <result column="host_memory_used" property="memoryUsed"/>
+                    <result column="host_disk_total" property="diskTotal"/>
+                    <result column="host_disk_used" property="diskUsed"/>
+                    <result column="vcpu" property="vcpu"/>
+                    <result column="data_center" property="dataCenter"/>
+                    <result column="exsi_build_number" property="exsiBuildNumber"/>
+                    <result column="exsi_full_version" property="exsiFullVersion"/>
+                    <result column="exsi_version" property="exsiVersion"/>
+                    <result column="host_agent_api_version" property="hostAgentApiVersion"/>
+                    <result column="logic_processor" property="logicProcessor"/>
+                    <result column="moref_id" property="morefId"/>
+                    <result column="nics" property="nics"/>
+                    <result column="processor_socket" property="processorSocket"/>
+                    <result column="enabled" property="enabled"/>
+                    <result column="from_port" property="fromPort"/>
+                    <result column="to_port" property="toPort"/>
+                    <result column="proxy_address" property="proxyAddress"/>
+                    <result column="host_key" property="hostKey"/>
+                    <collection property="datastoreList"
+                                ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.DatastoreResponse">
+                        <result column="datastore_name" property="datastoreName"/>
+                        <result column="drive_type" property="driveType"/>
+                        <result column="space_total" property="spaceTotal"/>
+                        <result column="space_used" property="spaceUsed"/>
+                        <result column="datastore_key" property="datastoreKey"/>
+                        <collection property="resourcePoolDatastoreList"
+                                    ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.ResourcePoolDatastoreResponse">
+                            <result column="space_total_allocate" property="spaceTotalAllocate"/>
+                            <result column="space_used_allocate" property="spaceUsedAllocate"/>
+                        </collection>
+                        <collection property="virtualMachineResponseList"
+                                    ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.VirtualMachineResponse">
+                            <result column="machine_id" property="id"/>
+                            <result column="vm_name" property="vmName"/>
+                        </collection>
+                    </collection>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryDataCenter" resultMap="dataCenterResultMap"
+            parameterType="com.ecdata.cmp.iaas.entity.dto.IaasProviderVO">
+        select
+        pr.provider_name,
+        pr.version,
+        area.area_name,
+        area.area_key,
+        clu.cluster_name,
+        clu.cluster_key,
+        clu.vm_num,
+        clu.cpu_total,
+        clu.cpu_used,
+        clu.memory_total,
+        clu.memory_used,
+        clu.disk_total,
+        clu.disk_used,
+        host.host_name,
+        host.cpu_total host_cpu_total,
+        host.cpu_used host_cpu_used,
+        host.memory_total host_memory_total,
+        host.memory_used host_memory_used,
+        host.disk_total host_disk_total,
+        host.disk_used host_disk_used,
+        host.vcpu,
+        host.data_center,
+        host.exsi_build_number,
+        host.exsi_full_version,
+        host.exsi_version,
+        host.host_agent_api_version,
+        host.logic_processor,
+        host.moref_id,
+        host.nics,
+        host.processor_socket,
+        host.enabled,
+        host.from_port,
+        host.to_port,
+        host.proxy_address,
+        host.host_key,
+        network.network_name,
+        network.type,
+        network.network_key,
+        datastore.datastore_name,
+        datastore.drive_type,
+        datastore.space_total,
+        datastore.space_used,
+        datastore.datastore_key,
+        machine.id machine_id,
+        machine.vm_name,
+        pool_datastore.space_total_allocate,
+        pool_datastore.space_used_allocate,
+        pool.pool_name,
+        pool.tag,
+        pool.vcpu_total_allocate,
+        pool.vcpu_used_allocate,
+        pool.memory_total_allocate,
+        pool.memory_used_allocate,
+        pool.vm_total_allocate,
+        pool.vm_used_allocate,
+        pool.pod_total_allocate,
+        pool.pod_used_allocate
+        from iaas_provider pr
+        left join iaas_area area on pr.id=area.provider_id and area.is_deleted=0
+        left join iaas_cluster clu on area.id=clu.area_id and clu.is_deleted=0
+        left join iaas_host host on clu.id=host.cluster_id and host.is_deleted=0
+        left join iaas_cluster_network network on clu.id=network.cluster_id and network.is_deleted=0
+        left join iaas_host_datastore datastore on host.id=datastore.host_id and datastore.is_deleted=0
+        left join iaas_virtual_machine machine on machine.datastore_id=datastore.id and machine.is_deleted=0
+        left join iaas_resource_pool_datastore pool_datastore on datastore.id=pool_datastore.datastore_id and
+        pool_datastore.is_deleted=0
+        left join iaas_resource_pool pool on clu.id=pool.cluster_id and pool.is_deleted=0
+        where
+        pr.is_deleted=0
+        <if test="id !=null">
+            and pr.id=#{id}
+        </if>
+        <if test="providerName !=null and providerName!=''">
+            and pr.provider_name=#{providerName}
+        </if>
+        <if test="type !=null and type!=''">
+            and pr.type=#{type}
+        </if>
+        <if test="clusterId !=null and clusterId!=''">
+            and clu.id=#{clusterId}
+        </if>
+    </select>
+
+    <!--去重过滤供应商-->
+    <select id="disProviderName" resultMap="BaseResultMap"
+            parameterType="java.lang.String">
+        select id, provider_name,type from iaas_provider where is_deleted=0 and provider_name is not null and type=2
+        <if test="providerName!= null and providerName!= ''">
+            and provider_name LIKE concat('%', #{providerName,jdbcType = VARCHAR} , '%')
+        </if>
+    </select>
+
+    <select id="queryIaasProviderVOById" resultType="com.ecdata.cmp.iaas.entity.dto.IaasProviderVO">
+        select * from iaas_provider
+        where is_deleted=0 and id=#{id}
+    </select>
+
+    <select id="queryProviderIdByClusterId" resultType="java.lang.Long">
+        select t1.id from iaas_provider t1
+         JOIN iaas_area t2 on t1.id=t2.provider_id and t2.is_deleted=0
+         join iaas_cluster t3 on t2.id=t3.area_id and t3.is_deleted=0
+         where t1.is_deleted=0 and t3.id=#{clusterId}
+    </select>
+    <select id="providerlistByMap" resultMap="BaseResultMap"
+            parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM iaas_provider p
+
+        WHERE p.is_deleted = 0
+        <if test="map.type != null and map.type != '' ">
+            and p.type =#{map.type}
+        </if>
+        <if test="map.keyword != null and map.keyword != '' ">
+            AND (
+            p.provider_name LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.type LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.username LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.password LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.address LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.port LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.version LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            OR p.remark LIKE concat('%', #{map.keyword,jdbcType = VARCHAR} , '%')
+            )
+            GROUP BY p.id
+        </if>
+        order by p.create_time desc,p.update_time desc
+    </select>
+
+    <select id="getCloudPlatformEntrance" resultMap="BaseResultMapPlatform">
+        select ip.id,
+        ip.tenant_id,
+        ip.provider_name,
+        ip.type,
+        ip.username,
+        ip.password,
+        ip.address,
+        ip.port,
+        ip.auth_address,
+        ip.oc_address,
+        ip.ecs_address,
+        ip.evs_address,
+        ip.vpc_address,
+        ip.version,
+        ip.remark,
+        ip.create_user,
+        ip.create_time,
+        ip.update_user,
+        ip.update_time,
+        ip.is_deleted,
+        ip.oc_interface_address,
+        ip.oc_interface_username,
+        ip.oc_interface_password,
+        ip.bms_address,
+        ip.ims_address,
+        ip.domain_name,
+        ivdc.id ivdc_id,
+        ivdc.tenant_id ivdc_tenant_id,
+        ivdc.cluster_id ivdc_cluster_id,
+        ivdc.provider_id ivdc_provider_id,
+        ivdc.vdc_name ivdc_vdc_name,
+        ivdc.domain_name ivdc_domain_name,
+        ivdc.username ivdc_username,
+        ivdc.password ivdc_password,
+        ivdc.vdc_key ivdc_vdc_key,
+        ivdc.user_key ivdc_user_key,
+        ivdc.score ivdc_score,
+        ivdc.remark ivdc_remark,
+        ivdc.create_user ivdc_create_user,
+        ivdc.create_time ivdc_create_time,
+        ivdc.update_user ivdc_update_user,
+        ivdc.update_time ivdc_update_time,
+        ivdc.is_deleted ivdc_is_deleted,
+        ipr.id ipr_id,
+        ipr.tenant_id ipr_tenant_id,
+        ipr.vdc_id ipr_vdc_id,
+        ipr.project_name ipr_project_name,
+        ipr.project_Key ipr_project_Key,
+        ipr.token ipr_token,
+        ipr.token_time ipr_token_time,
+        ipr.score ipr_score,
+        ipr.remark ipr_remark,
+        ipr.create_user ipr_create_user,
+        ipr.create_time ipr_create_time,
+        ipr.update_user ipr_update_user,
+        ipr.update_time ipr_update_time,
+        ipr.is_deleted ipr_is_deleted
+         from iaas_provider ip
+        left join iaas_virtual_data_center ivdc on ivdc.provider_id=ip.id and ivdc.is_deleted=0
+        left join iaas_project ipr on ivdc.id=ipr.id and ipr.is_deleted=0
+    </select>
+
+    <select id="queryProviderByAreaId" resultType="com.ecdata.cmp.iaas.entity.dto.IaasProviderVO">
+        select ip.* from iaas_provider ip
+        left join iaas_area ia on ia.provider_id=ip.id
+        where ia.id=#{id}
+    </select>
+
+    <!--供应商级联信息-->
+    <resultMap id="providerCascadeResultMap" type="com.ecdata.cmp.iaas.entity.dto.response.provider.cascade.ProviderCascade">
+        <result column="provider_id" property="id"/>
+        <result column="provider_name" property="name"/>
+        <collection property="items" ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.cascade.AreaCascade">
+            <result column="area_id" property="id"/>
+            <result column="area_name" property="name"/>
+            <collection property="items" ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.cascade.ClusterCascade">
+                <result column="cluster_id" property="id"/>
+                <result column="cluster_name" property="name"/>
+                <collection property="items" ofType="com.ecdata.cmp.iaas.entity.dto.response.provider.cascade.HostCascade">
+                    <result column="host_id" property="id"/>
+                    <result column="host_name" property="name"/>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryProviderCascadeByProvider" resultMap="providerCascadeResultMap">
+        select
+        pr.id provider_id,
+        pr.provider_name,
+        area.id area_id,
+        area.area_name,
+        clu.cluster_name,
+        clu.id cluster_id,
+        host.host_name,
+        host.id host_id
+        from iaas_provider pr
+        left join iaas_area area on pr.id=area.provider_id and area.is_deleted=0
+        left join iaas_cluster clu on area.id=clu.area_id and clu.is_deleted=0
+        left join iaas_host host on clu.id=host.cluster_id and host.is_deleted=0
+        where
+        pr.is_deleted=0
+        <if test="providerId !=null">
+            and pr.id=#{providerId}
+        </if>
+    </select>
+</mapper>

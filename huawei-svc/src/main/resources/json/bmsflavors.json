@@ -1,0 +1,74 @@
+{
+  "flavors": [
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "huawei:deploytype": "ironic",
+        "capabilities:hypervisor_type": "ironic",
+        "baremetal:cpu_detail": "CPU48",
+        "baremetal:netcard_detail": "NET2",
+        "capabilities:board_type": "2288H V5",
+        "resource_type": "ironic",
+        "capabilities:cpu_info:arch": "x86_64",
+        "baremetal:disk_detail": "DISK478",
+        "baremetal:memory_detail": "MEM786432",
+        "huawei:extBootType": "LocalDisk",
+        "baremetal:net_num": "2"
+      },
+      "vcpus": "48",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "478",
+      "rxtx_factor": "1.0",
+      "name": "2288",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/680e093ce53343b8bf2cc006f2447c38/flavors/physical.2288"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/680e093ce53343b8bf2cc006f2447c38/flavors/physical.2288"
+        }
+      ],
+      "id": "physical.2288",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 786432
+    },
+    {
+      "swap": "",
+      "os-flavor-access:is_public": true,
+      "os_extra_specs": {
+        "huawei:deploytype": "ironic",
+        "capabilities:hypervisor_type": "ironic",
+        "baremetal:cpu_detail": "CPU112",
+        "baremetal:netcard_detail": "NET2",
+        "capabilities:board_type": "2488H V5",
+        "resource_type": "ironic",
+        "capabilities:cpu_info:arch": "x86_64",
+        "baremetal:disk_detail": "DISK478",
+        "baremetal:memory_detail": "MEM1048576",
+        "huawei:extBootType": "LocalDisk",
+        "baremetal:net_num": "2"
+      },
+      "vcpus": "112",
+      "OS-FLV-EXT-DATA:ephemeral": 0,
+      "disk": "478",
+      "rxtx_factor": "1.0",
+      "name": "2488",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/v1.0/680e093ce53343b8bf2cc006f2447c38/flavors/physical.2488"
+        },
+        {
+          "rel": "bookmark",
+          "href": "https://compute-ext.az0.dc0.chengtou.com/680e093ce53343b8bf2cc006f2447c38/flavors/physical.2488"
+        }
+      ],
+      "id": "physical.2488",
+      "OS-FLV-DISABLED:disabled": false,
+      "ram": 1048576
+    }
+  ]
+}

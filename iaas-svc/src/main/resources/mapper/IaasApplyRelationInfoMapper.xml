@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyRelationInfoMapper">
+
+    <select id="queryRelationInfoList" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyRelationInfoVO">
+        select
+        t2.display_name  relationUserName,
+        t1.business_id businessId
+        from iaas_apply_relation_info t1
+        left join sys_user t2 on t1.relation_user=t2.id
+        where t1.apply_id=#{applyId} and t1.relation_user !=#{userId}
+    </select>
+
+    <select id="queryRelationInfoList2" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyRelationInfoVO">
+        select
+        t1.relation_user ,
+        t1.business_id businessId
+        from iaas_apply_relation_info t1
+        where t1.apply_id=#{applyId} and t1.relation_user !=#{userId}
+    </select>
+
+
+    <select id="queryRelationInfoList3" resultType="com.ecdata.cmp.iaas.entity.dto.apply.IaasApplyRelationInfoVO">
+        select
+        t1.id ,
+        t1.business_id businessId
+        from iaas_apply_relation_info t1
+        where t1.apply_id=#{applyId} and t1.relation_user =#{userId}
+    </select>
+
+</mapper>

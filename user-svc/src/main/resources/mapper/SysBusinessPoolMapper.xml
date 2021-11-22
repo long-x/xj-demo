@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysBusinessGroupResourcePoolMapper">
+
+
+    <delete id="deleteById">
+       DELETE FROM sys_business_group_resource_pool
+        WHERE id = #{id}
+    </delete>
+
+
+    <delete id="deleteByPoolId">
+        DELETE FROM sys_business_group_resource_pool
+        WHERE pool_id = #{poolId}
+    </delete>
+
+
+    <select id="getGroupByPoolId" parameterType="Long" resultType="String">
+        SELECT business_group_id
+        FROM sys_business_group_resource_pool
+        WHERE pool_id = #{poolId}
+    </select>
+
+
+    <!--由于每次新增，修改，删除不太好判断，所以都是先批量删除，然后批量插入 确保每次都是新增-->
+    <!--业务组 移除/关联 资源池 根据业务组id-->
+    <delete id="deletePoolByGroupId">
+        DELETE FROM sys_business_group_resource_pool
+        WHERE business_group_id = #{businessGroupId}
+    </delete>
+
+
+    <select id="qrySysBusinessPoolInfo" parameterType="string" resultMap="qrySysBusinessPoolInfoMap">
+        SELECT u.*
+        FROM sys_business_group_resource_pool u
+        WHERE 1=1
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            u.`business_group_id` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        order by u.id desc
+    </select>
+
+    <resultMap id="qrySysBusinessPoolInfoMap" type="com.ecdata.cmp.user.dto.SysBusinessPoolVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="type" property="type"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="pool_id" property="poolId"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+
+</mapper>

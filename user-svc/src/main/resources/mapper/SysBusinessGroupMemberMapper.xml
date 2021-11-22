@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.SysBusinessGroupMemberMapper">
+
+    <!--根据id删除-->
+    <delete id="deleteById">
+        DELETE FROM sys_business_group_member
+        WHERE id = #{id}
+    </delete>
+
+    <!--由于每次新增，修改，删除不太好判断，所以都是先批量删除，然后批量插入 确保每次都是新增-->
+    <!--业务组 移除/关联 用户 根据业务组id-->
+    <delete id="deleteMemberByGroupId">
+        DELETE FROM sys_business_group_member
+        WHERE business_group_id = #{businessGroupId}
+    </delete>
+
+    <select id="getMemberByIds" parameterType="long" resultType="long">
+
+        <choose>
+            <when test="null != ids and ids.size() !=0">
+                SELECT
+                DISTINCT(user_id)
+                FROM
+                sys_business_group_member
+                WHERE business_group_id in
+                <foreach collection="ids" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </when>
+            <otherwise>
+                SELECT
+                u.id
+                FROM
+                sys_user u
+                WHERE is_deleted = 0
+                GROUP BY
+                u.id
+            </otherwise>
+        </choose>
+        <!--SELECT-->
+        <!--DISTINCT(user_id)-->
+        <!--FROM-->
+        <!--sys_business_group_member-->
+        <!--<if test="null != ids and ids.size() !=0">-->
+            <!--AND business_group_id in-->
+            <!--<foreach collection="ids" item="item" index="index" open="(" close=")" separator=",">-->
+                <!--#{item}-->
+            <!--</foreach>-->
+        <!--</if>-->
+        <!--GROUP BY u.id-->
+    </select>
+
+    <select id="qrySysBusinessMemberInfo" parameterType="string" resultMap="qrySysBusinessMemberInfoMap">
+        SELECT u.*
+        FROM sys_business_group_member u
+        WHERE 1=1
+        <if test="keyword != null and keyword != '' ">
+            AND (
+            u.`business_group_id` LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        order by u.id desc
+    </select>
+
+    <resultMap id="qrySysBusinessMemberInfoMap" type="com.ecdata.cmp.user.dto.SysBusinessMemberVO">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="business_group_id" property="businessGroupId"/>
+        <result column="user_id" property="userId"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+
+
+</mapper>

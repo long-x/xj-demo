@@ -1,0 +1,412 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from WorkflowService WSDL service -->
+
+  <service name="WorkflowServiceHttpPort" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="webservices.services.weaver.com.cn"/>
+      <parameter name="wsdlServiceElement" value="WorkflowService"/>
+      <parameter name="schemaQualified" value="webservices.services.weaver.com.cn,http://webservices.workflow.weaver"/>
+      <parameter name="wsdlServicePort" value="WorkflowServiceHttpPort"/>
+      <parameter name="className" value="com.ecdata.cmp.activiti.webService.WorkflowServiceHttpBindingImpl"/>
+      <parameter name="wsdlPortType" value="WorkflowServicePortType"/>
+      <parameter name="typeMappingVersion" value="1.1"/>
+      <operation name="forward2WorkflowRequest" qname="operNS:forward2WorkflowRequest" returnQName="retNS:out"
+                 returnType="rtns:string" soapAction="urn:weaver.workflow.webservices.WorkflowService.forward2WorkflowRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAllWorkflowRequestList" qname="operNS:getAllWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getAllWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getWorkflowRequest" qname="operNS:getWorkflowRequest" returnQName="retNS:out" returnType="rtns:WorkflowRequestInfo"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.getWorkflowRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getHendledWorkflowRequestList" qname="operNS:getHendledWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getHendledWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getToDoWorkflowRequestList" qname="operNS:getToDoWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getToDoWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getWorkflowRequest4Split" qname="operNS:getWorkflowRequest4split" returnQName="retNS:out"
+                 returnType="rtns:WorkflowRequestInfo" soapAction="urn:weaver.workflow.webservices.WorkflowService.getWorkflowRequest4split" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="submitWorkflowRequest" qname="operNS:submitWorkflowRequest" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.submitWorkflowRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getHendledWorkflowRequestCount" qname="operNS:getHendledWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getHendledWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getLeaveDays" qname="operNS:getLeaveDays" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.getLeaveDays" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getHendledWorkflowRequestList4Ofs" qname="operNS:getHendledWorkflowRequestList4Ofs" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getHendledWorkflowRequestList4Ofs" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in5" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCreateWorkflowList" qname="operNS:getCreateWorkflowList" returnQName="retNS:out" returnType="rtns:ArrayOfWorkflowBaseInfo"
+                 returnItemQName="tns:WorkflowBaseInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCreateWorkflowList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in5" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getToBeReadWorkflowRequestCount" qname="operNS:getToBeReadWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getToBeReadWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCreateWorkflowCount" qname="operNS:getCreateWorkflowCount" returnQName="retNS:out" returnType="rtns:int"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.getCreateWorkflowCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getProcessedWorkflowRequestCount" qname="operNS:getProcessedWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getProcessedWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="doCreateRequest" qname="operNS:doCreateRequest" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.doCreateRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="forwardWorkflowRequest" qname="operNS:forwardWorkflowRequest" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.forwardWorkflowRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="doCreateWorkflowRequest" qname="operNS:doCreateWorkflowRequest" returnQName="retNS:out"
+                 returnType="rtns:string" soapAction="urn:weaver.workflow.webservices.WorkflowService.doCreateWorkflowRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getToBeReadWorkflowRequestList" qname="operNS:getToBeReadWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getToBeReadWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in5" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="doForceOver" qname="operNS:doForceOver" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.doForceOver" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getBeRejectWorkflowRequestList" qname="operNS:getBeRejectWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getBeRejectWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getCCWorkflowRequestCount" qname="operNS:getCCWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCCWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getProcessedWorkflowRequestList" qname="operNS:getProcessedWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getProcessedWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getAllWorkflowRequestCount" qname="operNS:getAllWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getAllWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getCreateWorkflowRequestInfo" qname="operNS:getCreateWorkflowRequestInfo" returnQName="retNS:out"
+                 returnType="rtns:WorkflowRequestInfo" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCreateWorkflowRequestInfo" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getDoingWorkflowRequestCount" qname="operNS:getDoingWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getDoingWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getForwardWorkflowRequestList" qname="operNS:getForwardWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getForwardWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getMyWorkflowRequestList" qname="operNS:getMyWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getMyWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getCreateWorkflowTypeList" qname="operNS:getCreateWorkflowTypeList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowBaseInfo" returnItemQName="tns:WorkflowBaseInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCreateWorkflowTypeList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getMyWorkflowRequestCount" qname="operNS:getMyWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getMyWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getWorkflowNewFlag" qname="operNS:getWorkflowNewFlag" returnQName="retNS:out" returnType="rtns:ArrayOfString"
+                 returnItemQName="tns:string" xmlns:tns="webservices.services.weaver.com.cn" soapAction="urn:weaver.workflow.webservices.WorkflowService.getWorkflowNewFlag" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="writeWorkflowReadFlag" qname="operNS:writeWorkflowReadFlag" soapAction="urn:weaver.workflow.webservices.WorkflowService.writeWorkflowReadFlag" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getHendledWorkflowRequestCount4Ofs" qname="operNS:getHendledWorkflowRequestCount4Ofs" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getHendledWorkflowRequestCount4Ofs" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getForwardWorkflowRequestCount" qname="operNS:getForwardWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getForwardWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getToDoWorkflowRequestCount" qname="operNS:getToDoWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getToDoWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="givingOpinions" qname="operNS:givingOpinions" returnQName="retNS:out" returnType="rtns:string"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.givingOpinions" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCreateWorkflowTypeCount" qname="operNS:getCreateWorkflowTypeCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCreateWorkflowTypeCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getWorkflowRequestLogs" qname="operNS:getWorkflowRequestLogs" returnQName="retNS:out" returnType="rtns:ArrayOfWorkflowRequestLog"
+                 returnItemQName="tns:WorkflowRequestLog" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getWorkflowRequestLogs" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteRequest" qname="operNS:deleteRequest" returnQName="retNS:out" returnType="rtns:boolean"
+                 soapAction="urn:weaver.workflow.webservices.WorkflowService.deleteRequest" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCCWorkflowRequestList" qname="operNS:getCCWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getCCWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getUserId" qname="operNS:getUserId" returnQName="retNS:out" returnType="rtns:string" soapAction="urn:weaver.workflow.webservices.WorkflowService.getUserid" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getBeRejectWorkflowRequestCount" qname="operNS:getBeRejectWorkflowRequestCount" returnQName="retNS:out"
+                 returnType="rtns:int" soapAction="urn:weaver.workflow.webservices.WorkflowService.getBeRejectWorkflowRequestCount" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+      </operation>
+      <operation name="getDoingWorkflowRequestList" qname="operNS:getDoingWorkflowRequestList" returnQName="retNS:out"
+                 returnType="rtns:ArrayOfWorkflowRequestInfo" returnItemQName="tns:WorkflowRequestInfo" xmlns:tns="http://webservices.workflow.weaver" soapAction="urn:weaver.workflow.webservices.WorkflowService.getDoingWorkflowRequestList" >
+        <parameter qname="pns:in0" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in1" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in2" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in3" xmlns:pns="webservices.services.weaver.com.cn" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:in4" xmlns:pns="webservices.services.weaver.com.cn" type="tns:ArrayOfString" xmlns:tns="webservices.services.weaver.com.cn" itemQName="itns:string" xmlns:itns="webservices.services.weaver.com.cn"/>
+        <parameter qname="pns:in5" xmlns:pns="webservices.services.weaver.com.cn" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="forward2WorkflowRequest getAllWorkflowRequestList getWorkflowRequest getHendledWorkflowRequestList getToDoWorkflowRequestList submitWorkflowRequest getHendledWorkflowRequestCount getLeaveDays getHendledWorkflowRequestList4Ofs getCreateWorkflowList getToBeReadWorkflowRequestCount getCreateWorkflowCount getProcessedWorkflowRequestCount doCreateRequest forwardWorkflowRequest doCreateWorkflowRequest getToBeReadWorkflowRequestList doForceOver getBeRejectWorkflowRequestList getCCWorkflowRequestCount getProcessedWorkflowRequestList getAllWorkflowRequestCount getWorkflowRequest4Split getCreateWorkflowRequestInfo getDoingWorkflowRequestCount getForwardWorkflowRequestList getMyWorkflowRequestList getCreateWorkflowTypeList getMyWorkflowRequestCount getWorkflowNewFlag writeWorkflowReadFlag getHendledWorkflowRequestCount4Ofs getForwardWorkflowRequestCount getToDoWorkflowRequestCount givingOpinions getCreateWorkflowTypeCount getWorkflowRequestLogs deleteRequest getCCWorkflowRequestList getUserId getBeRejectWorkflowRequestCount getDoingWorkflowRequestList"/>
+
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowRequestLog"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestLog"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowRequestTableField"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestTableField"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:ArrayOfWorkflowRequestInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestInfo[]"
+        innerType="cmp-ns:WorkflowRequestInfo"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="webservices.services.weaver.com.cn"
+        qname="ns:ArrayOfString"
+        type="java:java.lang.String[]"
+        innerType="cmp-ns:string"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowDetailTableInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowDetailTableInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:ArrayOfWorkflowRequestLog"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestLog[]"
+        innerType="cmp-ns:WorkflowRequestLog"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowRequestTableRecord"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestTableRecord"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:ArrayOfWorkflowRequestTableRecord"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestTableRecord[]"
+        innerType="cmp-ns:WorkflowRequestTableRecord"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="webservices.services.weaver.com.cn"
+        qname="ns:ArrayOfArrayOfString"
+        type="java:java.lang.String[][]"
+        innerType="cmp-ns:ArrayOfString"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:ArrayOfWorkflowRequestTableField"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestTableField[]"
+        innerType="cmp-ns:WorkflowRequestTableField"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowMainTableInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowMainTableInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:ArrayOfWorkflowBaseInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowBaseInfo[]"
+        innerType="cmp-ns:WorkflowBaseInfo"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowRequestInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowRequestInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+              xmlns:ns="http://webservices.workflow.weaver"
+              qname="ns:ArrayOfWorkflowDetailTableInfo"
+              type="java:com.ecdata.cmp.activiti.webService.WorkflowDetailTableInfo[]"
+              innerType="cmp-ns:WorkflowDetailTableInfo"
+              encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservices.workflow.weaver"
+        qname="ns:WorkflowBaseInfo"
+        type="java:com.ecdata.cmp.activiti.webService.WorkflowBaseInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

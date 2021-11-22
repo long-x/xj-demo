@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.iaas.mapper.IaasAreaSumMapper">
+
+    <select id="queryServerNameAndAreaName" resultType="java.lang.Integer">
+        SELECT  ifnull(areaSum,0) areaSum
+        FROM iaas_area_sum
+        WHERE
+            <if test="serverName !=null and serverName !=''">
+                serverName=#{serverName}
+            </if>
+        <if test="areaName !=null and areaName !=''">
+            AND areaName=#{areaName}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecdata.cmp.user.mapper.TenantMapper">
+    <update id="modifyUpdateRecord">
+        update sys_tenant
+        set update_user = #{updateUser}, update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <select id="qryTenantInfo" parameterType="string" resultType="com.ecdata.cmp.user.dto.TenantVO">
+        SELECT t1.id, t1.tenant_name tenantName, t1.parent_id parentId, t1.linkman, t1.contact_number contactNumber, t1.address,
+               t1.create_user createUser, t1.create_time createTime, t1.update_user updateUser, t1.update_time updateTime,
+               t1.is_deleted isDeleted, t2.tenant_name parentName
+        FROM sys_tenant t1
+        LEFT JOIN sys_tenant t2 ON t1.parent_id = t2.id
+        WHERE t1.is_deleted = 0
+        <if test="keyword != null and keyword != '' ">
+            AND (
+                t1.tenant_name LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+                OR t1.linkman LIKE concat('%', #{keyword,jdbcType = VARCHAR} , '%')
+            )
+        </if>
+        order by t1.create_time desc
+    </select>
+</mapper>

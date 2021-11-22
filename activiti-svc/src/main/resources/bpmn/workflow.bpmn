@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+    <process id="workflow" name="多级工作流审批流程" isExecutable="true">
+        <startEvent id="startEvent" name="开始"/>
+        <userTask id="submitFrom" name="资源申请" activiti:assignee="${userId}">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideSubmit" name="提交或放弃"/>
+        <userTask id="approve_1" name="IT主管审批">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove1" name="一级审批校验"/>
+        <userTask id="approve_2" name="集团审批">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove2" name="二级审批校验"/>
+        <userTask id="approve_3" name="申请受理">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove3" name="三级审批校验"/>
+        <userTask id="approve_4" name="服务请求分类">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove4" name="四级审批校验"/>
+        <userTask id="approve_5" name="运维主管确认">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove5" name="五级审批校验"/>
+        <userTask id="approve_6" name="技术评估">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove6" name="六级审批校验"/>
+        <userTask id="approve_7" name="需求实现">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove7" name="七级审批校验"/>
+        <userTask id="approve_8" name="申请人确认">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove8" name="八级审批校验"/>
+        <userTask id="approve_9" name="八级审批">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove9" name="九级审批校验"/>
+        <userTask id="approve_10" name="九级审批">
+            <extensionElements>
+                <activiti:taskListener event="create" class="com.ecdata.cmp.activiti.actlistener.WorkflowListener"/>
+            </extensionElements>
+        </userTask>
+        <exclusiveGateway id="decideApprove10" name="十级审批校验"/>
+        <endEvent id="endEvent" name="结束"/>
+        <endEvent id="endEventCancel" name="放弃"/>
+
+        <sequenceFlow id="flow1" name="填写申请" sourceRef="startEvent" targetRef="submitFrom"/>
+        <sequenceFlow id="flow2" sourceRef="submitFrom" targetRef="decideSubmit"/>
+        <sequenceFlow id="flow3" name="提交" sourceRef="decideSubmit" targetRef="approve_1">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='提交'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow4" sourceRef="approve_1" targetRef="decideApprove1"/>
+        <sequenceFlow id="flow5" name="同意" sourceRef="decideApprove1" targetRef="approve_2">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow6" sourceRef="approve_2" targetRef="decideApprove2"/>
+        <sequenceFlow id="flow7" name="同意" sourceRef="decideApprove2" targetRef="approve_3">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow8" sourceRef="approve_3" targetRef="decideApprove3"/>
+        <sequenceFlow id="flow9" name="同意" sourceRef="decideApprove3" targetRef="approve_4">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow10" sourceRef="approve_4" targetRef="decideApprove4"/>
+        <sequenceFlow id="flow11" name="同意" sourceRef="decideApprove4" targetRef="approve_5">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow12" sourceRef="approve_5" targetRef="decideApprove5"/>
+        <sequenceFlow id="flow13" name="同意" sourceRef="decideApprove5" targetRef="approve_6">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow14" sourceRef="approve_6" targetRef="decideApprove6"/>
+        <sequenceFlow id="flow15" name="同意" sourceRef="decideApprove6" targetRef="approve_7">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow16" sourceRef="approve_7" targetRef="decideApprove7"/>
+        <sequenceFlow id="flow17" name="同意" sourceRef="decideApprove7" targetRef="approve_8">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow18" sourceRef="approve_8" targetRef="decideApprove8"/>
+        <sequenceFlow id="flow19" name="同意" sourceRef="decideApprove8" targetRef="approve_9">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow20" sourceRef="approve_9" targetRef="decideApprove9"/>
+        <sequenceFlow id="flow21" name="同意" sourceRef="decideApprove9" targetRef="approve_10">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='同意'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow22" sourceRef="approve_10" targetRef="decideApprove10"/>
+        <sequenceFlow id="flow23" name="结束" sourceRef="decideApprove10" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='结束'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+
+        <sequenceFlow id="flow24" name="放弃" sourceRef="decideSubmit" targetRef="endEventCancel">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='放弃'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow53" name="驳回" sourceRef="decideApprove1" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow25" name="拒绝" sourceRef="decideApprove1" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow26" name="驳回" sourceRef="decideApprove2" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow27" name="拒绝" sourceRef="decideApprove2" targetRef="approve_1">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow28" name="驳回" sourceRef="decideApprove3" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow29" name="拒绝" sourceRef="decideApprove3" targetRef="approve_2">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow30" name="驳回" sourceRef="decideApprove4" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow31" name="拒绝" sourceRef="decideApprove4" targetRef="approve_3">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow32" name="驳回" sourceRef="decideApprove5" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow33" name="拒绝" sourceRef="decideApprove5" targetRef="approve_4">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow34" name="驳回" sourceRef="decideApprove6" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow35" name="拒绝" sourceRef="decideApprove6" targetRef="approve_5">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow36" name="驳回" sourceRef="decideApprove7" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow37" name="拒绝" sourceRef="decideApprove7" targetRef="approve_6">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow38" name="驳回" sourceRef="decideApprove8" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow39" name="拒绝" sourceRef="decideApprove8" targetRef="approve_7">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow40" name="驳回" sourceRef="decideApprove9" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow41" name="拒绝" sourceRef="decideApprove9" targetRef="approve_8">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow42" name="驳回" sourceRef="decideApprove10" targetRef="submitFrom">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome=='驳回'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow43" name="拒绝" sourceRef="decideApprove10" targetRef="approve_9">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == '拒绝'}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow44" name="结束" sourceRef="decideApprove1" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow45" name="结束" sourceRef="decideApprove2" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow46" name="结束" sourceRef="decideApprove3" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow47" name="结束" sourceRef="decideApprove4" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow48" name="结束" sourceRef="decideApprove5" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow49" name="结束" sourceRef="decideApprove6" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow50" name="结束" sourceRef="decideApprove7" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow51" name="结束" sourceRef="decideApprove8" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow id="flow52" name="结束" sourceRef="decideApprove9" targetRef="endEvent">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[${outcome == "结束"}]]>
+            </conditionExpression>
+        </sequenceFlow>
+    </process>
+</definitions>

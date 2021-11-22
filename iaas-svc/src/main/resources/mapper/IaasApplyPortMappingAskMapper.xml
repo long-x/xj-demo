@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ecdata.cmp.iaas.mapper.apply.IaasApplyPortMappingAskMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.ecdata.cmp.iaas.entity.apply.IaasApplyPortMappingAsk" id="iaasApplyCalculateMap">
+        <result property="id" column="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="config_id" property="configId"/>
+        <result column="native_port" property="nativePort"/>
+        <result column="opposite_port" property="oppositePort"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                id,
+                tenant_id,
+                config_id,
+                native_port,
+                opposite_port,
+                create_user,
+                create_time,
+                update_user,
+                update_time,
+                is_deleted
+    </sql>
+
+    <select id="queryPortMappingByConfigId" resultType="java.lang.Long">
+        select id from iaas_apply_port_mapping_ask
+        where is_deleted=0 and config_id=#{configId};
+    </select>
+</mapper>
