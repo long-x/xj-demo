@@ -96,14 +96,14 @@ tenant:
 
 huawei:
   ManageOne:
-    mo_url: https://auth.com
-    om_url: https://oc.com
-    web_om_url: https://oc.com:31943
-    ecs_url: https://ecs.com
-    vpc_url: https://vpc.com
-    ims_url: https://ims.com
-    evs_url: https://evs.com
-    bms_url: https://bms.com
+    mo_url: https://123.com
+    om_url: https://123.com
+    web_om_url: https://123.com:31943
+    ecs_url: https://123.com
+    vpc_url: https://123.com
+    ims_url: https://123.com
+    evs_url: https://123.com
+    bms_url: https://123.com
   server:
     backendServerIp: 127.0.0.1
 
